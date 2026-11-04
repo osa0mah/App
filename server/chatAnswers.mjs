@@ -1,6 +1,7 @@
+import { searchCatalog } from "./fatwaCatalog.mjs";
 import tafsir from "../data/tafsir/saadi.json" with { type: "json" };
 import chapters from "../data/chapters.json" with { type: "json" };
-import { providers, searchSource, readSource } from "./fatwaSources.mjs";
+import { providers, readSource } from "./fatwaSources.mjs";
 import {
   normalizeSearch,
   searchTopic,
@@ -185,13 +186,13 @@ export async function answerMessage(message, history = [], options = {}) {
       );
     const target = { section: "الفتاوى", scholar, query: topic };
     try {
-      const results = await (options.search || searchSource)(
+      const results = await (options.search || searchCatalog)(
         providers[scholar],
         topic,
       );
       if (!results.length)
         return response(
-          "لم يعرض المصدر نتائج لهذا الموضوع. جرّب تحديد المسألة بكلمات أقصر. لن أؤلف جوابًا أو أنسبه للشيخ.",
+          "لم أجد عنوانًا مطابقًا في الفهرس المتاح، وتغطيته محدودة. جرّب تحديد المسألة بكلمات أقصر. لن أؤلف جوابًا أو أنسبه للشيخ.",
           "الفتاوى",
           { suggestion: target },
         );

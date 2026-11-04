@@ -36,6 +36,34 @@ export default function Fatwas({
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
   const [error, setError] = useState("");
+  const [catalogInfo, setCatalogInfo] = useState<{
+    key: string;
+    count: number;
+    updatedAt?: string;
+    available: boolean;
+    error?: string;
+  } | null>(null);
+  useEffect(() => {
+    let active = true;
+    const controller = new AbortController();
+    getContent({ action: "status", scholar: ids[index] }, controller.signal)
+      .then((body) => {
+        if (active) setCatalogInfo({ key: ids[index], ...body.catalog });
+      })
+      .catch(() => {
+        if (active)
+          setCatalogInfo({
+            key: ids[index],
+            count: 0,
+            available: false,
+            error: "تعذّر التحقق من جاهزية الفهرس.",
+          });
+      });
+    return () => {
+      active = false;
+      controller.abort();
+    };
+  }, [index]);
   const request = useRef<AbortController | null>(null);
   const scholar = scholars[index].name;
   useEffect(
@@ -86,6 +114,7 @@ export default function Fatwas({
         if (!Array.isArray(body.results))
           throw Error("لم تصل نتائج صالحة من المصدر.");
         setResults(body.results);
+        if (body.catalog) setCatalogInfo({ key: ids[index], ...body.catalog });
       } else {
         if (
           !body.fatwa ||
@@ -123,8 +152,8 @@ export default function Fatwas({
     <>
       <Text style={f.title}>الفتاوى</Text>
       <Text style={f.note}>
-        اختر الشيخ وابحث في مصدره الرسمي. نعرض النص الأصلي هنا دون تحويلك إلى
-        الموقع، مع ذكر مصدره.
+        اختر الشيخ وابحث في عناوين الصفحات الرسمية المفهرسة. عند اختيار نتيجة،
+        نحاول جلب النص الأصلي وعرضه هنا مع مصدره.
       </Text>
       <View style={f.row}>
         {scholars.map((s, i) => (
@@ -138,6 +167,22 @@ export default function Fatwas({
             <Text style={f.label}>{s.name}</Text>
           </Pressable>
         ))}
+      </View>
+      <View style={f.card}>
+        <Text accessibilityLiveRegion="polite" style={f.note}>
+          {catalogInfo?.key === ids[index]
+            ? catalogInfo.error ||
+              (catalogInfo.available
+                ? `الفهرس المتاح: ${catalogInfo.count.toLocaleString("ar-SA")} عنوانًا. التغطية جزئية وليست جميع فتاوى الشيخ.`
+                : "لم يجهز فهرس هذا الشيخ من الصفحات الرسمية بعد. البحث غير متاح لهذا المصدر حاليًا.")
+            : "جارٍ التحقق من الفهرس…"}
+        </Text>
+        {catalogInfo?.key === ids[index] && catalogInfo.updatedAt && (
+          <Text style={f.source}>
+            تحديث الفهرس:{" "}
+            {new Date(catalogInfo.updatedAt).toLocaleDateString("ar-SA")}
+          </Text>
+        )}
       </View>
       <TextInput
         accessibilityLabel="البحث في الفتاوى"
@@ -195,7 +240,7 @@ export default function Fatwas({
         <>
           {!!results.length && (
             <Text accessibilityLiveRegion="polite" style={f.note}>
-              النتائج المعروضة من المصدر: {results.length}
+              النتائج المطابقة في الفهرس: {results.length}
             </Text>
           )}
           {results.map((x) => (
@@ -217,14 +262,15 @@ export default function Fatwas({
           ))}
           {searched && !loading && !error && !results.length && (
             <Text style={f.note}>
-              لم يعرض المصدر نتائج نصية مطابقة. جرّب كلمات أخرى.
+              لم نجد عنوانًا مطابقًا في الفهرس المتاح. التغطية جزئية؛ قد توجد
+              فتاوى أخرى لم تُفهرس.
             </Text>
           )}
           {!searched && (
             <View style={f.card}>
               <Text style={f.text}>
-                اكتب موضوعك واضغط بحث. تعتمد النتائج على توفر البحث النصي في
-                موقع الشيخ؛ وقد تكون بعض الصفحات صوتية دون نص.
+                اكتب موضوعك واضغط بحث. يجري البحث في العناوين المفهرسة دون
+                الاعتماد على بحث موقع الشيخ؛ وقد تكون بعض الصفحات صوتية دون نص.
               </Text>
             </View>
           )}

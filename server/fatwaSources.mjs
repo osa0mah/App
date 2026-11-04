@@ -1,20 +1,17 @@
 import { load } from "cheerio";
-import { relevance, searchTopic } from "./searchText.mjs";
+import { relevance } from "./searchText.mjs";
 export const providers = {
   binbaz: {
     name: "عبد العزيز بن باز",
     base: "https://binbaz.org.sa",
     hosts: ["binbaz.org.sa", "www.binbaz.org.sa"],
     path: /^\/fatwas\/\d+(?:\/|$)/,
-    search: (q) => `https://binbaz.org.sa/search?q=${encodeURIComponent(q)}`,
   },
   alfawzan: {
     name: "صالح الفوزان",
     base: "https://www.alfawzan.af.org.sa",
     hosts: ["www.alfawzan.af.org.sa", "alfawzan.af.org.sa"],
     path: /^\/(?:ar\/)?node\/\d+\/?$/,
-    search: (q) =>
-      `https://www.alfawzan.af.org.sa/ar/search/node?keys=${encodeURIComponent(q)}`,
   },
   ibnothaimeen: {
     name: "محمد بن صالح العثيمين",
@@ -168,59 +165,6 @@ export function extractSearch(html, url, provider, query = "") {
     )
     .slice(0, 20);
 }
-export function discoverSearchRequest(html, url, provider, query) {
-  const $ = load(html);
-  let endpoint = null;
-  $("form").each((_, form) => {
-    if (endpoint) return;
-    const el = $(form);
-    const method = (el.attr("method") || "get").toUpperCase();
-    if (
-      !["GET", "POST"].includes(method) ||
-      el.find('input[type="password"]').length
-    )
-      return;
-    const input = el
-      .find(
-        'input[type="search"],input[name="q"],input[name="s"],input[name="keys"],input[name="search"],input[name="query"],input[name="keyword"],input[name="search_api_fulltext"]',
-      )
-      .first();
-    if (!input.length || !input.attr("name")) return;
-    if (
-      method === "POST" &&
-      !/search|بحث/i.test(el.attr("action") || "") &&
-      el.attr("role") !== "search" &&
-      input.attr("type") !== "search" &&
-      !/بحث|ابحث/.test(el.text()) &&
-      !["keys", "search", "search_api_fulltext"].includes(input.attr("name"))
-    )
-      return;
-    try {
-      const u = allowedUrl(
-        new URL(el.attr("action") || url, url).href,
-        provider,
-      );
-      const params = new URLSearchParams();
-      el.find(
-        'input[type="hidden"][name],button[type="submit"][name],input[type="submit"][name]',
-      ).each((_, hidden) =>
-        params.set($(hidden).attr("name"), $(hidden).attr("value") || ""),
-      );
-      params.set(input.attr("name"), query);
-      if (method === "GET") {
-        for (const [k, v] of params) u.searchParams.set(k, v);
-        endpoint = { url: u.href, method };
-      } else endpoint = { url: u.href, method, body: params.toString() };
-    } catch {
-      /* Never submit off-site forms. */
-    }
-  });
-  return endpoint;
-}
-export function discoverSearch(html, url, provider, query) {
-  const request = discoverSearchRequest(html, url, provider, query);
-  return request?.method === "GET" ? request.url : null;
-}
 export function inspectSearchPage(html, url, provider) {
   const $ = load(html);
   const page = allowedUrl(url, provider);
@@ -287,67 +231,6 @@ export function inspectSearchPage(html, url, provider) {
     hasClientRoot: $("#app,#root,#__next").length > 0,
   };
 }
-export async function searchSource(provider, query, fetcher = fetch) {
-  const topic = searchTopic(query);
-  if (!topic)
-    throw new SourceError(
-      "اكتب موضوع الفتوى، مثل صلاة الوتر أو زكاة المال.",
-      "QUERY_TOO_BROAD",
-    );
-  const home = await sourceHtml(provider.base, provider, fetcher);
-  let request = discoverSearchRequest(home.html, home.url, provider, topic);
-  let cookie = home.cookie;
-  if (!request) {
-    const $ = load(home.html);
-    const links = $("a[href]")
-      .toArray()
-      .map((a) => $(a).attr("href"))
-      .filter((h) => h && /search|بحث/.test(h));
-    for (const link of links.slice(0, 1)) {
-      try {
-        const page = await sourceHtml(
-          new URL(link, home.url).href,
-          provider,
-          fetcher,
-          { cookie },
-        );
-        request = discoverSearchRequest(page.html, page.url, provider, topic);
-        cookie = page.cookie;
-      } catch (error) {
-        if (!(error instanceof SourceError)) throw error;
-      }
-    }
-  }
-  if (!request && provider.search)
-    request = { url: provider.search(topic), method: "GET" };
-  if (!request)
-    throw new SourceError(
-      "لم نتمكن من قراءة نموذج البحث لهذا المصدر؛ هذا لا يعني عدم وجود فتاوى.",
-      "SEARCH_UNSUPPORTED",
-    );
-  const page = await sourceHtml(request.url, provider, fetcher, {
-    ...request,
-    cookie,
-  });
-  const results = extractSearch(page.html, page.url, provider, topic);
-  if (results.length) return results;
-  const document = load(page.html);
-  document(
-    'script,style,template,noscript,[hidden],[style*="display:none"],[style*="display: none"]',
-  ).remove();
-  const visible = document("body").text();
-  if (
-    /لا توجد نتائج|لم (?:يتم العثور|نعثر|يعثر)|لا يوجد نتائج|لم نجد نتائج|no results|no matching/i.test(
-      visible,
-    )
-  )
-    return [];
-  throw new SourceError(
-    "تعذّر قراءة نتائج البحث من موقع الشيخ. لم نتحقق من خلو النتائج؛ جرّب لاحقًا.",
-    "SEARCH_PARSE_FAILED",
-    inspectSearchPage(page.html, page.url, provider),
-  );
-}
 export function extractArticle(html, url, provider) {
   const source = allowedUrl(url, provider);
   if (!provider.path.test(source.pathname))
@@ -385,6 +268,8 @@ export function extractArticle(html, url, provider) {
   if (!title || !answer)
     throw new SourceError(
       "لم نتمكن من استخراج النص الأصلي لهذه الصفحة. قد تكون صوتية فقط أو تغيّر تنسيق المصدر.",
+      "ARTICLE_PARSE_FAILED",
+      inspectSearchPage(html, url, provider),
     );
   return {
     id: source.pathname,
