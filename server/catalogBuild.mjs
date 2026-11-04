@@ -74,14 +74,14 @@ export function robotPolicy(text) {
     },
   };
 }
-async function document(url, p, fetcher, deadline) {
+async function document(url, p, fetcher, deadline, timeoutMs = 5000) {
   let current = safe(url, p);
   for (let i = 0; i < 4; i++) {
     if (Date.now() >= deadline) throw Error("TIME_BUDGET");
     const r = await fetcher(current.href, {
       redirect: "manual",
       signal: AbortSignal.timeout(
-        Math.max(1, Math.min(5000, deadline - Date.now())),
+        Math.max(1, Math.min(timeoutMs, deadline - Date.now())),
       ),
       headers: {
         "User-Agent": "AtharQuran/1.0 (+public-title-index)",
@@ -89,17 +89,140 @@ async function document(url, p, fetcher, deadline) {
       },
     });
     if ([301, 302, 303, 307, 308].includes(r.status)) {
+      await r.body?.cancel();
       const next = r.headers.get("location");
       if (!next) throw Error("INVALID_REDIRECT");
-      current = safe(new URL(next, current).href, p);
+      const target = new URL(next, current);
+      try {
+        current = safe(target.href, p);
+      } catch {
+        const error = new Error("OFFSITE_URL");
+        error.redirectHost = target.hostname;
+        throw error;
+      }
       continue;
     }
-    if (!r.ok) throw Error(`HTTP_${r.status}`);
+    if (!r.ok) {
+      const error = new Error(`HTTP_${r.status}`);
+      const header = r.headers.get("retry-after");
+      if (header) {
+        const seconds = /^\d+$/.test(header)
+          ? Number(header)
+          : Math.ceil((Date.parse(header) - Date.now()) / 1000);
+        if (Number.isFinite(seconds))
+          error.retryAfterSeconds = Math.max(0, Math.min(86400, seconds));
+      }
+      await r.body?.cancel();
+      throw error;
+    }
     const content = await r.text();
     if (content.length > 2_000_000) throw Error("DOCUMENT_TOO_LARGE");
-    return { text: content, url: current.href };
+    return { text: content, url: current.href, status: r.status };
   }
   throw Error("REDIRECT_LIMIT");
+}
+export function robotsFailure(error) {
+  const codes = [];
+  let current = error;
+  for (let i = 0; current && i < 4; i++, current = current.cause) {
+    if (
+      typeof current.code === "string" &&
+      /^[A-Z0-9_]{1,70}$/.test(current.code)
+    )
+      codes.push(current.code);
+    if (Array.isArray(current.errors))
+      for (const e of current.errors.slice(0, 3))
+        if (typeof e.code === "string" && /^[A-Z0-9_]{1,70}$/.test(e.code))
+          codes.push(e.code);
+  }
+  if (/^HTTP_\d{3}$/.test(error.message))
+    return {
+      state: "failed",
+      code: error.message,
+      ...(error.retryAfterSeconds !== undefined
+        ? { retryAfterSeconds: error.retryAfterSeconds }
+        : {}),
+    };
+  if (
+    ["REDIRECT_LIMIT", "INVALID_REDIRECT", "DOCUMENT_TOO_LARGE"].includes(
+      error.message,
+    )
+  )
+    return { state: "failed", code: error.message };
+  if (error.message === "OFFSITE_URL")
+    return {
+      state: "failed",
+      code: "REDIRECT_OUTSIDE_SOURCE",
+      ...(error.redirectHost ? { redirectHost: error.redirectHost } : {}),
+    };
+  const tls = codes.find((c) =>
+    /CERT|TLS|SSL|SELF_SIGNED|UNABLE_TO_VERIFY/.test(c),
+  );
+  if (tls)
+    return { state: "failed", code: "TLS_VERIFICATION_FAILED", detail: tls };
+  if (
+    ["TimeoutError", "AbortError"].includes(error.name) ||
+    error.message === "TIME_BUDGET" ||
+    codes.some((c) => /TIMEOUT|TIMEDOUT/.test(c))
+  )
+    return { state: "failed", code: "TIMEOUT" };
+  const dns = codes.find((c) => ["ENOTFOUND", "EAI_AGAIN"].includes(c));
+  if (dns) return { state: "failed", code: "DNS_FAILURE", detail: dns };
+  const network = codes.find((c) => /ECONN|ENET|EHOST|UND_ERR_SOCKET/.test(c));
+  return {
+    state: "failed",
+    code: "NETWORK_FAILURE",
+    ...(network || codes[0] ? { detail: network || codes[0] } : {}),
+  };
+}
+export async function readRobots(provider, fetcher, deadline) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const page = await document(
+        `${provider.base}/robots.txt`,
+        provider,
+        fetcher,
+        deadline,
+        12000,
+      );
+      return {
+        policy: robotPolicy(page.text),
+        status: {
+          state: "ready",
+          code: `HTTP_${page.status}`,
+          attempts: attempt + 1,
+        },
+      };
+    } catch (error) {
+      const status = { ...robotsFailure(error), attempts: attempt + 1 };
+      if (["HTTP_404", "HTTP_410"].includes(status.code))
+        return {
+          policy: robotPolicy(""),
+          status: { ...status, state: "missing" },
+        };
+      const transient =
+        [
+          "HTTP_408",
+          "HTTP_500",
+          "HTTP_502",
+          "HTTP_503",
+          "HTTP_504",
+          "TIMEOUT",
+        ].includes(status.code) ||
+        (status.code === "DNS_FAILURE" && status.detail === "EAI_AGAIN") ||
+        (status.code === "NETWORK_FAILURE" && status.detail === "ECONNRESET");
+      const retryDelay = Math.max(300, (status.retryAfterSeconds || 0) * 1000);
+      if (
+        attempt === 0 &&
+        transient &&
+        Date.now() + retryDelay + 12000 < deadline
+      ) {
+        await new Promise((resolve) => setTimeout(resolve, retryDelay));
+        continue;
+      }
+      return { policy: null, status };
+    }
+  }
 }
 export async function collectProvider(
   key,
@@ -113,7 +236,7 @@ export async function collectProvider(
     seen = new Set();
   let pageCount = 0;
   let policy = robotPolicy("");
-  let robots;
+  let robotsStatus;
   const enqueue = (value) => {
     try {
       const u = safe(value, p);
@@ -129,25 +252,24 @@ export async function collectProvider(
       /* Off-site and invalid paths are never crawled. */
     }
   };
-  try {
-    robots = await document(`${p.base}/robots.txt`, p, fetcher, deadline);
-    policy = robotPolicy(robots.text);
-  } catch (e) {
-    if (e.message !== "HTTP_404") {
-      issues.add("ROBOTS_UNAVAILABLE");
-      return {
-        records: [],
-        status: {
-          key,
-          source: p.name,
-          count: 0,
-          pageCount: 0,
-          coverage: "unavailable",
-          issues: [...issues],
-        },
-      };
-    }
+  const robots = await readRobots(p, fetcher, deadline);
+  robotsStatus = robots.status;
+  if (!robots.policy) {
+    issues.add("ROBOTS_UNAVAILABLE");
+    return {
+      records: [],
+      status: {
+        key,
+        source: p.name,
+        count: 0,
+        pageCount: 0,
+        coverage: "unavailable",
+        issues: [...issues],
+        robots: robotsStatus,
+      },
+    };
   }
+  policy = robots.policy;
   if (!policy.allowed("/"))
     return {
       records: [],
@@ -158,6 +280,7 @@ export async function collectProvider(
         pageCount: 0,
         coverage: "unavailable",
         issues: ["ROBOTS_DISALLOW"],
+        robots: robotsStatus,
       },
     };
   enqueue(p.base);
@@ -249,8 +372,10 @@ export async function collectProvider(
         if (
           p.path.test(u.pathname) ||
           /\/fatwas\/kind\//.test(u.pathname) ||
-          /(^|\s)next(\s|$)/.test($(a).attr("rel")||"") ||
-          (u.pathname===new URL(page.url).pathname&&u.searchParams.has("page")&&!p.path.test(u.pathname)) ||
+          /(^|\s)next(\s|$)/.test($(a).attr("rel") || "") ||
+          (u.pathname === new URL(page.url).pathname &&
+            u.searchParams.has("page") &&
+            !p.path.test(u.pathname)) ||
           /فتاوى|فتوى/.test(clean($(a).text()))
         )
           enqueue(u.href);
@@ -291,6 +416,7 @@ export async function collectProvider(
       pageCount,
       coverage: records.size ? "partial" : "unavailable",
       issues: [...issues],
+      robots: robotsStatus,
     },
   };
 }

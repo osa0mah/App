@@ -41,10 +41,33 @@ export function catalogStatus(catalog, key) {
   if (!count) {
     if (issues.includes("ROBOTS_DISALLOW"))
       reason = "تعليمات المصدر تمنع الفهرسة الآلية.";
-    else if (issues.includes("ROBOTS_UNAVAILABLE"))
+    else if (issues.includes("ROBOTS_UNAVAILABLE")) {
+      const code = source?.robots?.code;
+      const messages = {
+        HTTP_408: "خادم المصدر أنهى طلب robots.txt بسبب المهلة (HTTP 408).",
+        REDIRECT_LIMIT: "تكررت تحويلات ملف robots.txt أكثر من الحد المسموح.",
+        INVALID_REDIRECT: "المصدر أعاد تحويلًا غير صالح لملف robots.txt.",
+        DOCUMENT_TOO_LARGE: "استجابة robots.txt أكبر من حد القراءة المسموح.",
+        HTTP_401: "طلب ملف robots.txt يتطلب صلاحية وصول (HTTP 401).",
+        HTTP_403: "رُفض طلب ملف robots.txt (HTTP 403).",
+        HTTP_429: "المصدر طلب تخفيف الطلبات عند قراءة robots.txt (HTTP 429).",
+        HTTP_500: "ورد خطأ خادم عند طلب robots.txt (HTTP 500).",
+        HTTP_502: "تعذّر اتصال خادم المصدر عند قراءة robots.txt (HTTP 502).",
+        HTTP_503: "ملف robots.txt غير متاح من خادم المصدر (HTTP 503).",
+        HTTP_504: "انتهت مهلة خادم المصدر عند قراءة robots.txt (HTTP 504).",
+        TIMEOUT:
+          "انتهت مهلة الاتصال بملف robots.txt بعد محاولة الاتصال بالمصدر.",
+        TLS_VERIFICATION_FAILED:
+          "تعذّر التحقق من شهادة اتصال المصدر عند قراءة robots.txt.",
+        DNS_FAILURE: "تعذّر حل اسم نطاق المصدر عند قراءة robots.txt.",
+        NETWORK_FAILURE: "تعذّر الاتصال الشبكي بالمصدر عند قراءة robots.txt.",
+      };
       reason =
-        "تعذّر الوصول إلى تعليمات الفهرسة لدى المصدر، فتوقفت عملية الجمع.";
-    else if (issues.includes("SOURCE_CHALLENGE"))
+        code === "REDIRECT_OUTSIDE_SOURCE"
+          ? `المصدر يحوّل طلب robots.txt إلى نطاق غير مسجّل: ${source.robots.redirectHost || "غير معروف"}.`
+          : messages[code] ||
+            "تعذّر الوصول إلى تعليمات الفهرسة لدى المصدر، فتوقفت عملية الجمع.";
+    } else if (issues.includes("SOURCE_CHALLENGE"))
       reason = "المصدر يطلب تحققًا إضافيًا قبل قراءة الصفحات.";
     else if (issues.includes("SOURCE_ACCESS_DENIED"))
       reason = "المصدر لم يسمح بقراءة الصفحات أثناء الفهرسة.";
@@ -60,6 +83,7 @@ export function catalogStatus(catalog, key) {
     coverage: "partial",
     available: !!source && count > 0,
     pageCount: source?.pageCount ?? 0,
+    robots: source?.robots ?? null,
     reason,
   };
 }

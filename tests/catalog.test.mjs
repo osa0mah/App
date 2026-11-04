@@ -113,3 +113,147 @@ test("source readiness explains the blocking reason without asking users for bui
   assert.match(catalogStatus(catalog, "ibnothaimeen").reason, /تمنع الفهرسة/);
   assert.equal(catalogStatus(catalog, "alfawzan").available, false);
 });
+
+test("missing robots files include 410 and do not block public title indexing", async () => {
+  const { collectProvider } = await import("../server/catalogBuild.mjs");
+  const result = await collectProvider("binbaz", {
+    maxPages: 1,
+    fetcher: async (url) =>
+      url.endsWith("/robots.txt")
+        ? html("gone", 410)
+        : html(
+            '<main><a href="/fatwas/123/test">عنوان اختبار للصلاة</a></main>',
+          ),
+  });
+  assert.equal(result.status.robots.state, "missing");
+  assert.equal(result.status.robots.code, "HTTP_410");
+  assert.equal(result.records.length, 1);
+});
+test("robots access denials and throttling stop without retrying or fetching other pages", async () => {
+  const { collectProvider } = await import("../server/catalogBuild.mjs");
+  for (const status of [401, 403, 429]) {
+    const requests = [];
+    const result = await collectProvider("alfawzan", {
+      fetcher: async (url) => {
+        requests.push(url);
+        return html("blocked", status);
+      },
+    });
+    assert.equal(requests.length, 1);
+    assert.ok(requests[0].endsWith("/robots.txt"));
+    assert.equal(result.status.robots.code, `HTTP_${status}`);
+    assert.equal(result.status.robots.attempts, 1);
+    assert.equal(result.status.pageCount, 0);
+    assert.equal(result.records.length, 0);
+  }
+});
+test("temporary robots failures get one retry and successful policies are still enforced", async () => {
+  const { readRobots } = await import("../server/catalogBuild.mjs");
+  const { providers } = await import("../server/fatwaSources.mjs");
+  let attempts = 0;
+  const result = await readRobots(
+    providers.alfawzan,
+    async () =>
+      ++attempts === 1
+        ? html("temporary", 503)
+        : html("User-agent: *\nDisallow: /private"),
+    Date.now() + 30000,
+  );
+  assert.equal(attempts, 2);
+  assert.equal(result.status.state, "ready");
+  assert.equal(result.status.attempts, 2);
+  assert.equal(result.policy.allowed("/private/a"), false);
+});
+test("certificate failures retain verification and publish only a safe failure code", async () => {
+  const { readRobots } = await import("../server/catalogBuild.mjs");
+  const { providers } = await import("../server/fatwaSources.mjs");
+  let attempts = 0;
+  const result = await readRobots(
+    providers.alfawzan,
+    async (_url, options) => {
+      attempts++;
+      assert.equal(options.agent, undefined);
+      assert.equal(options.dispatcher, undefined);
+      throw new Error("fetch failed", {
+        cause: {
+          code: "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+          message: "private-fixture-do-not-report",
+        },
+      });
+    },
+    Date.now() + 30000,
+  );
+  assert.equal(attempts, 1);
+  assert.equal(result.policy, null);
+  assert.equal(result.status.code, "TLS_VERIFICATION_FAILED");
+  assert.equal(result.status.detail, "UNABLE_TO_VERIFY_LEAF_SIGNATURE");
+  assert.ok(!JSON.stringify(result.status).includes("private-fixture"));
+});
+test("redirect diagnostics report the public host without following it or exposing URL credentials", async () => {
+  const { readRobots } = await import("../server/catalogBuild.mjs");
+  const { providers } = await import("../server/fatwaSources.mjs");
+  let attempts = 0;
+  const result = await readRobots(
+    providers.alfawzan,
+    async () => {
+      attempts++;
+      return new Response("", {
+        status: 302,
+        headers: {
+          Location:
+            "https://user:private-fixture@new.example/path?token=private-fixture",
+        },
+      });
+    },
+    Date.now() + 30000,
+  );
+  assert.equal(attempts, 1);
+  assert.equal(result.policy, null);
+  assert.equal(result.status.code, "REDIRECT_OUTSIDE_SOURCE");
+  assert.equal(result.status.redirectHost, "new.example");
+  assert.ok(!JSON.stringify(result.status).includes("private-fixture"));
+});
+test("source status explains the actual robots failure rather than grouping all errors", () => {
+  const base = {
+    schemaVersion: 1,
+    generatedAt: "2026-11-04T00:00:00Z",
+    records: [],
+  };
+  for (const [code, pattern] of [
+    ["HTTP_403", /403/],
+    ["TLS_VERIFICATION_FAILED", /شهادة/],
+    ["TIMEOUT", /مهلة/],
+    ["DNS_FAILURE", /اسم نطاق/],
+  ]) {
+    const value = catalogStatus(
+      {
+        ...base,
+        sources: [
+          {
+            key: "alfawzan",
+            count: 0,
+            pageCount: 0,
+            issues: ["ROBOTS_UNAVAILABLE"],
+            robots: { state: "failed", code },
+          },
+        ],
+      },
+      "alfawzan",
+    );
+    assert.match(value.reason, pattern);
+    assert.equal(value.robots.code, code);
+  }
+});
+
+test('robots Retry-After beyond the build budget is honored without an immediate retry',async()=>{
+ const {readRobots}=await import('../server/catalogBuild.mjs');const {providers}=await import('../server/fatwaSources.mjs');let attempts=0;
+ const result=await readRobots(providers.alfawzan,async()=>{attempts++;return new Response('maintenance',{status:503,headers:{'Retry-After':'3600'}})},Date.now()+45000);assert.equal(attempts,1);assert.equal(result.policy,null);assert.equal(result.status.code,'HTTP_503');assert.equal(result.status.retryAfterSeconds,3600);
+});
+test('a persistent robots timeout is retried at most once',async()=>{
+ const {readRobots}=await import('../server/catalogBuild.mjs');const {providers}=await import('../server/fatwaSources.mjs');let attempts=0;
+ const result=await readRobots(providers.alfawzan,async()=>{attempts++;throw new DOMException('timeout fixture','TimeoutError')},Date.now()+30000);assert.equal(attempts,2);assert.equal(result.policy,null);assert.equal(result.status.code,'TIMEOUT');assert.equal(result.status.attempts,2);
+});
+
+test('otherwise unclassified Node network errors keep a safe code without exposing the message',async()=>{
+ const {robotsFailure}=await import('../server/catalogBuild.mjs');const result=robotsFailure(new Error('private-fixture',{cause:{code:'UND_ERR_INTERNAL_ERROR',message:'private-fixture'}}));assert.equal(result.code,'NETWORK_FAILURE');assert.equal(result.detail,'UND_ERR_INTERNAL_ERROR');assert.ok(!JSON.stringify(result).includes('private-fixture'));
+});

@@ -11,7 +11,7 @@ await writeFile(
 );
 for (const source of catalog.sources)
   console.log(
-    `Fatwa catalog ${source.key}: ${source.count} titles, ${source.pageCount} pages, ${source.coverage}${source.issues.length ? ` (${source.issues.join(", ")})` : ""}`,
+    `Fatwa catalog ${source.key}: ${source.count} titles, ${source.pageCount} pages, ${source.coverage}${source.robots ? ` [robots ${source.robots.code}]` : ""}${source.issues.length ? ` (${source.issues.join(", ")})` : ""}`,
   );
 if (!catalog.records.length)
   console.warn(
