@@ -88,3 +88,28 @@ test("crawl page budgets and unavailable files never masquerade as a complete em
     (e) => e.code === "CATALOG_NOT_READY",
   );
 });
+
+test("source readiness explains the blocking reason without asking users for build logs", () => {
+  const catalog = {
+    schemaVersion: 1,
+    generatedAt: "2026-11-04T00:00:00Z",
+    sources: [
+      {
+        key: "alfawzan",
+        count: 0,
+        pageCount: 0,
+        issues: ["ROBOTS_UNAVAILABLE"],
+      },
+      {
+        key: "ibnothaimeen",
+        count: 0,
+        pageCount: 0,
+        issues: ["ROBOTS_DISALLOW"],
+      },
+    ],
+    records: [],
+  };
+  assert.match(catalogStatus(catalog, "alfawzan").reason, /تعذّر الوصول/);
+  assert.match(catalogStatus(catalog, "ibnothaimeen").reason, /تمنع الفهرسة/);
+  assert.equal(catalogStatus(catalog, "alfawzan").available, false);
+});

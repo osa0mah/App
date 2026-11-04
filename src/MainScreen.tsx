@@ -366,6 +366,7 @@ export default function App() {
                     : "سورتان متاحتان في النسخة الأولى",
                 )}
                 <TextInput
+                  nativeID="quran-surah-search"
                   accessibilityLabel="البحث عن سورة"
                   style={s.input}
                   placeholder="ابحث باسم السورة أو رقمها"

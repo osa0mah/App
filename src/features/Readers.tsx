@@ -114,6 +114,7 @@ export default function Readers() {
       {!!reciters.length && (
         <>
           <TextInput
+            nativeID="reciter-search"
             accessibilityLabel="البحث عن قارئ"
             style={f.input}
             value={search}
@@ -236,6 +237,7 @@ export default function Readers() {
       {moshaf && (
         <>
           <TextInput
+            nativeID="audio-surah-search"
             accessibilityLabel="البحث عن سورة للاستماع"
             placeholder="ابحث عن سورة"
             value={query}

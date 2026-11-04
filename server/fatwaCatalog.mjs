@@ -35,11 +35,32 @@ export async function loadCatalog(
 }
 export function catalogStatus(catalog, key) {
   const source = catalog.sources.find((s) => s.key === key);
+  const count = catalog.records.filter((r) => r.provider === key).length;
+  const issues = source?.issues || [];
+  let reason = null;
+  if (!count) {
+    if (issues.includes("ROBOTS_DISALLOW"))
+      reason = "تعليمات المصدر تمنع الفهرسة الآلية.";
+    else if (issues.includes("ROBOTS_UNAVAILABLE"))
+      reason =
+        "تعذّر الوصول إلى تعليمات الفهرسة لدى المصدر، فتوقفت عملية الجمع.";
+    else if (issues.includes("SOURCE_CHALLENGE"))
+      reason = "المصدر يطلب تحققًا إضافيًا قبل قراءة الصفحات.";
+    else if (issues.includes("SOURCE_ACCESS_DENIED"))
+      reason = "المصدر لم يسمح بقراءة الصفحات أثناء الفهرسة.";
+    else if (issues.includes("PAGE_UNAVAILABLE"))
+      reason = "تعذّرت قراءة صفحات المصدر أثناء بناء الفهرس.";
+    else
+      reason =
+        "لم تُكتشف عناوين قابلة للفهرسة في الصفحات التي تم الوصول إليها.";
+  }
   return {
-    count: catalog.records.filter((r) => r.provider === key).length,
+    count,
     updatedAt: catalog.generatedAt,
     coverage: "partial",
-    available: !!source && catalog.records.some((r) => r.provider === key),
+    available: !!source && count > 0,
+    pageCount: source?.pageCount ?? 0,
+    reason,
   };
 }
 export function queryCatalog(catalog, key, query) {

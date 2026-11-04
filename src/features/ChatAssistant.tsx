@@ -189,6 +189,7 @@ export default function ChatAssistant({
         ))}
       </View>
       <TextInput
+        nativeID="assistant-message"
         accessibilityLabel="رسالتك للمساعد"
         placeholder="اكتب سؤالك هنا…"
         multiline

@@ -42,6 +42,8 @@ export default function Fatwas({
     updatedAt?: string;
     available: boolean;
     error?: string;
+    reason?: string | null;
+    pageCount?: number;
   } | null>(null);
   useEffect(() => {
     let active = true;
@@ -177,6 +179,11 @@ export default function Fatwas({
                 : "لم يجهز فهرس هذا الشيخ من الصفحات الرسمية بعد. البحث غير متاح لهذا المصدر حاليًا.")
             : "جارٍ التحقق من الفهرس…"}
         </Text>
+        {catalogInfo?.key === ids[index] && catalogInfo.reason && (
+          <Text selectable style={f.note}>
+            سبب عدم الجاهزية: {catalogInfo.reason}
+          </Text>
+        )}
         {catalogInfo?.key === ids[index] && catalogInfo.updatedAt && (
           <Text style={f.source}>
             تحديث الفهرس:{" "}
@@ -185,6 +192,7 @@ export default function Fatwas({
         )}
       </View>
       <TextInput
+        nativeID="fatwa-topic-search"
         accessibilityLabel="البحث في الفتاوى"
         placeholder="مثل: صلاة الوتر أو زكاة المال"
         style={f.input}
