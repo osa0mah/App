@@ -11,10 +11,14 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { findDestination, surahs, Surah } from "./content";
+import { surahs, Surah } from "./content";
 import Tafsir from "./features/Tafsir";
 import VerseAudio from "./features/VerseAudio";
 import Readers from "./features/Readers";
+import ChatAssistant, {
+  ChatMessage,
+  ChatSuggestion,
+} from "./features/ChatAssistant";
 import Fatwas from "./features/Fatwas";
 import Recitation from "./features/Recitation";
 const tabs = ["الرئيسية", "القرآن", "تعلّم", "المساعد"] as const;
@@ -64,9 +68,27 @@ export default function App() {
   const [verse, setVerse] = useState<number | null>(null);
   const [query, setQuery] = useState("");
   const [reader] = useState("الحصري");
-  const [prompt, setPrompt] = useState("");
-  const [reply, setReply] = useState("");
-  const [destination, setDestination] = useState<Screen | null>(null);
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+  const [fatwaContext, setFatwaContext] = useState<{
+    scholar?: string;
+    query?: string;
+  }>({});
+  const openChatSection = (target: ChatSuggestion) => {
+    setTafsirTarget(
+      target.chapter && target.verse
+        ? { chapter: target.chapter, verse: target.verse }
+        : null,
+    );
+    setScreen(target.section);
+    setSurah(
+      target.chapter
+        ? (surahs.find((c) => c.id === target.chapter) ?? null)
+        : null,
+    );
+    setQuery("");
+    if (target.section === "الفتاوى")
+      setFatwaContext({ scholar: target.scholar, query: target.query });
+  };
   const [bookmark, setBookmark] = useState<{
     id: number;
     verse: number;
@@ -167,7 +189,11 @@ export default function App() {
                     icon: "▤",
                     desc: "ارجع إلى المصادر الرسمية",
                   },
-                  { name: "المساعد", icon: "✦", desc: "وصول أسرع إلى الأقسام" },
+                  {
+                    name: "المساعد",
+                    icon: "✦",
+                    desc: "اسأل واقرأ الإجابة هنا",
+                  },
                 ] as const
               ).map((item) => (
                 <Pressable
@@ -357,65 +383,18 @@ export default function App() {
           </>
         )}
         {screen === "القراء" && <Readers />}
-        {screen === "الفتاوى" && <Fatwas />}
+        {screen === "الفتاوى" && (
+          <Fatwas
+            initialScholar={fatwaContext.scholar}
+            initialQuery={fatwaContext.query}
+          />
+        )}
         {screen === "المساعد" && (
-          <>
-            {heading("بماذا تريد أن تبدأ؟", "مساعد للوصول إلى أقسام التطبيق")}
-            <View style={s.card}>
-              <Text style={s.prose}>
-                هذه أداة توجيه بسيطة بالكلمات المفتاحية، وليست محادثة ذكاء
-                اصطناعي بعد. لا تصدر فتاوى أو تفسيرات.
-              </Text>
-            </View>
-            <View style={s.chips}>
-              {[
-                "أريد تفسير سورة الفاتحة",
-                "فتاوى ابن باز",
-                "أريد مراجعة حفظي",
-              ].map((x) => (
-                <Pressable
-                  accessibilityRole="button"
-                  style={s.chip}
-                  key={x}
-                  onPress={() => setPrompt(x)}
-                >
-                  <Text style={s.small}>{x}</Text>
-                </Pressable>
-              ))}
-            </View>
-            <TextInput
-              accessibilityLabel="طلبك للمساعد"
-              multiline
-              style={[s.input, { minHeight: 100 }]}
-              value={prompt}
-              onChangeText={setPrompt}
-              placeholder="اكتب ما تبحث عنه…"
-            />
-            <Button
-              label="اعثر على القسم المناسب"
-              onPress={() => {
-                const d = findDestination(prompt);
-                setDestination(d);
-                setReply(
-                  d
-                    ? `يمكنك متابعة طلبك في قسم «${d}». الإجابات الموثقة داخل المحادثة ستتوفر بعد ربط المصادر.`
-                    : "جرّب كتابة: تفسير، فتاوى، أو تسميع.",
-                );
-              }}
-            />
-            {!!reply && (
-              <View accessibilityLiveRegion="polite" style={s.card}>
-                <Text style={s.prose}>{reply}</Text>
-                {destination && (
-                  <Button
-                    secondary
-                    label={`فتح ${destination}`}
-                    onPress={() => navigate(destination)}
-                  />
-                )}
-              </View>
-            )}
-          </>
+          <ChatAssistant
+            messages={chatMessages}
+            onMessagesChange={setChatMessages}
+            onNavigate={openChatSection}
+          />
         )}
         {!fullReader && (
           <Text style={s.footer}>أثر القرآن · رحلة علم وعمل</Text>

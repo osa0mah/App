@@ -1,0 +1,244 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
+import { contentBase } from "./contentApi";
+import { f } from "./featureStyles";
+export type ChatSuggestion = {
+  section: "القرآن" | "تعلّم" | "الفتاوى" | "القراء" | "التسميع";
+  chapter?: number;
+  verse?: number;
+  scholar?: string;
+  query?: string;
+};
+export type ChatMessage = {
+  id: string;
+  role: "user" | "assistant";
+  text: string;
+  source?: { title: string; url: string };
+  suggestion?: ChatSuggestion | null;
+  explanation?: string;
+};
+type Props = {
+  messages: ChatMessage[];
+  onMessagesChange: React.Dispatch<React.SetStateAction<ChatMessage[]>>;
+  onNavigate: (suggestion: ChatSuggestion) => void;
+};
+export default function ChatAssistant({
+  messages,
+  onMessagesChange,
+  onNavigate,
+}: Props) {
+  const [input, setInput] = useState("");
+  const [pending, setPending] = useState(false);
+  const request = useRef<AbortController | null>(null);
+  useEffect(
+    () => () => {
+      const current = request.current;
+      request.current = null;
+      current?.abort();
+    },
+    [],
+  );
+  const send = async () => {
+    const text = input.trim();
+    if (!text || request.current) return;
+    const controller = new AbortController();
+    request.current = controller;
+    const timeout = setTimeout(() => controller.abort(), 55000);
+    setPending(true);
+    setInput("");
+    onMessagesChange((previous) => [
+      ...previous,
+      { id: `${Date.now()}-user`, role: "user", text },
+    ]);
+    try {
+      const response = await fetch(`${contentBase}/api/chat`, {
+        method: "POST",
+        signal: controller.signal,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: text,
+          history: messages
+            .slice(-6)
+            .map((m) => ({ role: m.role, content: m.text.slice(0, 1200) })),
+        }),
+      });
+      if (
+        !(response.headers.get("content-type") || "").includes(
+          "application/json",
+        )
+      )
+        throw Error(
+          "خدمة المحادثة لم تصبح متاحة بعد. انتظر اكتمال نشر التحديث.",
+        );
+      const data = await response.json();
+      if (!response.ok || typeof data.text !== "string")
+        throw Error(data.error || "تعذّر تجهيز الإجابة.");
+      if (request.current !== controller) return;
+      onMessagesChange((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}-assistant`,
+          role: "assistant",
+          text: data.text,
+          source: data.source,
+          suggestion: data.suggestion,
+          explanation: data.explanation,
+        },
+      ]);
+    } catch (e) {
+      if (request.current !== controller) return;
+      onMessagesChange((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}-error`,
+          role: "assistant",
+          text: controller.signal.aborted
+            ? "تأخر المصدر في الرد. حاول مجددًا بعد قليل."
+            : e instanceof Error
+              ? e.message
+              : "تعذّر الاتصال بالمساعد.",
+        },
+      ]);
+    } finally {
+      clearTimeout(timeout);
+      if (request.current === controller) {
+        request.current = null;
+        setPending(false);
+      }
+    }
+  };
+  return (
+    <>
+      <Text style={f.title}>محادثتك مع أثر القرآن</Text>
+      <Text style={f.note}>
+        اسأل هنا لتظهر الإجابة ومصدرها في المحادثة. فتح القسم المرتبط خيار إضافي
+        أسفل الإجابة.
+      </Text>
+      {!messages.length && (
+        <View style={f.card}>
+          <Text style={f.text}>
+            أهلًا بك. أقدر أعرض لك تفسير الآية من النص المضمن، أو أبحث عن نص
+            فتوى من الشيخ الذي تختاره. إذا لم أجد مصدرًا موثقًا سأوضح ذلك.
+          </Text>
+        </View>
+      )}
+      <View>
+        {messages.map((m) => (
+          <View
+            key={m.id}
+            style={[f.card, s.bubble, m.role === "user" ? s.user : s.assistant]}
+          >
+            <Text style={s.role}>
+              {m.role === "user" ? "أنت" : "أثر القرآن"}
+            </Text>
+            <Text
+              selectable
+              accessibilityLiveRegion={
+                m.role === "assistant" ? "polite" : "none"
+              }
+              style={f.text}
+            >
+              {m.text}
+            </Text>
+            {m.explanation && (
+              <View style={s.explanation}>
+                <Text style={f.note}>شرح مساعد للنص المنقول</Text>
+                <Text selectable style={f.text}>
+                  {m.explanation}
+                </Text>
+              </View>
+            )}
+            {m.source && (
+              <Text selectable style={f.source}>
+                المصدر: {m.source.title}
+                {"\n"}
+                {m.source.url}
+              </Text>
+            )}
+            {m.suggestion && (
+              <Pressable
+                accessibilityRole="button"
+                style={[f.chip, { marginTop: 16 }]}
+                onPress={() => onNavigate(m.suggestion!)}
+              >
+                <Text style={f.label}>فتح قسم {m.suggestion.section} ←</Text>
+              </Pressable>
+            )}
+          </View>
+        ))}
+      </View>
+      {pending && (
+        <Text accessibilityLiveRegion="polite" style={f.note}>
+          جارٍ تجهيز إجابتك من المصادر…
+        </Text>
+      )}
+      <View style={f.row}>
+        {[
+          "فسّر الآية الثانية من الفاتحة",
+          "أريد فتوى ابن باز عن صلاة الوتر",
+          "كيف أبدأ التسميع؟",
+        ].map((value) => (
+          <Pressable
+            accessibilityRole="button"
+            key={value}
+            style={f.chip}
+            onPress={() => setInput(value)}
+          >
+            <Text style={f.label}>{value}</Text>
+          </Pressable>
+        ))}
+      </View>
+      <TextInput
+        accessibilityLabel="رسالتك للمساعد"
+        placeholder="اكتب سؤالك هنا…"
+        multiline
+        maxLength={1200}
+        style={[f.input, { minHeight: 90 }]}
+        value={input}
+        onChangeText={setInput}
+      />
+      <Pressable
+        accessibilityRole="button"
+        accessibilityState={{ disabled: pending || !input.trim() }}
+        disabled={pending || !input.trim()}
+        style={[f.button, (pending || !input.trim()) && { opacity: 0.55 }]}
+        onPress={() => void send()}
+      >
+        <Text style={f.buttonText}>
+          {pending ? "انتظر الإجابة…" : "إرسال الرسالة"}
+        </Text>
+      </Pressable>
+      {!!messages.length && (
+        <Pressable
+          accessibilityRole="button"
+          style={f.chip}
+          onPress={() => {
+            request.current?.abort();
+            request.current = null;
+            setPending(false);
+            onMessagesChange([]);
+          }}
+        >
+          <Text style={f.label}>بدء محادثة جديدة</Text>
+        </Pressable>
+      )}
+      <Text style={f.note}>
+        النص المنقول يظهر كما ورد في المصدر. إذا ظهر شرح مساعد، فهو منفصل عن
+        النص الأصلي. المحادثة محفوظة خلال الجلسة فقط.
+      </Text>
+    </>
+  );
+}
+const s = StyleSheet.create({
+  bubble: { maxWidth: "96%", width: "96%" },
+  user: { alignSelf: "flex-end", backgroundColor: "#E4EDE0" },
+  assistant: { alignSelf: "flex-start" },
+  role: {
+    color: "#17624D",
+    fontSize: 12,
+    fontWeight: "700",
+    textAlign: "right",
+    marginBottom: 10,
+  },
+  explanation: { borderTopWidth: 1, borderTopColor: "#E4E8DF", marginTop: 16 },
+});

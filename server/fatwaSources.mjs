@@ -1,4 +1,5 @@
 import { load } from "cheerio";
+import { relevance, searchTopic } from "./searchText.mjs";
 export const providers = {
   binbaz: {
     name: "عبد العزيز بن باز",
@@ -22,7 +23,12 @@ export const providers = {
     path: /^\/content\/\d+(?:\/|$)/,
   },
 };
-export class SourceError extends Error {}
+export class SourceError extends Error {
+  constructor(message, code = "SOURCE_UNAVAILABLE") {
+    super(message);
+    this.code = code;
+  }
+}
 function allowedUrl(value, provider) {
   const u = new URL(value, provider.base);
   if (
@@ -35,23 +41,49 @@ function allowedUrl(value, provider) {
     throw new SourceError("عنوان المصدر غير مسموح.");
   return u;
 }
-export async function sourceHtml(url, provider, fetcher = fetch) {
+export async function sourceHtml(url, provider, fetcher = fetch, init = {}) {
+  const cookies = new Map();
+  let method = init.method || "GET";
+  let requestBody = init.body;
   let current = allowedUrl(url, provider);
   for (let attempt = 0; attempt < 4; attempt++) {
     let response;
     try {
       response = await fetcher(current.href, {
         redirect: "manual",
+        method,
+        ...(method === "POST" ? { body: requestBody } : {}),
         signal: AbortSignal.timeout(7000),
         headers: {
           Accept: "text/html",
           "User-Agent": "AtharQuran/1.0 (+public-source-reader)",
+          ...(method === "POST"
+            ? { "Content-Type": "application/x-www-form-urlencoded" }
+            : {}),
+          ...(init.cookie || cookies.size
+            ? {
+                Cookie: [init.cookie, ...cookies.values()]
+                  .filter(Boolean)
+                  .join("; "),
+              }
+            : {}),
         },
       });
     } catch {
       throw new SourceError("تعذّر الاتصال بموقع الشيخ. حاول مجددًا لاحقًا.");
     }
+    for (const value of response.headers.getSetCookie?.() || []) {
+      const pair = value.split(";")[0];
+      cookies.set(pair.split("=")[0], pair);
+    }
     if ([301, 302, 303, 307, 308].includes(response.status)) {
+      if (
+        response.status === 303 ||
+        ([301, 302].includes(response.status) && method === "POST")
+      ) {
+        method = "GET";
+        requestBody = undefined;
+      }
       const location = response.headers.get("location");
       if (!location) throw new SourceError("تحويل غير صالح من المصدر.");
       current = allowedUrl(new URL(location, current).href, provider);
@@ -62,12 +94,22 @@ export async function sourceHtml(url, provider, fetcher = fetch) {
         "موقع الشيخ لم يسمح بجلب المحتوى حاليًا. حاول لاحقًا.",
       );
     const type = response.headers.get("content-type") || "";
-    if (!type.includes("text/html"))
+    if (!type.includes("text/html") && !type.includes("application/xhtml+xml"))
       throw new SourceError("المصدر لم يُرجع صفحة نصية يمكن قراءتها.");
     const body = await response.text();
     if (body.length > 2_000_000)
       throw new SourceError("صفحة المصدر أكبر من الحد المتاح.");
-    return { html: body, url: current.href };
+    const title = load(body)("title").text();
+    if (/just a moment|access denied|captcha|attention required/i.test(title))
+      throw new SourceError(
+        "المصدر يطلب تحققًا إضافيًا ولا يسمح بقراءة البحث آليًا حاليًا.",
+        "SOURCE_CHALLENGE",
+      );
+    return {
+      html: body,
+      url: current.href,
+      cookie: [init.cookie, ...cookies.values()].filter(Boolean).join("; "),
+    };
   }
   throw new SourceError("تعذّر إكمال التحويل إلى صفحة المصدر.");
 }
@@ -78,11 +120,11 @@ const clean = (s) =>
     .replace(/\n[ \t]+/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
-export function extractSearch(html, url, provider) {
+export function extractSearch(html, url, provider, query = "") {
   const $ = load(html);
   const result = [];
   const seen = new Set();
-  $("nav,aside,header,footer,.breadcrumb,.related,.related-posts").remove();
+  $("nav,aside,body > header,header[role=banner],.site-header,footer,.breadcrumb,.related,.related-posts").remove();
   const containers = $(
     ".search-results,.search-result,.view-content,.search-content",
   );
@@ -91,85 +133,150 @@ export function extractSearch(html, url, provider) {
     : $("main").length
       ? $("main")
       : $("body");
-  root.find("a[href]").each((_, a) => {
-    const title = clean($(a).text());
-    if (title.length < 5) return;
-    let link;
-    try {
-      link = allowedUrl(new URL($(a).attr("href"), url).href, provider);
-    } catch {
-      return;
-    }
-    if (!provider.path.test(link.pathname) || seen.has(link.pathname)) return;
-    seen.add(link.pathname);
-    result.push({
-      id: link.pathname,
-      title: title.slice(0, 220),
-      sourceUrl: link.href,
-      scholar: provider.name,
+  root
+    .filter("a[href]")
+    .add(root.find("a[href]"))
+    .each((_, a) => {
+      const title = clean($(a).text());
+      if (title.length < 5) return;
+      let link;
+      try {
+        link = allowedUrl(new URL($(a).attr("href"), url).href, provider);
+      } catch {
+        return;
+      }
+      if (!provider.path.test(link.pathname) || seen.has(link.pathname)) return;
+      seen.add(link.pathname);
+      result.push({
+        id: link.pathname,
+        title: title.slice(0, 220),
+        sourceUrl: link.href,
+        scholar: provider.name,
+        snippet: clean(
+          $(a).closest("article,.search-result,.result,.views-row,li").text(),
+        ).slice(0, 600),
+      });
     });
-  });
-  return result.slice(0, 20);
+  return result
+    .sort(
+      (a, b) =>
+        relevance(`${b.title} ${b.snippet}`, query) -
+        relevance(`${a.title} ${a.snippet}`, query),
+    )
+    .slice(0, 20);
 }
-export function discoverSearch(html, url, provider, query) {
+export function discoverSearchRequest(html, url, provider, query) {
   const $ = load(html);
   let endpoint = null;
   $("form").each((_, form) => {
     if (endpoint) return;
     const el = $(form);
-    if ((el.attr("method") || "get").toLowerCase() !== "get") return;
+    const method = (el.attr("method") || "get").toUpperCase();
+    if (
+      !["GET", "POST"].includes(method) ||
+      el.find('input[type="password"]').length
+    )
+      return;
     const input = el
       .find(
-        'input[type="search"],input[name="q"],input[name="keys"],input[name="search"],input[name="query"],input[name="keyword"],input[name="search_api_fulltext"]',
+        'input[type="search"],input[name="q"],input[name="s"],input[name="keys"],input[name="search"],input[name="query"],input[name="keyword"],input[name="search_api_fulltext"]',
       )
       .first();
     if (!input.length || !input.attr("name")) return;
+    if (
+      method === "POST" &&
+      !/search|بحث/i.test(el.attr("action") || "") &&
+      el.attr("role") !== "search" &&
+      input.attr("type") !== "search" &&
+      !/بحث|ابحث/.test(el.text()) &&
+      !["keys", "search", "search_api_fulltext"].includes(input.attr("name"))
+    )
+      return;
     try {
       const u = allowedUrl(
         new URL(el.attr("action") || url, url).href,
         provider,
       );
-      el.find('input[type="hidden"][name]').each((_, hidden) => {
-        u.searchParams.set(
-          $(hidden).attr("name"),
-          $(hidden).attr("value") || "",
-        );
-      });
-      u.searchParams.set(input.attr("name"), query);
-      endpoint = u.href;
+      const params = new URLSearchParams();
+      el.find(
+        'input[type="hidden"][name],button[type="submit"][name],input[type="submit"][name]',
+      ).each((_, hidden) =>
+        params.set($(hidden).attr("name"), $(hidden).attr("value") || ""),
+      );
+      params.set(input.attr("name"), query);
+      if (method === "GET") {
+        for (const [k, v] of params) u.searchParams.set(k, v);
+        endpoint = { url: u.href, method };
+      } else endpoint = { url: u.href, method, body: params.toString() };
     } catch {
-      /* Ignore off-site forms. */
+      /* Never submit off-site forms. */
     }
   });
   return endpoint;
 }
+export function discoverSearch(html, url, provider, query) {
+  const request = discoverSearchRequest(html, url, provider, query);
+  return request?.method === "GET" ? request.url : null;
+}
 export async function searchSource(provider, query, fetcher = fetch) {
-  let endpoint = provider.search?.(query);
-  if (!endpoint) {
-    const home = await sourceHtml(provider.base, provider, fetcher);
-    endpoint = discoverSearch(home.html, home.url, provider, query);
-    if (!endpoint) {
-      const $ = load(home.html);
-      const link = $("a[href]")
-        .toArray()
-        .map((a) => $(a).attr("href"))
-        .find((h) => h && /search|بحث/.test(h));
-      if (link) {
+  const topic = searchTopic(query);
+  if (!topic)
+    throw new SourceError(
+      "اكتب موضوع الفتوى، مثل صلاة الوتر أو زكاة المال.",
+      "QUERY_TOO_BROAD",
+    );
+  const home = await sourceHtml(provider.base, provider, fetcher);
+  let request = discoverSearchRequest(home.html, home.url, provider, topic);
+  let cookie = home.cookie;
+  if (!request) {
+    const $ = load(home.html);
+    const links = $("a[href]")
+      .toArray()
+      .map((a) => $(a).attr("href"))
+      .filter((h) => h && /search|بحث/.test(h));
+    for (const link of links.slice(0, 1)) {
+      try {
         const page = await sourceHtml(
           new URL(link, home.url).href,
           provider,
           fetcher,
+          { cookie },
         );
-        endpoint = discoverSearch(page.html, page.url, provider, query);
+        request = discoverSearchRequest(page.html, page.url, provider, topic);
+        cookie = page.cookie;
+      } catch (error) {
+        if (!(error instanceof SourceError)) throw error;
       }
     }
   }
-  if (!endpoint)
+  if (!request && provider.search)
+    request = { url: provider.search(topic), method: "GET" };
+  if (!request)
     throw new SourceError(
-      "لم نتمكن من ربط البحث النصي لهذا المصدر بعد. جرّب شيخًا آخر حاليًا.",
+      "لم نتمكن من قراءة نموذج البحث لهذا المصدر؛ هذا لا يعني عدم وجود فتاوى.",
+      "SEARCH_UNSUPPORTED",
     );
-  const page = await sourceHtml(endpoint, provider, fetcher);
-  return extractSearch(page.html, page.url, provider);
+  const page = await sourceHtml(request.url, provider, fetcher, {
+    ...request,
+    cookie,
+  });
+  const results = extractSearch(page.html, page.url, provider, topic);
+  if (results.length) return results;
+  const document = load(page.html);
+  document(
+    'script,style,template,noscript,[hidden],[style*="display:none"],[style*="display: none"]',
+  ).remove();
+  const visible = document("body").text();
+  if (
+    /لا توجد نتائج|لم (?:يتم العثور|نعثر|يعثر)|لا يوجد نتائج|لم نجد نتائج|no results|no matching/i.test(
+      visible,
+    )
+  )
+    return [];
+  throw new SourceError(
+    "تعذّر قراءة نتائج البحث من موقع الشيخ. لم نتحقق من خلو النتائج؛ جرّب لاحقًا.",
+    "SEARCH_PARSE_FAILED",
+  );
 }
 export function extractArticle(html, url, provider) {
   const source = allowedUrl(url, provider);

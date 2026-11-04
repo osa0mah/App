@@ -40,6 +40,7 @@ export async function handler(event) {
         });
   } catch (e) {
     return respond(502, {
+      code: e instanceof SourceError ? e.code : "SOURCE_UNAVAILABLE",
       error:
         e instanceof SourceError
           ? e.message

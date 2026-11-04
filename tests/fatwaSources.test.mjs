@@ -5,6 +5,7 @@ import {
   extractSearch,
   extractArticle,
   discoverSearch,
+  discoverSearchRequest,
   sourceHtml,
   searchSource,
   readSource,
@@ -120,4 +121,101 @@ test("function validates scholar, method and query before any upstream request",
     ).statusCode,
     400,
   );
+});
+
+test("an unreadable search page is an integration failure, not zero results", async () => {
+  await assert.rejects(
+    searchSource(p, "الصلاة", async () =>
+      response("<main><h1>الصفحة الرئيسية</h1></main>"),
+    ),
+    (error) => error.code === "SEARCH_PARSE_FAILED",
+  );
+});
+test("search submits the actual form field instead of assuming q", async () => {
+  const seen = [];
+  const results = await searchSource(
+    p,
+    "أبغى فتوى ابن باز عن الصلاة",
+    async (url, init) => {
+      seen.push({ url, init });
+      return seen.length === 1
+        ? response(
+            '<form method="get" action="/find"><input type="search" name="search_term"><input type="hidden" name="type" value="fatwa"></form>',
+          )
+        : response('<main><a href="/fatwas/123/title">فضل الصلاة</a></main>');
+    },
+  );
+  assert.equal(results.length, 1);
+  assert.equal(new URL(seen[1].url).pathname, "/find");
+  assert.equal(new URL(seen[1].url).searchParams.get("search_term"), "الصلاة");
+  assert.equal(new URL(seen[1].url).searchParams.get("type"), "fatwa");
+});
+test("POST search forms preserve their fields and public session without leaking them", async () => {
+  const seen = [];
+  await searchSource(p, "صلاة الوتر", async (url, init) => {
+    seen.push({ url, init });
+    return seen.length === 1
+      ? response(
+          '<form method="post" action="/search"><input name="keys"><input type="hidden" name="form_token" value="public-test-token"></form>',
+          200,
+          { "Set-Cookie": "session=public-fixture; HttpOnly; Secure" },
+        )
+      : response('<main><a href="/fatwas/123/title">صلاة الوتر</a></main>');
+  });
+  assert.equal(seen[1].init.method, "POST");
+  assert.equal(
+    new URLSearchParams(seen[1].init.body).get("keys"),
+    "صلاة الوتر",
+  );
+  assert.equal(
+    new URLSearchParams(seen[1].init.body).get("form_token"),
+    "public-test-token",
+  );
+  assert.match(seen[1].init.headers.Cookie, /session=public-fixture/);
+});
+test("relevant results precede unrelated sidebar-like results", async () => {
+  const results = extractSearch(
+    '<main><a href="/fatwas/1/test">حكم السفر للعمل</a><a href="/fatwas/2/test">وقت صلاة الوتر</a></main>',
+    p.base,
+    p,
+    "صلاة الوتر",
+  );
+  assert.equal(results[0].id, "/fatwas/2/test");
+});
+
+test("hidden no-results templates do not masquerade as an empty source search", async () => {
+  await assert.rejects(
+    searchSource(p, "الصلاة", async () =>
+      response(
+        '<main><script>const empty="لا توجد نتائج";</script><template>لا توجد نتائج</template><div hidden>لا توجد نتائج</div></main>',
+      ),
+    ),
+    (error) => error.code === "SEARCH_PARSE_FAILED",
+  );
+});
+
+test("a result class on the link itself remains searchable", () => {
+  const result = extractSearch(
+    '<main><a class="search-result" href="/fatwas/123/test">صلاة الوتر</a></main>',
+    p.base,
+    p,
+    "صلاة الوتر",
+  );
+  assert.equal(result.length, 1);
+});
+
+test("non-search POST forms are never submitted", () => {
+  assert.equal(
+    discoverSearchRequest(
+      '<form method="post" action="/subscribe"><input name="q"><button>Subscribe</button></form>',
+      p.base,
+      p,
+      "الصلاة",
+    ),
+    null,
+  );
+});
+
+test('result titles inside article headers are preserved while global headers are excluded',()=>{
+ const results=extractSearch('<body><header><a href="/fatwas/1/nav">عنوان في رأس الموقع</a></header><main><article class="search-result"><header><h2><a href="/fatwas/2/test">وقت صلاة الوتر</a></h2></header></article></main></body>',p.base,p,'صلاة الوتر');assert.deepEqual(results.map(r=>r.id),['/fatwas/2/test']);
 });

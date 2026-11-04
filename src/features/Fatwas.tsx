@@ -1,18 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Platform, Pressable, Text, TextInput, View } from "react-native";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { scholars } from "../content";
 import { fatwas, searchFatwas, Fatwa } from "./fatwaIndex";
 import { f } from "./featureStyles";
+import { contentBase } from "./contentApi";
 type Result = Pick<Fatwa, "id" | "title" | "sourceUrl" | "scholar">;
 const ids = ["binbaz", "alfawzan", "ibnothaimeen"];
-const base =
-  Platform.OS === "web"
-    ? ""
-    : process.env.EXPO_PUBLIC_CONTENT_API_URL ||
-      "https://joyful-kangaroo-2ad9b7.netlify.app";
 async function getContent(params: Record<string, string>, signal: AbortSignal) {
   const response = await fetch(
-    `${base}/api/fatwas?${new URLSearchParams(params)}`,
+    `${contentBase}/api/fatwas?${new URLSearchParams(params)}`,
     { signal },
   );
   const type = response.headers.get("content-type") || "";
@@ -24,9 +20,17 @@ async function getContent(params: Record<string, string>, signal: AbortSignal) {
   if (!response.ok) throw Error(body.error || "تعذّر جلب المحتوى من المصدر.");
   return body;
 }
-export default function Fatwas() {
-  const [index, setIndex] = useState(0);
-  const [query, setQuery] = useState("");
+export default function Fatwas({
+  initialScholar,
+  initialQuery,
+}: {
+  initialScholar?: string;
+  initialQuery?: string;
+}) {
+  const [index, setIndex] = useState(
+    Math.max(0, ids.indexOf(initialScholar ?? "binbaz")),
+  );
+  const [query, setQuery] = useState(initialQuery ?? "");
   const [selected, setSelected] = useState<Fatwa | null>(null);
   const [results, setResults] = useState<Result[]>([]);
   const [loading, setLoading] = useState(false);
@@ -36,8 +40,8 @@ export default function Fatwas() {
   const scholar = scholars[index].name;
   useEffect(
     () => () => {
-      const current=request.current;
-      request.current=null;
+      const current = request.current;
+      request.current = null;
       current?.abort();
     },
     [],

@@ -7,6 +7,12 @@
   EXPO_NO_TELEMETRY = "1"
 
 [[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/fatwas"
   to = "/.netlify/functions/fatwas"
   status = 200
