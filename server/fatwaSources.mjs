@@ -24,9 +24,10 @@ export const providers = {
   },
 };
 export class SourceError extends Error {
-  constructor(message, code = "SOURCE_UNAVAILABLE") {
+  constructor(message, code = "SOURCE_UNAVAILABLE", diagnostics = undefined) {
     super(message);
     this.code = code;
+    this.diagnostics = diagnostics;
   }
 }
 function allowedUrl(value, provider) {
@@ -124,7 +125,9 @@ export function extractSearch(html, url, provider, query = "") {
   const $ = load(html);
   const result = [];
   const seen = new Set();
-  $("nav,aside,body > header,header[role=banner],.site-header,footer,.breadcrumb,.related,.related-posts").remove();
+  $(
+    "nav,aside,body > header,header[role=banner],.site-header,footer,.breadcrumb,.related,.related-posts",
+  ).remove();
   const containers = $(
     ".search-results,.search-result,.view-content,.search-content",
   );
@@ -218,6 +221,72 @@ export function discoverSearch(html, url, provider, query) {
   const request = discoverSearchRequest(html, url, provider, query);
   return request?.method === "GET" ? request.url : null;
 }
+export function inspectSearchPage(html, url, provider) {
+  const $ = load(html);
+  const page = allowedUrl(url, provider);
+  const links = [];
+  const seen = new Set();
+  $("a[href]").each((_, a) => {
+    let u;
+    try {
+      u = allowedUrl(new URL($(a).attr("href"), page).href, provider);
+    } catch {
+      return;
+    }
+    if (seen.has(u.pathname)) return;
+    seen.add(u.pathname);
+    links.push({
+      path: u.pathname.slice(0, 180),
+      title: clean($(a).text()).slice(0, 100),
+    });
+  });
+  const forms = $("form")
+    .toArray()
+    .slice(0, 6)
+    .map((form) => {
+      const el = $(form);
+      let action = null;
+      try {
+        action = allowedUrl(
+          new URL(el.attr("action") || page.href, page).href,
+          provider,
+        ).pathname;
+      } catch {
+        /* no offsite form details */
+      }
+      return {
+        method: (el.attr("method") || "GET").toUpperCase(),
+        action,
+        fields: el
+          .find("input[name]")
+          .toArray()
+          .map((i) => $(i).attr("name"))
+          .filter(
+            (n) =>
+              /^[a-zA-Z0-9_\[\]-]{1,60}$/.test(n) &&
+              !/token|csrf|password|session|auth/i.test(n),
+          )
+          .slice(0, 12),
+      };
+    });
+  return {
+    source: provider.name,
+    pagePath: page.pathname,
+    title: clean($("title").text()).slice(0, 180),
+    formCount: $("form").length,
+    forms,
+    linkCount: $("a[href]").length,
+    contentLinkCount: links.filter((l) => provider.path.test(l.path)).length,
+    sampleLinks: links
+      .filter((l) => /fat|content|node|search|بحث|فتوى/i.test(l.path))
+      .concat(
+        links.filter((l) => !/fat|content|node|search|بحث|فتوى/i.test(l.path)),
+      )
+      .slice(0, 12),
+    scriptCount: $("script").length,
+    hasClientRoot: $("#app,#root,#__next").length > 0,
+  };
+}
 export async function searchSource(provider, query, fetcher = fetch) {
   const topic = searchTopic(query);
   if (!topic)
@@ -276,6 +345,7 @@ export async function searchSource(provider, query, fetcher = fetch) {
   throw new SourceError(
     "تعذّر قراءة نتائج البحث من موقع الشيخ. لم نتحقق من خلو النتائج؛ جرّب لاحقًا.",
     "SEARCH_PARSE_FAILED",
+    inspectSearchPage(page.html, page.url, provider),
   );
 }
 export function extractArticle(html, url, provider) {

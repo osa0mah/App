@@ -216,6 +216,58 @@ test("non-search POST forms are never submitted", () => {
   );
 });
 
-test('result titles inside article headers are preserved while global headers are excluded',()=>{
- const results=extractSearch('<body><header><a href="/fatwas/1/nav">عنوان في رأس الموقع</a></header><main><article class="search-result"><header><h2><a href="/fatwas/2/test">وقت صلاة الوتر</a></h2></header></article></main></body>',p.base,p,'صلاة الوتر');assert.deepEqual(results.map(r=>r.id),['/fatwas/2/test']);
+test("result titles inside article headers are preserved while global headers are excluded", () => {
+  const results = extractSearch(
+    '<body><header><a href="/fatwas/1/nav">عنوان في رأس الموقع</a></header><main><article class="search-result"><header><h2><a href="/fatwas/2/test">وقت صلاة الوتر</a></h2></header></article></main></body>',
+    p.base,
+    p,
+    "صلاة الوتر",
+  );
+  assert.deepEqual(
+    results.map((r) => r.id),
+    ["/fatwas/2/test"],
+  );
+});
+
+test("parse-failure diagnostics expose public structure, never form values or session data", async () => {
+  const page =
+    '<title>Search page</title><main><form action="/find?private=never-report"><input name="query" value="never-report"><input name="csrf_token" value="never-report"></form><a href="/answers/123?q=never-report">عنوان عام</a><div id="app"></div></main>';
+  await assert.rejects(
+    searchSource(p, "الصلاة", async () =>
+      response(page, 200, { "Set-Cookie": "secret=never-report; Secure" }),
+    ),
+    (error) => {
+      assert.equal(error.code, "SEARCH_PARSE_FAILED");
+      const d = error.diagnostics;
+      assert.equal(d.title, "Search page");
+      assert.equal(d.forms[0].action, "/find");
+      assert.deepEqual(d.forms[0].fields, ["query"]);
+      assert.equal(d.sampleLinks[0].path, "/answers/123");
+      assert.equal(d.hasClientRoot, true);
+      assert.ok(!JSON.stringify(d).includes("never-report"));
+      return true;
+    },
+  );
+});
+
+test("the deployed API error includes the sanitized diagnostic report", async () => {
+  const previous = globalThis.fetch;
+  globalThis.fetch = async () =>
+    response(
+      '<title>Source search</title><main><form action="/search"><input name="q" type="search"></form></main>',
+    );
+  try {
+    const result = await handler({
+      httpMethod: "GET",
+      queryStringParameters: { scholar: "binbaz", q: "الصلاة" },
+    });
+    const body = JSON.parse(result.body);
+    assert.equal(result.statusCode, 502);
+    assert.equal(body.code, "SEARCH_PARSE_FAILED");
+    assert.equal(body.diagnostics.title, "Source search");
+    assert.equal(body.diagnostics.source, "عبد العزيز بن باز");
+    assert.equal(typeof body.release, "string");
+  } finally {
+    globalThis.fetch = previous;
+  }
 });

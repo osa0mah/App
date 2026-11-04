@@ -41,6 +41,10 @@ export async function handler(event) {
   } catch (e) {
     return respond(502, {
       code: e instanceof SourceError ? e.code : "SOURCE_UNAVAILABLE",
+      release: process.env.COMMIT_REF?.slice(0, 7) || "local",
+      ...(e instanceof SourceError && e.diagnostics
+        ? { diagnostics: e.diagnostics }
+        : {}),
       error:
         e instanceof SourceError
           ? e.message
