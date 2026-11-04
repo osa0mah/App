@@ -48,8 +48,6 @@ export const scholars = [
   { name: "صالح الفوزان", url: "https://www.alfawzan.af.org.sa/" },
   { name: "محمد بن صالح العثيمين", url: "https://binothaimeen.net/" },
 ];
-export const tafsirUrl = (id: number, verse = 1) =>
-  `https://quran.com/${id}:${verse}/tafsirs/ar-tafsir-al-saddi`;
 export function findDestination(
   input: string,
 ): "القرآن" | "تعلّم" | "الفتاوى" | "التسميع" | null {

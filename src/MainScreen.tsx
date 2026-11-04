@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {
-  Alert,
-  Linking,
   Modal,
   Pressable,
   ScrollView,
@@ -13,7 +11,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { findDestination, surahs, Surah, tafsirUrl } from "./content";
+import { findDestination, surahs, Surah } from "./content";
+import Tafsir from "./features/Tafsir";
 import VerseAudio from "./features/VerseAudio";
 import Readers from "./features/Readers";
 import Fatwas from "./features/Fatwas";
@@ -28,13 +27,6 @@ const colors = {
   gold: "#BA9655",
 };
 const arabic = (n: number) => n.toLocaleString("ar-SA");
-async function open(url: string) {
-  try {
-    await Linking.openURL(url);
-  } catch {
-    Alert.alert("تعذّر فتح المصدر", "تحقق من اتصال الإنترنت وحاول مجددًا.");
-  }
-}
 function Button({
   label,
   onPress,
@@ -65,6 +57,10 @@ export default function App() {
     : "الرئيسية";
   const setScreen = (target: Screen) => router.setParams({ section: target });
   const [surah, setSurah] = useState<Surah | null>(null);
+  const [tafsirTarget, setTafsirTarget] = useState<{
+    chapter: number;
+    verse: number;
+  } | null>(null);
   const [verse, setVerse] = useState<number | null>(null);
   const [query, setQuery] = useState("");
   const [reader] = useState("الحصري");
@@ -95,8 +91,8 @@ export default function App() {
   const sourceButton = (id: number, v = 1) => (
     <Button
       secondary
-      label="قراءة تفسير السعدي · المصدر ↗"
-      onPress={() => open(tafsirUrl(id, v))}
+      label="قراءة تفسير السعدي داخل التطبيق"
+      onPress={() => setTafsirTarget({ chapter: id, verse: v })}
     />
   );
   const cards = () =>
@@ -444,38 +440,49 @@ export default function App() {
         </View>
       )}
       <Modal
-        visible={verse !== null}
+        visible={verse !== null || tafsirTarget !== null}
         transparent
         animationType="slide"
-        onRequestClose={() => setVerse(null)}
+        onRequestClose={() => {
+          if (tafsirTarget) setTafsirTarget(null);
+          else setVerse(null);
+        }}
       >
-        <View style={s.overlay}>
-          <View style={s.sheet}>
-            <Text style={s.title}>
-              {surah?.name} · الآية {arabic(verse ?? 1)}
-            </Text>
-            <Text style={[s.quran, { marginVertical: 18 }]}>
-              {surah?.verses[(verse ?? 1) - 1]}
-            </Text>
-            {surah && sourceButton(surah.id, verse ?? 1)}
-            {surah && verse && (
-              <VerseAudio
-                key={`${surah.id}:${verse}`}
-                label={`استماع بصوت ${reader}`}
-                source={`https://everyayah.com/data/Husary_128kbps/${String(surah.id).padStart(3, "0")}${String(verse).padStart(3, "0")}.mp3`}
+        {tafsirTarget ? (
+          <Tafsir
+            chapter={tafsirTarget.chapter}
+            verse={tafsirTarget.verse}
+            onClose={() => setTafsirTarget(null)}
+          />
+        ) : (
+          <View style={s.overlay}>
+            <View style={s.sheet}>
+              <Text style={s.title}>
+                {surah?.name} · الآية {arabic(verse ?? 1)}
+              </Text>
+              <Text style={[s.quran, { marginVertical: 18 }]}>
+                {surah?.verses[(verse ?? 1) - 1]}
+              </Text>
+              {surah && sourceButton(surah.id, verse ?? 1)}
+              {surah && verse && (
+                <VerseAudio
+                  key={`${surah.id}:${verse}`}
+                  label={`استماع بصوت ${reader}`}
+                  source={`https://everyayah.com/data/Husary_128kbps/${String(surah.id).padStart(3, "0")}${String(verse).padStart(3, "0")}.mp3`}
+                />
+              )}
+              <Button
+                secondary
+                label="حفظ موضع القراءة لهذه الجلسة"
+                onPress={() => {
+                  if (surah && verse) setBookmark({ id: surah.id, verse });
+                  setVerse(null);
+                }}
               />
-            )}
-            <Button
-              secondary
-              label="حفظ موضع القراءة لهذه الجلسة"
-              onPress={() => {
-                if (surah && verse) setBookmark({ id: surah.id, verse });
-                setVerse(null);
-              }}
-            />
-            <Button secondary label="إغلاق" onPress={() => setVerse(null)} />
+              <Button secondary label="إغلاق" onPress={() => setVerse(null)} />
+            </View>
           </View>
-        </View>
+        )}
       </Modal>
     </SafeAreaView>
   );

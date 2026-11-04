@@ -3,7 +3,6 @@ import assert from "node:assert/strict";
 import {
   surahs,
   findDestination,
-  tafsirUrl,
   scholars,
 } from "../src/content.ts";
 test("sample surahs have the expected verse counts and unique IDs", () => {
@@ -11,12 +10,6 @@ test("sample surahs have the expected verse counts and unique IDs", () => {
   assert.equal(surahs.find((s) => s.id === 1).verses.length, 7);
   assert.equal(surahs.find((s) => s.id === 112).verses.length, 4);
   assert.ok(surahs.every((s) => s.verses.every((v) => v.trim().length > 0)));
-});
-test("verse interpretation links preserve the selected chapter and verse", () => {
-  assert.equal(
-    tafsirUrl(112, 3),
-    "https://quran.com/112:3/tafsirs/ar-tafsir-al-saddi",
-  );
 });
 test("assistant routes requests without inventing answers", () => {
   assert.equal(findDestination("أريد تفسير سورة الفاتحة"), "تعلّم");

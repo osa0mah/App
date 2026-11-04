@@ -7,6 +7,12 @@
   EXPO_NO_TELEMETRY = "1"
 
 [[redirects]]
+  from = "/api/fatwas"
+  to = "/.netlify/functions/fatwas"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -20,3 +26,7 @@
   for = "/index.html"
   [headers.values]
     Cache-Control = "no-cache"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
