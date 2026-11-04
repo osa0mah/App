@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "أثر القرآن",
+    "slug": "athar-alquran",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.atharalquran.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.atharalquran.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "اسمح لأثر القرآن بسماع تلاوتك أثناء التسميع.",
+          "speechRecognitionPermission": "اسمح لأثر القرآن بتحويل تلاوتك إلى نص لإظهار الكلمات المطابقة."
+        }
+      ]
+    ],
+    "scheme": "atharalquran"
+  }
+}
