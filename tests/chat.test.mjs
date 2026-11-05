@@ -140,3 +140,15 @@ test("changing scholars in a follow-up retains the substantive fatwa topic", asy
   assert.equal(provider, "محمد بن صالح العثيمين");
   assert.equal(topic, "صلاة الوتر");
 });
+
+test("archived audio results are offered as recordings without fabricating a written fatwa or model evidence", async () => {
+  const archive = "https://web.archive.org/web/20251012120000id_/https://www.alfawzan.af.org.sa/sites/default/files/test.mp3";
+  const answer = await answerMessage("فتوى الفوزان عن الطلاق", [], {
+    search: async () => [{ id: "/ar/node/123", title: "سؤال عن الطلاق", contentKind: "archived-audio", question: "سؤال اختبار" }],
+    read: async () => ({ title: "سؤال عن الطلاق", scholar: "صالح الفوزان", answer: "", audioUrl: archive, archiveUrl: archive, sourceUrl: "https://www.alfawzan.af.org.sa/ar/node/123" }),
+  });
+  assert.match(answer.text, /تسجيلًا صوتيًا مؤرشفًا/);
+  assert.match(answer.text, /لا يتوفر تفريغ نصي موثق/);
+  assert.equal(answer.evidence, undefined);
+  assert.equal(answer.source.url, archive);
+});

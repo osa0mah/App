@@ -229,12 +229,13 @@ export async function readRobots(provider, fetcher, deadline) {
 }
 export async function collectProvider(
   key,
-  { fetcher = fetch, maxPages = 60, deadline = Date.now() + 45000 } = {},
+  { fetcher = fetch, maxPages = 60, deadline = Date.now() + 45000, listingOnly = false, continuations = {}, onProgress } = {},
 ) {
   const p = providers[key];
   if (!p) throw Error("UNKNOWN_PROVIDER");
   const pageFailures = [];
   const lessonIds = new Set();
+  const deferred = new Set();
   const issues = new Set(),
     records = new Map(),
     queue = [],
@@ -246,6 +247,7 @@ export async function collectProvider(
     try {
       const u = safe(value, p);
       if (
+        (listingOnly && key === "binbaz" && p.path.test(u.pathname)) ||
         !policy.allowed(u.pathname + u.search) ||
         seen.has(u.href) ||
         queue.includes(u.href) ||
@@ -296,6 +298,7 @@ export async function collectProvider(
     : [`${p.base}/sitemap.xml`]
   ).slice(0, 2))
     enqueue(sitemap);
+  for (const path of (continuations[key] || []).slice(0, 4000)) enqueue(path);
   const add = (url, title, titleOrigin = "link") => {
     try {
       const u = safe(url, p);
@@ -391,6 +394,7 @@ export async function collectProvider(
           enqueue(u.href);
       });
     } catch (e) {
+      if (key === "binbaz" && /^\/fatwas\/kind\/[1-4]$/.test(new URL(url).pathname) && !["HTTP_404", "HTTP_410"].includes(e.message)) deferred.add(url);
       if (pageFailures.length < 3)
         pageFailures.push({ path: new URL(url).pathname, ...robotsFailure(e) });
       issues.add(
@@ -414,11 +418,12 @@ export async function collectProvider(
     }
     if (!batch.length) break;
     await Promise.all(batch.map(visit));
+    onProgress?.({ key, pageCount, count: records.size, queued: queue.length, records: records.values() });
     if (queue.length && Date.now() + policy.delayMs < deadline)
       await new Promise((r) => setTimeout(r, policy.delayMs));
     else if (queue.length && Date.now() + policy.delayMs >= deadline) break;
   }
-  if (queue.length) issues.add("PARTIAL_CRAWL");
+  if (queue.length || deferred.size) issues.add("PARTIAL_CRAWL");
   return {
     records: [...records.values()],
     status: {
@@ -429,6 +434,7 @@ export async function collectProvider(
       coverage: records.size ? "partial" : "unavailable",
       issues: [...issues],
       pageFailures,
+      pendingPaths: key === "binbaz" ? [...new Set([...queue, ...deferred])].map(value => { const u = new URL(value); return u.pathname + u.search; }) : [],
       robots: robotsStatus,
     },
   };

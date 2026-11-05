@@ -1,4 +1,5 @@
 import { load } from "cheerio";
+import { archivedAudioFatwa } from "./archiveAudio.mjs";
 import { readSourceBody } from "./sourceBody.mjs";
 import { relevance } from "./searchText.mjs";
 export const providers = {
@@ -12,7 +13,7 @@ export const providers = {
     name: "صالح الفوزان",
     base: "https://www.alfawzan.af.org.sa",
     hosts: ["www.alfawzan.af.org.sa", "alfawzan.af.org.sa"],
-    path: /^\/(?:ar\/)?node\/\d+\/?$/,
+    path: /^(?:\/(?:ar\/)?node\/\d+\/?$|\/sites\/default\/files\/[^?#]+[.]mp3$)/i,
   },
   ibnothaimeen: {
     name: "محمد بن صالح العثيمين",
@@ -68,7 +69,12 @@ export async function sourceHtml(url, provider, fetcher = fetch, init = {}) {
             : {}),
         },
       });
-    } catch {
+    } catch (error) {
+      let cause = error;
+      for (let depth = 0; cause && depth < 4; depth++, cause = cause.cause) {
+        if (cause.code === "CERT_HAS_EXPIRED")
+          throw new SourceError("انتهت صلاحية شهادة اتصال الموقع الرسمي. يلزم أن يجددها المسؤولون عن المصدر لإتاحة نص الفتوى.", "SOURCE_CERTIFICATE_EXPIRED");
+      }
       throw new SourceError("تعذّر الاتصال بموقع الشيخ. حاول مجددًا لاحقًا.");
     }
     for (const value of response.headers.getSetCookie?.() || []) {
@@ -247,7 +253,25 @@ export function extractArticle(html, url, provider) {
   ).remove();
   const title = clean($("h1").first().text());
   let answer = "";
+  if (provider === providers.alfawzan) {
+    const article = $("article").first();
+    const field = article.find(".field--name-field-question,.field-name-field-question,.field--name-body,.field-name-body").first().clone();
+    field.find(".field__label,.field-label").remove();
+    const rawQuestion = clean(field.text());
+    const audioPath = article.find("[data-source],audio[src],audio source[src],a[href$='.mp3']").first();
+    const audioValue = audioPath.attr("data-source") || audioPath.attr("src") || audioPath.attr("href");
+    const explicitAnswer = clean(article.find(".field--name-field-answer,.field-name-field-answer").text());
+    const bodyText = clean(article.find(".field--name-body,.field-name-body").text());
+    const hasWrittenAnswer = explicitAnswer.length >= 40 || (article.find(".field--name-field-question,.field-name-field-question").length && bodyText.length >= 40 && !/^نص السؤال/.test(bodyText));
+    if (!hasWrittenAnswer && audioValue && rawQuestion && (article.find(".field--name-field-question,.field-name-field-question").length || /^نص السؤال/.test(rawQuestion))) {
+      const audio = allowedUrl(audioValue, provider);
+      if (/^\/sites\/default\/files\/.+[.]mp3$/i.test(audio.pathname))
+        return { id: source.pathname, scholar: provider.name, title, question: rawQuestion.replace(/^نص السؤال\s*/, ""), answer: "", audioUrl: audio.href, sourceUrl: source.href, retrievedAt: new Date().toISOString().slice(0,10) };
+    }
+  }
   const selectors = [
+    ".field--name-field-answer",
+    ".field-name-field-answer",
     '[itemprop="articleBody"]',
     ".fatwa-body",
     ".fatwa-content",
@@ -260,7 +284,8 @@ export function extractArticle(html, url, provider) {
     "article",
   ];
   for (const selector of selectors) {
-    const el = $(selector).first().clone();
+    const scope = provider === providers.alfawzan ? $("article").first() : $.root();
+    const el = (selector === "article" && provider === providers.alfawzan ? scope : scope.find(selector)).first().clone();
     if (!el.length) continue;
     el.find("h1").remove();
     el.find("br").replaceWith("\n");
@@ -336,6 +361,14 @@ export async function readSource(provider, path, fetcher = fetch) {
   const url = allowedUrl(path, provider);
   if (provider === providers.ibnothaimeen && uthaymeenLesson(url.pathname))
     return readUthaymeenLesson(url.pathname, provider, fetcher);
+  if (provider === providers.alfawzan) {
+    const { loadCatalog } = await import("./fatwaCatalog.mjs");
+    const catalog = await loadCatalog();
+    const row = catalog.records.find(item => item.provider === "alfawzan" && item.id === url.pathname);
+    const article = archivedAudioFatwa(row, provider.name, catalog.sources.find(source => source.key === "alfawzan")?.updatedAt || catalog.generatedAt);
+    if (article) return article;
+    if (/[.]mp3$/i.test(url.pathname)) throw new SourceError("التسجيل غير موجود في الفهرس المؤرشف المعتمد.", "ARCHIVE_NOT_READY");
+  }
   const page = await sourceHtml(url.href, provider, fetcher);
   return extractArticle(page.html, page.url, provider);
 }

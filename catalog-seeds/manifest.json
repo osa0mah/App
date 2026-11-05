@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "provider": "alfawzan",
+      "file": "alfawzan.json.gz",
+      "records": 25,
+      "retrievedAt": "2026-11-05T13:31:25.491Z",
+      "sha256": "3fbbf44307e4ff704a4fe006dd52ead7bd229d7eac454bc71da3f4b04b141e7f"
+    },
+    {
+      "provider": "binbaz",
+      "file": "binbaz.json.gz",
+      "records": 24136,
+      "retrievedAt": "2026-11-05T13:00:00.947Z",
+      "sha256": "07fb75785af1f313ab47675f93fe96e277aa7a08740756a2e10d9134c964bcd9"
+    },
+    {
+      "provider": "ibnothaimeen",
+      "file": "ibnothaimeen.json.gz",
+      "records": 16781,
+      "retrievedAt": "2026-11-05T04:10:59.067Z",
+      "sha256": "9bd68e96a36a1bb3310cd49e0f901f979da6fd42e82abe3bc25da544b718e228"
+    }
+  ]
+}

@@ -197,7 +197,7 @@ export async function answerMessage(message, history = [], options = {}) {
           { suggestion: target },
         );
       const top = results.find(
-        (r) => relevance(`${r.title} ${r.snippet || ""}`, topic) > 0,
+        (r) => relevance(`${r.title} ${r.snippet || ""} ${r.contentKind === "archived-audio" ? r.question || "" : ""}`, topic) > 0,
       );
       if (!top)
         return response(
@@ -209,6 +209,10 @@ export async function answerMessage(message, history = [], options = {}) {
         providers[scholar],
         top.id,
       );
+      if (article.audioUrl && !article.answer)
+        return response(`وجدت تسجيلًا صوتيًا${article.archiveUrl ? " مؤرشفًا" : ""} من الموقع الرسمي للشيخ ${article.scholar} بعنوان «${article.title}». لا يتوفر تفريغ نصي موثق له؛ يمكنك الاستماع داخل قسم الفتاوى.`, "الفتاوى", {
+          source: { title: `${article.title}${article.archiveUrl ? " · نسخة مؤرشفة" : ""}`, url: article.archiveUrl || article.sourceUrl }, suggestion: target,
+        });
       return response(
         `وجدت هذا النص من الشيخ ${article.scholar} بعنوان «${article.title}»:\n\n${article.answer}`,
         "الفتاوى",

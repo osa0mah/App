@@ -39,10 +39,10 @@ export default function VerseAudio({
           {status.playing ? "إيقاف مؤقت" : label}
         </Text>
       </Pressable>
-      {status.isBuffering && <Text style={f.note}>جارٍ تحميل الآية…</Text>}
+      {status.isBuffering && <Text style={f.note}>جارٍ تحميل التسجيل…</Text>}
       {(failed || !!status.error) && (
         <Text style={f.error}>
-          تعذّر تحميل الآية. تحقق من اتصالك وحاول مجددًا.
+          تعذّر تحميل التسجيل. تحقق من اتصالك وحاول مجددًا.
         </Text>
       )}
     </View>

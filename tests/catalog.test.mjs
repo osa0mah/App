@@ -274,3 +274,24 @@ test("page failures retain safe connection diagnostics without query or raw erro
   assert.match(catalogStatus(catalog, "alfawzan").reason, /TIMEOUT/);
   assert.ok(!JSON.stringify(catalog).includes("private connection details"));
 });
+
+test("listing-only collection follows official pagination without spending requests on individual Bin Baz articles", async () => {
+  const calls = [];
+  const catalog = await collectCatalog({ keys: ["binbaz"], listingOnly: true, maxPages: 15, deadline: Date.now() + 10000,
+    fetcher: async url => {
+      calls.push(url);
+      if (url.endsWith("robots.txt")) return html("User-agent: *\nAllow: /");
+      if (url.endsWith("/fatwas/kind/1")) return html('<a href="/fatwas/11/test">حكم صلاة الوتر</a><a href="?page=2" rel="next">التالي</a>');
+      if (url.endsWith("/fatwas/kind/1?page=2")) return html('<a href="/fatwas/12/test">حكم زكاة المال</a>');
+      return html("");
+    } });
+  assert.equal(catalog.records.length, 2);
+  assert.ok(calls.includes("https://binbaz.org.sa/fatwas/kind/1?page=2"));
+  assert.ok(!calls.some(url => /\/fatwas\/\d/.test(url)));
+});
+test("failed listing pages remain available for a future collection pass", async () => {
+  const catalog = await collectCatalog({ keys: ["binbaz"], listingOnly: true, maxPages: 10, deadline: Date.now() + 10000,
+    continuations: { binbaz: ["/fatwas/kind/1?page=45"] },
+    fetcher: async url => url.endsWith("robots.txt") ? html("User-agent: *\nAllow: /") : url.includes("page=45") ? html("unavailable", 503) : html("") });
+  assert.ok(catalog.sources[0].pendingPaths.includes("/fatwas/kind/1?page=45"));
+});

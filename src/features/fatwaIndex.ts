@@ -8,6 +8,10 @@ export type Fatwa = {
   answer: string;
   sourceUrl: string;
   retrievedAt: string;
+  audioUrl?: string;
+  archiveUrl?: string;
+  archivedAt?: string;
+  audioArchivedAt?: string;
 };
 export const fatwas: Fatwa[] = records;
 export function searchFatwas(

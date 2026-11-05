@@ -1,7 +1,8 @@
 import { readFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
 import { dirname } from "node:path";
+import { validateArchiveAudio } from "./archiveAudio.mjs";
 import { providers } from "./fatwaSources.mjs";
-import { SOURCE_PAGE_BYTES, SOURCE_SITEMAP_BYTES } from "./sourceBody.mjs";
+import { readSourceBody, SOURCE_PAGE_BYTES, SOURCE_SITEMAP_BYTES } from "./sourceBody.mjs";
 export const MINIMUM_PUBLISHED_COUNTS = Object.freeze({ binbaz: 277 });
 export function sanitizeSnapshot(value) {
   if (
@@ -44,13 +45,17 @@ export function sanitizeSnapshot(value) {
       row.id !== url.pathname
     )
       continue;
+    const archive = validateArchiveAudio(row);
+    if (row.contentKind === "archived-audio" && !archive) continue;
+    if (row.provider === "alfawzan" && /[.]mp3$/i.test(url.pathname) && !archive) continue;
     records.set(`${row.provider}:${row.id}`, {
+      ...(archive || {}),
       provider: row.provider,
       id: row.id,
       title: row.title.trim(),
       sourceUrl: url.href,
       scholar: p.name,
-      titleOrigin: ["heading", "sitemap"].includes(row.titleOrigin) ? row.titleOrigin : "link",
+      titleOrigin: ["heading", "sitemap", "archive"].includes(row.titleOrigin) ? row.titleOrigin : "link",
     });
   }
   const safeRecords = [...records.values()];
@@ -79,6 +84,8 @@ export function sanitizeSnapshot(value) {
       bodyLimitBytes: Number.isSafeInteger(source.bodyLimitBytes) && source.bodyLimitBytes > 0
         ? source.bodyLimitBytes : 0,
       sitemapLimitBytes: Number.isSafeInteger(source.sitemapLimitBytes) && source.sitemapLimitBytes > 0 ? source.sitemapLimitBytes : 0,
+      pendingPaths: key === "binbaz" && Array.isArray(source.pendingPaths)
+        ? [...new Set(source.pendingPaths.filter(path => typeof path === "string" && /^\/fatwas\/kind\/[1-4](?:\?page=[1-9][0-9]{0,4})?$/.test(path)))].slice(0, 4000) : [],
       retained: !!source.retained,
       updatedAt: validDate(source.updatedAt) || value.generatedAt,
       lastAttemptAt:
@@ -219,6 +226,7 @@ export function refreshKeys(catalog, { now = Date.now(), force = false } = {}) {
     if (source.bodyLimitBytes !== SOURCE_PAGE_BYTES && source.pageFailures?.some((failure) => failure.code === "DOCUMENT_TOO_LARGE"))
       return true;
     if (key === "ibnothaimeen" && source.sitemapLimitBytes !== SOURCE_SITEMAP_BYTES) return true;
+    if (key === "binbaz" && source.pendingPaths?.length && now - Date.parse(source.lastAttemptAt || catalog.generatedAt) >= 60 * 60 * 1000) return true;
     const dataAge = now - Date.parse(source.updatedAt || catalog.generatedAt);
     if (count > 0 && dataAge >= 0 && dataAge < 24 * 60 * 60 * 1000)
       return false;
@@ -275,8 +283,7 @@ export async function publishedSnapshot({
       !(response.headers.get("content-type") || "").includes("application/json")
     )
       return null;
-    const body = await response.text();
-    if (body.length > 20_000_000) return null;
+    const body = await readSourceBody(response, 64 * 1024 * 1024);
     return sanitizeSnapshot(JSON.parse(body));
   } catch {
     return null;

@@ -3,6 +3,7 @@ import { Pressable, Text, TextInput, View } from "react-native";
 import { scholars } from "../content";
 import { fatwas, searchFatwas, Fatwa } from "./fatwaIndex";
 import { f } from "./featureStyles";
+import VerseAudio from "./VerseAudio";
 import { contentBase } from "./contentApi";
 type Result = Pick<Fatwa, "id" | "title" | "sourceUrl" | "scholar">;
 const ids = ["binbaz", "alfawzan", "ibnothaimeen"];
@@ -45,6 +46,7 @@ export default function Fatwas({
     reason?: string | null;
     warning?: string | null;
     pageCount?: number;
+    featured?: Result[];
   } | null>(null);
   useEffect(() => {
     let active = true;
@@ -69,6 +71,7 @@ export default function Fatwas({
   }, [index]);
   const request = useRef<AbortController | null>(null);
   const scholar = scholars[index].name;
+  const shownResults = searched ? results : catalogInfo?.key === ids[index] ? catalogInfo.featured || [] : [];
   useEffect(
     () => () => {
       const current = request.current;
@@ -122,7 +125,7 @@ export default function Fatwas({
         if (
           !body.fatwa ||
           typeof body.fatwa.answer !== "string" ||
-          !body.fatwa.answer.trim()
+          (!body.fatwa.answer.trim() && !(typeof body.fatwa.audioUrl === "string" && body.fatwa.audioUrl.startsWith("https://")))
         )
           throw Error("النص غير متاح لهذا الرابط.");
         setSelected(body.fatwa);
@@ -239,23 +242,33 @@ export default function Fatwas({
               <Text style={f.text}>{selected.question}</Text>
             </>
           )}
-          <Text style={f.title}>النص الأصلي من المصدر</Text>
-          <Text selectable style={f.text}>
-            {selected.answer}
-          </Text>
+          {!!selected.archiveUrl && <Text style={f.note}>
+            نسخة مؤرشفة من الموقع الرسمي، وليست جلبًا مباشرًا منه.
+            {selected.archivedAt ? ` تاريخ الأرشفة: ${new Date(selected.audioArchivedAt || selected.archivedAt).toLocaleDateString("ar-SA")}.` : ""}
+          </Text>}
+          {!!selected.audioUrl && <>
+            <Text style={f.title}>{selected.archiveUrl ? "التسجيل الأصلي المؤرشف" : "الإجابة الصوتية الأصلية"}</Text>
+            <Text style={f.note}>الإجابة صوتية؛ لا يتوفر تفريغ نصي مع هذا التسجيل. قد يحتوي التسجيل على عدة أسئلة.</Text>
+            <VerseAudio key={selected.audioUrl} source={selected.audioUrl} label="استماع لتسجيل الشيخ" />
+          </>}
+          {!!selected.answer && <>
+            <Text style={f.title}>النص الأصلي من المصدر</Text>
+            <Text selectable style={f.text}>{selected.answer}</Text>
+          </>}
           <Text selectable style={f.source}>
             المصدر: {selected.sourceUrl}
           </Text>
+          {!!selected.archiveUrl && <Text selectable style={f.source}>رابط النسخة المؤرشفة: {selected.archiveUrl}</Text>}
           <Text style={f.source}>تاريخ الجلب: {selected.retrievedAt}</Text>
         </View>
       ) : (
         <>
-          {!!results.length && (
+          {!!shownResults.length && (
             <Text accessibilityLiveRegion="polite" style={f.note}>
-              النتائج المطابقة في الفهرس: {results.length}
+              {searched ? "النتائج المطابقة في الفهرس" : "تسجيلات متاحة من الأرشيف"}: {shownResults.length}
             </Text>
           )}
-          {results.map((x) => (
+          {shownResults.map((x) => (
             <Pressable
               accessibilityRole="button"
               key={x.id}

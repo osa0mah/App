@@ -332,3 +332,15 @@ test("public page diagnostics exclude query strings, raw errors, and extra field
   ]);
   assert.ok(!JSON.stringify(safe).includes("secret"));
 });
+
+test("continuation stores only official listing paths and refreshes partial coverage after cooldown", async () => {
+  const { refreshKeys } = await import("../server/catalogSnapshot.mjs");
+  const safe = sanitizeSnapshot({ ...old, sources: [{ key: "binbaz", lastAttemptAt: old.generatedAt, pendingPaths: ["/fatwas/kind/1?page=50", "//evil.test/", "/fatwas/kind/1?token=secret", "/fatwas/kind/1?page=50"] }] });
+  assert.deepEqual(safe.sources[0].pendingPaths, ["/fatwas/kind/1?page=50"]);
+  assert.ok(refreshKeys(safe, { now: Date.parse(old.generatedAt) + 61 * 60000 }).includes("binbaz"));
+});
+test("expired official source certificates have an actionable source-side readiness explanation", () => {
+  const status = catalogStatus({ ...failure, records: [], sources: [{ key: "alfawzan", issues: ["ROBOTS_UNAVAILABLE"], robots: { code: "TLS_VERIFICATION_FAILED", detail: "CERT_HAS_EXPIRED" } }] }, "alfawzan");
+  assert.match(status.reason, /انتهت صلاحية/);
+  assert.match(status.reason, /المسؤولون عن موقعه/);
+});

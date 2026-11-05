@@ -62,7 +62,9 @@ export function catalogStatus(catalog, key) {
         DNS_FAILURE: "تعذّر حل اسم نطاق المصدر عند قراءة robots.txt.",
         NETWORK_FAILURE: "تعذّر الاتصال الشبكي بالمصدر عند قراءة robots.txt.",
       };
-      reason =
+      if (code === "TLS_VERIFICATION_FAILED" && source?.robots?.detail === "CERT_HAS_EXPIRED")
+        reason = "انتهت صلاحية شهادة اتصال الموقع الرسمي. يتعذّر جلب فتاوى هذا المصدر حتى يجدد المسؤولون عن موقعه الشهادة.";
+      else reason =
         code === "REDIRECT_OUTSIDE_SOURCE"
           ? `المصدر يحوّل طلب robots.txt إلى نطاق غير مسجّل: ${source.robots.redirectHost || "غير معروف"}.`
           : messages[code] ||
@@ -82,10 +84,13 @@ export function catalogStatus(catalog, key) {
     reason += ` رمز الاتصال: ${pageCode}.`;
   return {
     count,
+    featured: key === "alfawzan" ? catalog.records.filter(row => row.provider === key && row.contentKind === "archived-audio").slice(0, 10).map(({id,title,scholar,sourceUrl}) => ({id,title,scholar,sourceUrl})) : [],
     updatedAt: source?.updatedAt || catalog.generatedAt,
     lastAttemptAt: source?.lastAttemptAt || catalog.generatedAt,
     retained: !!source?.retained,
-    warning: source?.retained
+    warning: catalog.records.some(row => row.provider === key && row.contentKind === "archived-audio")
+      ? "يتضمن هذا الفهرس تسجيلات فتاوى مؤرشفة من الموقع الرسمي؛ تاريخ الأرشفة موضح داخل التسجيل، وقد يضم التسجيل عدة أسئلة."
+      : source?.retained
       ? "لم يكتمل تحديث المصدر؛ نعرض آخر فهرس محفوظ."
       : null,
     coverage: "partial",
@@ -114,7 +119,7 @@ export function queryCatalog(catalog, key, query) {
   return catalog.records
     .filter((r) => r.provider === key)
     .map((r) => {
-      const hits = relevance(r.title, topic);
+      const hits = relevance(`${r.title} ${r.contentKind === "archived-audio" ? r.question || "" : ""}`, topic);
       const score =
         hits +
         (hits === count ? 2 : 0) +

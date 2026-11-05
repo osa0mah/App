@@ -141,3 +141,9 @@ test("missing generated data is a readiness failure, never an empty search", asy
   assert.equal(r.statusCode, 503);
   assert.equal(JSON.parse(r.body).code, "CATALOG_NOT_READY");
 });
+
+test("expired source certificates report the source-side problem without disabling verification", async () => {
+  await assert.rejects(sourceHtml(providers.alfawzan.base, providers.alfawzan, async () => {
+    throw new Error("fetch failed", { cause: Object.assign(new Error("certificate expired"), { code: "CERT_HAS_EXPIRED" }) });
+  }), error => error.code === "SOURCE_CERTIFICATE_EXPIRED" && /انتهت صلاحية/.test(error.message));
+});

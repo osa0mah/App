@@ -1,5 +1,6 @@
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { readSeedSnapshots } from "../server/catalogSeeds.mjs";
 import { collectCatalog } from "../server/catalogBuild.mjs";
 import {
   readSnapshot,
@@ -26,6 +27,11 @@ export async function buildFatwaCatalog({
     readSnapshot(cache),
     production ? backup() : null,
   ]);
+  const seeds = await readSeedSnapshots(root);
+  candidates.push(...seeds);
+  const requiredCounts = { ...minimums };
+  for (const seed of seeds) for (const source of seed.sources)
+    requiredCounts[source.key] = Math.max(requiredCounts[source.key] || 0, seed.records.filter(row => row.provider === source.key).length);
   const previous = mergeSnapshots(
     {
       schemaVersion: 1,
@@ -40,13 +46,15 @@ export async function buildFatwaCatalog({
     deadline: Date.now() + 45000,
     maxPages: 60,
     keys,
+    listingOnly: true,
+    continuations: Object.fromEntries(previous.sources.map(source => [source.key, source.pendingPaths || []])),
   });
   const catalog = mergeSnapshots(fresh, candidates);
   for (const source of catalog.sources)
     console.log(
       `Fatwa catalog ${source.key}: ${source.count} saved titles, ${source.pageCount} pages checked${source.retained ? " (retained previous catalog)" : ""}${source.robots ? ` [robots ${source.robots.code}]` : ""}`,
     );
-  if (production) assertPublishedMinimums(catalog, minimums);
+  if (production) assertPublishedMinimums(catalog, requiredCounts);
   else if (!catalog.records.length)
     console.warn(
       "Development catalog is empty. Production would be blocked to prevent replacing the 277-title baseline.",
