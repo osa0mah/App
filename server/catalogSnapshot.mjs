@@ -1,7 +1,7 @@
 import { readFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
 import { dirname } from "node:path";
 import { providers } from "./fatwaSources.mjs";
-import { SOURCE_PAGE_BYTES } from "./sourceBody.mjs";
+import { SOURCE_PAGE_BYTES, SOURCE_SITEMAP_BYTES } from "./sourceBody.mjs";
 export const MINIMUM_PUBLISHED_COUNTS = Object.freeze({ binbaz: 277 });
 export function sanitizeSnapshot(value) {
   if (
@@ -50,7 +50,7 @@ export function sanitizeSnapshot(value) {
       title: row.title.trim(),
       sourceUrl: url.href,
       scholar: p.name,
-      titleOrigin: row.titleOrigin === "heading" ? "heading" : "link",
+      titleOrigin: ["heading", "sitemap"].includes(row.titleOrigin) ? row.titleOrigin : "link",
     });
   }
   const safeRecords = [...records.values()];
@@ -78,6 +78,7 @@ export function sanitizeSnapshot(value) {
         : [],
       bodyLimitBytes: Number.isSafeInteger(source.bodyLimitBytes) && source.bodyLimitBytes > 0
         ? source.bodyLimitBytes : 0,
+      sitemapLimitBytes: Number.isSafeInteger(source.sitemapLimitBytes) && source.sitemapLimitBytes > 0 ? source.sitemapLimitBytes : 0,
       retained: !!source.retained,
       updatedAt: validDate(source.updatedAt) || value.generatedAt,
       lastAttemptAt:
@@ -217,6 +218,7 @@ export function refreshKeys(catalog, { now = Date.now(), force = false } = {}) {
     if (!source || source.lastAttemptAt === null) return true;
     if (source.bodyLimitBytes !== SOURCE_PAGE_BYTES && source.pageFailures?.some((failure) => failure.code === "DOCUMENT_TOO_LARGE"))
       return true;
+    if (key === "ibnothaimeen" && source.sitemapLimitBytes !== SOURCE_SITEMAP_BYTES) return true;
     const dataAge = now - Date.parse(source.updatedAt || catalog.generatedAt);
     if (count > 0 && dataAge >= 0 && dataAge < 24 * 60 * 60 * 1000)
       return false;

@@ -1,6 +1,6 @@
 import { load } from "cheerio";
-import { readSourceBody, SOURCE_PAGE_BYTES } from "./sourceBody.mjs";
-import { providers, extractSearch } from "./fatwaSources.mjs";
+import { readSourceBody, SOURCE_PAGE_BYTES, SOURCE_SITEMAP_BYTES } from "./sourceBody.mjs";
+import { providers, extractSearch, uthaymeenLesson } from "./fatwaSources.mjs";
 function safe(value, p) {
   const u = new URL(value, p.base);
   if (
@@ -117,7 +117,8 @@ async function document(url, p, fetcher, deadline, timeoutMs = 12000) {
       throw error;
     }
     const content = await readSourceBody(
-      r, current.pathname === "/robots.txt" ? 1024 * 1024 : undefined,
+      r, current.pathname === "/robots.txt" ? 1024 * 1024
+        : /sitemap|\.xml$/i.test(current.pathname) ? SOURCE_SITEMAP_BYTES : undefined,
     );
     return { text: content, url: current.href, status: r.status };
   }
@@ -233,6 +234,7 @@ export async function collectProvider(
   const p = providers[key];
   if (!p) throw Error("UNKNOWN_PROVIDER");
   const pageFailures = [];
+  const lessonIds = new Set();
   const issues = new Set(),
     records = new Map(),
     queue = [],
@@ -333,14 +335,19 @@ export async function collectProvider(
         page.text,
       );
       if (xml) {
-        const $ = load(page.text, { xmlMode: true });
-        $("loc").each((_, loc) => {
-          const value = $(loc).text();
+        // Process bounded loc elements without allocating a DOM for a large sitemap.
+        for (const match of page.text.matchAll(/<loc\b[^>]*>([^<]{1,8000})<\/loc>/gi)) {
+          const value = match[1].replace(/&amp;/g, "&").trim();
           let u;
           try {
             u = safe(value, p);
           } catch {
-            return;
+            continue;
+          }
+          const lesson = key === "ibnothaimeen" ? uthaymeenLesson(u.pathname) : null;
+          if (lesson) {
+            if (!lessonIds.has(lesson.id)) { add(u.href, lesson.title, "sitemap"); lessonIds.add(lesson.id); }
+            continue;
           }
           if (
             p.path.test(u.pathname) ||
@@ -348,7 +355,7 @@ export async function collectProvider(
             /sitemap/i.test(u.pathname)
           )
             enqueue(u.href);
-        });
+        }
         return;
       }
       const $ = load(page.text);
@@ -436,7 +443,7 @@ export async function collectCatalog(options = {}) {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
     coverage: "partial",
-    sources: all.map((x) => ({ ...x.status, bodyLimitBytes: SOURCE_PAGE_BYTES })),
+    sources: all.map((x) => ({ ...x.status, bodyLimitBytes: SOURCE_PAGE_BYTES, sitemapLimitBytes: SOURCE_SITEMAP_BYTES })),
     records: all.flatMap((x) => x.records),
   };
 }

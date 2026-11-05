@@ -18,7 +18,7 @@ export const providers = {
     name: "محمد بن صالح العثيمين",
     base: "https://binothaimeen.net",
     hosts: ["binothaimeen.net", "www.binothaimeen.net"],
-    path: /^\/content\/\d+(?:\/|$)/,
+    path: /^(?:\/content\/\d+(?:\/|$)|\/ar\/voice_library\/lessonDetails\/[^/]+\/[^/]+\/[a-f0-9-]{36}\/?$)/i,
   },
 };
 export class SourceError extends Error {
@@ -287,6 +287,44 @@ export function extractArticle(html, url, provider) {
     retrievedAt: new Date().toISOString().slice(0, 10),
   };
 }
+export function uthaymeenLesson(path) {
+  const match = path.match(/^\/ar\/voice_library\/lessonDetails\/[^/]+\/([^/]+)\/([a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12})\/?$/i);
+  if (!match) return null;
+  try { return { id: match[2], title: decodeURIComponent(match[1]).trim() }; }
+  catch { return null; }
+}
+async function readUthaymeenLesson(path, provider, fetcher) {
+  const lesson = uthaymeenLesson(path);
+  if (!lesson) throw new SourceError("رابط الفتوى غير صالح.");
+  const endpoint = `https://shekhapi.binothaimeen.net/lessons/audios/show/${lesson.id}/0/1?getManySectionsWithAllParent=audio_library&getAllPaths=1`;
+  let response;
+  try {
+    response = await fetcher(endpoint, {
+      redirect: "error", signal: AbortSignal.timeout(12000),
+      headers: { Accept: "application/json", "User-Agent": "AtharQuran/1.0 (+public-source-reader)" },
+    });
+  } catch { throw new SourceError("تعذّر الاتصال بواجهة المحتوى الرسمية للشيخ."); }
+  if (!response.ok || !/application\/json/i.test(response.headers.get("content-type") || "")) {
+    await response.body?.cancel();
+    throw new SourceError("واجهة المحتوى الرسمية لم تُرجع نص الفتوى.");
+  }
+  let data;
+  try { data = JSON.parse(await readSourceBody(response)).data; }
+  catch { throw new SourceError("تعذّرت قراءة استجابة المصدر الرسمية."); }
+  if (data?.id !== lesson.id || data.type !== "audios")
+    throw new SourceError("استجابة المصدر لا تطابق الفتوى المطلوبة.");
+  const title = data.title?.ar;
+  const html = data.objective?.content?.ar;
+  if (typeof title !== "string" || typeof html !== "string" || data.objective?.text_display === false)
+    throw new SourceError("لا يتوفر نص منشور لهذه المادة لدى المصدر.", "ARTICLE_PARSE_FAILED");
+  const $ = load(html);
+  $("script,style,iframe,form").remove();
+  $("p,div,br").append("\n");
+  const answer = $.root().text().replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+  if (!answer) throw new SourceError("لا يتوفر نص منشور لهذه المادة لدى المصدر.", "ARTICLE_PARSE_FAILED");
+  return { id: path, scholar: provider.name, title: title.trim(), question: "", answer,
+    sourceUrl: new URL(path, provider.base).href, retrievedAt: new Date().toISOString().slice(0,10) };
+}
 export async function readSource(provider, path, fetcher = fetch) {
   if (
     typeof path !== "string" ||
@@ -296,6 +334,8 @@ export async function readSource(provider, path, fetcher = fetch) {
   )
     throw new SourceError("رابط الفتوى غير صالح.");
   const url = allowedUrl(path, provider);
+  if (provider === providers.ibnothaimeen && uthaymeenLesson(url.pathname))
+    return readUthaymeenLesson(url.pathname, provider, fetcher);
   const page = await sourceHtml(url.href, provider, fetcher);
   return extractArticle(page.html, page.url, provider);
 }

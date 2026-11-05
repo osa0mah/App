@@ -1,4 +1,5 @@
 // Bound decoded response bytes before allocating or parsing a whole document.
+export const SOURCE_SITEMAP_BYTES = 32 * 1024 * 1024;
 export const SOURCE_PAGE_BYTES = 16 * 1024 * 1024;
 export async function readSourceBody(response, maxBytes = SOURCE_PAGE_BYTES) {
   const reader = response.body?.getReader();

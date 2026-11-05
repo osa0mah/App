@@ -36,5 +36,6 @@ test("a larger reader retries failed old-limit catalogs without waiting for cool
   const catalog = { generatedAt: new Date(now).toISOString(), records: [], sources: [source] };
   assert.ok(refreshKeys(catalog, { now }).includes("ibnothaimeen"));
   source.bodyLimitBytes = (await import("../server/sourceBody.mjs")).SOURCE_PAGE_BYTES;
+  source.sitemapLimitBytes = (await import("../server/sourceBody.mjs")).SOURCE_SITEMAP_BYTES;
   assert.ok(!refreshKeys(catalog, { now }).includes("ibnothaimeen"));
 });
