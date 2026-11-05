@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Platform, Pressable, Text, View } from "react-native";
 import {
   ExpoSpeechRecognitionModule,
   useSpeechRecognitionEvent,
@@ -27,6 +27,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
   const [completed, setCompleted] = useState(0);
   const [finished, setFinished] = useState(false);
   const [listening, setListening] = useState(false);
+  const [soundActive, setSoundActive] = useState(false);
   const [recognizing, setRecognizing] = useState(false);
   const microphone = useRef<RecitationMicrophone | null>(null);
   const [holdingMicrophone, setHoldingMicrophone] = useState(false);
@@ -45,6 +46,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
     wanted.current = false;
     clearRetry();
     setListening(false);
+    setSoundActive(false);
     setRecognizing(false);
     setCompleted(progress.current.verse);
     setWordCursor(wordProgress.current);
@@ -94,6 +96,12 @@ export default function Recitation({ surah }: { surah: Surah }) {
     if (!active.current) return;
     if (!wanted.current) { ExpoSpeechRecognitionModule.abort(); return; }
     setRecognizing(true);
+  });
+  useSpeechRecognitionEvent("speechstart", () => {
+    if (Platform.OS !== "web" && active.current && wanted.current) setSoundActive(true);
+  });
+  useSpeechRecognitionEvent("speechend", () => {
+    if (Platform.OS !== "web" && active.current) setSoundActive(false);
   });
   useSpeechRecognitionEvent("end", () => {
     if (!active.current || !wanted.current) return;
@@ -173,6 +181,8 @@ export default function Recitation({ surah }: { surah: Surah }) {
         if (!active.current || !wanted.current || session.current !== request) return;
         stop();
         setMessage("انقطع الميكروفون أو أُوقف إذنه. تحقق منه ثم ابدأ التسميع مجددًا.");
+      }, (hasSound) => {
+        if (active.current && wanted.current && session.current === request) setSoundActive(hasSound);
       });
       if (!active.current || !wanted.current || session.current !== request) {
         capture.stop();
@@ -226,10 +236,11 @@ export default function Recitation({ surah }: { surah: Surah }) {
         </Pressable>
         <Text accessibilityLiveRegion="polite" style={f.note}>
           {!listening ? "الميكروفون متوقف" : recognizing
-            ? "● نستمع لتسميعك الآن"
+            ? soundActive ? "● الصوت يصل… جارٍ مطابقة القراءة" : "● نستمع لتسميعك الآن"
             : holdingMicrophone ? "● الميكروفون مفتوح · جارٍ استئناف التعرّف"
               : "جلسة التسميع مفعّلة · جارٍ تشغيل التعرّف"} · {mode === "words" ? `${wordCursor} / ${expectedWords.length} كلمة` : `${completed} / ${verses.length} آيات`}
         </Text>
+        {listening && <Text style={f.note}>تأخر ظهور الكلمة لا يعني بالضرورة وجود خطأ في قراءتك.</Text>}
         <Pressable accessibilityRole="button" style={f.chip} onPress={() => {
           stop();
           progress.current = { verse: 0, pending: [] };
