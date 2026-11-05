@@ -243,3 +243,40 @@ test("a follow-up to a comparison retains both explicitly selected scholars",asy
   await answerMessage("طيب وما وقتها؟",[{role:"user",content:"قارن ابن باز وابن عثيمين في صلاة الوتر"}],{search:async p=>{names.push(p.name);return [];}});
   assert.deepEqual(names,["عبد العزيز بن باز","محمد بن صالح العثيمين"]);
 });
+
+const noLearningSearch = { search: async () => { throw Error("Learning must not search fatwas"); } };
+test("learning asks for the surah and interprets the next answer as a selection", async () => {
+  const question = "ابغى اعرف عن مقاصد العمل";
+  const first = await answerMessage(question, [], noLearningSearch);
+  assert.match(first.text, /أي سورة تقصد/);
+  assert.deepEqual(first.choices.map(c => c.label), ["الفاتحة", "الإخلاص"]);
+  const history = [{role:"user",content:question},{role:"assistant",content:first.text}];
+  for (const [name,id] of [["الإخلاص",112],["الفاتحه",1],["سورة الاخلاص",112]]) {
+    const answer = await answerMessage(name, history, noLearningSearch);
+    assert.match(answer.text, /مقاصد سورة/);
+    assert.match(answer.text, /من العلم والعمل/);
+    assert.equal(answer.suggestion.chapter,id);
+    assert.ok(answer.source.url);
+  }
+  const unsupported = await answerMessage("البقرة", history, noLearningSearch);
+  assert.match(unsupported.text, /لم تُضف/);
+  assert.equal(unsupported.suggestion.chapter, undefined);
+});
+test("learning recognizes self-contained requests and does not assume a stale chapter",async()=>{
+  const answer=await answerMessage("اشرح مقاصد العلم والعمل في سورة الإخلاص",[],noLearningSearch);
+  assert.equal(answer.suggestion.chapter,112);
+  const history=[{role:"user",content:"تفسير الفاتحة"}];
+  assert.match((await answerMessage("مقاصد العمل",history,noLearningSearch)).text,/أي سورة تقصد/);
+  assert.equal((await answerMessage("ومقاصدها؟",history,noLearningSearch)).suggestion.chapter,1);
+});
+test("learning clarification permits acknowledgements, another surah, and a change of topic",async()=>{
+  const first=await answerMessage("مقاصد العمل");
+  const history=[{role:"user",content:"مقاصد العمل"},{role:"assistant",content:first.text}];
+  assert.match((await answerMessage("طيب",history,noLearningSearch)).text,/أي سورة تقصد/);
+  const answer=await answerMessage("الإخلاص",history,noLearningSearch);
+  const next=await answerMessage("الفاتحة",[{role:"user",content:"الإخلاص"},{role:"assistant",content:answer.text}],noLearningSearch);
+  assert.equal(next.suggestion.chapter,1);
+  let calls=0;
+  await answerMessage("صلاة الوتر",history,{search:async()=>{calls++;return [];}});
+  assert.equal(calls,3);
+});

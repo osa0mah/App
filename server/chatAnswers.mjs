@@ -1,3 +1,4 @@
+import { answerLearning } from "./learningAnswers.mjs";
 import { answerTopic, resolveTopic, scholarsIn } from "./topicAnswers.mjs";
 import tafsir from "../data/tafsir/saadi.json" with { type: "json" };
 import chapters from "../data/chapters.json" with { type: "json" };
@@ -43,6 +44,9 @@ export async function answerMessage(message, history = [], options = {}) {
     mode: "source",
     ...extra,
   });
+  const legalIntent = /فتو|فتاو|حكم|يجوز|حلال|حرام/.test(normalized) || getScholar(message);
+  const learning = answerLearning(message, history, { legalIntent: !!legalIntent, chapterContext: context.chapter });
+  if (learning) return learning;
   const verseMatch = digits(normalized).match(/(?:الايه|ايه|الايات)\s*(\d+)/);
   const ordinal = normalized.match(
     /(?:الايه|ايه)\s*(الاولي|الثانيه|الثالثه|الرابعه|الخامسه|السادسه|السابعه)/,
@@ -73,7 +77,6 @@ export async function answerMessage(message, history = [], options = {}) {
     /سور[هة]/.test(message) &&
     !getChapter(message) &&
     !/(السور[هة]|هذه السور[هة])/.test(message);
-  const legalIntent = /فتو|فتاو|حكم|يجوز|حلال|حرام/.test(normalized) || getScholar(message);
   const scriptureReference = /(?:^|\s)(?:الايه|ايه|الايات|سوره|السوره)(?:\s|$)/.test(normalized);
   const revelationQuestion = /(?:سبب|اسباب).*نزول|متي نزل/.test(normalized);
   const revelationContext = getChapter(message) || scriptureReference || /^(?:ما |ايش )?(?:سبب|اسباب) (?:ال)?نزول$/.test(normalized) || (context.chapter && /نزولها|متي نزلت/.test(normalized));
@@ -132,20 +135,6 @@ export async function answerMessage(message, history = [], options = {}) {
           ...(requested ? { verse: requested } : {}),
         },
         evidence: entries.map((a) => a.text).join("\n\n"),
-      },
-    );
-  }
-  if (/مقاصد|نتعلم|تعل[يم]|هدايات|العمل/.test(normalized) && context.chapter) {
-    const c = context.chapter;
-    return response(
-      `مقاصد سورة ${c.name}:\n${c.theme}\n\nمن العلم والعمل:\n${c.lessons.map((x) => `• ${x}`).join("\n")}`,
-      "تعلّم",
-      {
-        source: {
-          title: "تلخيص تعليمي أولي مستند إلى تفسير السعدي",
-          url: tafsir.upstreamSource,
-        },
-        suggestion: { section: "تعلّم", chapter: c.id },
       },
     );
   }

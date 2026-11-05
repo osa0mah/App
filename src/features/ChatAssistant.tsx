@@ -25,6 +25,7 @@ export type ChatMessage = {
   sources?: ChatSource[];
   suggestion?: ChatSuggestion | null;
   explanation?: string;
+  choices?: { label: string; message: string }[];
 };
 type Props = {
   messages: ChatMessage[];
@@ -47,8 +48,8 @@ export default function ChatAssistant({
     },
     [],
   );
-  const send = async () => {
-    const text = input.trim();
+  const send = async (value = input) => {
+    const text = value.trim();
     if (!text || request.current) return;
     const controller = new AbortController();
     request.current = controller;
@@ -93,6 +94,7 @@ export default function ChatAssistant({
           sources: Array.isArray(data.sources) ? data.sources : undefined,
           suggestion: data.suggestion,
           explanation: data.explanation,
+          choices: Array.isArray(data.choices) ? data.choices : undefined,
         },
       ]);
     } catch (e) {
@@ -151,6 +153,13 @@ export default function ChatAssistant({
             >
               {m.text}
             </Text>
+            {!!m.choices?.length && <View style={[f.row, { marginTop: 12 }]}>
+              {m.choices.map(choice => <Pressable key={choice.message} accessibilityRole="button"
+                accessibilityState={{ disabled: pending }} disabled={pending} style={f.chip}
+                onPress={() => void send(choice.message)}>
+                <Text style={f.label}>{choice.label}</Text>
+              </Pressable>)}
+            </View>}
             {m.explanation && (
               <View style={s.explanation}>
                 <Text style={f.note}>شرح مساعد للنص المنقول</Text>
@@ -196,6 +205,7 @@ export default function ChatAssistant({
         {[
           "فسّر الآية الثانية من الفاتحة",
           "أبغى أستفسر عن صلاة الوتر",
+          "ما مقاصد العلم والعمل؟",
           "كيف أبدأ التسميع؟",
         ].map((value) => (
           <Pressable
