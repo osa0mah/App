@@ -249,7 +249,7 @@ test("learning asks for the surah and interprets the next answer as a selection"
   const question = "ابغى اعرف عن مقاصد العمل";
   const first = await answerMessage(question, [], noLearningSearch);
   assert.match(first.text, /أي سورة تقصد/);
-  assert.deepEqual(first.choices.map(c => c.label), ["الفاتحة", "الإخلاص"]);
+  assert.deepEqual(first.choices.map(c => c.label), ["الفاتحة", "البقرة", "الكهف", "الإخلاص"]);
   const history = [{role:"user",content:question},{role:"assistant",content:first.text}];
   for (const [name,id] of [["الإخلاص",112],["الفاتحه",1],["سورة الاخلاص",112]]) {
     const answer = await answerMessage(name, history, noLearningSearch);
@@ -258,9 +258,9 @@ test("learning asks for the surah and interprets the next answer as a selection"
     assert.equal(answer.suggestion.chapter,id);
     assert.ok(answer.source.url);
   }
-  const unsupported = await answerMessage("البقرة", history, noLearningSearch);
-  assert.match(unsupported.text, /لم تُضف/);
-  assert.equal(unsupported.suggestion.chapter, undefined);
+  const baqarah = await answerMessage("البقرة", history, noLearningSearch);
+  assert.match(baqarah.text, /مقاصد سورة البقرة/);
+  assert.equal(baqarah.suggestion.chapter, 2);
 });
 test("learning recognizes self-contained requests and does not assume a stale chapter",async()=>{
   const answer=await answerMessage("اشرح مقاصد العلم والعمل في سورة الإخلاص",[],noLearningSearch);

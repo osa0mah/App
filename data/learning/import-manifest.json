@@ -1,0 +1,2758 @@
+{
+  "sourceVersion": "1.0.0",
+  "retrievedAt": "2026-11-05T16:01:20.088Z",
+  "pageDifferences": [
+    {
+      "chapter": 80,
+      "sourcePages": [
+        585,
+        586
+      ],
+      "metadataRange": [
+        585,
+        585
+      ]
+    },
+    {
+      "chapter": 84,
+      "sourcePages": [
+        589,
+        590
+      ],
+      "metadataRange": [
+        589,
+        589
+      ]
+    },
+    {
+      "chapter": 88,
+      "sourcePages": [
+        592,
+        593
+      ],
+      "metadataRange": [
+        592,
+        592
+      ]
+    },
+    {
+      "chapter": 90,
+      "sourcePages": [
+        594,
+        595
+      ],
+      "metadataRange": [
+        594,
+        594
+      ]
+    },
+    {
+      "chapter": 94,
+      "sourcePages": [
+        596,
+        597
+      ],
+      "metadataRange": [
+        596,
+        596
+      ]
+    },
+    {
+      "chapter": 96,
+      "sourcePages": [
+        597,
+        598
+      ],
+      "metadataRange": [
+        597,
+        597
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/1",
+      "sha256": "07c46bd2592c9cd38853a6904e0001fc926e4fbb493013c474647bb957f25e2d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10",
+      "sha256": "807f8be88d4f115e61ce37f1727c840b35b70fa45a37dcfbd13c55eb1e04dc63"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-10_",
+      "sha256": "ce96a71d2cf697e905ceb1fa7fd364193dd48a28ef535e98a8c4da5fd2a20628"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-11_",
+      "sha256": "e8440329445b2d085625e58ac75d221dd5654884356d3293f2511b0acd9f8385"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-12_",
+      "sha256": "40944b1346049e538a9eea7c95e5e54e65fc936dc32778d8a9a5f8534ade4900"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-13_",
+      "sha256": "165833a9b86cb3ba99c57d9d6f2656099b07361ec7e78d05396c66b93fbe7bb8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-14_",
+      "sha256": "c01765ce22583573c54bec7db49f129b97d5904569f82d497e0868442897834f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-2_",
+      "sha256": "f6e5afe485a208adf3f5c3c1f1faf85d2b78110a85af92a89a2a08316207ec3e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-3_",
+      "sha256": "ce531e7d87c3d44556f9a6abab835be60920703de294b0615ab032694fe8bc1e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-4_",
+      "sha256": "a83880a27412fcafa3b220aa28a25558f3aaeca76e88e06fd7d7adf1033ea355"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-5_",
+      "sha256": "4a9e0d1ecaf39d4cfb9599b903f47a4158c6a669f3ea2095e6c5cc0464e37f87"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-6_",
+      "sha256": "8fedc0851ec010b7d9a4b2d9643f0966d288ab27af0c6741a67031c930f818e1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-7_",
+      "sha256": "9636c12536df00ad3229e11ccbae119e3a5be4a30d8ac9b92471ebdc82dfdf49"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-8_",
+      "sha256": "498a148b63c863e507b835837d674bed306740fd775748ab99c5dda8a5911332"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/10-9_",
+      "sha256": "00b703afbb0c9f7b4bcaa5e0cc4b62996260840b91fc5b8b093d6546bac0f462"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/100",
+      "sha256": "7d494d04b2793794d98d93623d3589d9119462914a4ee842de4f8c4148ee3d6c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/100-2_",
+      "sha256": "a69d8ea72a2b30b65ca8f31e51343bc358f168e15253cd441c0c8e0676d98afd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/101",
+      "sha256": "61a7ff52bb2e98a35b85856675611cf0173562340ba27b03313331243a362ad6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/102",
+      "sha256": "93d84b21a8324b4bf45714aa9ff6cce6f1c1266b9e049012b8ac4418668e7fb6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/103",
+      "sha256": "327c02cc859a1ee19233fa8e444a01fe33f26b1843e446c4252d95186917a263"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/104",
+      "sha256": "83349964b26753a9f12b07cb33466f703bc53aa2ccdf0ce5d74cd1e128b95e7d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/105",
+      "sha256": "591903f69dbbfbed2a67a0ccbc3072af6fbc132998b07cb8fc3a1588cefd7b26"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/106",
+      "sha256": "6996dca4b2cbe2915026bcd59e9058dc76b4f3916cb39022a02552327b97b8ef"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/107",
+      "sha256": "3e1aebbed9f4883f512700c8e8132b0fa6eb606da3128cbb260045f28f9b36a5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/108",
+      "sha256": "dd2e35ce1acc8e8139a4c16d2ffcbc694a86dad5df8880e65e50d2364eb68463"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/109",
+      "sha256": "7540b850724ac5cfc2ee1c264c177acf7099a05df9b3da316998013d623e11f6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11",
+      "sha256": "22aae761715ff8cdc3062407fd9179d6e4ca415da9ea3ea9c4232db4fabdb6e6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-10_",
+      "sha256": "513e5e05def90a8ba8db90946c1da9ff1e25760aec72067fe70c188470a8097a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-11_",
+      "sha256": "5b1494d50cd6377d5f1e42ff1779a686651f5c6e336a52b8d7b5f5440738516b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-12_",
+      "sha256": "cc33a5b3974db796f916943532089ab84d906513fc2f3d89dd1eca047cd28eb2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-13_",
+      "sha256": "6ed946975562b656f41a19ff70bffe79741d9cae417016217da9ac7426203990"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-14_",
+      "sha256": "b3899d61a60f600be179360a5b70b427bb52216025525ce8f1a90e7d3900780f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-15_",
+      "sha256": "60c59cab3b6ea8cf5981bc7a1b1fa1580a84668f072343335728effa9e2033de"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-2_",
+      "sha256": "27662749f68e32a168967679e6ab0f7cac0ed540e1d383b3ed9236f9225f6aa7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-3_",
+      "sha256": "0fc6cde63d05cb725c82e60228f6a7d16e394213b7af6f1c9964a54c2ad9f4fd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-4_",
+      "sha256": "989f42147920754cd00e4edb41150e1319f49a19b42ed93d8656172f1d105982"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-5_",
+      "sha256": "e2b29d2a66e8fa73e12e2ede57ecc98d68edbaa161f76a12344af5223aba0751"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-6_",
+      "sha256": "029751a0e1ed801ad1c436661589f9976c86758cae05c681c08c3838d5626a2e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-7_",
+      "sha256": "2fccf05932b154321ce5e6210c64bb50a5e2696054d8228137cbdeae476a9be9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-8_",
+      "sha256": "85d86935a272a9a18ed82f5c113a1459a4b7843f4b035f5663c48b1bc3444ee6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/11-9_",
+      "sha256": "06485d02499f30ef614e30645e1a21eb877f2f3b6deb7c70d9b56b183e485898"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/110",
+      "sha256": "01258e6e2ffb808236e414e5040c49824ec2fc18d661c6dce764cae2d1a8bc3a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/111",
+      "sha256": "373c22206850526eb3fb809ecb75e43bf1a834b5b5d159a923a90a02469c1c78"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/112",
+      "sha256": "9857830f121fd283cd97a791aec0cf751e86665b9a0569322e7a5656148c5121"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/113",
+      "sha256": "89cf2247b5426b746e625656c279c93419644199101d2884bc427df285dd933c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/114",
+      "sha256": "9e61b52d1f928e37d2aafeaeb19e39ea508f7b92434c73b9f1401d5c3615f68a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12",
+      "sha256": "e018f4e78491476f5394011c805b3503de2d0406fb7a20e81d6f89be3fe9a9ba"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-10_",
+      "sha256": "55877f6ae912a8f13bbe6eaa4a4c3fa694bed14d4d182d7e6188d8035d4cbba7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-11_",
+      "sha256": "84c9664deb2b3a9430505c1984b55810979c9c4ebf2492ce76aacb511b0137b1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-12_",
+      "sha256": "26df51bc1d31ee29f2c8a24b2428f4acb1bf8928eba59d09d072e37137da88e2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-13_",
+      "sha256": "53cd8c519c2d7d41117be51e8e814c13237b92694885080ff50b583fb7e78960"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-14_",
+      "sha256": "df6d79c8ed17fdc6cc33190b7f651ec5a77fd142f8760693cf29e4f3fa74b72d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-2_",
+      "sha256": "fca36f161a710646ffa59db4fdc47966ce3064436dad06c39a428e597c30ebb6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-3_",
+      "sha256": "84ee9bee7de79da7b54fec53899c5da82c54598eecf1f9f8a2e4255e0dbf6ca0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-4_",
+      "sha256": "437469caba36e5bdb0d754c7edbbd22add9c646f509257ca7d2780090c71e8ae"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-5_",
+      "sha256": "64728372ce774db591874ad284207c0325dde77a5fca5eecd9fc96dfbc9f5ca9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-6_",
+      "sha256": "2c50486024dcec42f0217e29ee97affe33c7ef1a98f243246f70c3761b9295a6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-7_",
+      "sha256": "c4f8dd70d966041ab650b8cccc43a1930025fc83a394751df4e4db6baa605aef"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-8_",
+      "sha256": "c044aff3b73500c21825977f819911b5d392034d469fe01978a4a686218acd5c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/12-9_",
+      "sha256": "001e0b39286f693622658e3436bdeaa0f0d2f7e1f1a4460507386c1a79d9a51a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13",
+      "sha256": "485fe9091916461776f8e9ac8ca0a2fada0e99dcf2d0a4309734b61b68b812d6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13-2_",
+      "sha256": "69f173eb0c464698a21fbe9f3aef038658be4f2d7ee69f6bad2e53e741954ea7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13-3_",
+      "sha256": "8af585301053fcac1dade92aee27c74145579f5b7df0a9ea02dd2189cf4aadcd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13-4_",
+      "sha256": "5c2d74d1443421f53e20940fb2ba6cd243bb1e487d6524f3b0e44daba7b07641"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13-5_",
+      "sha256": "73868a29fc1697a3ea47e1cca4748e8eefaa27d98da98c9c7fb3bb13de2e8ed5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13-6_",
+      "sha256": "4f8e66b283ba807e0ba87d3f7a2d72587524f776baa06347fc7144651f7aa553"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/13-7_",
+      "sha256": "92ef4367c5204d32fa9d69d97d3b9cfaaec55ecfce57fb4ab2a1af71968ebdb8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14",
+      "sha256": "39db66f4ce467396bd9c7bd38dc7b5525a7d96ca941c1745229c1bb8a01e110e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14-2_",
+      "sha256": "f0a07cb5f2275c099697537fa4c850f25b9e9ae45f0c0ac2ba89fbba6996c6d7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14-3_",
+      "sha256": "6ab4f7852577a8d5058bd6ac593c9d2c3a458bef964a8062b6b9e3e02026c156"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14-4_",
+      "sha256": "252cffb5cd79deb8f7b7e254f81150a48c1ae2028ef6ae4890a32ad296532e69"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14-5_",
+      "sha256": "2cc62bdb3b10eb74baca97c6a486335991ec5c7837ae5a08f7f45ff5f364ba47"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14-6_",
+      "sha256": "18ce51868c4accac583fd7d53facbae33d708c837c7ab439a868c97a7ea08173"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/14-7_",
+      "sha256": "1184a17a853685aa3d340d16f21dd365196407634ab5803ad10ff16d47c0d799"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/15",
+      "sha256": "9b14e514eaf0306b7608ca69a0cd888f96621b3bbcac3a93f4f0cf77c4141576"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/15-2_",
+      "sha256": "d9cfc930ab89f27882044e58cd7af92bc28ab129f2c8e84bfedac836abab2b4e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/15-3_",
+      "sha256": "7b6505f67a3409333f471dd410784710e7c2cd833b6b82a6da27e7db1c1e0d06"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/15-4_",
+      "sha256": "6afcc67ca0b2a8c8ecd5444ff0b344deae37c9a29571ec26cbc9de53e672c618"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/15-5_",
+      "sha256": "c9c94559b7d3677717f41e821e1854498bd48af5fdc60c2b4afcb366c0de9515"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/15-6_",
+      "sha256": "94203264db45ccf3a257eda706f3d0bcff88c3d1806d36149f2fdac63d3cda9e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16",
+      "sha256": "e06ee6a0f37349b11e76a1217bfa76ef2b1b24c7d3265f4978f251dce31a9efb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-10_",
+      "sha256": "6dde87d921e14ef927f6f12183042a6428db38fd97895f634c2d45da307b8318"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-11_",
+      "sha256": "c92d7da3cfb95c6434b7cc6cd3f2c2a4ca85d7852304573955a80dc6fc55de53"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-12_",
+      "sha256": "6e53734d7c93a13498c4e60fe4c7dcd0b618ae2b9d4def6fda715c921cfb9917"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-13_",
+      "sha256": "d8fd8daf1547d19a098d3474dc06ebaf05125afd68675cbdffaeb339cff9334d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-14_",
+      "sha256": "c06ce87fe821f740b0a07cb1e07d71825ce229ceaeb54b51cad451947ea7b290"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-15_",
+      "sha256": "5f15a28c3bb0a2f3be61cc210a42fdf01b8145cd279025605f1231ecd12c7c85"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-2_",
+      "sha256": "97f813aec84929f1ea157be81023630ff9a23cd9b40308d600c6c631950be4f8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-3_",
+      "sha256": "1f667f89164141df013791193fdf238a3af21bf670bf059181aa85cf9f1d287e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-4_",
+      "sha256": "ff844af04667d9ea8f8ab9ce1f12a707800b61d608375c61192c4429ddac5b31"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-5_",
+      "sha256": "8188f95dc9547646d7e362e49a144126a22c8b3ee27e694a38f6347e205c5566"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-6_",
+      "sha256": "dfd947d3b19d7cb66436149c496c143d16c45903c63aa9991b2d797ef614b610"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-7_",
+      "sha256": "940c6923249bf9077a4b1aee9c70c67b16d958181f07b5db98291bd15fd807ba"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-8_",
+      "sha256": "838cd97026b541310511be5cad8d30c06a8db9147517f451b9cfb9f698df6fd1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/16-9_",
+      "sha256": "58e1b72ee0d7419df58f7d1196015cacfe5726d2d362d971a91332bdb6502999"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17",
+      "sha256": "26e515f2e828aeacade0a075c4c7bc5c36235901017880fd3e9963bc5eb6a1d6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-10_",
+      "sha256": "104ed7445273d84ff06d666019b673cfadc024d9bc6a6f9fb085455b59bc5969"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-11_",
+      "sha256": "59462f8de46aab21d6d345885873bcb37376b3781878f767467ced336e983760"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-12_",
+      "sha256": "cb2024e767a6b7db786fcc2e57b229e870c551e610600bb0670d7ea1a58f145b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-2_",
+      "sha256": "a2f3f6922ffef8983e68d2748a332e6121e28c73be5411649b57d8ecc3cb70fd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-3_",
+      "sha256": "f822a13bf090c36a621e2c99872aeb250b9d4216a0ffd8a190b9b88e831685ec"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-4_",
+      "sha256": "a56fc2c863d227a2c62c6a4d802ea8fbdd00525a0d8929b582de9e08783dfa9f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-5_",
+      "sha256": "2b33a7a0a45dab7da1a91a4a15b3768c62211d9afdcf8d1834da642473b6dd63"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-6_",
+      "sha256": "2f0daec7bb293fafe14697cca475101fa0f613410f054e3ef5d68a78c998ce1e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-7_",
+      "sha256": "4f988f334429ca3420b886d692a7cc375f5d5e886ed05f51a7b28a329264cb33"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-8_",
+      "sha256": "8e2e2b226d5b43db2f289ddd0bcd9721cc740e2e78aba98949d2312d73a481bf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/17-9_",
+      "sha256": "0c0c6db1b2eddd0a0b87dd198383dc2c1f2937d806287cd81cc177bfdd2bcc54"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18",
+      "sha256": "424f0e675c45e7839cbb3442df45f3b55c8882af87b3e33092ba55a0201ff058"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-10_",
+      "sha256": "f2b06e6ef90a36ff8b8050969ab1a8ae78d047c3cca80e2575bccd6fa655e028"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-11_",
+      "sha256": "906755c930a2673473305e750bc92a8cd588de8ba33f247d88cbd4a0f9d8544e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-12_",
+      "sha256": "7c3012471ff1c7b6803b9cc126aa95620c444e6bfcf6c26fe83b93f157cd374a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-2_",
+      "sha256": "611049a3610e95fd7541b4a172859274c2086c7978f5561f7932acdc95d09a19"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-3_",
+      "sha256": "5617ff1b95182b6d2c33b1f001e95c5cf12b7f1a7619168a8a829380fe9854cf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-4_",
+      "sha256": "167a743c8cdda77246b1e0364b352a5bc82cbeab77a63d09e562b8906d1c6c95"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-5_",
+      "sha256": "9de991a12f61839fc63021ec5e6657bcc2cf6586d48227c17393ac5e01cdf4cf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-6_",
+      "sha256": "702bbb15876e3c280ab1c2bfd50669c86068672e30d98693a5af7a59011d2963"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-7_",
+      "sha256": "62a57ddc4841c9451f458c38cd067f98a78775911528e8b8c77d2d0b3e30c86e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-8_",
+      "sha256": "e2acaa249578e43876a5b39ec0d416d700b7d12a44c53b0c8f6f401548dc8c23"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/18-9_",
+      "sha256": "1fe9ba42d23a496d2aeeef772d6a7a24bf983eefb5add27f3c47930b651a7350"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19",
+      "sha256": "90a0095e61e39633b47cc2d143737021e0a52899d3dbb8e48b3d66813727f070"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-2_",
+      "sha256": "2f84ec4d1cc9e976d52ced66f1f9dd01b59e088e46d93b1ba8e75ace1c968985"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-3_",
+      "sha256": "5a3fb3f8a9ffb2881818cf8523f61c7a03ec88557c83765101f84089503ecff4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-4_",
+      "sha256": "9643178d5c846694838e302761ef0f68c1f3ea1e22de7045cc061d60c08c965b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-5_",
+      "sha256": "1e243f36da132901e33064280d2629266ca27ddb2ac27f1c2677d58d0ab1e759"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-6_",
+      "sha256": "07177f9aa8498f73fff150afd981edc69069af1e773021daaaf38a3e673f85ee"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-7_",
+      "sha256": "60d53a33d04253fadbb21e6091bc804c9991ddd0de3f3fb88fe2068c71d5831a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/19-8_",
+      "sha256": "80236be9346da319c93fd5ef4b20a4f8b96cf5ae492308cfefa04f9237160948"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2",
+      "sha256": "55a85c0fb2f9750190b37390e712e246aed0fc1c6429810930a939cfd85d357a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-10_",
+      "sha256": "819f475a7aacaa3e86c780ec5f7e7916868206906dbeec33611e5a186e99a5a5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-11_",
+      "sha256": "8154aacc898b72cd3ce8078ba6d589b78be04f82fac55166840a6ee6cd7a38bf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-12_",
+      "sha256": "1e0f114d41137f00bd96fadf0546ec606e0f07268220df3f8e8b6ad4b7659c78"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-13_",
+      "sha256": "66e53997739dcb987a568b66101ba1fa12ea0ba14e886d8d25fe0fedb24ba510"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-14_",
+      "sha256": "5a8bd3183d9ee98ecc21caf179d8052db0b6e0672695c6a2d61672daf8aa278f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-15_",
+      "sha256": "be8b83deeffbd7412e56b75dd2f52a93783732d6ee501b15abdf06d3e685f6b4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-16_",
+      "sha256": "b8ff9ea1652f510510616149cc46a8fe26d76660a6c97fb42e1ca09056afc3d6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-17_",
+      "sha256": "9298b9cebf6a2a50b0ce54915f45f7709d8b0efa88a027392d9b83637d9c3e6f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-18_",
+      "sha256": "ff72a92f7e1a228f8b20c38869ad5e876e67a84fd96042f6e1d0554010e0e487"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-19_",
+      "sha256": "1eb51f0fe611e5446e8a4ab34701a2d1dc6d9ddc50bdac60bb6dca2f5ace2706"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-2_",
+      "sha256": "e043f798c6f5c9c2ee0568a30deef601f5f14a542b6ad6b1396eec1bdc46bfa4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-20_",
+      "sha256": "2f47342ab1172b930dc14466be8178568af2189e141ec3866901748533ae85c1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-21_",
+      "sha256": "4d491cd684f92a1aa418a827db9d271f408dd6121df8b899b618e70e72c2cc5b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-22_",
+      "sha256": "745696c1dcd15710b0666ab85ffdf2af62e3bddbb206b4e272e651893e0721d4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-23_",
+      "sha256": "06772abf91b5bdf241965ce4e1f93f2b280b082f49be4680eb5fa7997d605391"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-24_",
+      "sha256": "fb810c375e346e55856d70a3e7e5c4a73f0400295691965ea1d432e53461c8ba"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-25_",
+      "sha256": "c773b420e8f593cd02b6315ce72c6fdd00722663661b118616cc49764590f056"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-26_",
+      "sha256": "e2b335d33368ba4a385f72f3be59147fa560d097108cc8652055ea2b5a930570"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-27_",
+      "sha256": "e712b507f26e65f8f6ff059b9eecefae174d0ad45c95531087105aa873851ccc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-28_",
+      "sha256": "83447d184f44a96afd56320f8d561f4f603e19fe9a2feb7166a891e2770ca431"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-29_",
+      "sha256": "9b80f42ec7c04b54c7fac4f43f81cd565ac0f43f5334839c4a2598e4ecc0256c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-3_",
+      "sha256": "a1f785c2d69e951e9fd4f03de29d3cd72708d1442c42fef68cec8d80afa5c592"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-30_",
+      "sha256": "d74b7f363a3819e2350e60a51b089f67d175f5c2a20abf58af9b6364fecd8c4d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-31_",
+      "sha256": "caa637cc3fe945108b3425221127fd5f077a4c53fcbca159ffc7a0e0829dd2ca"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-32_",
+      "sha256": "cba298d98cd0c945afdc0bb44ee80d36d60996c8769fdd0ba51b64765e272577"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-33_",
+      "sha256": "97f93a536043085eda3fbdfaf3eba6953d3029752dc90ae5ed2063919af21abe"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-34_",
+      "sha256": "9230b9f57b76383a40eafe4b62f9320d09775d1916847936e21def89e160d416"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-35_",
+      "sha256": "46e10077de21d1fce83fe24c99c4b6c8b160461d66b165f5e3d7f6bf283735f6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-36_",
+      "sha256": "ad7819d0d17565859477fda3c59e038ab1b567ed3fa0e23b841768d23fde1a3c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-37_",
+      "sha256": "0cdddb762f331e84360be4c4f6d2d6615a27ec271419c9d44dd7fbfc239aff04"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-38_",
+      "sha256": "79824cca10ecc2b244204ea4c71c101e8cf307aa3110db9b0b6e7a64bf560463"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-39_",
+      "sha256": "1d5565e10d26993feb8cbda022cb80b0fb3002bc620cc85ff8804ddfef779014"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-4_",
+      "sha256": "b458986de6a31f1e9de1a43a64d83668770625a115fb2328505282791010a603"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-40_",
+      "sha256": "09a149b75e9d03b23b426c2660cf9f763091203f1bd25d34443649219f3ed19b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-41_",
+      "sha256": "9116783cdbf9ef8e7a8a48cf58b0ec9cedf270444f980e59f9e7e30a98b23c9d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-42_",
+      "sha256": "c9d1172aee22500927df8f37fc3499f844675b009008d1cf2b9263c69b724a69"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-43_",
+      "sha256": "284530589ef0a30dabedd1cf72c3154286f89b6e37ca00d25517c15f751363bb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-44_",
+      "sha256": "a0b2e6b02ef5334b5ddc8f5d2ea70216161352dc2815ca589009ff95e58a9d69"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-45_",
+      "sha256": "b141f12d7014b163de58339df4d7d5eef69be43c324795a7381e3febca8045db"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-46_",
+      "sha256": "3cbab6ad4aa4c6bf3bbbf03c0c0de3a15a954f99860d45dd71ddaf702255a6b7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-47_",
+      "sha256": "3eb01c13c20e25d5a64b6659d943fc11984f6a5bfada2054c561ffa4ff8510ce"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-48_",
+      "sha256": "25fbf1acf3b86fd0c42c845e3f0d926b9f6f0acb042d749485a0323e48597e44"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-5_",
+      "sha256": "abc1ef368b6a020968d625ac33610eced9a241cd908b58ac29ab0336b6c7684e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-6_",
+      "sha256": "2ef958f7e999675225d47ecff95d4920fbd8a9924652593656779fc12d5e7fbb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-7_",
+      "sha256": "6e89c63e3fd56091fc6f3a378a2f3f2e3fcddff68b30b8e4efadee52c350f584"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-8_",
+      "sha256": "e8fc3aa8fcabbc560d3132800f7ac4924d695c91bafee9dad453445b5f59785f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/2-9_",
+      "sha256": "68f29999cfeb7dcc8602267de0fb7127744166ce2e368572146ab4ed8c37218e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20",
+      "sha256": "58ade80f2d53f42f9c1ae72d325bc17c8a8754c4c59ef30c671881555889532c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-10_",
+      "sha256": "33779e26ada6306357b55034d829bb4f3ac6071ca530ad37bf47871b23fe72d1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-2_",
+      "sha256": "022ac018a0d2de0d8014c46090cf34896d0cb0095c35681695c3b73571a870a0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-3_",
+      "sha256": "81af37845dfea58704df357a6867b7781629a2c481555eace7e467d72423156c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-4_",
+      "sha256": "88a21b69f608ae2a47917a518447450c2c67714a801ef58b019abda4e1be38de"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-5_",
+      "sha256": "b58b02ca130188add4c17f819d26d0658d09d5ab912811bbbeca4b609a69b7ea"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-6_",
+      "sha256": "1f44333718b1997c6df4a073e408a90c2f8b7c2c0c6d3be2c48900712acff28e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-7_",
+      "sha256": "e99fc10877d7927758de5f4dc4305fc6b2843f569752c273cdf943d4cb118a66"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-8_",
+      "sha256": "eff88f78bb8fd84125566ceb9887a3450415291b950cb06f83f45d6ebca4ccf9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/20-9_",
+      "sha256": "574878d70c5e25443770e9c30012c5075c10fe1aa62076be34dd4b9e3a26a40b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21",
+      "sha256": "de4b38f41e3344d86e593ace8ec41d9708385d3d2635c2cbee9eb7add2b830a7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-10_",
+      "sha256": "4b1d09ef8f52cccbc15f91f9f79f722b83cd1b2df604f3d5011685d9f8750fc2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-2_",
+      "sha256": "737a8eb970837cd32bb2d34a115339005ba7c4ee0522ab1a83a700d011420026"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-3_",
+      "sha256": "eb422d24ae9e923d47702c9b3f298450d604e4e84451cc901edcf4abcf4b0865"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-4_",
+      "sha256": "a0d3e4f745eaabb5e6b4f5332e20a8d0a10070cbcb3d4c21f91394a786c7a8b9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-5_",
+      "sha256": "08939d82828f6df1c5570804cff60d649126e271effa430206a3644005c383a5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-6_",
+      "sha256": "af98f2a8f7b6b3612a6b8e3d0111d0d2d21abc2587d7bbcf797025e49416a704"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-7_",
+      "sha256": "c0870c3c78f041646bd6bf8e417181d91f7cb085ea7d244291518a9169b8b98b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-8_",
+      "sha256": "d512f4e090d0f9acdafb348c27cfed27c81a8d34b491e6decb6ad194e6f59c64"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/21-9_",
+      "sha256": "4b7e3851295652d3b88bdd41ce3749b799eea95a41a2d7f3d5b1d2b021d35cae"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22",
+      "sha256": "f83eb702ba5a76741dbee6badf55bf6fe470bca5704188d13684de022b0db43a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-10_",
+      "sha256": "3068302b264760238adcb9f5ca463470a45e009437ab1ce5c65a03ab32b8a1ac"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-2_",
+      "sha256": "f943a5c0042e245ce4bd147b1bf618242c3f400df661c0900674f474eb84ef9c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-3_",
+      "sha256": "746311bef8b4bc77cde6a1fd9fda54d6fac12d78845b2aa1b4a96090eeb9a74c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-4_",
+      "sha256": "8e93a5e3d959fab1e4ac17fe03fa1ba2b2fa65e597a435c099b8a11995aff6ff"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-5_",
+      "sha256": "582bb2f508c58003e9767f2bdb344e6d8830b86220e5b9b7420b4f3a17510206"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-6_",
+      "sha256": "a77de56a61e12782b7d404c2dead39f8f9f9b15aa6c45f6d351910f2fa22d76c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-7_",
+      "sha256": "986b6a35f25f7b151c8ba99995ee3fccd03dbd0a913ddb9c6e62870c64c32b5e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-8_",
+      "sha256": "ee21ae88ab2cdbdc6b5129deda1bdd0caea92a5d23f700fd2e03d91980e05de4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/22-9_",
+      "sha256": "5324a4f934cb4833423ef620ac63d8c4640cb56ab803f1947ff0dbbe714cb6f9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23",
+      "sha256": "5e36e109b8e8d6caefc647f1165b441cafef32ea60f547a610807de5d828fd02"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-2_",
+      "sha256": "97a1c00f0af611b3868c98e24b1e166dbe0afc688e0c133306d1870cdb9ee609"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-3_",
+      "sha256": "c5d651bd261302617070dcdbd474a6df3f740c09a072ff65ea367523a6dfba28"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-4_",
+      "sha256": "f34ab22f9eccde3d52b06d2d8eb9e892f0114245cb3e903a41a0e58fe35fe996"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-5_",
+      "sha256": "ae35cf25d255919d770a7e5a687b0b6ff79a8df398cd541046bc6e3bf6e51fc2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-6_",
+      "sha256": "6dbc23d091f835b5f966c8be0598f2923992bc45120e92c65598cdcdda2e93d7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-7_",
+      "sha256": "d55ade4e93de6f87c78c7a52b6ef6bab454a772ffc662609ceece12be45b1c9b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/23-8_",
+      "sha256": "4de80aa9bf63523dae78cd2dcea5f8caf82377081b74dab8fc1ac35dc49fc4dc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24",
+      "sha256": "89cb6e710b9f57977c845f74ee5c80a13880a35d86d9859bbfec50ee9682e687"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-10_",
+      "sha256": "1e46a5e04c539559186480685d1d5827b4b43a6b6439b4d4db2a4afdbee5bfdf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-2_",
+      "sha256": "84c1f4cef251db06936c5fe06a13ef9d09d18a1278fa7c4fc587990c9ac47eeb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-3_",
+      "sha256": "cb26d9a9cb638087741608272c78697d1a2e07e4593f444028af7f5b44a25af7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-4_",
+      "sha256": "977b610e9a700a379b4f025ad5d210e4edbdbeb4c025bb3edd17d57ed6383d76"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-5_",
+      "sha256": "327d156d1ac19f1b438bdd5322ce559aebd10001d36a32c08d1ac9764718dcea"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-6_",
+      "sha256": "872a2bea9cbc6670604596c161ab2cf15c2c9eb30a1478e68299fed996297bf0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-7_",
+      "sha256": "cd54a89b01dde438d849529d2a71e62782b415ca704249330f10f86037c0c035"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-8_",
+      "sha256": "46cf52ea05bf7b57ab482e5f8c00403da1bdaa8bc2fb25c01d22bd40713668cd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/24-9_",
+      "sha256": "ef80cad55580160583b67e99d2bda2f3a84498f529a8edf8058a94364129dc83"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25",
+      "sha256": "f7ab6c2cf601554e3a852268588e78e2bb352516de164ec0b8c33985e6817ff1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-2_",
+      "sha256": "ac8e8dd33014e9ad0986942b290cbdaca8e0dc5f6f0a5168f12ce78cbc6a5910"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-3_",
+      "sha256": "d223f7368ca39602584595b349e11eeb15336397d14c7ef801e9315fe2df6eef"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-4_",
+      "sha256": "cde2dfbaa3125226aa6fe5031ec8130d8080ced089f2289a75ad871768af6bfb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-5_",
+      "sha256": "06a0133ec25d0dfdd4cc7c232f5e9f676d9c8e70f570eab5976383d1c93041fc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-6_",
+      "sha256": "1f2f5ca16ae8a356faeba766138ea522659427f7f90130520f230fbb51b7314d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-7_",
+      "sha256": "e3f83b0d2a473530e35f6c25749a983d7a89c0493f3d9d457da5cd7396df0bd6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/25-8_",
+      "sha256": "22fd2b6103d9dd2da74a3dd16c250c04d1edc1efee6b09a8ea2d06f30aae3a68"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26",
+      "sha256": "0779cc64ded717d51428caeb6cbf0475228991c309593ef7635820145ec4e204"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-10_",
+      "sha256": "6c9f6e3065cb3a6676f299827ea48ed783fcc179e43f3ab394e7673604b53981"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-2_",
+      "sha256": "86500c4aae0241783fe2e566759de57d177ca458d980ad2ece148a2f6fce092f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-3_",
+      "sha256": "c5206ae1a7c0c674ddc605dfe8111bf845951bdfe4a27fdf10d856ce9af638a9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-4_",
+      "sha256": "cfea3dbb6ca416ccbc28fd4a1b23228c856f402e9e75b5a9ecc6bfdcd065d35d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-5_",
+      "sha256": "09e6d4a39955da394194e661ba3f6fe7efdb9f79537965d4fbf6f7a863eaf9f3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-6_",
+      "sha256": "111b739906a45925c28249b9d038e7b7d2dbe340ac3cde6520f2af64464e4822"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-7_",
+      "sha256": "e17c7ab337f4c38d0e975c4c8d8b0b3e5f0a275419f96023a2dc452fa2c31809"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-8_",
+      "sha256": "002ed8cf296b6b973232f274c1a4ab9657a5fe45749232d8766f01368fe97745"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/26-9_",
+      "sha256": "6a9293cb5c2fadd17e4f18bb0fb6c414f6921ef31dbad061393a6c0057763b1f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27",
+      "sha256": "753f1469db4fe456983fc9776285f793e243c52cff982342709022c48acfa0c1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-2_",
+      "sha256": "04c5d8387af5329ce93b4e7534e43025ab4c2c5624bdd6807864473ddb6157c0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-3_",
+      "sha256": "9d25e6d6612f4d2368b830aaac677b116170a305a15e5ea380cb0ebcae320d46"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-4_",
+      "sha256": "9746f5a15be90588c8efbca984920855742e293f02d4b0a411bed07ffe834150"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-5_",
+      "sha256": "8b65c5039a9149db1ea6671e52601fbceb35da8c00952bac20fbbd0bae1820d4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-6_",
+      "sha256": "8ea842e54c2058cd1dd85f95f09cb1f938c369dec8dcec5513e528992ae62ef3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-7_",
+      "sha256": "acb7d554476aa4f1595f4888a3fb568a1ba330affff1aca87728440f2dd7cf0e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-8_",
+      "sha256": "24662dc0caa58face145a409615a484ee5cb439b67891d9b9acfad5d6ac90dae"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/27-9_",
+      "sha256": "7d0a6e20364977884ddd263096e7248932045ec25233a99f2c42cd58e50954f4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28",
+      "sha256": "189b7b628d5a2984ca49fe8f4bacd800f166af19cb0a164646b5e382f404586a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-10_",
+      "sha256": "80c508ad52581af3bdf372c0bbfe8db930f1e9c88702570161a40202ee3fdf16"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-11_",
+      "sha256": "e836a1ea8451f27e390e439c275b969cff6d96c3a8da4c01646a38b46a826134"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-12_",
+      "sha256": "08f631121b09b79a14953e66544c3a1f0e7e39e028b637212cff19204317f0a0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-2_",
+      "sha256": "76923eb9c8cdbc3b9390f12b847f1885b0960e48c86e459e9845b9f31ea6dd6b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-3_",
+      "sha256": "29f7656b12164853e3e37c341a200b2c6c75fa7c95500669801c4eef2f9a1ac5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-4_",
+      "sha256": "e1139ea7c6e756128d04d858564fc31d5dad6c742ad4609bdd0f2e22c561a0e0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-5_",
+      "sha256": "71892f9e1435e3fd8c9aa302ebf282375771089bfcbba49b0ba430995c13c0dd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-6_",
+      "sha256": "58df5047c2a396edb87fdc938606fa517e17228e22fdeab75952f5153b27dbda"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-7_",
+      "sha256": "c50aabd881927bf2cf619207ab51937967ffefa14e2e6b281532e4c8c07daf57"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-8_",
+      "sha256": "4e2b5cc724a2ebaf864d64ace57adefce018b464b262758f7e50cea1da5363fe"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/28-9_",
+      "sha256": "4dfd31e700aab96b21749a206f0f930b911202ee4c3eb7449376d50eb5bfeaaf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29",
+      "sha256": "631d4312dd8acb749081a02f0e5fcae49ead23c5c612f4fe533992ff2502eda6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-2_",
+      "sha256": "7d3e9726d259672360cb5739c887fe59d70688bf4f78c20505217b173041deee"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-3_",
+      "sha256": "608416e4b939f0fb6396376852e5e55f94e7622fd4f6d3c4c432b00ba481ea1b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-4_",
+      "sha256": "752ee3b0ba065b2b5efa4b4d15f60757e8b355a9ddcc0436179d97c9119e7a50"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-5_",
+      "sha256": "865e4a41c1df950864760127cbf20029b4fb414c89978144702faa9a0962c2cb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-6_",
+      "sha256": "043b19ec50205be8591d20aa8600af3e49a19a4e59b68f096661dac150ff0a1a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-7_",
+      "sha256": "5637e0dcd4080cc03985decb317de085148deef4ac86c6db06b047ffea982094"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-8_",
+      "sha256": "4e0adaacfa310b306b684a2b208df9f4262015c0ce83937301df628eeb60af3e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/29-9_",
+      "sha256": "3b9df28d0d52ad43847ac399b6867ec102632999aab66f68dd54b33453fb43d2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3",
+      "sha256": "4f706d9038be29a9bc55af1bfcc48c86a252a5658d43ba80d312a218ada4ff3b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-10_",
+      "sha256": "6c6ada9045a55e456ec3a8cb35733e7e860ddf054c24dc95fc8f8dd2cfd1cab5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-11_",
+      "sha256": "2b84a6fb0b94662d208485a8053f8429fbbb17e1fe77906b96fd0a59a6371d9a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-12_",
+      "sha256": "f3298327ed9dbf8641e12fb279139aca0240f9035648c61349b5539070875553"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-13_",
+      "sha256": "f48c703ffcf1d0da2cfa5280355d3ce660964deb114666834f0da1333ad852bc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-14_",
+      "sha256": "3cc9c0045c87dfefeffd3277e6de90d1989b5e181b98091a9bb2e9cf90bfe719"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-15_",
+      "sha256": "fdfaf5b8d7cc4bd2421d4414b274883e573951423b8070e3aee39a7a3ce39af2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-16_",
+      "sha256": "6f267f0ec564fe03113d56e49c3c851d70ad57fb9ef461852957b440dcce4396"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-17_",
+      "sha256": "6517bd771ae177999b3cf0ea67b984a66de0eaa73d3b8bbb481cedc0ee24361a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-18_",
+      "sha256": "62f6f8665a9af68ee6d79586617dce54ef286319f1723cc469f22d82cac5969a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-19_",
+      "sha256": "c75061fca8617cca9e08d56da9def3c536452b4d4b831025ceb2e4761126c806"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-2_",
+      "sha256": "bfeef8e63c12aa052f21de6d95fbd433a9a71652307036794ae4bcfc23cd6bda"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-20_",
+      "sha256": "c4efabeecc13da45fd3c78ad1869e3513da0a91c4ef17e24e00264313ab094e7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-21_",
+      "sha256": "21c23ce56ab100c432c445e53fdb6595fba8727420f0bb9ab800590bc103cb90"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-22_",
+      "sha256": "e89f9eee971f39e9367b3bb9d37d0ce0406dfcf803cf48a7eaeae287e6fc84aa"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-23_",
+      "sha256": "0436d4971bd9c080125822c440098dbb8139ad63ff6a5058cc68792ffefeb44f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-24_",
+      "sha256": "84eae5cf70938bff2158feb56568e77f1ffb39108a019c9927a3024ed3605b47"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-25_",
+      "sha256": "26c08cce1c96d3c048bc09357903c3b68f38bb4cde07fb90917705c312b60ccb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-26_",
+      "sha256": "14e9e435c588f283e793e91314d5bfbbbd92a702ba26326eaea126640de0ad72"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-27_",
+      "sha256": "19f171cd122b328ded8da8f0a3574208c6c8b33b4909f38f18e1a26e44347b8e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-3_",
+      "sha256": "9a617cff5a4f9806bcb73f1acce795ab5ba4e7d15e7f78ee80a85b485c57c5de"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-4_",
+      "sha256": "57386f9379cf499cf52dc5116cff15387a35f62cba0cee96548d0581948c4e67"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-5_",
+      "sha256": "1233b8a365b826101b041fa7c7ab425e2c42d03716fc306610bed95f55a52c14"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-6_",
+      "sha256": "0c3a45c72d81475f0b30c645e01d9ac722f10be35d75f295fe6e260428f7d452"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-7_",
+      "sha256": "46995808bb452c715229f0c7a45feba01cdec195db891d5faad07e558ac0e779"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-8_",
+      "sha256": "df0b7cc6946535611ff2cc6dc41ad65e02f49c68c193e4e387ac47b872442464"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/3-9_",
+      "sha256": "85d7aacec2475467b996acb997ba2406867e0c5e0deb9a5bd652506d5e711270"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30",
+      "sha256": "50931dd69334df1c0ac34be85ed0c152738ae4a13272af6b49568b4d2112afae"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30-2_",
+      "sha256": "d422912806bfe7d0e3dfc72771ec5579e1b197cc156098a7f1f2c31ebe007f0b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30-3_",
+      "sha256": "f2d3ad720a69792d70ac0d1fa17e4001b714dd4abfd4bab04549422beb865b4b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30-4_",
+      "sha256": "b70eed5b3503e2550ac07f3474117e14bb0a3b94217a0bea375eaf0de9c0ad23"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30-5_",
+      "sha256": "6d7be66bc7d54f1c9fa98597f718b46b595a8cc5b3d0e4a142a33aae787e08a6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30-6_",
+      "sha256": "3f8b31d7c694a92f8fb99a0f9f0b642b7178ccccebc25bfe35087fd714dfaf90"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/30-7_",
+      "sha256": "4ec346507a27e1c7dd941fdfb96d1228433f6d71eb5d242e6ab4af928378a712"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/31",
+      "sha256": "c5d0675b4f0714f0d133be17224da63c69a2d75942c7cc13f1471025832de3cd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/31-2_",
+      "sha256": "344cbc78d54425cd53e85a68e475e958b3dcd40030e183ae297dd67cca9c824a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/31-3_",
+      "sha256": "06acc48ae7e30d9e64d35df3a6dde2bb0686475195472f17289290adae2730f7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/31-4_",
+      "sha256": "26491615c54a885d1e7c7716da4c09ead89b727c2f55d8be40094b6ab059340d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/32",
+      "sha256": "2be1e60815d4c8d1dae6c0594f991d3f9c1748bcb573aff38ed3d5319cb87dde"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/32-2_",
+      "sha256": "73a0a0518365fed894d97b55991f59ff555b8598035d9ddfce162a05ad616025"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/32-3_",
+      "sha256": "fbcc721f3f5b00517dd861f6759ba1591aa8acc933ace2a273f307590c9ff08e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33",
+      "sha256": "672502e4b5b4a0d65ce8662096c32b502a4e717e96b3d2ad91f24b33450e2c59"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-10_",
+      "sha256": "ad122a523b663c9c8dd3fbcbe4c2209de97d986e965f61fa07094983832f3840"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-2_",
+      "sha256": "69573c6fdfbfc86acfdb26a14753c85c1adced87275d7c68e60781251564f770"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-3_",
+      "sha256": "c50c5184482c0abc7db97b35ec05e12f2b2b36ad0359d234ff8fcaad2a6f672e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-4_",
+      "sha256": "329650c1599c0f95919e5610ba712b1c7e81b1daf1d30ee738b9ad8636e0bcdc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-5_",
+      "sha256": "d7faea5cb2aeff625ad01530532d74d9765c871aaac43886df31296c34f72a42"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-6_",
+      "sha256": "b6f6dba3523672c2588e0acf4c9660709ef2190e511860d0ec60d19e1ecd624c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-7_",
+      "sha256": "d042f2eccccd89f709a06dc76a336d6b99bb648501467c3a1cb59fa59eb13f4a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-8_",
+      "sha256": "30d0da6cc9d8a874658247a555872093541657d23124a84f71ff7fffc892ddaa"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/33-9_",
+      "sha256": "5cfd3fcb31a020b02a3c2747dc6202a410e6761ddc1c8b0d8b2b7347fb6c60cf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34",
+      "sha256": "ceef720b9e71df0d53ee3690f95d170ccd608868e9d99b4a36dcb9918602799d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34-2_",
+      "sha256": "b7945dd099e6c67bdf2cdf1eab7414b7915dbb50390ea7094f71bc9587d6de31"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34-3_",
+      "sha256": "fc492840c60703fc35f7828aab5475b9d92b32fab3ba5ed79c8c5de2bf361c90"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34-4_",
+      "sha256": "a8caad68a63dc64b8798eba9e2e373386607d49fa72a5a5252d08e9ba304eb2b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34-5_",
+      "sha256": "ecdc3cbb861edf26269e7c9ba0792eccf0aa84a3f62113766a23f47919539b0d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34-6_",
+      "sha256": "f997f912ebb6bbc8d9a417764af43bbfd7f2373f559ccbfc132f181bd2dd8601"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/34-7_",
+      "sha256": "646a996f43aa479a9e54d795a81864cea37d976141fd7139957632626257ad0b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35",
+      "sha256": "407b693d2fe9e2e54d57d279eadc1c54fed44dd1ac78c7748edeaddaab2f3d4e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35-2_",
+      "sha256": "1d18582dbafe90601b3ea983a067b72ad4b61071de51aec9a153080a41769c0f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35-3_",
+      "sha256": "e05a1ce6e8ec89881399c62a22af429a3694c4f2ca5f69b6b4932668d44f1b36"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35-4_",
+      "sha256": "b8aff4a4431ea678b2e8490b7354aeaa3f08f3438d76f66098262f5d6bfc6be6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35-5_",
+      "sha256": "a627fdb2946e040d913d4133318c1c9fd32dfdd77b29674233c65a8a4319e6f0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35-6_",
+      "sha256": "66fcc635db96d3ad67b8f47e96839124151371f52500a5d66f8307887fcf49f4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/35-7_",
+      "sha256": "00d1d5dd1cffaa5b607d431a8f4935491c8d8aab7d59b051d78089b4d9eaaec3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/36",
+      "sha256": "3c5c4fb3a6a1266491372b99541cb8585fdac67e130b37e77bf0f9c1ddc792e7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/36-2_",
+      "sha256": "dcd3e3f7e0482fa9d4163358061372d5478c27ddaf50a9149570632dfb892ac8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/36-3_",
+      "sha256": "f3106e57dd03ba32b46d6ba39075a733a2d90c20f153373e120cb150d201f82e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/36-4_",
+      "sha256": "f0280a2a1a5880c643a435d4ed7646dfc20bae05dc93bc1cf8ef3c4eb9f381cb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/36-5_",
+      "sha256": "b8439b92405af384db19c79d8e4eafbadb7d285d0dcafc01bd7d272f9303fd50"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/36-6_",
+      "sha256": "8656d9c3f47b2d5088e679fb43f135fa9be96eae1795f725ece53101cd1b2848"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37",
+      "sha256": "00211271dcd0641ad524ae9cc8cc09dffb587a8faffdcdc78f75588262189685"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37-2_",
+      "sha256": "e3d870aa29213f8a061a94ebfb604e3e10f1b209239d27e0fb41f05b36b0b8b3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37-3_",
+      "sha256": "01589ada58a7ef92b6760fbd7d1ea309a4cf565d7fd4e612d6aedb7e34fd1632"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37-4_",
+      "sha256": "ea9095a7d2c1a0838ea74cb3525b4e3bd8719693ece09c22e111dbee0c69ef59"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37-5_",
+      "sha256": "542982d25f858a3fa50fa6940351c2f21e226df4a2fd0209faec03413f786067"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37-6_",
+      "sha256": "b8a08286ffd48da266e10cfb78883ce6aac052b7dfe91b59290b761735b63693"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/37-7_",
+      "sha256": "f24ea4164659c91a65676228356c51fee828c3c4cb5ff67621cc16a51dcd5b21"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/38",
+      "sha256": "d325f7ee2abb703dd67f6a6ad4e098a6ec1556e2a1548ef5f5c3bebcd370b44b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/38-2_",
+      "sha256": "cdb0bc7466a80ca9b70688675add8949d0a3d1f4a3f4f11303e249b32ad0c8f1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/38-3_",
+      "sha256": "14c9031222fb3f803f6fccbf8ac63f02064635242a7ca6d66c7a66482b0eb525"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/38-4_",
+      "sha256": "24cff684c0791adb6cf2a72fe701e786956d78103eeb005377f755f249b4881d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/38-5_",
+      "sha256": "f3c8d83d4abad69b53a220862871dba92383b3cafe094808f6105f26784c0b79"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/38-6_",
+      "sha256": "10ee43cca6c2c89d654c42a794ca9c28953a85e6ddd4a630975f9bdf06a5644f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39",
+      "sha256": "bfe27f047ea5197e46ac1e8f9094a78ce995b9c1ddb69eb3a1b9646e0f6da0d8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-10_",
+      "sha256": "77c4d12bed527e604330b12faf540cefc5cce20dd00bc89a18a7261aa6fa355c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-2_",
+      "sha256": "42803a622b37e8f1ad5acf67793b75ce48df3ab7e98a9c0afacc9f39c8f6901e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-3_",
+      "sha256": "7d3bc544cfb7ff5bc42bde77b8b6d51d1d636c0c24458a7621dfff102c52c40b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-4_",
+      "sha256": "1981ec381a0f11278bdda98ed0cee01d56b4fa71d5eee02e3be31a037c62c134"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-5_",
+      "sha256": "fbc863ebc946b75636cf727b4cc072172e97ef221b869910d13036736d5eec85"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-6_",
+      "sha256": "07c2aea4907e00c611b43492a75b9809bdb1d38a25705af79a63b4c6ab363485"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-7_",
+      "sha256": "21cc33ba6e5fea357a0852bd22231b1043607eef9d752e91ecfc5dd5bf9a5a06"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-8_",
+      "sha256": "dc08606f1681fb4bc1cf36147107098f63b0e9e1c9d59956c449e0f32186afed"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/39-9_",
+      "sha256": "3cfc8b0277e3a787334b1e0546be256df21c1240befe23c0ca4278f42bc31b69"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4",
+      "sha256": "dee24f3876123d58a93536ee9787c72184bbb685a9470982ff51cee71ff859d1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-10_",
+      "sha256": "11a9a0462b93342374b68911c2a393ca96a4e91af20718194ece49c4c8ac6652"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-11_",
+      "sha256": "9a411923799f4c71d010fccf5ecef05d656f7d7c02c97bea7d743ba850b25bdc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-12_",
+      "sha256": "5dc7f8120c0c1f1bcd6e925ad5f896728d5d56fc84c10c204f3866873eb9092f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-13_",
+      "sha256": "0b7635f4a1dad6edb2bda7591a949469bf352e2bf158fd0f35df2973fe7a08f3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-14_",
+      "sha256": "bef3d138a90c02a400d678a2d6c09b533fee99892d40af345af38f6f1e950b75"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-15_",
+      "sha256": "0b7780ee9bd3e21734af65f3a7ee82635fb0a3f0769463f2b47bf2381c424015"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-16_",
+      "sha256": "2a9c4ec4cc996b656614714c92748fb0af99eda0f383ba9a3527dcda4fd919dd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-17_",
+      "sha256": "8eac5e906a9f7fdc8afa9241939ec5f74a60239e092c26ca4e374e3f8d76951a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-18_",
+      "sha256": "8f337919822c9b2f4e693106797222f9a13dfb40bfc468e38f19b38a4b4d46fe"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-19_",
+      "sha256": "0e22fdffcf5d9c775f3641a99118e22e85bcb824c8b3a7a7324e185e0d3d4a38"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-2_",
+      "sha256": "6a93bd6e3e3e051b96aaacbdcc92763c9350308232c31047931871e3189e381e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-20_",
+      "sha256": "7d526c0c22e7f4e53ff4945df93872758e1918caab1dbf4f3a642e47e70f26af"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-21_",
+      "sha256": "8050da1301cd0b6c3bad18afa66dd1a8ad9720097cd9fec91807a80d6ff95eb4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-22_",
+      "sha256": "054bfa38e3162bf4b7ea391517b71affcd06b717e68ac5c94375077b7557e969"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-23_",
+      "sha256": "545473d70996782b50d2c19cca1c238d4e55188e82d79f7ea06253f72d6c6b5e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-24_",
+      "sha256": "e86466bc4e4ebd86bdb7f6ea07ec1a14260c68272c5e530bcd8e68b523155177"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-25_",
+      "sha256": "db8a6c41e132010153ace6f78d14fbbade7a759ac5cee7405643845c5136c523"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-26_",
+      "sha256": "c3a66087eabdc6152f071f8e5818b54f7442d6970d0955d4fe6d0b7f2fca5c69"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-27_",
+      "sha256": "670dfc27e45964d19f48db832296f62ba94ff55e4e1f76eff9e75b2bdc69de8b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-28_",
+      "sha256": "3c4b59630db9cbb6754109ed1caa81e99e04449fb4e07c9492b8d90da82021fa"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-29_",
+      "sha256": "ad91ce4a2c7873b35d8a3490d4a8ed3ab2a93918f659e9fd5e2b7f8dc3bc1c8f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-3_",
+      "sha256": "5e123b51b216282badb3b4b93fc94f4ccb99fd23653af46edf229bf13f8fb150"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-30_",
+      "sha256": "db9298c5887fab965dbd3615d2681b1e0777190573cdb1bf99a32d820d9aa96c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-4_",
+      "sha256": "d48f5ec2d63634ebedf64ac8b2b9c5e49fe0918bcf8a843a73a264f926af0bc0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-5_",
+      "sha256": "7187b7e4e7ce6ea9d2bae6fea252073fae52985e5e102f9fc727e3c7c2859a14"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-6_",
+      "sha256": "08c9976332910d2cd9124047a073b4602227f44aaa9c4636c90473e9974d33c7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-7_",
+      "sha256": "d51e5e39ba22bc74cce975807d70e284f1c1d6ff8395333e00584008d3b699cd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-8_",
+      "sha256": "b16374d5fc2ecdb77d0a8d74c3c86b2d5ae027c3b5668317760ba3fc0f2382db"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/4-9_",
+      "sha256": "fbbadb9de1c70ed29479b1b71fa9129954e80b2331b97b38c96a4ca439942c2c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40",
+      "sha256": "9d3633ec9157fcaa2865b3ed4c61f27df2a65789da2c252e440105844b324c5b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-10_",
+      "sha256": "32eb2371f3e535257b29ec8a694ea6e0c347cb5d73003967bb4ff93e69ce1cdd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-2_",
+      "sha256": "a19f8a8e26160e72473e50bd811e0b005a35b3b185a87de5b12bd005a6d5a61b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-3_",
+      "sha256": "c960770dc8183ab9343b90d6d2508a69e28d3c7c175e073d08b6a51a4a5adc2b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-4_",
+      "sha256": "bafa65359bd592a884c3bf9669f86f08586a3870b0a7b56bee29cc6b279607e2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-5_",
+      "sha256": "d4d869e776f41f42fc9534dea467225b444d2322cb4b148c8b59dd03073f959f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-6_",
+      "sha256": "3d1e058819875b7a1f5c5bd20de35ab84343be63aead8dc30592b0d857e2039e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-7_",
+      "sha256": "57e6d0394c0b4e5f660978e0d908eb3238359bce6126b29091bd1ba3eb1a17f6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-8_",
+      "sha256": "2e557dbe633496f2220c78676dc7ce72a0d6e6cc245046a2c76cc2d7bb5d19ac"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/40-9_",
+      "sha256": "9f87f918f139821f7430c8f866cc6150dd87f07141b1d0ea8c10329e596af7d0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/41",
+      "sha256": "ef2a4249cb4ee1fa218faf47acf6716b64aa90a5bca00f5faabe2058c007c70a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/41-2_",
+      "sha256": "551b8e546150341d6bd7c1b73d272b9f67b86012bd7353a87e1c7e7cc7ec37f6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/41-3_",
+      "sha256": "a56033ce8f57be513abeaacbcc1b1d040ce82c07c2746e23e1600a4f7af53a16"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/41-4_",
+      "sha256": "538175fbf8ee1ad19860ecec852ff7304e539ce09fc34588d032085bdd1d80bc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/41-5_",
+      "sha256": "dc0b1cabff14fd66228c259681d7cdb014c792291cbb7332d50036d32b66a021"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/41-6_",
+      "sha256": "2ce44473bf08faa7de84235b61831aa2ca707ee8f8b463c7bdf131010cf910dc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42",
+      "sha256": "c15fb22e90e7877dbc97e9a2148c3d00decb06a5fa468af16e2d724a45fd7179"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42-2_",
+      "sha256": "d9c40a3644addecfb305cff50df910dda242e6e99ac68007d863f2105d1642a3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42-3_",
+      "sha256": "3d2147607ae42e9a63d917449fd14777c80f71181aaadf08e78271dc79e5653b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42-4_",
+      "sha256": "11d2a0079ee5fc0c5c377f96bbbbaf32ee6b32393f1b89cce2bfd94f7c2e45cb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42-5_",
+      "sha256": "f632b665a5a69d725f4ee2ec71b90ec13cda83bcacc6ca888d4b072f8cc0af3f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42-6_",
+      "sha256": "206bf10b25bd0a7b528a6ba13a5686992667c1694664e76afe62b16d57d1870f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/42-7_",
+      "sha256": "47e792f887ec2e14aedb61c401f4f285befbde418ad34d55adfd9fd23bfe2c8f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43",
+      "sha256": "be53d374e9395040a620de439a1e51896b03b0418a45d893b6efda5a15bc762c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43-2_",
+      "sha256": "d2bfa8a98ae27d2db826f6498fed09ef2e2dcf0534fa8117bf7566eea5722fe0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43-3_",
+      "sha256": "4aaac0439d8d17a63afb3cf3cf75bbc319c28a7562127d57d2e884a2e30be697"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43-4_",
+      "sha256": "eb69c7756cc0019eaa780f6de5208da0d5c2b188b0f49e39f0404b1d1c1f9e61"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43-5_",
+      "sha256": "631cad17748b91e090c9d52e427914401799a4a45f0913f8cf1ddc2a10ba773b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43-6_",
+      "sha256": "e6f4ee63437024a784f92dc0d13cc50c916e7719b88f7b4100b6790aa237e195"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/43-7_",
+      "sha256": "e57a7cdcde9fe409f5525e2bbeea370229aaa92add0b2bae17acd32a8d6f493b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/44",
+      "sha256": "398648cf4095b8339e9e14fec4616dba762678d286655fef81ec5264ce0ff0c0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/44-2_",
+      "sha256": "6bc07a48ae3390f6d7f6c94f7796d4999417b3ae2b2e258f19d5f5c8c28feb6e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/44-3_",
+      "sha256": "9f0a2845bf5182ba5d5f706278ec2f12ab4da63afbd97004b60ae4d35946815b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/45",
+      "sha256": "5f6b535530008ced17e46a669515516fab38fa10ef98288ce0740aac7b028888"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/45-2_",
+      "sha256": "ba9ab07614fdc143510d8b123ce1c6d868b0ddeec7695e5eef910cd23d3881d9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/45-3_",
+      "sha256": "174b54bd552f0ff33eb1cae6431e1cb1a496b17c7d33d1baf470392151165e97"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/45-4_",
+      "sha256": "1b73fb3f0d368f04c261ee739e50cdf3da2b5f1eb5df0e5f8d1e032d4b718017"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/46",
+      "sha256": "f214129826123651aaabed72eb151c1f5cadb1d5e9b33f004f0f3c9b6bc89469"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/46-2_",
+      "sha256": "f494d45004f91338d2c46dfbb3d51634f1c8b90aaa9a777c72bc61e57962ec13"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/46-3_",
+      "sha256": "931ca58b1e6b74c990deb85c9c0dfb61b4e7a173231c06bd11916b2a184e022d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/46-4_",
+      "sha256": "c5a73f2e79123ad176adaa60899d4ab2436337228249f08d3ae5c1eace3badba"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/46-5_",
+      "sha256": "204599cc87810f8cec86fed5561ce51b175b52dd7df9b5241a6d3f803c569a9b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/47",
+      "sha256": "322b9554c2e577434ded8afa20da42dedae78e504817faba39a0fef06ada7b07"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/47-2_",
+      "sha256": "d4510b06b65bf101d31b3a60a059f1cefb085576b601c827318a4896bf6d2759"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/47-3_",
+      "sha256": "bcbdbe15b055a2ffc46824802b0ab2bf67d9c6b20346b2b5c7172bf4291fd3dd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/47-4_",
+      "sha256": "3d82eda418977336ab9d18a2602a4043e5e2b56c27f6f1c2334df8fd067e5fce"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/48",
+      "sha256": "b22f0e82be74378feb5f54007e0c5a0aa1edae14fa9befc11dcf7402d86d4730"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/48-2_",
+      "sha256": "f9f983aa3fbfd6d59cdaa09ce05c3f38adf89b2be32f3cb4b8742bd0480800e9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/48-3_",
+      "sha256": "af0bb8d7b14636fef46876b508240b24f3bde51513aa156bffdc8797e4a809ad"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/48-4_",
+      "sha256": "ebcc15d5221c7e146dcfd70cea3d8a53b3407cf5f768842df589aa9c9af0608d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/48-5_",
+      "sha256": "c0a3c605699041e74e1fdb2af6c82a17f1b63b597511a587632dc255c93a74eb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/49",
+      "sha256": "2a89c887de607c17c1a1d03cfe1606ddc8b300653f3634d0e30a3e18f0ad63cd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/49-2_",
+      "sha256": "5a906b885bd9ff1e7dea46b907e2ffdc8c761b45e052d093f2c251bbb9b34063"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/49-3_",
+      "sha256": "5ddac469b8ac202171638d8a6bb02146a6061dc378799e485556a696b4b3f07e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5",
+      "sha256": "7f4423ea0ff81bdeeb417610ccef003bba08731469f65f989a19df1fd0664283"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-10_",
+      "sha256": "6997bc9f104e4ff30e7b01529a17cb78d4ea52cc4d2bad13852be85bdb8aa960"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-11_",
+      "sha256": "4fbc44951b7517a1a2c81f6a8b2923356290cc7fb4cfce3d55d2e553b2c8d738"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-12_",
+      "sha256": "0c893f404db680419cf343f87fff3e9da80972a20882520c2d5082948e6913d3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-13_",
+      "sha256": "cb40c18859c901677c747c8393040caa7c60aa3e6a797378acd7615fa90d7499"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-14_",
+      "sha256": "a8b8d86ce8e38833794117e884016030d6e662db90951d17375f967eeb83d0f5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-15_",
+      "sha256": "1f8014ed31be7f4fd2919637146d6a52a9d38167ca59ca5c0a21fb5346736d18"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-16_",
+      "sha256": "bc06b24d5d28ca4c8bd53036203ce1fbfc4d931b379c1b51c2c7e2922eb25e30"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-17_",
+      "sha256": "548f0f4cd97528a47a22c35d8905dc3e89f322e8d6bfcdf96306d2c81c1bd56e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-18_",
+      "sha256": "35a9f0ec135c24b873a900c1266fb7c58cb5bf6b18cf1710690233d89efb48eb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-19_",
+      "sha256": "bc1e83e1675e34ead7f4a39b9d6d6ea0a71824d2fee86697f9cd06e1b0ec1c34"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-2_",
+      "sha256": "26de7dac732ef53a8b90bfcfe110a45f3fc7f10be0c7d103d1b2026d3b0bcb6f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-20_",
+      "sha256": "0456d7ed27e60931c64de3d9280110e4cd811875ff1af5115839f4fb02d076c9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-21_",
+      "sha256": "0779471e0d60ce5c82eeb33b84faa63e702ee111d6fce7dec54053b6f60e9f7f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-22_",
+      "sha256": "9bce377156ac6b3da509c43030941659c1863ad149dbcb937f3e400270c14ba1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-3_",
+      "sha256": "f8758f33d397697f61c2fc8f287219e553e8e9aae69889013e4842d65a0d4b04"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-4_",
+      "sha256": "59d19734fa1a1211a17549c87c178318786c3d970715ded6e19887a211ab43a9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-5_",
+      "sha256": "e6c4cd04df69a12a2a54d6824aca1c98e7dea79575673c60310ff15b4f21b047"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-6_",
+      "sha256": "a73837b669840d280af1f34465f74d9a41e4c4fff0850f4f30a1b038b6d860e0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-7_",
+      "sha256": "bb44d632b16781f389a43dec59a44b794e257d96788126faa8e247f38c7e0703"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-8_",
+      "sha256": "598cd5d25c336d059b428ec531fb36cce393d157fbbfe5c1b948fa8b445a37e8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/5-9_",
+      "sha256": "d5bd6d044e58941d0261d36d192613ea7f5aef4b1a7e7469d2f773c877dec9ae"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/50",
+      "sha256": "41f3b9bed4ef9985bcbaae3af7c56d6a67bcc21d6b8c84e55521d339dc841d7b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/50-2_",
+      "sha256": "a14fd99631dbb8abf54640b7a594c933f00e83c51ae2203bd1df30bcdd0c4e2e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/50-3_",
+      "sha256": "ec5cce439f1e46a1514ead0d5b9ee241e5ef04ca460de5ee6ea4b02131e82a7a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/51",
+      "sha256": "9a07b94d1e0d4065d9d545ce3bcb843a6adfc7800e23f7aadaa8576747982975"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/51-2_",
+      "sha256": "cd7c6fb960db04e275baa20a88a4b7a49e53032464ea62c3df996831fb2781d4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/51-3_",
+      "sha256": "b8e16e19a6ec109b92e7d52782e9b21d735a91b7a043fe541a3b21784dd4a6f4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/51-4_",
+      "sha256": "c241e7ff8db84a364ca3179f0429868fc0a5005644b9b6de2cb942aeaf90ef7b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/52",
+      "sha256": "6fc6b98568433f2f531e88112a49e48d4b2c3ea913c46f961333afe6fe256fd8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/52-2_",
+      "sha256": "403712530f7713f63384ebbdaceb609736f56505c8dfb1226deb2f614a14bec8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/52-3_",
+      "sha256": "69988ca5cd324418b2aea1988f4dc959b546122944a30117cb7fc7755c2d39f6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/53",
+      "sha256": "f39fcd0f1c62741d985e89bed716a4d305e6617ced7536866be31af9705c2e95"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/53-2_",
+      "sha256": "866024fd59d4bf9cb7b6817470cba1294ccfb54d186bcf408340988db0519f85"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/53-3_",
+      "sha256": "e060f2b19c7583ac9124241b47d5d41cc230ab766c259a7666987ff56d344117"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/54",
+      "sha256": "9cd84b5c0b1268e16c4fdd3f2fde79ec54e35ea1fdc8ed8d1add630401a811d7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/54-2_",
+      "sha256": "2154acd4222213613aeb019a7619463a47d16f811a07afc5a87d57a141ec8896"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/54-3_",
+      "sha256": "60af945197d6b56e78fd3a7a3aaf92c619e95548f34f4c916b8ba170ebcfc0c3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/54-4_",
+      "sha256": "efb53506231e44c4099ab5ecfab178511cc8a5d5773b5c3adf1cf3e3773b1883"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/55",
+      "sha256": "e80fbad66a5c35868ff86fe03f0492d4352c48bc89e6cfc7e847d9edeeb32917"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/55-2_",
+      "sha256": "e0b529aed660db93be7189a583e509e63137289bee42442ff2932ad55af05e9a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/55-3_",
+      "sha256": "99171bd4fbff9dfa97a5d26b893b79f937c7a49ceb79a63a4fa1be097f51c010"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/55-4_",
+      "sha256": "2e4f96edeca014fb135ca52041d2e196b7508d00dd09c41c3ca318407d1858c6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/56",
+      "sha256": "dc99fd85c8ce19a10b5fa20d59404519ef8df6e34048284928a1fe75cfc9b08d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/56-2_",
+      "sha256": "b14e1e05fbc42c17fa76b849c90b9c603153ca3319900b1de880abe66d4823d1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/56-3_",
+      "sha256": "a20d97aeafe8a8bfdb1835b588cd3707ac9e40167e471953dc448095c7c1d5f6"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/56-4_",
+      "sha256": "1582c21df1f4533f2ebc2be227007be11366dc6469b357e9908c5ace121c3cb0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/57",
+      "sha256": "0a153983e917913a38b94a153fb7ff57ba0772c904e3eee63906bb6be0ec6209"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/57-2_",
+      "sha256": "85d3eccf1855c07242dd3b9d71d0a08c52b3e99edd55410ed4435c9b192e2a38"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/57-3_",
+      "sha256": "5aa0c483656850e1d797e86289a5acc116400bc6fceec54957a14be86deadc24"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/57-4_",
+      "sha256": "3a3f9fba044d6fb254bd961bb09f32b63b1cf3bfb015ffec7cc24b025e6d3245"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/57-5_",
+      "sha256": "542fd3f997b5737a30bc8e96750e260dd4a4d51212adc11e9c1f0c84cf3c674a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/58",
+      "sha256": "78b4c3f9fa7e4a4e52adb239c8273ec9d3a94f68d965a84f7ed9fba454c8f6c3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/58-2_",
+      "sha256": "8b596e2713b2c9a807c4fd743f6560dc91183d8e83a41c62c08ce5a38c5d1f83"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/58-3_",
+      "sha256": "3fedbfe0e162d52dbcbef0203850ca8938933fae6466301c0d0efe4a652ad657"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/58-4_",
+      "sha256": "a21a8cfca87b81612b1a35e48f731a0d4cecb17a6dfa5ac58630e56d20ef5f44"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/59",
+      "sha256": "76a810285c58b0264e09cb67dc13be81f958a1308b964b7fb404cd7bad8dc540"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/59-2_",
+      "sha256": "32ad5cf07dfad4c5d3d20da0e6994bc89437f8e5da8a61b68286eaa6c8d09714"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/59-3_",
+      "sha256": "fa41bd5333d226bbffa8155822b9bbbc3250633817f2c19f921a413f582e77bf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/59-4_",
+      "sha256": "ef20e2ce2e67872cbc0e575f4f42309fa347de5032a435953f370a7226dd7363"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6",
+      "sha256": "e532328df78179bc570f685e7535e327d29de978a8875a69ee0e4a2a45d2b301"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-10_",
+      "sha256": "e0de9cfcec683c7d0b9c6a3f8d7f97c67162ca752dd324be09f7e8148b26012c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-11_",
+      "sha256": "f29ccf0c09b87b6bd88fc7e6ac73cb09546e7e369b9cd04502bc6d586cbe711e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-12_",
+      "sha256": "0df261dfa1049afd3f6ba79a0fad84be80c803eee8cd1e12cacc9eb840123b43"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-13_",
+      "sha256": "20a319e4ee4e81b6b1f98e5a6f2bbb6f5f6170c50d5e012bc903f882280fb387"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-14_",
+      "sha256": "05c7c5d9143cb89ee7c4f710aafafdfdeb25502cbe3acc8296dcfdc8dc65491a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-15_",
+      "sha256": "e4f52adb4f6c8d3597b2f939c821fe53b0a61f4c5707af6988e9bc0e7d785538"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-16_",
+      "sha256": "59504914b315892bf5a1bf8550dad695827d9ab3951d3949546d0bb74c8f8360"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-17_",
+      "sha256": "4df4daedb862b7e015eb1a7b3cb9411da81ff5c152dbf90b5dbc125b6074293b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-18_",
+      "sha256": "cb0f91d58e972ac4c0f637f306e4e8f9682cb15c3e1ebb2d0a9574419cbc59ff"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-19_",
+      "sha256": "37875b4cfd045010698d7f98843ba530858836240ade43ba05d9814156f56767"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-2_",
+      "sha256": "deb56f4265bb522a41e4e393fb7418e00654b029454fc269824b3d7f021b85a8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-20_",
+      "sha256": "d7512e2ed0205e6e0795a4abd346cb63a7b300212ac5ef97bcd8cc039ce2e7b7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-21_",
+      "sha256": "8ca53be8dd77415236ec5f699dcf1da227842bf485f183a50f355089e5781f2a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-22_",
+      "sha256": "7061811f6009f7590cc09266f8ec5d2c47ca8737d08de028d9a021cd4f41be45"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-23_",
+      "sha256": "9cdf7d2c9675fc5509ea5450549d8c15c19df6cf2040b4430a0a072a1695a39b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-3_",
+      "sha256": "b3810440774eafa46074f906b188e439016048abaa2dc07bf44623eb1e94dac7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-4_",
+      "sha256": "e50303dffea883c507e60b437211d2c794391647e7495b52be6345d6afba7965"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-5_",
+      "sha256": "701d033ec0f1f606e197ee9fe36374aafb38b546c49ca236e0b33ab527e74022"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-6_",
+      "sha256": "338c7a0b8ba29f7bd3b1b8a0606c2f00b33765df068f19da12508b581957db0b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-7_",
+      "sha256": "3f106ee89669a6d395de63deabc64abe3cf36a621542f67e7973096bff58b9ed"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-8_",
+      "sha256": "5e0c171b5120c3d14fdc6d953f78703b8fe8854511d8c4a9400744519457898f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/6-9_",
+      "sha256": "8ef551afb0f72ba400dc684e5c27d0422c87412024047f4799ce3a9ef6c07484"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/60",
+      "sha256": "b48328245f79225ae2dd11e37337ab1780b20d4998c7d5aff053849b852c6ff5"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/60-2_",
+      "sha256": "69314437f26e14bbfeba7eb5b3ce3d1e122288d407e613ee757d7dbea91e6155"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/60-3_",
+      "sha256": "078b81e2fd7e514de9e18342e993b8a51fb5d91dd30e824fef435b4493269432"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/61",
+      "sha256": "63293b959c4a019c97d1542d25d48b3d3bd7221859730ec18c223a2f6c396656"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/61-2_",
+      "sha256": "cf97f4cada11a8866d523470f39c1e34c2bcf31091b82541c2ae5fa489da0203"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/62",
+      "sha256": "fc86b92b3d9ba528bc54f688c07d67b36aae13e3db8d23a9b76e2ffdb15cb886"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/62-2_",
+      "sha256": "72b219ab9141cf7627df16c5440aae8764110ec16e8e71bb6af5fb89bdb6de86"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/63",
+      "sha256": "769f8e08dce52f38de66bc3e18022aed1eb45547b12837733906d6a10442a239"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/63-2_",
+      "sha256": "e0df874d1fb839e92cd925517605097659545a1f54a7a394f50644ea415f7dff"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/64",
+      "sha256": "3280c6ff5e3f207575868c4c020131ca34b3a706d0d5b0fbc0b9b15de6583747"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/64-2_",
+      "sha256": "70e82d57fadcc8fe5d9742e886421e7ca0b9a4c4a13cc67d00a02351982e8f0a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/65",
+      "sha256": "1b8ed2922d4ee47aefdb9edc5acfa2d1054ee1af8317194a841befa33721080f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/65-2_",
+      "sha256": "3ac4c869cd3e13bc59c5958d9784ea5757029942d1e194092bdd980371ed0172"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/66",
+      "sha256": "4e334b6b17c3b9293ec82f14b9b4bc3e51cf1296e3ed84da7a507cfac4e996f9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/66-2_",
+      "sha256": "094002bc11ac626babf1a08990230fe1f021065b0739132bb4aa36f95f906894"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/67",
+      "sha256": "cdd4eed39fdb5aa6c5b9888dd3cff1d74b6c34943dbbd787c4d247a6ccc6d85e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/67-2_",
+      "sha256": "e203e5fbd8450e3737894f5bc296810db30a4eea4d36460664ff7012231d75c4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/67-3_",
+      "sha256": "9add3e9f0e9514f24f207274147a676a8405631f6cb9e7b6f220275fd4e4658f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/68",
+      "sha256": "1713b34ded87b6668e3b2ef5b699e048474a08d63078da385d212281a5bd5871"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/68-2_",
+      "sha256": "cd0c283b9c12b1bc77697d9ca75700b9c30ebfbc74bd27e38df9dd6210b3e567"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/68-3_",
+      "sha256": "1f43d2de79d6863f6c5d0fba5bd0ef28f960c02f386dfd7baf39aa99bbd0f3e2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/69",
+      "sha256": "23056fc4699664ac85db4837e48570bf079fbb44f4c3b07fbd9e2ad86406aa03"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/69-2_",
+      "sha256": "548dad611bc36ffab813891b0f80679b79856ba76fed21c55bc0388b07b3151e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/69-3_",
+      "sha256": "be216e17859c834d074d0d1cdb4988d83559fbc212882ea46038fd84eac5181d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7",
+      "sha256": "c93f3324ac01ecc1c5703eecad5be08de933a82dfa5a7087d81b5779aa1207f9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-10_",
+      "sha256": "50bcda58bb18af85e7c054ce4a3fcf3addc711184dc9423567b66f455774a439"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-11_",
+      "sha256": "15f42a7ceaa75266303871350ab41342d76a65cb4095965ecc91d04a49525d94"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-12_",
+      "sha256": "f706d1b7f644eb3d12100c54a2c47e03a329e4ab9d1ba0460468b9f3872881be"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-13_",
+      "sha256": "3719a9db571d2c00425e6e98f48c009ae4704e318098d68ab9f8fb579af8e396"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-14_",
+      "sha256": "eb6e0341db66a630ce77091a61e3132798fe2a2f1db1baab3be975eab1f00885"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-15_",
+      "sha256": "a361e7a9c904fcb62a70ee03aa25da2ae2d2fad23c1c4341fd4e13bcce84187c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-16_",
+      "sha256": "969b6a06ec20ced52a35c6730e404de7fff5b71babdf6dce81553eb1c1778048"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-17_",
+      "sha256": "7afcc04dc02fb2e29548372f979632320552c3554be74dd38d426a00e8cc284d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-18_",
+      "sha256": "052ee9c1e91ce103de8e03929e7efe82e95965840b3cc2765dae5a90eb9da2cf"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-19_",
+      "sha256": "459c9b36d16f61620b81dff3a097ad3a1aa257af538325fad778363a9bf5923c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-2_",
+      "sha256": "c49775a5dfb88a74df298a71973457a9feab92121c7a2167aa5b8d67d0d2104d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-20_",
+      "sha256": "ea56ed08eb0e742fe8ea39d8c96103df680818538d921a81cf195864d357faec"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-21_",
+      "sha256": "dfb7a2ea520f9f57acbf0822ef1e13e2d388b75299d351115894c8009a60c7e7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-22_",
+      "sha256": "e360d1562b06221d482d8d675aa46c130e15a81499674b0f6cd1119738a9d23c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-23_",
+      "sha256": "0f76fcf59f86248c1f60289bc0fbb5946c81e19c9378b3fee2ab0ebd0c41f62e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-24_",
+      "sha256": "ce4bc94e1a022fd3ccfa8b0d325e009c4938670ffd97fc1bb27097acdc2d76fb"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-25_",
+      "sha256": "4a7b3923350f207798e014fb83457a85987476fe08f4124755db58bbb87b5ebc"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-26_",
+      "sha256": "15e46eb8fbc8ecaf6c9a7f5e35c71f1c4f4d3eae74d237473d3b6e5d0950f74f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-3_",
+      "sha256": "4997e05b4fb59447b9758ddac6417d184d8171fb664da8df8c84c532e627cc66"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-4_",
+      "sha256": "a5be7c8ad0918db44c082706536325e533f6630256739065c8cf85d265f7876a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-5_",
+      "sha256": "480071c2a2a9cd7c4165b3c79431945063b0e2354bc97a34cbc5acaf28678bc0"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-6_",
+      "sha256": "4e61ffa3229051b210bb49a425f1dc138e54433ce1742fdf66bf568748829150"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-7_",
+      "sha256": "a18c0f7a27afb89260572e1b06dd513f7aa02f9696eb92b40be24ecf96a41768"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-8_",
+      "sha256": "2c312734a2a804e0734db4a60c28cfe5042b592d7bc1e34f80583d9998ba998d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/7-9_",
+      "sha256": "305dd722064ad4c74983a8d90038d0d47449303c5e45cb68dc48ad57f279299e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/70",
+      "sha256": "0fe8234135218da091f030fc1a6d27a661751a6607f5028dbdcdd7492bbc0b32"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/70-2_",
+      "sha256": "8c7200a11167c4a76acfddc984b77c8a06235e335058558245a9189eb05574b4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/70-3_",
+      "sha256": "850ba12a1cc46424f9821944253bdf0945a17afc5e995f455fa8ead2c9376af1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/71",
+      "sha256": "fd1c790036f35f22e4c2ec08918feec1775113eb8616eeb748c2d1cdb3320f6a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/71-2_",
+      "sha256": "3c8f48452ab1e4c2d90c0a8bce9bf57185067a037952a8cad9436d9635ec3392"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/72",
+      "sha256": "8badba9953dbc63bd085dd92b56301376b3e7b92f9b6584e62b0123758d2e0f1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/72-2_",
+      "sha256": "19dfe26f6be117875da2c2224b9692103c083e94dfc9fa05f53976df5c78bbca"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/73",
+      "sha256": "78a5dd39a98eb90a6eb020decf6d4755cb1a684e86ab15a964b882b40989fd8f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/73-2_",
+      "sha256": "a35c90c558709ab26fc9e9aef257eeb603c1117ff45f353066d6bafda03b3de2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/74",
+      "sha256": "1faec87403da137cc5f090c1dcc4623eeaac3f7415d3746f3883849c8df3a0d7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/74-2_",
+      "sha256": "898f83dfa4a776b4951934a0d0666adaf1e3b1d0d409edacde73485b23719551"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/74-3_",
+      "sha256": "ef9824e8c0641f3a8712b9c244ad9032ffd2639d0865c4587d4ca6933d7fb769"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/75",
+      "sha256": "4e1e71c49e89006873a2a17f392634d042085aefc2af8b77a8794938a93bf108"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/75-2_",
+      "sha256": "2f0b4f11ba4f7e99d7750492cc12eb6ee0e9e23d73611ab83254fb2bb9e5d821"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/76",
+      "sha256": "19a3042fead43600ae7a191171ea4cbfdb970a94e8cd1fae8715168c53ec4751"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/76-2_",
+      "sha256": "846424ca2bacdafef46680b40a7c0460862fdb0a05f6161ccd75ea2fc5d5637a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/76-3_",
+      "sha256": "39acf0a3fa92a1041be660e1c1a451381cf7e1759588a74accc916bba0f9d829"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/77",
+      "sha256": "e061e43b05c44746b67d9d70c6c2f86d114274277eced66c6feb40a62627b6de"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/77-2_",
+      "sha256": "1b6fb8cc80201d1ef58512297731ad781a0b6a6483a8470e50f8f0874c0cb561"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/78",
+      "sha256": "e98852e6f3c273aae481699b7899edac3bc026e33d2b45373ad02a1feb61707e"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/78-2_",
+      "sha256": "4bcb1a820058719510ca640135f87d9ad6cec9f7be9057ba85676f3f7d58931a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/79",
+      "sha256": "0a20d5e47610c6f60fed11288720fcb488f398db5c66b600459220218b2db17d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/79-2_",
+      "sha256": "b6b1ce2502fd85aa3a73f21a4f4ada9b3d012c971bf159f5b1c45f1a215dd0ee"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8",
+      "sha256": "a8459fee3c27ddc13e88b4c3c419c4bd401ed17cb1efb92d4aee8d372653263c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-10_",
+      "sha256": "a6d641489decae09a0cef3b9e4221ce28beececb24b1c373d246531afe23326d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-2_",
+      "sha256": "3337e82247290caac508c24951215fb3322114489fe0560820ba511e51da54ec"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-3_",
+      "sha256": "949cde31efb30a318d04d2384c46f236293075bcfdfd17243785f994ab2d3630"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-4_",
+      "sha256": "7f3810854bd5d38355ea619ed66529457366398f46d19d049357f89f366679e2"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-5_",
+      "sha256": "5ecd10ec535f13d3310f992cfb91f7deed66e7aa6ceddcda79dcb8e306088489"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-6_",
+      "sha256": "07bf988bb96c4e57ec508cec6368462311773bee5cb863f4cb9296b9208b349a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-7_",
+      "sha256": "9aa68e1da57034f45aebdd565cb438a7ad2f095eadb61c8aa78b06f5e5bac155"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-8_",
+      "sha256": "8d838faecdea0cbb74ec9bcde4124bce3add3066b505ce67a258e5f56e357e9c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/8-9_",
+      "sha256": "6cf450eb97370bb5532905381336158add0e3b2f31c2c8a2710a408717c0c07c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/80",
+      "sha256": "42feb99c7f5df2647438e7b01c5fb458f3bd9e794456e07ae7991c0c0066c7d4"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/80-2_",
+      "sha256": "284933b1736383d31c3aaab16e40545bddb660add8b329a24d7cdefb85435221"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/81",
+      "sha256": "4b562f549de1f4a31654aa5b2141145f3a2b52db59c3e396288aa907be44124c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/82",
+      "sha256": "c70eff8209ce24a724a9c8f53886263faeab95fd3555c9120c230eb00521aa70"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/83",
+      "sha256": "725e315e18ed9856e224318dba325dcbbf18dcfbf58d572351153381aeaaa539"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/83-2_",
+      "sha256": "cedfd87995f7b598a27ac6d05fbbd20710bcc492c572c083b769b5dcf389a222"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/83-3_",
+      "sha256": "f688f17e45efd2ac063f47afb427ca8bffd5911310a62562164656d82cbc73e7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/84",
+      "sha256": "dfbc436ba93dd8debcc98d513752fb9f3fb4e8bc932aa4eea6582ab2a08a2c43"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/84-2_",
+      "sha256": "dfb226d96e0dec2381f8ca97054f773c13a058cc65f2a3fbfe6da4c483b8abc9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/85",
+      "sha256": "04d3cd159e7947b2eb79df0af39a4cf9d08dccd5ac8741d7bfa3b9bc20788e19"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/86",
+      "sha256": "831f3aeaf0d47c4fc6b9f6d5959da4ac8955d29cf47976341cc86d801c6fc2aa"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/87",
+      "sha256": "58c2da59ec08d593072207a795e2701341c92e2e609419cbb58ac7f8f87be0ef"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/87-2_",
+      "sha256": "3d1a7994687a08b5398170d3cc5f46d1b17d1dc10529a7f0375613284e28981b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/88",
+      "sha256": "c333f17dbd92006a6f0b63cb1967b8080e3ab7b5751992c8d3d1c585fdfd63d8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/88-2_",
+      "sha256": "a383c1e1a6f91b6b5117f36ef9b76068540419fe7a7e2f981149e8d90f4f3068"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/89",
+      "sha256": "61d0bf06ddcf01712916d2976825df82ffd7afda6fc99ca554d5de62952e2159"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/89-2_",
+      "sha256": "02401ed5673b9904f3c683268a00f906926d0c87b81e52bc741da4af18ed1fdd"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9",
+      "sha256": "1f0cb60b45ac63b4176eb55c71c19478611ab8f5958703d1d7d6baff2927a6b7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-10_",
+      "sha256": "89b4f3de8a62da15fa21af2a1c74d7c5fdf2f7e6807253529640fd406925c690"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-11_",
+      "sha256": "7ccddae7a8128e2e408dc025f7ac3babc4841edd8ca8cebb201b67374e422ca1"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-12_",
+      "sha256": "6ba41d40f6e13a7a0a438818c9d82ad4dd1d5c9d143d9ea3495641bd32e51407"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-13_",
+      "sha256": "5c0275ed37020bd70e5006244526d6ae4afa0330a0c0b6ebacdf94fbf64b3fc9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-14_",
+      "sha256": "7724a1150d998b9c97dc983c74ee71bed55e08f6b4de935a43abb2f8d015ac64"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-15_",
+      "sha256": "87f04191f983f0c420ea06a26259ee5c0149c8a9e1df5531ed6f3480dc2e01b3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-16_",
+      "sha256": "9b57b8689d0d7efef214134722d58bf542c8f4754f146c17edbcd4e0a463b618"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-17_",
+      "sha256": "19fdb054e817641266374fb1a597da574cd6b787e6f2da46a8be975db3247c65"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-18_",
+      "sha256": "541fcef2df9264e40c92623b7a1381765d8d3d1ab1c0343f7be83fd455f16409"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-19_",
+      "sha256": "403725acd5871c9705e78d8dd390c4cff5c01c81f2b2369b0d0d7640de209cf8"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-2_",
+      "sha256": "d6b6259793fc274943ceabbb1bf4167cd39704e8dfa19374499c23d10e3da333"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-20_",
+      "sha256": "6e10be628144f36276be480246c6d99d35fc336fb2c9126dd007253194ba03ae"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-21_",
+      "sha256": "1bd2ff4bfd823c8614a57142ba845750174ab6ba02f970263b99f6f3d13e7e5b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-3_",
+      "sha256": "8f986086e943f48594c85b3e37689c7368468ec3370a468874cd406522c2ed3b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-4_",
+      "sha256": "a34370df11325f73e23b3b05f4ae61fce4ae871800267740645924e2d3d78ff9"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-5_",
+      "sha256": "08d3ffb286ed8495aeae1a8615b76bf639765fe60e9f3eabb892489b92847369"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-6_",
+      "sha256": "f280f3304884ea3ec8d0ea8471c9acc81141fe23b92fda6d4fff9aa154665190"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-7_",
+      "sha256": "c5f9645757cf6d2a9832a6c872539aa1a72dcb7ce684bf2a8ded7c4ba5a370ac"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-8_",
+      "sha256": "8256be4b9670138fdc96dabfb0f173d8c4cab8840b8e28f4c12ca6fb87fa1a7a"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/9-9_",
+      "sha256": "91e7af4bb9abbd14e5007c99220573c2552f60e7c956181e53a41883e4bb423b"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/90",
+      "sha256": "b5f7d7c54c0288f90c44080f9a770bb987dc2a9b0710601e16606258de77fc98"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/90-2_",
+      "sha256": "165f79710413e871f8a40158a82c51ee6d8afb9ba0d57b94b62021ad158555f3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/91",
+      "sha256": "a04fd6dc1515f2fae71eb2177aff353ad0ea033e73965410ff08b6e36dbcec43"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/92",
+      "sha256": "e5da4a64c129a391c322a2287419ffe4c8a52a830c98fbc65e0fca014671567f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/92-2_",
+      "sha256": "ca415594fc9d902da66121b3b2a55093079fd3c3d290ae34fec24c249df4d52f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/93",
+      "sha256": "3adad24efaff5e25fbfee1555b1b7a04611f16dd840a70c451f1f3302906c42f"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/94",
+      "sha256": "1b46113f04b9aef37dd60818c132b25b23a4a98da851ed52f6467f556f2d9ca7"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/94-2_",
+      "sha256": "6306e2bb85059a60459a9290aadf499aa57a722dd4008d79cb2369db3f4d0e0c"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/95",
+      "sha256": "07fc7768cc2d066d48cf8826c22384a2960162acdcb49bf499399f32201c02df"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/96",
+      "sha256": "69867e92fa3c04f7830b8521d65aad976c09962cd25580148546acd9bd27af74"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/96-2_",
+      "sha256": "3e9d235d121c8814c0b3d81d6f4ab1b60c87600ec2ea44be83bcaa75dbd36e49"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/97",
+      "sha256": "bf155c783f70be5b9aa68c2f95af1fe16336cca471cd85ef0d5d1ed696cea69d"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/98",
+      "sha256": "276833e3c3de0579d76a932f1fd77d9b0416ebe249b8b09dbb8a3e7a8e7b80e3"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/98-2_",
+      "sha256": "d01f6e9556d54b2542d1f2710f199fe835398d67066d10f21742eacb8f5dd7be"
+    },
+    {
+      "url": "https://quranenc.com/ar/browse/arabic_mokhtasar/99",
+      "sha256": "a14d8450e13e5600245d4d7e64299940a328ead4c70f353100e7386d4d85739e"
+    },
+    {
+      "url": "https://quranenc.com/ar/home",
+      "sha256": "9b898e40205a1daf201a3f2190c595097e3d7684ab7216a86253d465f79d3a9b"
+    },
+    {
+      "url": "https://quranenc.com/assets_2/js/quran-data.js",
+      "sha256": "9e9930c592aaa34b5c7a79ff4e99ffdc782263a266090bfe2c49e4ed4bac4ca4"
+    },
+    {
+      "url": "https://quranenc.com/robots.txt",
+      "sha256": "57101ffe3a18bcce9cb54aa34facdef48604a5e6cb565f84f0bcb7e144f063fe"
+    }
+  ]
+}

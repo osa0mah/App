@@ -13,6 +13,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { surahs, Surah } from "./content";
 import Tafsir from "./features/Tafsir";
+import Learning from "./features/Learning";
 import VerseAudio from "./features/VerseAudio";
 import Readers from "./features/Readers";
 import ChatAssistant, {
@@ -67,6 +68,7 @@ export default function App() {
   } | null>(null);
   const [verse, setVerse] = useState<number | null>(null);
   const [query, setQuery] = useState("");
+  const [learningChapter, setLearningChapter] = useState<number | null>(null);
   const [reader] = useState("الحصري");
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [fatwaContext, setFatwaContext] = useState<{
@@ -74,6 +76,7 @@ export default function App() {
     query?: string;
   }>({});
   const openChatSection = (target: ChatSuggestion) => {
+    setLearningChapter(target.section === "تعلّم" ? target.chapter ?? null : null);
     setTafsirTarget(
       target.chapter && target.verse
         ? { chapter: target.chapter, verse: target.verse }
@@ -94,6 +97,7 @@ export default function App() {
     verse: number;
   } | null>(null);
   const navigate = (target: Screen) => {
+    setLearningChapter(null);
     setScreen(target);
     setSurah(null);
     setQuery("");
@@ -225,9 +229,8 @@ export default function App() {
             </Text>
           </>
         )}
-        {(screen === "القرآن" ||
-          screen === "تعلّم" ||
-          screen === "التسميع") && (
+        {screen === "تعلّم" && <Learning initialChapter={learningChapter} />}
+        {(screen === "القرآن" || screen === "التسميع") && (
           <>
             {surah ? (
               <>
@@ -256,114 +259,76 @@ export default function App() {
                     )}
                   </>
                 )}
-                {screen === "تعلّم" ? (
-                  <>
-                    <View style={s.card}>
-                      <Text style={s.sectionTitle}>مقاصد السورة</Text>
-                      <Text style={s.prose}>{surah.theme}</Text>
-                      <Text style={s.sectionTitle}>العلم والعمل</Text>
-                      {surah.lessons.map((t) => (
-                        <Text style={s.prose} key={t}>
-                          • {t}
+                {screen === "التسميع" && (
+                  <Recitation key={surah.id} surah={surah} />
+                )}
+                {screen !== "التسميع" && (
+                  <View style={fullReader ? s.mushafPage : s.page}>
+                    {fullReader && (
+                      <View style={s.surahFrame}>
+                        <Text style={s.ornament}>✦</Text>
+                        <Text
+                          accessibilityRole="header"
+                          style={s.surahHeading}
+                        >
+                          سورة {surah.name}
                         </Text>
-                      ))}
-                    </View>
-                    <View style={s.card}>
-                      <Text style={s.sectionTitle}>
-                        متى نزلت؟ وما سبب نزولها؟
-                      </Text>
-                      <Text style={s.prose}>
-                        لم ندرج هنا تاريخًا محددًا أو رواية لسبب النزول. إضافة
-                        هذه المعلومات تحتاج توثيق الروايات ومراجعتها، وقد يخص
-                        سبب النزول آيات دون السورة كاملة.
-                      </Text>
-                    </View>
-                    <Text style={s.note}>
-                      تلخيص تعليمي أولي لمعاني السورة، مستند إلى تفسير السعدي،
-                      ويحتاج مراجعة علمية قبل النشر.
-                    </Text>
-                    {sourceButton(surah.id)}
-                  </>
-                ) : (
-                  <>
-                    {screen === "التسميع" && (
-                      <Recitation key={surah.id} surah={surah} />
-                    )}
-                    {screen !== "التسميع" && (
-                      <View style={fullReader ? s.mushafPage : s.page}>
-                        {fullReader && (
-                          <View style={s.surahFrame}>
-                            <Text style={s.ornament}>✦</Text>
-                            <Text
-                              accessibilityRole="header"
-                              style={s.surahHeading}
-                            >
-                              سورة {surah.name}
-                            </Text>
-                            <Text style={s.ornament}>✦</Text>
-                          </View>
-                        )}
-                        {surah.id !== 1 && (
-                          <Text style={s.basmala}>
-                            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-                          </Text>
-                        )}
-                        {fullReader ? (
-                          <Text style={s.mushafText}>
-                            {surah.verses.map((text, i) => (
-                              <Text
-                                key={i}
-                                accessibilityRole="button"
-                                accessibilityLabel={`الآية ${i + 1}: ${text}`}
-                                onPress={() => setVerse(i + 1)}
-                              >
-                                {text}{" "}
-                                <Text style={s.verseNumber}>
-                                  ﴿{arabic(i + 1)}﴾
-                                </Text>{" "}
-                              </Text>
-                            ))}
-                          </Text>
-                        ) : (
-                          surah.verses.map((text, i) => (
-                            <Pressable
-                              accessibilityRole="button"
-                              accessibilityLabel={`الآية ${i + 1}: ${text}`}
-                              key={i}
-                              onPress={() => setVerse(i + 1)}
-                              style={s.verse}
-                            >
-                              <Text style={s.quran}>
-                                {text}{" "}
-                                <Text style={s.verseNumber}>
-                                  ﴿{arabic(i + 1)}﴾
-                                </Text>
-                              </Text>
-                            </Pressable>
-                          ))
-                        )}
+                        <Text style={s.ornament}>✦</Text>
                       </View>
                     )}
-                    {screen !== "التسميع" && (
-                      <Text style={fullReader ? s.readerHint : s.note}>
-                        اضغط على الآية لعرض خياراتها. النص التجريبي برواية حفص،
-                        ويحتاج مقابلة على مصحف معتمد قبل النشر.
+                    {surah.id !== 1 && (
+                      <Text style={s.basmala}>
+                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
                       </Text>
                     )}
-                  </>
+                    {fullReader ? (
+                      <Text style={s.mushafText}>
+                        {surah.verses.map((text, i) => (
+                          <Text
+                            key={i}
+                            accessibilityRole="button"
+                            accessibilityLabel={`الآية ${i + 1}: ${text}`}
+                            onPress={() => setVerse(i + 1)}
+                          >
+                            {text}{" "}
+                            <Text style={s.verseNumber}>
+                              ﴿{arabic(i + 1)}﴾
+                            </Text>{" "}
+                          </Text>
+                        ))}
+                      </Text>
+                    ) : (
+                      surah.verses.map((text, i) => (
+                        <Pressable
+                          accessibilityRole="button"
+                          accessibilityLabel={`الآية ${i + 1}: ${text}`}
+                          key={i}
+                          onPress={() => setVerse(i + 1)}
+                          style={s.verse}
+                        >
+                          <Text style={s.quran}>
+                            {text}{" "}
+                            <Text style={s.verseNumber}>
+                              ﴿{arabic(i + 1)}﴾
+                            </Text>
+                          </Text>
+                        </Pressable>
+                      ))
+                    )}
+                  </View>
+                )}
+                {screen !== "التسميع" && (
+                  <Text style={fullReader ? s.readerHint : s.note}>
+                    اضغط على الآية لعرض خياراتها. النص التجريبي برواية حفص،
+                    ويحتاج مقابلة على مصحف معتمد قبل النشر.
+                  </Text>
                 )}
               </>
             ) : (
               <>
                 {heading(
-                  screen === "تعلّم"
-                    ? "تعلّم السورة"
-                    : screen === "التسميع"
-                      ? "راجع حفظك"
-                      : "القرآن الكريم",
-                  screen === "تعلّم"
-                    ? "من المعرفة إلى العمل"
-                    : "سورتان متاحتان في النسخة الأولى",
+                  screen === "التسميع" ? "راجع حفظك" : "القرآن الكريم",
+                  "سورتان متاحتان في النسخة الأولى",
                 )}
                 <TextInput
                   nativeID="quran-surah-search"
