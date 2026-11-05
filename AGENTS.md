@@ -39,3 +39,9 @@ Docs: https://docs.expo.dev/eas/index.md
 - If `ios/` and `android/` directories do not exist, they are generated (Continuous Native Generation). Never create or edit them by hand — configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, the app needs a development build: `npx expo run:ios|android` locally, or `eas build --profile development`.
 - Prefer recommended Expo modules over third-party libraries, and check your available skills before adding dependencies. Docs: https://docs.expo.dev/versions/latest/index.md
+
+## Current development preview workflow
+
+The user currently wants a local development preview, not website publication. Work on the `preview` branch and push reviewable changes to that branch for the local preview follower. Do not push `main` or deploy a website unless the user explicitly asks to publish again. Netlify is configured to skip the `preview` branch.
+
+Use the existing checkout. `npm run preview:local` runs Metro with the local API proxy and the bundled catalog; `npm run preview:follow` additionally syncs `origin/preview` while protecting local edits and commits. See `LOCAL-PREVIEW.md`. The launcher is for the user's computer; do not claim this cloud machine's localhost URL is accessible from their laptop.

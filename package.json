@@ -37,7 +37,10 @@
     "export:web": "expo export --platform web",
     "package:web": "node scripts/package-web.mjs",
     "build:web": "npm run build:catalog && expo export --platform web",
-    "build:catalog": "node scripts/build-fatwa-catalog.mjs"
+    "build:catalog": "node scripts/build-fatwa-catalog.mjs",
+    "preview:local": "node scripts/start-preview.mjs",
+    "preview:follow": "node scripts/start-preview.mjs --follow",
+    "test:preview": "node --test tests/localPreview.test.mjs tests/previewSync.test.mjs"
   },
   "private": true
 }

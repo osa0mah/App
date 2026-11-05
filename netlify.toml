@@ -1,4 +1,5 @@
 [build]
+  ignore = "node scripts/skip-preview-deploy.mjs"
   command = "npm run build:web"
   publish = "dist"
 
