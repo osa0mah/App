@@ -1,0 +1,6205 @@
+{
+  "source": {
+    "title": "Tanzil Quran Metadata",
+    "version": "1.0",
+    "author": "Tanzil.info",
+    "copyright": "Copyright (C) 2008-2009 Tanzil.info",
+    "license": "Creative Commons Attribution 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "url": "https://quranenc.com/assets_2/js/quran-data.js",
+    "sha256": "9e9930c592aaa34b5c7a79ff4e99ffdc782263a266090bfe2c49e4ed4bac4ca4",
+    "retrievedAt": "2026-11-05T18:47:22.535Z"
+  },
+  "pages": [
+    {
+      "number": 1,
+      "start": 1,
+      "end": 7,
+      "firstChapter": 1,
+      "firstVerse": 1,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 2,
+      "start": 8,
+      "end": 12,
+      "firstChapter": 2,
+      "firstVerse": 1,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 3,
+      "start": 13,
+      "end": 23,
+      "firstChapter": 2,
+      "firstVerse": 6,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 4,
+      "start": 24,
+      "end": 31,
+      "firstChapter": 2,
+      "firstVerse": 17,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 5,
+      "start": 32,
+      "end": 36,
+      "firstChapter": 2,
+      "firstVerse": 25,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 6,
+      "start": 37,
+      "end": 44,
+      "firstChapter": 2,
+      "firstVerse": 30,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 7,
+      "start": 45,
+      "end": 55,
+      "firstChapter": 2,
+      "firstVerse": 38,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 8,
+      "start": 56,
+      "end": 64,
+      "firstChapter": 2,
+      "firstVerse": 49,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 9,
+      "start": 65,
+      "end": 68,
+      "firstChapter": 2,
+      "firstVerse": 58,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 10,
+      "start": 69,
+      "end": 76,
+      "firstChapter": 2,
+      "firstVerse": 62,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 11,
+      "start": 77,
+      "end": 83,
+      "firstChapter": 2,
+      "firstVerse": 70,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 12,
+      "start": 84,
+      "end": 90,
+      "firstChapter": 2,
+      "firstVerse": 77,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 13,
+      "start": 91,
+      "end": 95,
+      "firstChapter": 2,
+      "firstVerse": 84,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 14,
+      "start": 96,
+      "end": 100,
+      "firstChapter": 2,
+      "firstVerse": 89,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 15,
+      "start": 101,
+      "end": 108,
+      "firstChapter": 2,
+      "firstVerse": 94,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 16,
+      "start": 109,
+      "end": 112,
+      "firstChapter": 2,
+      "firstVerse": 102,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 17,
+      "start": 113,
+      "end": 119,
+      "firstChapter": 2,
+      "firstVerse": 106,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 18,
+      "start": 120,
+      "end": 126,
+      "firstChapter": 2,
+      "firstVerse": 113,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 19,
+      "start": 127,
+      "end": 133,
+      "firstChapter": 2,
+      "firstVerse": 120,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 20,
+      "start": 134,
+      "end": 141,
+      "firstChapter": 2,
+      "firstVerse": 127,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 21,
+      "start": 142,
+      "end": 148,
+      "firstChapter": 2,
+      "firstVerse": 135,
+      "juz": 1,
+      "endJuz": 1
+    },
+    {
+      "number": 22,
+      "start": 149,
+      "end": 152,
+      "firstChapter": 2,
+      "firstVerse": 142,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 23,
+      "start": 153,
+      "end": 160,
+      "firstChapter": 2,
+      "firstVerse": 146,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 24,
+      "start": 161,
+      "end": 170,
+      "firstChapter": 2,
+      "firstVerse": 154,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 25,
+      "start": 171,
+      "end": 176,
+      "firstChapter": 2,
+      "firstVerse": 164,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 26,
+      "start": 177,
+      "end": 183,
+      "firstChapter": 2,
+      "firstVerse": 170,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 27,
+      "start": 184,
+      "end": 188,
+      "firstChapter": 2,
+      "firstVerse": 177,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 28,
+      "start": 189,
+      "end": 193,
+      "firstChapter": 2,
+      "firstVerse": 182,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 29,
+      "start": 194,
+      "end": 197,
+      "firstChapter": 2,
+      "firstVerse": 187,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 30,
+      "start": 198,
+      "end": 203,
+      "firstChapter": 2,
+      "firstVerse": 191,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 31,
+      "start": 204,
+      "end": 209,
+      "firstChapter": 2,
+      "firstVerse": 197,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 32,
+      "start": 210,
+      "end": 217,
+      "firstChapter": 2,
+      "firstVerse": 203,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 33,
+      "start": 218,
+      "end": 222,
+      "firstChapter": 2,
+      "firstVerse": 211,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 34,
+      "start": 223,
+      "end": 226,
+      "firstChapter": 2,
+      "firstVerse": 216,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 35,
+      "start": 227,
+      "end": 231,
+      "firstChapter": 2,
+      "firstVerse": 220,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 36,
+      "start": 232,
+      "end": 237,
+      "firstChapter": 2,
+      "firstVerse": 225,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 37,
+      "start": 238,
+      "end": 240,
+      "firstChapter": 2,
+      "firstVerse": 231,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 38,
+      "start": 241,
+      "end": 244,
+      "firstChapter": 2,
+      "firstVerse": 234,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 39,
+      "start": 245,
+      "end": 252,
+      "firstChapter": 2,
+      "firstVerse": 238,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 40,
+      "start": 253,
+      "end": 255,
+      "firstChapter": 2,
+      "firstVerse": 246,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 41,
+      "start": 256,
+      "end": 259,
+      "firstChapter": 2,
+      "firstVerse": 249,
+      "juz": 2,
+      "endJuz": 2
+    },
+    {
+      "number": 42,
+      "start": 260,
+      "end": 263,
+      "firstChapter": 2,
+      "firstVerse": 253,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 43,
+      "start": 264,
+      "end": 266,
+      "firstChapter": 2,
+      "firstVerse": 257,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 44,
+      "start": 267,
+      "end": 271,
+      "firstChapter": 2,
+      "firstVerse": 260,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 45,
+      "start": 272,
+      "end": 276,
+      "firstChapter": 2,
+      "firstVerse": 265,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 46,
+      "start": 277,
+      "end": 281,
+      "firstChapter": 2,
+      "firstVerse": 270,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 47,
+      "start": 282,
+      "end": 288,
+      "firstChapter": 2,
+      "firstVerse": 275,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 48,
+      "start": 289,
+      "end": 289,
+      "firstChapter": 2,
+      "firstVerse": 282,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 49,
+      "start": 290,
+      "end": 293,
+      "firstChapter": 2,
+      "firstVerse": 283,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 50,
+      "start": 294,
+      "end": 302,
+      "firstChapter": 3,
+      "firstVerse": 1,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 51,
+      "start": 303,
+      "end": 308,
+      "firstChapter": 3,
+      "firstVerse": 10,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 52,
+      "start": 309,
+      "end": 315,
+      "firstChapter": 3,
+      "firstVerse": 16,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 53,
+      "start": 316,
+      "end": 322,
+      "firstChapter": 3,
+      "firstVerse": 23,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 54,
+      "start": 323,
+      "end": 330,
+      "firstChapter": 3,
+      "firstVerse": 30,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 55,
+      "start": 331,
+      "end": 338,
+      "firstChapter": 3,
+      "firstVerse": 38,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 56,
+      "start": 339,
+      "end": 345,
+      "firstChapter": 3,
+      "firstVerse": 46,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 57,
+      "start": 346,
+      "end": 354,
+      "firstChapter": 3,
+      "firstVerse": 53,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 58,
+      "start": 355,
+      "end": 363,
+      "firstChapter": 3,
+      "firstVerse": 62,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 59,
+      "start": 364,
+      "end": 370,
+      "firstChapter": 3,
+      "firstVerse": 71,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 60,
+      "start": 371,
+      "end": 376,
+      "firstChapter": 3,
+      "firstVerse": 78,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 61,
+      "start": 377,
+      "end": 384,
+      "firstChapter": 3,
+      "firstVerse": 84,
+      "juz": 3,
+      "endJuz": 3
+    },
+    {
+      "number": 62,
+      "start": 385,
+      "end": 393,
+      "firstChapter": 3,
+      "firstVerse": 92,
+      "juz": 3,
+      "endJuz": 4
+    },
+    {
+      "number": 63,
+      "start": 394,
+      "end": 401,
+      "firstChapter": 3,
+      "firstVerse": 101,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 64,
+      "start": 402,
+      "end": 408,
+      "firstChapter": 3,
+      "firstVerse": 109,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 65,
+      "start": 409,
+      "end": 414,
+      "firstChapter": 3,
+      "firstVerse": 116,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 66,
+      "start": 415,
+      "end": 425,
+      "firstChapter": 3,
+      "firstVerse": 122,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 67,
+      "start": 426,
+      "end": 433,
+      "firstChapter": 3,
+      "firstVerse": 133,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 68,
+      "start": 434,
+      "end": 441,
+      "firstChapter": 3,
+      "firstVerse": 141,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 69,
+      "start": 442,
+      "end": 446,
+      "firstChapter": 3,
+      "firstVerse": 149,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 70,
+      "start": 447,
+      "end": 450,
+      "firstChapter": 3,
+      "firstVerse": 154,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 71,
+      "start": 451,
+      "end": 458,
+      "firstChapter": 3,
+      "firstVerse": 158,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 72,
+      "start": 459,
+      "end": 466,
+      "firstChapter": 3,
+      "firstVerse": 166,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 73,
+      "start": 467,
+      "end": 473,
+      "firstChapter": 3,
+      "firstVerse": 174,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 74,
+      "start": 474,
+      "end": 479,
+      "firstChapter": 3,
+      "firstVerse": 181,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 75,
+      "start": 480,
+      "end": 487,
+      "firstChapter": 3,
+      "firstVerse": 187,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 76,
+      "start": 488,
+      "end": 493,
+      "firstChapter": 3,
+      "firstVerse": 195,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 77,
+      "start": 494,
+      "end": 499,
+      "firstChapter": 4,
+      "firstVerse": 1,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 78,
+      "start": 500,
+      "end": 504,
+      "firstChapter": 4,
+      "firstVerse": 7,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 79,
+      "start": 505,
+      "end": 507,
+      "firstChapter": 4,
+      "firstVerse": 12,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 80,
+      "start": 508,
+      "end": 512,
+      "firstChapter": 4,
+      "firstVerse": 15,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 81,
+      "start": 513,
+      "end": 516,
+      "firstChapter": 4,
+      "firstVerse": 20,
+      "juz": 4,
+      "endJuz": 4
+    },
+    {
+      "number": 82,
+      "start": 517,
+      "end": 519,
+      "firstChapter": 4,
+      "firstVerse": 24,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 83,
+      "start": 520,
+      "end": 526,
+      "firstChapter": 4,
+      "firstVerse": 27,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 84,
+      "start": 527,
+      "end": 530,
+      "firstChapter": 4,
+      "firstVerse": 34,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 85,
+      "start": 531,
+      "end": 537,
+      "firstChapter": 4,
+      "firstVerse": 38,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 86,
+      "start": 538,
+      "end": 544,
+      "firstChapter": 4,
+      "firstVerse": 45,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 87,
+      "start": 545,
+      "end": 552,
+      "firstChapter": 4,
+      "firstVerse": 52,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 88,
+      "start": 553,
+      "end": 558,
+      "firstChapter": 4,
+      "firstVerse": 60,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 89,
+      "start": 559,
+      "end": 567,
+      "firstChapter": 4,
+      "firstVerse": 66,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 90,
+      "start": 568,
+      "end": 572,
+      "firstChapter": 4,
+      "firstVerse": 75,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 91,
+      "start": 573,
+      "end": 579,
+      "firstChapter": 4,
+      "firstVerse": 80,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 92,
+      "start": 580,
+      "end": 584,
+      "firstChapter": 4,
+      "firstVerse": 87,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 93,
+      "start": 585,
+      "end": 587,
+      "firstChapter": 4,
+      "firstVerse": 92,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 94,
+      "start": 588,
+      "end": 594,
+      "firstChapter": 4,
+      "firstVerse": 95,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 95,
+      "start": 595,
+      "end": 598,
+      "firstChapter": 4,
+      "firstVerse": 102,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 96,
+      "start": 599,
+      "end": 606,
+      "firstChapter": 4,
+      "firstVerse": 106,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 97,
+      "start": 607,
+      "end": 614,
+      "firstChapter": 4,
+      "firstVerse": 114,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 98,
+      "start": 615,
+      "end": 620,
+      "firstChapter": 4,
+      "firstVerse": 122,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 99,
+      "start": 621,
+      "end": 627,
+      "firstChapter": 4,
+      "firstVerse": 128,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 100,
+      "start": 628,
+      "end": 633,
+      "firstChapter": 4,
+      "firstVerse": 135,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 101,
+      "start": 634,
+      "end": 640,
+      "firstChapter": 4,
+      "firstVerse": 141,
+      "juz": 5,
+      "endJuz": 5
+    },
+    {
+      "number": 102,
+      "start": 641,
+      "end": 647,
+      "firstChapter": 4,
+      "firstVerse": 148,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 103,
+      "start": 648,
+      "end": 655,
+      "firstChapter": 4,
+      "firstVerse": 155,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 104,
+      "start": 656,
+      "end": 663,
+      "firstChapter": 4,
+      "firstVerse": 163,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 105,
+      "start": 664,
+      "end": 668,
+      "firstChapter": 4,
+      "firstVerse": 171,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 106,
+      "start": 669,
+      "end": 671,
+      "firstChapter": 4,
+      "firstVerse": 176,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 107,
+      "start": 672,
+      "end": 674,
+      "firstChapter": 5,
+      "firstVerse": 3,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 108,
+      "start": 675,
+      "end": 678,
+      "firstChapter": 5,
+      "firstVerse": 6,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 109,
+      "start": 679,
+      "end": 682,
+      "firstChapter": 5,
+      "firstVerse": 10,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 110,
+      "start": 683,
+      "end": 686,
+      "firstChapter": 5,
+      "firstVerse": 14,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 111,
+      "start": 687,
+      "end": 692,
+      "firstChapter": 5,
+      "firstVerse": 18,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 112,
+      "start": 693,
+      "end": 700,
+      "firstChapter": 5,
+      "firstVerse": 24,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 113,
+      "start": 701,
+      "end": 705,
+      "firstChapter": 5,
+      "firstVerse": 32,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 114,
+      "start": 706,
+      "end": 710,
+      "firstChapter": 5,
+      "firstVerse": 37,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 115,
+      "start": 711,
+      "end": 714,
+      "firstChapter": 5,
+      "firstVerse": 42,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 116,
+      "start": 715,
+      "end": 719,
+      "firstChapter": 5,
+      "firstVerse": 46,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 117,
+      "start": 720,
+      "end": 726,
+      "firstChapter": 5,
+      "firstVerse": 51,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 118,
+      "start": 727,
+      "end": 733,
+      "firstChapter": 5,
+      "firstVerse": 58,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 119,
+      "start": 734,
+      "end": 739,
+      "firstChapter": 5,
+      "firstVerse": 65,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 120,
+      "start": 740,
+      "end": 745,
+      "firstChapter": 5,
+      "firstVerse": 71,
+      "juz": 6,
+      "endJuz": 6
+    },
+    {
+      "number": 121,
+      "start": 746,
+      "end": 751,
+      "firstChapter": 5,
+      "firstVerse": 77,
+      "juz": 6,
+      "endJuz": 7
+    },
+    {
+      "number": 122,
+      "start": 752,
+      "end": 758,
+      "firstChapter": 5,
+      "firstVerse": 83,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 123,
+      "start": 759,
+      "end": 764,
+      "firstChapter": 5,
+      "firstVerse": 90,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 124,
+      "start": 765,
+      "end": 772,
+      "firstChapter": 5,
+      "firstVerse": 96,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 125,
+      "start": 773,
+      "end": 777,
+      "firstChapter": 5,
+      "firstVerse": 104,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 126,
+      "start": 778,
+      "end": 782,
+      "firstChapter": 5,
+      "firstVerse": 109,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 127,
+      "start": 783,
+      "end": 789,
+      "firstChapter": 5,
+      "firstVerse": 114,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 128,
+      "start": 790,
+      "end": 797,
+      "firstChapter": 6,
+      "firstVerse": 1,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 129,
+      "start": 798,
+      "end": 807,
+      "firstChapter": 6,
+      "firstVerse": 9,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 130,
+      "start": 808,
+      "end": 816,
+      "firstChapter": 6,
+      "firstVerse": 19,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 131,
+      "start": 817,
+      "end": 824,
+      "firstChapter": 6,
+      "firstVerse": 28,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 132,
+      "start": 825,
+      "end": 833,
+      "firstChapter": 6,
+      "firstVerse": 36,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 133,
+      "start": 834,
+      "end": 841,
+      "firstChapter": 6,
+      "firstVerse": 45,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 134,
+      "start": 842,
+      "end": 848,
+      "firstChapter": 6,
+      "firstVerse": 53,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 135,
+      "start": 849,
+      "end": 857,
+      "firstChapter": 6,
+      "firstVerse": 60,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 136,
+      "start": 858,
+      "end": 862,
+      "firstChapter": 6,
+      "firstVerse": 69,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 137,
+      "start": 863,
+      "end": 870,
+      "firstChapter": 6,
+      "firstVerse": 74,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 138,
+      "start": 871,
+      "end": 879,
+      "firstChapter": 6,
+      "firstVerse": 82,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 139,
+      "start": 880,
+      "end": 883,
+      "firstChapter": 6,
+      "firstVerse": 91,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 140,
+      "start": 884,
+      "end": 890,
+      "firstChapter": 6,
+      "firstVerse": 95,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 141,
+      "start": 891,
+      "end": 899,
+      "firstChapter": 6,
+      "firstVerse": 102,
+      "juz": 7,
+      "endJuz": 7
+    },
+    {
+      "number": 142,
+      "start": 900,
+      "end": 907,
+      "firstChapter": 6,
+      "firstVerse": 111,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 143,
+      "start": 908,
+      "end": 913,
+      "firstChapter": 6,
+      "firstVerse": 119,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 144,
+      "start": 914,
+      "end": 920,
+      "firstChapter": 6,
+      "firstVerse": 125,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 145,
+      "start": 921,
+      "end": 926,
+      "firstChapter": 6,
+      "firstVerse": 132,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 146,
+      "start": 927,
+      "end": 931,
+      "firstChapter": 6,
+      "firstVerse": 138,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 147,
+      "start": 932,
+      "end": 935,
+      "firstChapter": 6,
+      "firstVerse": 143,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 148,
+      "start": 936,
+      "end": 940,
+      "firstChapter": 6,
+      "firstVerse": 147,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 149,
+      "start": 941,
+      "end": 946,
+      "firstChapter": 6,
+      "firstVerse": 152,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 150,
+      "start": 947,
+      "end": 954,
+      "firstChapter": 6,
+      "firstVerse": 158,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 151,
+      "start": 955,
+      "end": 965,
+      "firstChapter": 7,
+      "firstVerse": 1,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 152,
+      "start": 966,
+      "end": 976,
+      "firstChapter": 7,
+      "firstVerse": 12,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 153,
+      "start": 977,
+      "end": 984,
+      "firstChapter": 7,
+      "firstVerse": 23,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 154,
+      "start": 985,
+      "end": 991,
+      "firstChapter": 7,
+      "firstVerse": 31,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 155,
+      "start": 992,
+      "end": 997,
+      "firstChapter": 7,
+      "firstVerse": 38,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 156,
+      "start": 998,
+      "end": 1005,
+      "firstChapter": 7,
+      "firstVerse": 44,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 157,
+      "start": 1006,
+      "end": 1011,
+      "firstChapter": 7,
+      "firstVerse": 52,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 158,
+      "start": 1012,
+      "end": 1021,
+      "firstChapter": 7,
+      "firstVerse": 58,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 159,
+      "start": 1022,
+      "end": 1027,
+      "firstChapter": 7,
+      "firstVerse": 68,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 160,
+      "start": 1028,
+      "end": 1035,
+      "firstChapter": 7,
+      "firstVerse": 74,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 161,
+      "start": 1036,
+      "end": 1041,
+      "firstChapter": 7,
+      "firstVerse": 82,
+      "juz": 8,
+      "endJuz": 8
+    },
+    {
+      "number": 162,
+      "start": 1042,
+      "end": 1049,
+      "firstChapter": 7,
+      "firstVerse": 88,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 163,
+      "start": 1050,
+      "end": 1058,
+      "firstChapter": 7,
+      "firstVerse": 96,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 164,
+      "start": 1059,
+      "end": 1074,
+      "firstChapter": 7,
+      "firstVerse": 105,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 165,
+      "start": 1075,
+      "end": 1084,
+      "firstChapter": 7,
+      "firstVerse": 121,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 166,
+      "start": 1085,
+      "end": 1091,
+      "firstChapter": 7,
+      "firstVerse": 131,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 167,
+      "start": 1092,
+      "end": 1097,
+      "firstChapter": 7,
+      "firstVerse": 138,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 168,
+      "start": 1098,
+      "end": 1103,
+      "firstChapter": 7,
+      "firstVerse": 144,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 169,
+      "start": 1104,
+      "end": 1109,
+      "firstChapter": 7,
+      "firstVerse": 150,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 170,
+      "start": 1110,
+      "end": 1113,
+      "firstChapter": 7,
+      "firstVerse": 156,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 171,
+      "start": 1114,
+      "end": 1117,
+      "firstChapter": 7,
+      "firstVerse": 160,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 172,
+      "start": 1118,
+      "end": 1124,
+      "firstChapter": 7,
+      "firstVerse": 164,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 173,
+      "start": 1125,
+      "end": 1132,
+      "firstChapter": 7,
+      "firstVerse": 171,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 174,
+      "start": 1133,
+      "end": 1141,
+      "firstChapter": 7,
+      "firstVerse": 179,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 175,
+      "start": 1142,
+      "end": 1149,
+      "firstChapter": 7,
+      "firstVerse": 188,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 176,
+      "start": 1150,
+      "end": 1160,
+      "firstChapter": 7,
+      "firstVerse": 196,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 177,
+      "start": 1161,
+      "end": 1168,
+      "firstChapter": 8,
+      "firstVerse": 1,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 178,
+      "start": 1169,
+      "end": 1176,
+      "firstChapter": 8,
+      "firstVerse": 9,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 179,
+      "start": 1177,
+      "end": 1185,
+      "firstChapter": 8,
+      "firstVerse": 17,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 180,
+      "start": 1186,
+      "end": 1193,
+      "firstChapter": 8,
+      "firstVerse": 26,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 181,
+      "start": 1194,
+      "end": 1200,
+      "firstChapter": 8,
+      "firstVerse": 34,
+      "juz": 9,
+      "endJuz": 9
+    },
+    {
+      "number": 182,
+      "start": 1201,
+      "end": 1205,
+      "firstChapter": 8,
+      "firstVerse": 41,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 183,
+      "start": 1206,
+      "end": 1212,
+      "firstChapter": 8,
+      "firstVerse": 46,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 184,
+      "start": 1213,
+      "end": 1221,
+      "firstChapter": 8,
+      "firstVerse": 53,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 185,
+      "start": 1222,
+      "end": 1229,
+      "firstChapter": 8,
+      "firstVerse": 62,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 186,
+      "start": 1230,
+      "end": 1235,
+      "firstChapter": 8,
+      "firstVerse": 70,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 187,
+      "start": 1236,
+      "end": 1241,
+      "firstChapter": 9,
+      "firstVerse": 1,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 188,
+      "start": 1242,
+      "end": 1248,
+      "firstChapter": 9,
+      "firstVerse": 7,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 189,
+      "start": 1249,
+      "end": 1255,
+      "firstChapter": 9,
+      "firstVerse": 14,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 190,
+      "start": 1256,
+      "end": 1261,
+      "firstChapter": 9,
+      "firstVerse": 21,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 191,
+      "start": 1262,
+      "end": 1266,
+      "firstChapter": 9,
+      "firstVerse": 27,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 192,
+      "start": 1267,
+      "end": 1271,
+      "firstChapter": 9,
+      "firstVerse": 32,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 193,
+      "start": 1272,
+      "end": 1275,
+      "firstChapter": 9,
+      "firstVerse": 37,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 194,
+      "start": 1276,
+      "end": 1282,
+      "firstChapter": 9,
+      "firstVerse": 41,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 195,
+      "start": 1283,
+      "end": 1289,
+      "firstChapter": 9,
+      "firstVerse": 48,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 196,
+      "start": 1290,
+      "end": 1296,
+      "firstChapter": 9,
+      "firstVerse": 55,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 197,
+      "start": 1297,
+      "end": 1303,
+      "firstChapter": 9,
+      "firstVerse": 62,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 198,
+      "start": 1304,
+      "end": 1307,
+      "firstChapter": 9,
+      "firstVerse": 69,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 199,
+      "start": 1308,
+      "end": 1314,
+      "firstChapter": 9,
+      "firstVerse": 73,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 200,
+      "start": 1315,
+      "end": 1321,
+      "firstChapter": 9,
+      "firstVerse": 80,
+      "juz": 10,
+      "endJuz": 10
+    },
+    {
+      "number": 201,
+      "start": 1322,
+      "end": 1328,
+      "firstChapter": 9,
+      "firstVerse": 87,
+      "juz": 10,
+      "endJuz": 11
+    },
+    {
+      "number": 202,
+      "start": 1329,
+      "end": 1334,
+      "firstChapter": 9,
+      "firstVerse": 94,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 203,
+      "start": 1335,
+      "end": 1341,
+      "firstChapter": 9,
+      "firstVerse": 100,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 204,
+      "start": 1342,
+      "end": 1346,
+      "firstChapter": 9,
+      "firstVerse": 107,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 205,
+      "start": 1347,
+      "end": 1352,
+      "firstChapter": 9,
+      "firstVerse": 112,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 206,
+      "start": 1353,
+      "end": 1357,
+      "firstChapter": 9,
+      "firstVerse": 118,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 207,
+      "start": 1358,
+      "end": 1364,
+      "firstChapter": 9,
+      "firstVerse": 123,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 208,
+      "start": 1365,
+      "end": 1370,
+      "firstChapter": 10,
+      "firstVerse": 1,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 209,
+      "start": 1371,
+      "end": 1378,
+      "firstChapter": 10,
+      "firstVerse": 7,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 210,
+      "start": 1379,
+      "end": 1384,
+      "firstChapter": 10,
+      "firstVerse": 15,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 211,
+      "start": 1385,
+      "end": 1389,
+      "firstChapter": 10,
+      "firstVerse": 21,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 212,
+      "start": 1390,
+      "end": 1397,
+      "firstChapter": 10,
+      "firstVerse": 26,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 213,
+      "start": 1398,
+      "end": 1406,
+      "firstChapter": 10,
+      "firstVerse": 34,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 214,
+      "start": 1407,
+      "end": 1417,
+      "firstChapter": 10,
+      "firstVerse": 43,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 215,
+      "start": 1418,
+      "end": 1425,
+      "firstChapter": 10,
+      "firstVerse": 54,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 216,
+      "start": 1426,
+      "end": 1434,
+      "firstChapter": 10,
+      "firstVerse": 62,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 217,
+      "start": 1435,
+      "end": 1442,
+      "firstChapter": 10,
+      "firstVerse": 71,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 218,
+      "start": 1443,
+      "end": 1452,
+      "firstChapter": 10,
+      "firstVerse": 79,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 219,
+      "start": 1453,
+      "end": 1461,
+      "firstChapter": 10,
+      "firstVerse": 89,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 220,
+      "start": 1462,
+      "end": 1470,
+      "firstChapter": 10,
+      "firstVerse": 98,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 221,
+      "start": 1471,
+      "end": 1478,
+      "firstChapter": 10,
+      "firstVerse": 107,
+      "juz": 11,
+      "endJuz": 11
+    },
+    {
+      "number": 222,
+      "start": 1479,
+      "end": 1485,
+      "firstChapter": 11,
+      "firstVerse": 6,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 223,
+      "start": 1486,
+      "end": 1492,
+      "firstChapter": 11,
+      "firstVerse": 13,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 224,
+      "start": 1493,
+      "end": 1501,
+      "firstChapter": 11,
+      "firstVerse": 20,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 225,
+      "start": 1502,
+      "end": 1510,
+      "firstChapter": 11,
+      "firstVerse": 29,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 226,
+      "start": 1511,
+      "end": 1518,
+      "firstChapter": 11,
+      "firstVerse": 38,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 227,
+      "start": 1519,
+      "end": 1526,
+      "firstChapter": 11,
+      "firstVerse": 46,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 228,
+      "start": 1527,
+      "end": 1535,
+      "firstChapter": 11,
+      "firstVerse": 54,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 229,
+      "start": 1536,
+      "end": 1544,
+      "firstChapter": 11,
+      "firstVerse": 63,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 230,
+      "start": 1545,
+      "end": 1554,
+      "firstChapter": 11,
+      "firstVerse": 72,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 231,
+      "start": 1555,
+      "end": 1561,
+      "firstChapter": 11,
+      "firstVerse": 82,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 232,
+      "start": 1562,
+      "end": 1570,
+      "firstChapter": 11,
+      "firstVerse": 89,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 233,
+      "start": 1571,
+      "end": 1581,
+      "firstChapter": 11,
+      "firstVerse": 98,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 234,
+      "start": 1582,
+      "end": 1590,
+      "firstChapter": 11,
+      "firstVerse": 109,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 235,
+      "start": 1591,
+      "end": 1600,
+      "firstChapter": 11,
+      "firstVerse": 118,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 236,
+      "start": 1601,
+      "end": 1610,
+      "firstChapter": 12,
+      "firstVerse": 5,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 237,
+      "start": 1611,
+      "end": 1618,
+      "firstChapter": 12,
+      "firstVerse": 15,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 238,
+      "start": 1619,
+      "end": 1626,
+      "firstChapter": 12,
+      "firstVerse": 23,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 239,
+      "start": 1627,
+      "end": 1633,
+      "firstChapter": 12,
+      "firstVerse": 31,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 240,
+      "start": 1634,
+      "end": 1639,
+      "firstChapter": 12,
+      "firstVerse": 38,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 241,
+      "start": 1640,
+      "end": 1648,
+      "firstChapter": 12,
+      "firstVerse": 44,
+      "juz": 12,
+      "endJuz": 12
+    },
+    {
+      "number": 242,
+      "start": 1649,
+      "end": 1659,
+      "firstChapter": 12,
+      "firstVerse": 53,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 243,
+      "start": 1660,
+      "end": 1665,
+      "firstChapter": 12,
+      "firstVerse": 64,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 244,
+      "start": 1666,
+      "end": 1674,
+      "firstChapter": 12,
+      "firstVerse": 70,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 245,
+      "start": 1675,
+      "end": 1682,
+      "firstChapter": 12,
+      "firstVerse": 79,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 246,
+      "start": 1683,
+      "end": 1691,
+      "firstChapter": 12,
+      "firstVerse": 87,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 247,
+      "start": 1692,
+      "end": 1699,
+      "firstChapter": 12,
+      "firstVerse": 96,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 248,
+      "start": 1700,
+      "end": 1707,
+      "firstChapter": 12,
+      "firstVerse": 104,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 249,
+      "start": 1708,
+      "end": 1712,
+      "firstChapter": 13,
+      "firstVerse": 1,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 250,
+      "start": 1713,
+      "end": 1720,
+      "firstChapter": 13,
+      "firstVerse": 6,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 251,
+      "start": 1721,
+      "end": 1725,
+      "firstChapter": 13,
+      "firstVerse": 14,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 252,
+      "start": 1726,
+      "end": 1735,
+      "firstChapter": 13,
+      "firstVerse": 19,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 253,
+      "start": 1736,
+      "end": 1741,
+      "firstChapter": 13,
+      "firstVerse": 29,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 254,
+      "start": 1742,
+      "end": 1749,
+      "firstChapter": 13,
+      "firstVerse": 35,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 255,
+      "start": 1750,
+      "end": 1755,
+      "firstChapter": 13,
+      "firstVerse": 43,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 256,
+      "start": 1756,
+      "end": 1760,
+      "firstChapter": 14,
+      "firstVerse": 6,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 257,
+      "start": 1761,
+      "end": 1768,
+      "firstChapter": 14,
+      "firstVerse": 11,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 258,
+      "start": 1769,
+      "end": 1774,
+      "firstChapter": 14,
+      "firstVerse": 19,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 259,
+      "start": 1775,
+      "end": 1783,
+      "firstChapter": 14,
+      "firstVerse": 25,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 260,
+      "start": 1784,
+      "end": 1792,
+      "firstChapter": 14,
+      "firstVerse": 34,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 261,
+      "start": 1793,
+      "end": 1802,
+      "firstChapter": 14,
+      "firstVerse": 43,
+      "juz": 13,
+      "endJuz": 13
+    },
+    {
+      "number": 262,
+      "start": 1803,
+      "end": 1817,
+      "firstChapter": 15,
+      "firstVerse": 1,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 263,
+      "start": 1818,
+      "end": 1833,
+      "firstChapter": 15,
+      "firstVerse": 16,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 264,
+      "start": 1834,
+      "end": 1853,
+      "firstChapter": 15,
+      "firstVerse": 32,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 265,
+      "start": 1854,
+      "end": 1872,
+      "firstChapter": 15,
+      "firstVerse": 52,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 266,
+      "start": 1873,
+      "end": 1892,
+      "firstChapter": 15,
+      "firstVerse": 71,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 267,
+      "start": 1893,
+      "end": 1907,
+      "firstChapter": 15,
+      "firstVerse": 91,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 268,
+      "start": 1908,
+      "end": 1915,
+      "firstChapter": 16,
+      "firstVerse": 7,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 269,
+      "start": 1916,
+      "end": 1927,
+      "firstChapter": 16,
+      "firstVerse": 15,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 270,
+      "start": 1928,
+      "end": 1935,
+      "firstChapter": 16,
+      "firstVerse": 27,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 271,
+      "start": 1936,
+      "end": 1943,
+      "firstChapter": 16,
+      "firstVerse": 35,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 272,
+      "start": 1944,
+      "end": 1955,
+      "firstChapter": 16,
+      "firstVerse": 43,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 273,
+      "start": 1956,
+      "end": 1965,
+      "firstChapter": 16,
+      "firstVerse": 55,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 274,
+      "start": 1966,
+      "end": 1973,
+      "firstChapter": 16,
+      "firstVerse": 65,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 275,
+      "start": 1974,
+      "end": 1980,
+      "firstChapter": 16,
+      "firstVerse": 73,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 276,
+      "start": 1981,
+      "end": 1988,
+      "firstChapter": 16,
+      "firstVerse": 80,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 277,
+      "start": 1989,
+      "end": 1994,
+      "firstChapter": 16,
+      "firstVerse": 88,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 278,
+      "start": 1995,
+      "end": 2003,
+      "firstChapter": 16,
+      "firstVerse": 94,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 279,
+      "start": 2004,
+      "end": 2011,
+      "firstChapter": 16,
+      "firstVerse": 103,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 280,
+      "start": 2012,
+      "end": 2019,
+      "firstChapter": 16,
+      "firstVerse": 111,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 281,
+      "start": 2020,
+      "end": 2029,
+      "firstChapter": 16,
+      "firstVerse": 119,
+      "juz": 14,
+      "endJuz": 14
+    },
+    {
+      "number": 282,
+      "start": 2030,
+      "end": 2036,
+      "firstChapter": 17,
+      "firstVerse": 1,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 283,
+      "start": 2037,
+      "end": 2046,
+      "firstChapter": 17,
+      "firstVerse": 8,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 284,
+      "start": 2047,
+      "end": 2056,
+      "firstChapter": 17,
+      "firstVerse": 18,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 285,
+      "start": 2057,
+      "end": 2067,
+      "firstChapter": 17,
+      "firstVerse": 28,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 286,
+      "start": 2068,
+      "end": 2078,
+      "firstChapter": 17,
+      "firstVerse": 39,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 287,
+      "start": 2079,
+      "end": 2087,
+      "firstChapter": 17,
+      "firstVerse": 50,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 288,
+      "start": 2088,
+      "end": 2095,
+      "firstChapter": 17,
+      "firstVerse": 59,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 289,
+      "start": 2096,
+      "end": 2104,
+      "firstChapter": 17,
+      "firstVerse": 67,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 290,
+      "start": 2105,
+      "end": 2115,
+      "firstChapter": 17,
+      "firstVerse": 76,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 291,
+      "start": 2116,
+      "end": 2125,
+      "firstChapter": 17,
+      "firstVerse": 87,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 292,
+      "start": 2126,
+      "end": 2133,
+      "firstChapter": 17,
+      "firstVerse": 97,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 293,
+      "start": 2134,
+      "end": 2144,
+      "firstChapter": 17,
+      "firstVerse": 105,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 294,
+      "start": 2145,
+      "end": 2155,
+      "firstChapter": 18,
+      "firstVerse": 5,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 295,
+      "start": 2156,
+      "end": 2160,
+      "firstChapter": 18,
+      "firstVerse": 16,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 296,
+      "start": 2161,
+      "end": 2167,
+      "firstChapter": 18,
+      "firstVerse": 21,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 297,
+      "start": 2168,
+      "end": 2174,
+      "firstChapter": 18,
+      "firstVerse": 28,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 298,
+      "start": 2175,
+      "end": 2185,
+      "firstChapter": 18,
+      "firstVerse": 35,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 299,
+      "start": 2186,
+      "end": 2193,
+      "firstChapter": 18,
+      "firstVerse": 46,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 300,
+      "start": 2194,
+      "end": 2201,
+      "firstChapter": 18,
+      "firstVerse": 54,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 301,
+      "start": 2202,
+      "end": 2214,
+      "firstChapter": 18,
+      "firstVerse": 62,
+      "juz": 15,
+      "endJuz": 15
+    },
+    {
+      "number": 302,
+      "start": 2215,
+      "end": 2223,
+      "firstChapter": 18,
+      "firstVerse": 75,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 303,
+      "start": 2224,
+      "end": 2237,
+      "firstChapter": 18,
+      "firstVerse": 84,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 304,
+      "start": 2238,
+      "end": 2250,
+      "firstChapter": 18,
+      "firstVerse": 98,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 305,
+      "start": 2251,
+      "end": 2261,
+      "firstChapter": 19,
+      "firstVerse": 1,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 306,
+      "start": 2262,
+      "end": 2275,
+      "firstChapter": 19,
+      "firstVerse": 12,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 307,
+      "start": 2276,
+      "end": 2288,
+      "firstChapter": 19,
+      "firstVerse": 26,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 308,
+      "start": 2289,
+      "end": 2301,
+      "firstChapter": 19,
+      "firstVerse": 39,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 309,
+      "start": 2302,
+      "end": 2314,
+      "firstChapter": 19,
+      "firstVerse": 52,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 310,
+      "start": 2315,
+      "end": 2326,
+      "firstChapter": 19,
+      "firstVerse": 65,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 311,
+      "start": 2327,
+      "end": 2345,
+      "firstChapter": 19,
+      "firstVerse": 77,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 312,
+      "start": 2346,
+      "end": 2360,
+      "firstChapter": 19,
+      "firstVerse": 96,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 313,
+      "start": 2361,
+      "end": 2385,
+      "firstChapter": 20,
+      "firstVerse": 13,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 314,
+      "start": 2386,
+      "end": 2399,
+      "firstChapter": 20,
+      "firstVerse": 38,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 315,
+      "start": 2400,
+      "end": 2412,
+      "firstChapter": 20,
+      "firstVerse": 52,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 316,
+      "start": 2413,
+      "end": 2424,
+      "firstChapter": 20,
+      "firstVerse": 65,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 317,
+      "start": 2425,
+      "end": 2435,
+      "firstChapter": 20,
+      "firstVerse": 77,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 318,
+      "start": 2436,
+      "end": 2446,
+      "firstChapter": 20,
+      "firstVerse": 88,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 319,
+      "start": 2447,
+      "end": 2461,
+      "firstChapter": 20,
+      "firstVerse": 99,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 320,
+      "start": 2462,
+      "end": 2473,
+      "firstChapter": 20,
+      "firstVerse": 114,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 321,
+      "start": 2474,
+      "end": 2483,
+      "firstChapter": 20,
+      "firstVerse": 126,
+      "juz": 16,
+      "endJuz": 16
+    },
+    {
+      "number": 322,
+      "start": 2484,
+      "end": 2493,
+      "firstChapter": 21,
+      "firstVerse": 1,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 323,
+      "start": 2494,
+      "end": 2507,
+      "firstChapter": 21,
+      "firstVerse": 11,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 324,
+      "start": 2508,
+      "end": 2518,
+      "firstChapter": 21,
+      "firstVerse": 25,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 325,
+      "start": 2519,
+      "end": 2527,
+      "firstChapter": 21,
+      "firstVerse": 36,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 326,
+      "start": 2528,
+      "end": 2540,
+      "firstChapter": 21,
+      "firstVerse": 45,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 327,
+      "start": 2541,
+      "end": 2555,
+      "firstChapter": 21,
+      "firstVerse": 58,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 328,
+      "start": 2556,
+      "end": 2564,
+      "firstChapter": 21,
+      "firstVerse": 73,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 329,
+      "start": 2565,
+      "end": 2573,
+      "firstChapter": 21,
+      "firstVerse": 82,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 330,
+      "start": 2574,
+      "end": 2584,
+      "firstChapter": 21,
+      "firstVerse": 91,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 331,
+      "start": 2585,
+      "end": 2595,
+      "firstChapter": 21,
+      "firstVerse": 102,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 332,
+      "start": 2596,
+      "end": 2600,
+      "firstChapter": 22,
+      "firstVerse": 1,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 333,
+      "start": 2601,
+      "end": 2610,
+      "firstChapter": 22,
+      "firstVerse": 6,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 334,
+      "start": 2611,
+      "end": 2618,
+      "firstChapter": 22,
+      "firstVerse": 16,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 335,
+      "start": 2619,
+      "end": 2625,
+      "firstChapter": 22,
+      "firstVerse": 24,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 336,
+      "start": 2626,
+      "end": 2633,
+      "firstChapter": 22,
+      "firstVerse": 31,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 337,
+      "start": 2634,
+      "end": 2641,
+      "firstChapter": 22,
+      "firstVerse": 39,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 338,
+      "start": 2642,
+      "end": 2650,
+      "firstChapter": 22,
+      "firstVerse": 47,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 339,
+      "start": 2651,
+      "end": 2659,
+      "firstChapter": 22,
+      "firstVerse": 56,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 340,
+      "start": 2660,
+      "end": 2667,
+      "firstChapter": 22,
+      "firstVerse": 65,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 341,
+      "start": 2668,
+      "end": 2673,
+      "firstChapter": 22,
+      "firstVerse": 73,
+      "juz": 17,
+      "endJuz": 17
+    },
+    {
+      "number": 342,
+      "start": 2674,
+      "end": 2690,
+      "firstChapter": 23,
+      "firstVerse": 1,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 343,
+      "start": 2691,
+      "end": 2700,
+      "firstChapter": 23,
+      "firstVerse": 18,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 344,
+      "start": 2701,
+      "end": 2715,
+      "firstChapter": 23,
+      "firstVerse": 28,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 345,
+      "start": 2716,
+      "end": 2732,
+      "firstChapter": 23,
+      "firstVerse": 43,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 346,
+      "start": 2733,
+      "end": 2747,
+      "firstChapter": 23,
+      "firstVerse": 60,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 347,
+      "start": 2748,
+      "end": 2762,
+      "firstChapter": 23,
+      "firstVerse": 75,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 348,
+      "start": 2763,
+      "end": 2777,
+      "firstChapter": 23,
+      "firstVerse": 90,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 349,
+      "start": 2778,
+      "end": 2791,
+      "firstChapter": 23,
+      "firstVerse": 105,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 350,
+      "start": 2792,
+      "end": 2801,
+      "firstChapter": 24,
+      "firstVerse": 1,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 351,
+      "start": 2802,
+      "end": 2811,
+      "firstChapter": 24,
+      "firstVerse": 11,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 352,
+      "start": 2812,
+      "end": 2818,
+      "firstChapter": 24,
+      "firstVerse": 21,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 353,
+      "start": 2819,
+      "end": 2822,
+      "firstChapter": 24,
+      "firstVerse": 28,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 354,
+      "start": 2823,
+      "end": 2827,
+      "firstChapter": 24,
+      "firstVerse": 32,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 355,
+      "start": 2828,
+      "end": 2834,
+      "firstChapter": 24,
+      "firstVerse": 37,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 356,
+      "start": 2835,
+      "end": 2844,
+      "firstChapter": 24,
+      "firstVerse": 44,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 357,
+      "start": 2845,
+      "end": 2849,
+      "firstChapter": 24,
+      "firstVerse": 54,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 358,
+      "start": 2850,
+      "end": 2852,
+      "firstChapter": 24,
+      "firstVerse": 59,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 359,
+      "start": 2853,
+      "end": 2857,
+      "firstChapter": 24,
+      "firstVerse": 62,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 360,
+      "start": 2858,
+      "end": 2866,
+      "firstChapter": 25,
+      "firstVerse": 3,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 361,
+      "start": 2867,
+      "end": 2875,
+      "firstChapter": 25,
+      "firstVerse": 12,
+      "juz": 18,
+      "endJuz": 18
+    },
+    {
+      "number": 362,
+      "start": 2876,
+      "end": 2887,
+      "firstChapter": 25,
+      "firstVerse": 21,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 363,
+      "start": 2888,
+      "end": 2898,
+      "firstChapter": 25,
+      "firstVerse": 33,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 364,
+      "start": 2899,
+      "end": 2910,
+      "firstChapter": 25,
+      "firstVerse": 44,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 365,
+      "start": 2911,
+      "end": 2922,
+      "firstChapter": 25,
+      "firstVerse": 56,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 366,
+      "start": 2923,
+      "end": 2932,
+      "firstChapter": 25,
+      "firstVerse": 68,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 367,
+      "start": 2933,
+      "end": 2951,
+      "firstChapter": 26,
+      "firstVerse": 1,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 368,
+      "start": 2952,
+      "end": 2971,
+      "firstChapter": 26,
+      "firstVerse": 20,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 369,
+      "start": 2972,
+      "end": 2992,
+      "firstChapter": 26,
+      "firstVerse": 40,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 370,
+      "start": 2993,
+      "end": 3015,
+      "firstChapter": 26,
+      "firstVerse": 61,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 371,
+      "start": 3016,
+      "end": 3043,
+      "firstChapter": 26,
+      "firstVerse": 84,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 372,
+      "start": 3044,
+      "end": 3068,
+      "firstChapter": 26,
+      "firstVerse": 112,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 373,
+      "start": 3069,
+      "end": 3091,
+      "firstChapter": 26,
+      "firstVerse": 137,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 374,
+      "start": 3092,
+      "end": 3115,
+      "firstChapter": 26,
+      "firstVerse": 160,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 375,
+      "start": 3116,
+      "end": 3138,
+      "firstChapter": 26,
+      "firstVerse": 184,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 376,
+      "start": 3139,
+      "end": 3159,
+      "firstChapter": 26,
+      "firstVerse": 207,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 377,
+      "start": 3160,
+      "end": 3172,
+      "firstChapter": 27,
+      "firstVerse": 1,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 378,
+      "start": 3173,
+      "end": 3181,
+      "firstChapter": 27,
+      "firstVerse": 14,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 379,
+      "start": 3182,
+      "end": 3194,
+      "firstChapter": 27,
+      "firstVerse": 23,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 380,
+      "start": 3195,
+      "end": 3203,
+      "firstChapter": 27,
+      "firstVerse": 36,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 381,
+      "start": 3204,
+      "end": 3214,
+      "firstChapter": 27,
+      "firstVerse": 45,
+      "juz": 19,
+      "endJuz": 19
+    },
+    {
+      "number": 382,
+      "start": 3215,
+      "end": 3222,
+      "firstChapter": 27,
+      "firstVerse": 56,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 383,
+      "start": 3223,
+      "end": 3235,
+      "firstChapter": 27,
+      "firstVerse": 64,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 384,
+      "start": 3236,
+      "end": 3247,
+      "firstChapter": 27,
+      "firstVerse": 77,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 385,
+      "start": 3248,
+      "end": 3257,
+      "firstChapter": 27,
+      "firstVerse": 89,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 386,
+      "start": 3258,
+      "end": 3265,
+      "firstChapter": 28,
+      "firstVerse": 6,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 387,
+      "start": 3266,
+      "end": 3273,
+      "firstChapter": 28,
+      "firstVerse": 14,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 388,
+      "start": 3274,
+      "end": 3280,
+      "firstChapter": 28,
+      "firstVerse": 22,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 389,
+      "start": 3281,
+      "end": 3287,
+      "firstChapter": 28,
+      "firstVerse": 29,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 390,
+      "start": 3288,
+      "end": 3295,
+      "firstChapter": 28,
+      "firstVerse": 36,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 391,
+      "start": 3296,
+      "end": 3302,
+      "firstChapter": 28,
+      "firstVerse": 44,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 392,
+      "start": 3303,
+      "end": 3311,
+      "firstChapter": 28,
+      "firstVerse": 51,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 393,
+      "start": 3312,
+      "end": 3322,
+      "firstChapter": 28,
+      "firstVerse": 60,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 394,
+      "start": 3323,
+      "end": 3329,
+      "firstChapter": 28,
+      "firstVerse": 71,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 395,
+      "start": 3330,
+      "end": 3336,
+      "firstChapter": 28,
+      "firstVerse": 78,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 396,
+      "start": 3337,
+      "end": 3346,
+      "firstChapter": 28,
+      "firstVerse": 85,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 397,
+      "start": 3347,
+      "end": 3354,
+      "firstChapter": 29,
+      "firstVerse": 7,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 398,
+      "start": 3355,
+      "end": 3363,
+      "firstChapter": 29,
+      "firstVerse": 15,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 399,
+      "start": 3364,
+      "end": 3370,
+      "firstChapter": 29,
+      "firstVerse": 24,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 400,
+      "start": 3371,
+      "end": 3378,
+      "firstChapter": 29,
+      "firstVerse": 31,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 401,
+      "start": 3379,
+      "end": 3385,
+      "firstChapter": 29,
+      "firstVerse": 39,
+      "juz": 20,
+      "endJuz": 20
+    },
+    {
+      "number": 402,
+      "start": 3386,
+      "end": 3392,
+      "firstChapter": 29,
+      "firstVerse": 46,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 403,
+      "start": 3393,
+      "end": 3403,
+      "firstChapter": 29,
+      "firstVerse": 53,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 404,
+      "start": 3404,
+      "end": 3414,
+      "firstChapter": 29,
+      "firstVerse": 64,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 405,
+      "start": 3415,
+      "end": 3424,
+      "firstChapter": 30,
+      "firstVerse": 6,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 406,
+      "start": 3425,
+      "end": 3433,
+      "firstChapter": 30,
+      "firstVerse": 16,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 407,
+      "start": 3434,
+      "end": 3441,
+      "firstChapter": 30,
+      "firstVerse": 25,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 408,
+      "start": 3442,
+      "end": 3450,
+      "firstChapter": 30,
+      "firstVerse": 33,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 409,
+      "start": 3451,
+      "end": 3459,
+      "firstChapter": 30,
+      "firstVerse": 42,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 410,
+      "start": 3460,
+      "end": 3469,
+      "firstChapter": 30,
+      "firstVerse": 51,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 411,
+      "start": 3470,
+      "end": 3480,
+      "firstChapter": 31,
+      "firstVerse": 1,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 412,
+      "start": 3481,
+      "end": 3488,
+      "firstChapter": 31,
+      "firstVerse": 12,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 413,
+      "start": 3489,
+      "end": 3497,
+      "firstChapter": 31,
+      "firstVerse": 20,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 414,
+      "start": 3498,
+      "end": 3503,
+      "firstChapter": 31,
+      "firstVerse": 29,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 415,
+      "start": 3504,
+      "end": 3514,
+      "firstChapter": 32,
+      "firstVerse": 1,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 416,
+      "start": 3515,
+      "end": 3523,
+      "firstChapter": 32,
+      "firstVerse": 12,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 417,
+      "start": 3524,
+      "end": 3533,
+      "firstChapter": 32,
+      "firstVerse": 21,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 418,
+      "start": 3534,
+      "end": 3539,
+      "firstChapter": 33,
+      "firstVerse": 1,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 419,
+      "start": 3540,
+      "end": 3548,
+      "firstChapter": 33,
+      "firstVerse": 7,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 420,
+      "start": 3549,
+      "end": 3555,
+      "firstChapter": 33,
+      "firstVerse": 16,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 421,
+      "start": 3556,
+      "end": 3563,
+      "firstChapter": 33,
+      "firstVerse": 23,
+      "juz": 21,
+      "endJuz": 21
+    },
+    {
+      "number": 422,
+      "start": 3564,
+      "end": 3568,
+      "firstChapter": 33,
+      "firstVerse": 31,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 423,
+      "start": 3569,
+      "end": 3576,
+      "firstChapter": 33,
+      "firstVerse": 36,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 424,
+      "start": 3577,
+      "end": 3583,
+      "firstChapter": 33,
+      "firstVerse": 44,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 425,
+      "start": 3584,
+      "end": 3587,
+      "firstChapter": 33,
+      "firstVerse": 51,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 426,
+      "start": 3588,
+      "end": 3595,
+      "firstChapter": 33,
+      "firstVerse": 55,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 427,
+      "start": 3596,
+      "end": 3606,
+      "firstChapter": 33,
+      "firstVerse": 63,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 428,
+      "start": 3607,
+      "end": 3613,
+      "firstChapter": 34,
+      "firstVerse": 1,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 429,
+      "start": 3614,
+      "end": 3620,
+      "firstChapter": 34,
+      "firstVerse": 8,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 430,
+      "start": 3621,
+      "end": 3628,
+      "firstChapter": 34,
+      "firstVerse": 15,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 431,
+      "start": 3629,
+      "end": 3637,
+      "firstChapter": 34,
+      "firstVerse": 23,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 432,
+      "start": 3638,
+      "end": 3645,
+      "firstChapter": 34,
+      "firstVerse": 32,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 433,
+      "start": 3646,
+      "end": 3654,
+      "firstChapter": 34,
+      "firstVerse": 40,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 434,
+      "start": 3655,
+      "end": 3663,
+      "firstChapter": 34,
+      "firstVerse": 49,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 435,
+      "start": 3664,
+      "end": 3671,
+      "firstChapter": 35,
+      "firstVerse": 4,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 436,
+      "start": 3672,
+      "end": 3678,
+      "firstChapter": 35,
+      "firstVerse": 12,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 437,
+      "start": 3679,
+      "end": 3690,
+      "firstChapter": 35,
+      "firstVerse": 19,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 438,
+      "start": 3691,
+      "end": 3698,
+      "firstChapter": 35,
+      "firstVerse": 31,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 439,
+      "start": 3699,
+      "end": 3704,
+      "firstChapter": 35,
+      "firstVerse": 39,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 440,
+      "start": 3705,
+      "end": 3717,
+      "firstChapter": 35,
+      "firstVerse": 45,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 441,
+      "start": 3718,
+      "end": 3732,
+      "firstChapter": 36,
+      "firstVerse": 13,
+      "juz": 22,
+      "endJuz": 22
+    },
+    {
+      "number": 442,
+      "start": 3733,
+      "end": 3745,
+      "firstChapter": 36,
+      "firstVerse": 28,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 443,
+      "start": 3746,
+      "end": 3759,
+      "firstChapter": 36,
+      "firstVerse": 41,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 444,
+      "start": 3760,
+      "end": 3775,
+      "firstChapter": 36,
+      "firstVerse": 55,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 445,
+      "start": 3776,
+      "end": 3788,
+      "firstChapter": 36,
+      "firstVerse": 71,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 446,
+      "start": 3789,
+      "end": 3812,
+      "firstChapter": 37,
+      "firstVerse": 1,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 447,
+      "start": 3813,
+      "end": 3839,
+      "firstChapter": 37,
+      "firstVerse": 25,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 448,
+      "start": 3840,
+      "end": 3864,
+      "firstChapter": 37,
+      "firstVerse": 52,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 449,
+      "start": 3865,
+      "end": 3890,
+      "firstChapter": 37,
+      "firstVerse": 77,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 450,
+      "start": 3891,
+      "end": 3914,
+      "firstChapter": 37,
+      "firstVerse": 103,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 451,
+      "start": 3915,
+      "end": 3941,
+      "firstChapter": 37,
+      "firstVerse": 127,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 452,
+      "start": 3942,
+      "end": 3970,
+      "firstChapter": 37,
+      "firstVerse": 154,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 453,
+      "start": 3971,
+      "end": 3986,
+      "firstChapter": 38,
+      "firstVerse": 1,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 454,
+      "start": 3987,
+      "end": 3996,
+      "firstChapter": 38,
+      "firstVerse": 17,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 455,
+      "start": 3997,
+      "end": 4012,
+      "firstChapter": 38,
+      "firstVerse": 27,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 456,
+      "start": 4013,
+      "end": 4031,
+      "firstChapter": 38,
+      "firstVerse": 43,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 457,
+      "start": 4032,
+      "end": 4053,
+      "firstChapter": 38,
+      "firstVerse": 62,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 458,
+      "start": 4054,
+      "end": 4063,
+      "firstChapter": 38,
+      "firstVerse": 84,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 459,
+      "start": 4064,
+      "end": 4068,
+      "firstChapter": 39,
+      "firstVerse": 6,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 460,
+      "start": 4069,
+      "end": 4079,
+      "firstChapter": 39,
+      "firstVerse": 11,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 461,
+      "start": 4080,
+      "end": 4089,
+      "firstChapter": 39,
+      "firstVerse": 22,
+      "juz": 23,
+      "endJuz": 23
+    },
+    {
+      "number": 462,
+      "start": 4090,
+      "end": 4098,
+      "firstChapter": 39,
+      "firstVerse": 32,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 463,
+      "start": 4099,
+      "end": 4105,
+      "firstChapter": 39,
+      "firstVerse": 41,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 464,
+      "start": 4106,
+      "end": 4114,
+      "firstChapter": 39,
+      "firstVerse": 48,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 465,
+      "start": 4115,
+      "end": 4125,
+      "firstChapter": 39,
+      "firstVerse": 57,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 466,
+      "start": 4126,
+      "end": 4132,
+      "firstChapter": 39,
+      "firstVerse": 68,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 467,
+      "start": 4133,
+      "end": 4140,
+      "firstChapter": 39,
+      "firstVerse": 75,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 468,
+      "start": 4141,
+      "end": 4149,
+      "firstChapter": 40,
+      "firstVerse": 8,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 469,
+      "start": 4150,
+      "end": 4158,
+      "firstChapter": 40,
+      "firstVerse": 17,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 470,
+      "start": 4159,
+      "end": 4166,
+      "firstChapter": 40,
+      "firstVerse": 26,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 471,
+      "start": 4167,
+      "end": 4173,
+      "firstChapter": 40,
+      "firstVerse": 34,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 472,
+      "start": 4174,
+      "end": 4182,
+      "firstChapter": 40,
+      "firstVerse": 41,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 473,
+      "start": 4183,
+      "end": 4191,
+      "firstChapter": 40,
+      "firstVerse": 50,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 474,
+      "start": 4192,
+      "end": 4199,
+      "firstChapter": 40,
+      "firstVerse": 59,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 475,
+      "start": 4200,
+      "end": 4210,
+      "firstChapter": 40,
+      "firstVerse": 67,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 476,
+      "start": 4211,
+      "end": 4218,
+      "firstChapter": 40,
+      "firstVerse": 78,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 477,
+      "start": 4219,
+      "end": 4229,
+      "firstChapter": 41,
+      "firstVerse": 1,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 478,
+      "start": 4230,
+      "end": 4238,
+      "firstChapter": 41,
+      "firstVerse": 12,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 479,
+      "start": 4239,
+      "end": 4247,
+      "firstChapter": 41,
+      "firstVerse": 21,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 480,
+      "start": 4248,
+      "end": 4256,
+      "firstChapter": 41,
+      "firstVerse": 30,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 481,
+      "start": 4257,
+      "end": 4264,
+      "firstChapter": 41,
+      "firstVerse": 39,
+      "juz": 24,
+      "endJuz": 24
+    },
+    {
+      "number": 482,
+      "start": 4265,
+      "end": 4272,
+      "firstChapter": 41,
+      "firstVerse": 47,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 483,
+      "start": 4273,
+      "end": 4282,
+      "firstChapter": 42,
+      "firstVerse": 1,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 484,
+      "start": 4283,
+      "end": 4287,
+      "firstChapter": 42,
+      "firstVerse": 11,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 485,
+      "start": 4288,
+      "end": 4294,
+      "firstChapter": 42,
+      "firstVerse": 16,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 486,
+      "start": 4295,
+      "end": 4303,
+      "firstChapter": 42,
+      "firstVerse": 23,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 487,
+      "start": 4304,
+      "end": 4316,
+      "firstChapter": 42,
+      "firstVerse": 32,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 488,
+      "start": 4317,
+      "end": 4323,
+      "firstChapter": 42,
+      "firstVerse": 45,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 489,
+      "start": 4324,
+      "end": 4335,
+      "firstChapter": 42,
+      "firstVerse": 52,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 490,
+      "start": 4336,
+      "end": 4347,
+      "firstChapter": 43,
+      "firstVerse": 11,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 491,
+      "start": 4348,
+      "end": 4358,
+      "firstChapter": 43,
+      "firstVerse": 23,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 492,
+      "start": 4359,
+      "end": 4372,
+      "firstChapter": 43,
+      "firstVerse": 34,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 493,
+      "start": 4373,
+      "end": 4385,
+      "firstChapter": 43,
+      "firstVerse": 48,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 494,
+      "start": 4386,
+      "end": 4398,
+      "firstChapter": 43,
+      "firstVerse": 61,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 495,
+      "start": 4399,
+      "end": 4414,
+      "firstChapter": 43,
+      "firstVerse": 74,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 496,
+      "start": 4415,
+      "end": 4432,
+      "firstChapter": 44,
+      "firstVerse": 1,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 497,
+      "start": 4433,
+      "end": 4453,
+      "firstChapter": 44,
+      "firstVerse": 19,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 498,
+      "start": 4454,
+      "end": 4473,
+      "firstChapter": 44,
+      "firstVerse": 40,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 499,
+      "start": 4474,
+      "end": 4486,
+      "firstChapter": 45,
+      "firstVerse": 1,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 500,
+      "start": 4487,
+      "end": 4495,
+      "firstChapter": 45,
+      "firstVerse": 14,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 501,
+      "start": 4496,
+      "end": 4505,
+      "firstChapter": 45,
+      "firstVerse": 23,
+      "juz": 25,
+      "endJuz": 25
+    },
+    {
+      "number": 502,
+      "start": 4506,
+      "end": 4515,
+      "firstChapter": 45,
+      "firstVerse": 33,
+      "juz": 25,
+      "endJuz": 26
+    },
+    {
+      "number": 503,
+      "start": 4516,
+      "end": 4524,
+      "firstChapter": 46,
+      "firstVerse": 6,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 504,
+      "start": 4525,
+      "end": 4530,
+      "firstChapter": 46,
+      "firstVerse": 15,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 505,
+      "start": 4531,
+      "end": 4538,
+      "firstChapter": 46,
+      "firstVerse": 21,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 506,
+      "start": 4539,
+      "end": 4545,
+      "firstChapter": 46,
+      "firstVerse": 29,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 507,
+      "start": 4546,
+      "end": 4556,
+      "firstChapter": 47,
+      "firstVerse": 1,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 508,
+      "start": 4557,
+      "end": 4564,
+      "firstChapter": 47,
+      "firstVerse": 12,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 509,
+      "start": 4565,
+      "end": 4574,
+      "firstChapter": 47,
+      "firstVerse": 20,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 510,
+      "start": 4575,
+      "end": 4583,
+      "firstChapter": 47,
+      "firstVerse": 30,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 511,
+      "start": 4584,
+      "end": 4592,
+      "firstChapter": 48,
+      "firstVerse": 1,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 512,
+      "start": 4593,
+      "end": 4598,
+      "firstChapter": 48,
+      "firstVerse": 10,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 513,
+      "start": 4599,
+      "end": 4606,
+      "firstChapter": 48,
+      "firstVerse": 16,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 514,
+      "start": 4607,
+      "end": 4611,
+      "firstChapter": 48,
+      "firstVerse": 24,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 515,
+      "start": 4612,
+      "end": 4616,
+      "firstChapter": 48,
+      "firstVerse": 29,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 516,
+      "start": 4617,
+      "end": 4623,
+      "firstChapter": 49,
+      "firstVerse": 5,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 517,
+      "start": 4624,
+      "end": 4630,
+      "firstChapter": 49,
+      "firstVerse": 12,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 518,
+      "start": 4631,
+      "end": 4645,
+      "firstChapter": 50,
+      "firstVerse": 1,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 519,
+      "start": 4646,
+      "end": 4665,
+      "firstChapter": 50,
+      "firstVerse": 16,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 520,
+      "start": 4666,
+      "end": 4681,
+      "firstChapter": 50,
+      "firstVerse": 36,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 521,
+      "start": 4682,
+      "end": 4705,
+      "firstChapter": 51,
+      "firstVerse": 7,
+      "juz": 26,
+      "endJuz": 26
+    },
+    {
+      "number": 522,
+      "start": 4706,
+      "end": 4726,
+      "firstChapter": 51,
+      "firstVerse": 31,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 523,
+      "start": 4727,
+      "end": 4749,
+      "firstChapter": 51,
+      "firstVerse": 52,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 524,
+      "start": 4750,
+      "end": 4766,
+      "firstChapter": 52,
+      "firstVerse": 15,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 525,
+      "start": 4767,
+      "end": 4784,
+      "firstChapter": 52,
+      "firstVerse": 32,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 526,
+      "start": 4785,
+      "end": 4810,
+      "firstChapter": 53,
+      "firstVerse": 1,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 527,
+      "start": 4811,
+      "end": 4828,
+      "firstChapter": 53,
+      "firstVerse": 27,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 528,
+      "start": 4829,
+      "end": 4852,
+      "firstChapter": 53,
+      "firstVerse": 45,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 529,
+      "start": 4853,
+      "end": 4873,
+      "firstChapter": 54,
+      "firstVerse": 7,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 530,
+      "start": 4874,
+      "end": 4895,
+      "firstChapter": 54,
+      "firstVerse": 28,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 531,
+      "start": 4896,
+      "end": 4917,
+      "firstChapter": 54,
+      "firstVerse": 50,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 532,
+      "start": 4918,
+      "end": 4941,
+      "firstChapter": 55,
+      "firstVerse": 17,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 533,
+      "start": 4942,
+      "end": 4968,
+      "firstChapter": 55,
+      "firstVerse": 41,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 534,
+      "start": 4969,
+      "end": 4995,
+      "firstChapter": 55,
+      "firstVerse": 68,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 535,
+      "start": 4996,
+      "end": 5029,
+      "firstChapter": 56,
+      "firstVerse": 17,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 536,
+      "start": 5030,
+      "end": 5055,
+      "firstChapter": 56,
+      "firstVerse": 51,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 537,
+      "start": 5056,
+      "end": 5078,
+      "firstChapter": 56,
+      "firstVerse": 77,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 538,
+      "start": 5079,
+      "end": 5086,
+      "firstChapter": 57,
+      "firstVerse": 4,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 539,
+      "start": 5087,
+      "end": 5093,
+      "firstChapter": 57,
+      "firstVerse": 12,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 540,
+      "start": 5094,
+      "end": 5099,
+      "firstChapter": 57,
+      "firstVerse": 19,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 541,
+      "start": 5100,
+      "end": 5104,
+      "firstChapter": 57,
+      "firstVerse": 25,
+      "juz": 27,
+      "endJuz": 27
+    },
+    {
+      "number": 542,
+      "start": 5105,
+      "end": 5110,
+      "firstChapter": 58,
+      "firstVerse": 1,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 543,
+      "start": 5111,
+      "end": 5115,
+      "firstChapter": 58,
+      "firstVerse": 7,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 544,
+      "start": 5116,
+      "end": 5125,
+      "firstChapter": 58,
+      "firstVerse": 12,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 545,
+      "start": 5126,
+      "end": 5129,
+      "firstChapter": 58,
+      "firstVerse": 22,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 546,
+      "start": 5130,
+      "end": 5135,
+      "firstChapter": 59,
+      "firstVerse": 4,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 547,
+      "start": 5136,
+      "end": 5142,
+      "firstChapter": 59,
+      "firstVerse": 10,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 548,
+      "start": 5143,
+      "end": 5150,
+      "firstChapter": 59,
+      "firstVerse": 17,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 549,
+      "start": 5151,
+      "end": 5155,
+      "firstChapter": 60,
+      "firstVerse": 1,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 550,
+      "start": 5156,
+      "end": 5161,
+      "firstChapter": 60,
+      "firstVerse": 6,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 551,
+      "start": 5162,
+      "end": 5168,
+      "firstChapter": 60,
+      "firstVerse": 12,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 552,
+      "start": 5169,
+      "end": 5177,
+      "firstChapter": 61,
+      "firstVerse": 6,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 553,
+      "start": 5178,
+      "end": 5185,
+      "firstChapter": 62,
+      "firstVerse": 1,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 554,
+      "start": 5186,
+      "end": 5192,
+      "firstChapter": 62,
+      "firstVerse": 9,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 555,
+      "start": 5193,
+      "end": 5199,
+      "firstChapter": 63,
+      "firstVerse": 5,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 556,
+      "start": 5200,
+      "end": 5208,
+      "firstChapter": 64,
+      "firstVerse": 1,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 557,
+      "start": 5209,
+      "end": 5217,
+      "firstChapter": 64,
+      "firstVerse": 10,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 558,
+      "start": 5218,
+      "end": 5222,
+      "firstChapter": 65,
+      "firstVerse": 1,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 559,
+      "start": 5223,
+      "end": 5229,
+      "firstChapter": 65,
+      "firstVerse": 6,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 560,
+      "start": 5230,
+      "end": 5236,
+      "firstChapter": 66,
+      "firstVerse": 1,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 561,
+      "start": 5237,
+      "end": 5241,
+      "firstChapter": 66,
+      "firstVerse": 8,
+      "juz": 28,
+      "endJuz": 28
+    },
+    {
+      "number": 562,
+      "start": 5242,
+      "end": 5253,
+      "firstChapter": 67,
+      "firstVerse": 1,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 563,
+      "start": 5254,
+      "end": 5267,
+      "firstChapter": 67,
+      "firstVerse": 13,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 564,
+      "start": 5268,
+      "end": 5286,
+      "firstChapter": 67,
+      "firstVerse": 27,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 565,
+      "start": 5287,
+      "end": 5313,
+      "firstChapter": 68,
+      "firstVerse": 16,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 566,
+      "start": 5314,
+      "end": 5331,
+      "firstChapter": 68,
+      "firstVerse": 43,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 567,
+      "start": 5332,
+      "end": 5357,
+      "firstChapter": 69,
+      "firstVerse": 9,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 568,
+      "start": 5358,
+      "end": 5385,
+      "firstChapter": 69,
+      "firstVerse": 35,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 569,
+      "start": 5386,
+      "end": 5414,
+      "firstChapter": 70,
+      "firstVerse": 11,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 570,
+      "start": 5415,
+      "end": 5429,
+      "firstChapter": 70,
+      "firstVerse": 40,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 571,
+      "start": 5430,
+      "end": 5447,
+      "firstChapter": 71,
+      "firstVerse": 11,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 572,
+      "start": 5448,
+      "end": 5460,
+      "firstChapter": 72,
+      "firstVerse": 1,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 573,
+      "start": 5461,
+      "end": 5475,
+      "firstChapter": 72,
+      "firstVerse": 14,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 574,
+      "start": 5476,
+      "end": 5494,
+      "firstChapter": 73,
+      "firstVerse": 1,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 575,
+      "start": 5495,
+      "end": 5512,
+      "firstChapter": 73,
+      "firstVerse": 20,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 576,
+      "start": 5513,
+      "end": 5542,
+      "firstChapter": 74,
+      "firstVerse": 18,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 577,
+      "start": 5543,
+      "end": 5570,
+      "firstChapter": 74,
+      "firstVerse": 48,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 578,
+      "start": 5571,
+      "end": 5596,
+      "firstChapter": 75,
+      "firstVerse": 20,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 579,
+      "start": 5597,
+      "end": 5616,
+      "firstChapter": 76,
+      "firstVerse": 6,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 580,
+      "start": 5617,
+      "end": 5641,
+      "firstChapter": 76,
+      "firstVerse": 26,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 581,
+      "start": 5642,
+      "end": 5672,
+      "firstChapter": 77,
+      "firstVerse": 20,
+      "juz": 29,
+      "endJuz": 29
+    },
+    {
+      "number": 582,
+      "start": 5673,
+      "end": 5702,
+      "firstChapter": 78,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 583,
+      "start": 5703,
+      "end": 5727,
+      "firstChapter": 78,
+      "firstVerse": 31,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 584,
+      "start": 5728,
+      "end": 5758,
+      "firstChapter": 79,
+      "firstVerse": 16,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 585,
+      "start": 5759,
+      "end": 5800,
+      "firstChapter": 80,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 586,
+      "start": 5801,
+      "end": 5829,
+      "firstChapter": 81,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 587,
+      "start": 5830,
+      "end": 5854,
+      "firstChapter": 82,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 588,
+      "start": 5855,
+      "end": 5882,
+      "firstChapter": 83,
+      "firstVerse": 7,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 589,
+      "start": 5883,
+      "end": 5909,
+      "firstChapter": 83,
+      "firstVerse": 35,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 590,
+      "start": 5910,
+      "end": 5931,
+      "firstChapter": 85,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 591,
+      "start": 5932,
+      "end": 5963,
+      "firstChapter": 86,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 592,
+      "start": 5964,
+      "end": 5993,
+      "firstChapter": 87,
+      "firstVerse": 16,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 593,
+      "start": 5994,
+      "end": 6016,
+      "firstChapter": 89,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 594,
+      "start": 6017,
+      "end": 6043,
+      "firstChapter": 89,
+      "firstVerse": 24,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 595,
+      "start": 6044,
+      "end": 6072,
+      "firstChapter": 91,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 596,
+      "start": 6073,
+      "end": 6098,
+      "firstChapter": 92,
+      "firstVerse": 15,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 597,
+      "start": 6099,
+      "end": 6125,
+      "firstChapter": 95,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 598,
+      "start": 6126,
+      "end": 6137,
+      "firstChapter": 97,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 599,
+      "start": 6138,
+      "end": 6155,
+      "firstChapter": 98,
+      "firstVerse": 8,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 600,
+      "start": 6156,
+      "end": 6176,
+      "firstChapter": 100,
+      "firstVerse": 10,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 601,
+      "start": 6177,
+      "end": 6193,
+      "firstChapter": 103,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 602,
+      "start": 6194,
+      "end": 6207,
+      "firstChapter": 106,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 603,
+      "start": 6208,
+      "end": 6221,
+      "firstChapter": 109,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    },
+    {
+      "number": 604,
+      "start": 6222,
+      "end": 6236,
+      "firstChapter": 112,
+      "firstVerse": 1,
+      "juz": 30,
+      "endJuz": 30
+    }
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "firstPage": 1,
+      "lastPage": 1
+    },
+    {
+      "id": 2,
+      "firstPage": 2,
+      "lastPage": 49
+    },
+    {
+      "id": 3,
+      "firstPage": 50,
+      "lastPage": 76
+    },
+    {
+      "id": 4,
+      "firstPage": 77,
+      "lastPage": 106
+    },
+    {
+      "id": 5,
+      "firstPage": 106,
+      "lastPage": 127
+    },
+    {
+      "id": 6,
+      "firstPage": 128,
+      "lastPage": 150
+    },
+    {
+      "id": 7,
+      "firstPage": 151,
+      "lastPage": 176
+    },
+    {
+      "id": 8,
+      "firstPage": 177,
+      "lastPage": 186
+    },
+    {
+      "id": 9,
+      "firstPage": 187,
+      "lastPage": 207
+    },
+    {
+      "id": 10,
+      "firstPage": 208,
+      "lastPage": 221
+    },
+    {
+      "id": 11,
+      "firstPage": 221,
+      "lastPage": 235
+    },
+    {
+      "id": 12,
+      "firstPage": 235,
+      "lastPage": 248
+    },
+    {
+      "id": 13,
+      "firstPage": 249,
+      "lastPage": 255
+    },
+    {
+      "id": 14,
+      "firstPage": 255,
+      "lastPage": 261
+    },
+    {
+      "id": 15,
+      "firstPage": 262,
+      "lastPage": 267
+    },
+    {
+      "id": 16,
+      "firstPage": 267,
+      "lastPage": 281
+    },
+    {
+      "id": 17,
+      "firstPage": 282,
+      "lastPage": 293
+    },
+    {
+      "id": 18,
+      "firstPage": 293,
+      "lastPage": 304
+    },
+    {
+      "id": 19,
+      "firstPage": 305,
+      "lastPage": 312
+    },
+    {
+      "id": 20,
+      "firstPage": 312,
+      "lastPage": 321
+    },
+    {
+      "id": 21,
+      "firstPage": 322,
+      "lastPage": 331
+    },
+    {
+      "id": 22,
+      "firstPage": 332,
+      "lastPage": 341
+    },
+    {
+      "id": 23,
+      "firstPage": 342,
+      "lastPage": 349
+    },
+    {
+      "id": 24,
+      "firstPage": 350,
+      "lastPage": 359
+    },
+    {
+      "id": 25,
+      "firstPage": 359,
+      "lastPage": 366
+    },
+    {
+      "id": 26,
+      "firstPage": 367,
+      "lastPage": 376
+    },
+    {
+      "id": 27,
+      "firstPage": 377,
+      "lastPage": 385
+    },
+    {
+      "id": 28,
+      "firstPage": 385,
+      "lastPage": 396
+    },
+    {
+      "id": 29,
+      "firstPage": 396,
+      "lastPage": 404
+    },
+    {
+      "id": 30,
+      "firstPage": 404,
+      "lastPage": 410
+    },
+    {
+      "id": 31,
+      "firstPage": 411,
+      "lastPage": 414
+    },
+    {
+      "id": 32,
+      "firstPage": 415,
+      "lastPage": 417
+    },
+    {
+      "id": 33,
+      "firstPage": 418,
+      "lastPage": 427
+    },
+    {
+      "id": 34,
+      "firstPage": 428,
+      "lastPage": 434
+    },
+    {
+      "id": 35,
+      "firstPage": 434,
+      "lastPage": 440
+    },
+    {
+      "id": 36,
+      "firstPage": 440,
+      "lastPage": 445
+    },
+    {
+      "id": 37,
+      "firstPage": 446,
+      "lastPage": 452
+    },
+    {
+      "id": 38,
+      "firstPage": 453,
+      "lastPage": 458
+    },
+    {
+      "id": 39,
+      "firstPage": 458,
+      "lastPage": 467
+    },
+    {
+      "id": 40,
+      "firstPage": 467,
+      "lastPage": 476
+    },
+    {
+      "id": 41,
+      "firstPage": 477,
+      "lastPage": 482
+    },
+    {
+      "id": 42,
+      "firstPage": 483,
+      "lastPage": 489
+    },
+    {
+      "id": 43,
+      "firstPage": 489,
+      "lastPage": 495
+    },
+    {
+      "id": 44,
+      "firstPage": 496,
+      "lastPage": 498
+    },
+    {
+      "id": 45,
+      "firstPage": 499,
+      "lastPage": 502
+    },
+    {
+      "id": 46,
+      "firstPage": 502,
+      "lastPage": 506
+    },
+    {
+      "id": 47,
+      "firstPage": 507,
+      "lastPage": 510
+    },
+    {
+      "id": 48,
+      "firstPage": 511,
+      "lastPage": 515
+    },
+    {
+      "id": 49,
+      "firstPage": 515,
+      "lastPage": 517
+    },
+    {
+      "id": 50,
+      "firstPage": 518,
+      "lastPage": 520
+    },
+    {
+      "id": 51,
+      "firstPage": 520,
+      "lastPage": 523
+    },
+    {
+      "id": 52,
+      "firstPage": 523,
+      "lastPage": 525
+    },
+    {
+      "id": 53,
+      "firstPage": 526,
+      "lastPage": 528
+    },
+    {
+      "id": 54,
+      "firstPage": 528,
+      "lastPage": 531
+    },
+    {
+      "id": 55,
+      "firstPage": 531,
+      "lastPage": 534
+    },
+    {
+      "id": 56,
+      "firstPage": 534,
+      "lastPage": 537
+    },
+    {
+      "id": 57,
+      "firstPage": 537,
+      "lastPage": 541
+    },
+    {
+      "id": 58,
+      "firstPage": 542,
+      "lastPage": 545
+    },
+    {
+      "id": 59,
+      "firstPage": 545,
+      "lastPage": 548
+    },
+    {
+      "id": 60,
+      "firstPage": 549,
+      "lastPage": 551
+    },
+    {
+      "id": 61,
+      "firstPage": 551,
+      "lastPage": 552
+    },
+    {
+      "id": 62,
+      "firstPage": 553,
+      "lastPage": 554
+    },
+    {
+      "id": 63,
+      "firstPage": 554,
+      "lastPage": 555
+    },
+    {
+      "id": 64,
+      "firstPage": 556,
+      "lastPage": 557
+    },
+    {
+      "id": 65,
+      "firstPage": 558,
+      "lastPage": 559
+    },
+    {
+      "id": 66,
+      "firstPage": 560,
+      "lastPage": 561
+    },
+    {
+      "id": 67,
+      "firstPage": 562,
+      "lastPage": 564
+    },
+    {
+      "id": 68,
+      "firstPage": 564,
+      "lastPage": 566
+    },
+    {
+      "id": 69,
+      "firstPage": 566,
+      "lastPage": 568
+    },
+    {
+      "id": 70,
+      "firstPage": 568,
+      "lastPage": 570
+    },
+    {
+      "id": 71,
+      "firstPage": 570,
+      "lastPage": 571
+    },
+    {
+      "id": 72,
+      "firstPage": 572,
+      "lastPage": 573
+    },
+    {
+      "id": 73,
+      "firstPage": 574,
+      "lastPage": 575
+    },
+    {
+      "id": 74,
+      "firstPage": 575,
+      "lastPage": 577
+    },
+    {
+      "id": 75,
+      "firstPage": 577,
+      "lastPage": 578
+    },
+    {
+      "id": 76,
+      "firstPage": 578,
+      "lastPage": 580
+    },
+    {
+      "id": 77,
+      "firstPage": 580,
+      "lastPage": 581
+    },
+    {
+      "id": 78,
+      "firstPage": 582,
+      "lastPage": 583
+    },
+    {
+      "id": 79,
+      "firstPage": 583,
+      "lastPage": 584
+    },
+    {
+      "id": 80,
+      "firstPage": 585,
+      "lastPage": 585
+    },
+    {
+      "id": 81,
+      "firstPage": 586,
+      "lastPage": 586
+    },
+    {
+      "id": 82,
+      "firstPage": 587,
+      "lastPage": 587
+    },
+    {
+      "id": 83,
+      "firstPage": 587,
+      "lastPage": 589
+    },
+    {
+      "id": 84,
+      "firstPage": 589,
+      "lastPage": 589
+    },
+    {
+      "id": 85,
+      "firstPage": 590,
+      "lastPage": 590
+    },
+    {
+      "id": 86,
+      "firstPage": 591,
+      "lastPage": 591
+    },
+    {
+      "id": 87,
+      "firstPage": 591,
+      "lastPage": 592
+    },
+    {
+      "id": 88,
+      "firstPage": 592,
+      "lastPage": 592
+    },
+    {
+      "id": 89,
+      "firstPage": 593,
+      "lastPage": 594
+    },
+    {
+      "id": 90,
+      "firstPage": 594,
+      "lastPage": 594
+    },
+    {
+      "id": 91,
+      "firstPage": 595,
+      "lastPage": 595
+    },
+    {
+      "id": 92,
+      "firstPage": 595,
+      "lastPage": 596
+    },
+    {
+      "id": 93,
+      "firstPage": 596,
+      "lastPage": 596
+    },
+    {
+      "id": 94,
+      "firstPage": 596,
+      "lastPage": 596
+    },
+    {
+      "id": 95,
+      "firstPage": 597,
+      "lastPage": 597
+    },
+    {
+      "id": 96,
+      "firstPage": 597,
+      "lastPage": 597
+    },
+    {
+      "id": 97,
+      "firstPage": 598,
+      "lastPage": 598
+    },
+    {
+      "id": 98,
+      "firstPage": 598,
+      "lastPage": 599
+    },
+    {
+      "id": 99,
+      "firstPage": 599,
+      "lastPage": 599
+    },
+    {
+      "id": 100,
+      "firstPage": 599,
+      "lastPage": 600
+    },
+    {
+      "id": 101,
+      "firstPage": 600,
+      "lastPage": 600
+    },
+    {
+      "id": 102,
+      "firstPage": 600,
+      "lastPage": 600
+    },
+    {
+      "id": 103,
+      "firstPage": 601,
+      "lastPage": 601
+    },
+    {
+      "id": 104,
+      "firstPage": 601,
+      "lastPage": 601
+    },
+    {
+      "id": 105,
+      "firstPage": 601,
+      "lastPage": 601
+    },
+    {
+      "id": 106,
+      "firstPage": 602,
+      "lastPage": 602
+    },
+    {
+      "id": 107,
+      "firstPage": 602,
+      "lastPage": 602
+    },
+    {
+      "id": 108,
+      "firstPage": 602,
+      "lastPage": 602
+    },
+    {
+      "id": 109,
+      "firstPage": 603,
+      "lastPage": 603
+    },
+    {
+      "id": 110,
+      "firstPage": 603,
+      "lastPage": 603
+    },
+    {
+      "id": 111,
+      "firstPage": 603,
+      "lastPage": 603
+    },
+    {
+      "id": 112,
+      "firstPage": 604,
+      "lastPage": 604
+    },
+    {
+      "id": 113,
+      "firstPage": 604,
+      "lastPage": 604
+    },
+    {
+      "id": 114,
+      "firstPage": 604,
+      "lastPage": 604
+    }
+  ],
+  "juz": [
+    {
+      "number": 1,
+      "page": 1,
+      "chapter": 1,
+      "verse": 1
+    },
+    {
+      "number": 2,
+      "page": 22,
+      "chapter": 2,
+      "verse": 142
+    },
+    {
+      "number": 3,
+      "page": 42,
+      "chapter": 2,
+      "verse": 253
+    },
+    {
+      "number": 4,
+      "page": 62,
+      "chapter": 3,
+      "verse": 93
+    },
+    {
+      "number": 5,
+      "page": 82,
+      "chapter": 4,
+      "verse": 24
+    },
+    {
+      "number": 6,
+      "page": 102,
+      "chapter": 4,
+      "verse": 148
+    },
+    {
+      "number": 7,
+      "page": 121,
+      "chapter": 5,
+      "verse": 82
+    },
+    {
+      "number": 8,
+      "page": 142,
+      "chapter": 6,
+      "verse": 111
+    },
+    {
+      "number": 9,
+      "page": 162,
+      "chapter": 7,
+      "verse": 88
+    },
+    {
+      "number": 10,
+      "page": 182,
+      "chapter": 8,
+      "verse": 41
+    },
+    {
+      "number": 11,
+      "page": 201,
+      "chapter": 9,
+      "verse": 93
+    },
+    {
+      "number": 12,
+      "page": 222,
+      "chapter": 11,
+      "verse": 6
+    },
+    {
+      "number": 13,
+      "page": 242,
+      "chapter": 12,
+      "verse": 53
+    },
+    {
+      "number": 14,
+      "page": 262,
+      "chapter": 15,
+      "verse": 1
+    },
+    {
+      "number": 15,
+      "page": 282,
+      "chapter": 17,
+      "verse": 1
+    },
+    {
+      "number": 16,
+      "page": 302,
+      "chapter": 18,
+      "verse": 75
+    },
+    {
+      "number": 17,
+      "page": 322,
+      "chapter": 21,
+      "verse": 1
+    },
+    {
+      "number": 18,
+      "page": 342,
+      "chapter": 23,
+      "verse": 1
+    },
+    {
+      "number": 19,
+      "page": 362,
+      "chapter": 25,
+      "verse": 21
+    },
+    {
+      "number": 20,
+      "page": 382,
+      "chapter": 27,
+      "verse": 56
+    },
+    {
+      "number": 21,
+      "page": 402,
+      "chapter": 29,
+      "verse": 46
+    },
+    {
+      "number": 22,
+      "page": 422,
+      "chapter": 33,
+      "verse": 31
+    },
+    {
+      "number": 23,
+      "page": 442,
+      "chapter": 36,
+      "verse": 28
+    },
+    {
+      "number": 24,
+      "page": 462,
+      "chapter": 39,
+      "verse": 32
+    },
+    {
+      "number": 25,
+      "page": 482,
+      "chapter": 41,
+      "verse": 47
+    },
+    {
+      "number": 26,
+      "page": 502,
+      "chapter": 46,
+      "verse": 1
+    },
+    {
+      "number": 27,
+      "page": 522,
+      "chapter": 51,
+      "verse": 31
+    },
+    {
+      "number": 28,
+      "page": 542,
+      "chapter": 58,
+      "verse": 1
+    },
+    {
+      "number": 29,
+      "page": 562,
+      "chapter": 67,
+      "verse": 1
+    },
+    {
+      "number": 30,
+      "page": 582,
+      "chapter": 78,
+      "verse": 1
+    }
+  ]
+}

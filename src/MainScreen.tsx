@@ -12,7 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { surahs, Surah, quranSource } from "./content";
+import { surahs, Surah } from "./content";
 import { normalizeChapterSearch } from "./learning";
 import Tafsir from "./features/Tafsir";
 import Learning from "./features/Learning";
@@ -25,6 +25,7 @@ import ChatAssistant, {
 import Fatwas from "./features/Fatwas";
 import Hadiths from "./features/Hadiths";
 import Recitation from "./features/Recitation";
+import QuranReader from "./features/QuranReader";
 const tabs = ["الرئيسية", "القرآن", "تعلّم", "المساعد"] as const;
 type Screen = (typeof tabs)[number] | "القراء" | "الفتاوى" | "التسميع" | "الأحاديث";
 const colors = {
@@ -65,6 +66,7 @@ export default function App() {
     : "الرئيسية";
   const setScreen = (target: Screen) => router.setParams({ section: target });
   const [surah, setSurah] = useState<Surah | null>(null);
+  const [readerStartVerse, setReaderStartVerse] = useState(1);
   const contentScroll = useRef<ScrollViewInstance>(null);
   const scrollToStart = () => contentScroll.current?.scrollTo({ y: 0, animated: false });
   useEffect(() => { contentScroll.current?.scrollTo({ y: 0, animated: false }); }, [screen, surah?.id]);
@@ -83,10 +85,11 @@ export default function App() {
   }>({});
   const [hadithContext, setHadithContext] = useState<{query?: string; id?: string}>({});
   const openChatSection = (target: ChatSuggestion) => {
+    setReaderStartVerse(target.verse ?? 1);
     if (target.section === "الأحاديث") setHadithContext({query: target.query, id: target.hadithId});
     setLearningChapter(target.section === "تعلّم" ? target.chapter ?? null : null);
     setTafsirTarget(
-      target.chapter && target.verse
+      target.section !== "القرآن" && target.chapter && target.verse
         ? { chapter: target.chapter, verse: target.verse }
         : null,
     );
@@ -137,6 +140,7 @@ export default function App() {
         key={item.id}
         style={s.surahRow}
         onPress={() => {
+          setReaderStartVerse(1);
           setSurah(item);
         }}
       >
@@ -163,10 +167,11 @@ export default function App() {
           <Text style={s.tag}>اقرأ، تعلّم، واعمل</Text>
         </View>
       )}
-      <ScrollView
+      {fullReader ? <QuranReader initialChapter={surah!.id} initialVerse={readerStartVerse}
+        interactionEnabled={verse === null && tafsirTarget === null}
+        onExit={() => setSurah(null)} onVersePress={(chapter, selectedVerse) => { setSurah(surahs.find(item => item.id === chapter)!); setVerse(selectedVerse); }} /> : <ScrollView
         ref={contentScroll}
-        style={fullReader ? s.readerScroll : undefined}
-        contentContainerStyle={fullReader ? s.readerBody : s.body}
+        contentContainerStyle={s.body}
         keyboardShouldPersistTaps="handled"
       >
         {screen === "الرئيسية" && (
@@ -230,7 +235,8 @@ export default function App() {
                 onPress={() => {
                   setScreen("القرآن");
                   setSurah(surahs.find((x) => x.id === bookmark.id)!);
-                  setVerse(bookmark.verse);
+                  setReaderStartVerse(bookmark.verse);
+                  setVerse(null);
                 }}
               />
             )}
@@ -244,94 +250,9 @@ export default function App() {
           <>
             {surah ? (
               <>
-                {fullReader ? (
-                  <View style={s.readerToolbar}>
-                    <Pressable
-                      accessibilityRole="button"
-                      accessibilityLabel="العودة إلى السور"
-                      onPress={() => setSurah(null)}
-                      style={s.readerBack}
-                    >
-                      <Text style={s.readerBackText}>السور →</Text>
-                    </Pressable>
-                    <Text style={s.readerCaption}>القرآن الكريم</Text>
-                  </View>
-                ) : (
-                  <>
-                    <Button
-                      secondary
-                      label="→ العودة إلى السور"
-                      onPress={() => setSurah(null)}
-                    />
-                    {heading(
-                      `سورة ${surah.name}`,
-                      `${arabic(surah.verses.length)} آيات · ${surah.place}`,
-                    )}
-                  </>
-                )}
-                {screen === "التسميع" && (
-                  <Recitation key={surah.id} surah={surah} />
-                )}
-                {screen !== "التسميع" && (
-                  <View style={fullReader ? s.mushafPage : s.page}>
-                    {fullReader && (
-                      <View style={s.surahFrame}>
-                        <Text style={s.ornament}>✦</Text>
-                        <Text
-                          accessibilityRole="header"
-                          style={s.surahHeading}
-                        >
-                          سورة {surah.name}
-                        </Text>
-                        <Text style={s.ornament}>✦</Text>
-                      </View>
-                    )}
-                    {!!surah.bismillah && (
-                      <Text style={s.basmala}>
-                        {surah.bismillah}
-                      </Text>
-                    )}
-                    {fullReader ? (
-                      <Text style={s.mushafText}>
-                        {surah.verses.map((text, i) => (
-                          <Text
-                            key={i}
-                            accessibilityRole="button"
-                            accessibilityLabel={`الآية ${i + 1}: ${text}`}
-                            onPress={() => setVerse(i + 1)}
-                          >
-                            {text}{" "}
-                            <Text style={s.verseNumber}>
-                              ﴿{arabic(i + 1)}﴾
-                            </Text>{" "}
-                          </Text>
-                        ))}
-                      </Text>
-                    ) : (
-                      surah.verses.map((text, i) => (
-                        <Pressable
-                          accessibilityRole="button"
-                          accessibilityLabel={`الآية ${i + 1}: ${text}`}
-                          key={i}
-                          onPress={() => setVerse(i + 1)}
-                          style={s.verse}
-                        >
-                          <Text style={s.quran}>
-                            {text}{" "}
-                            <Text style={s.verseNumber}>
-                              ﴿{arabic(i + 1)}﴾
-                            </Text>
-                          </Text>
-                        </Pressable>
-                      ))
-                    )}
-                  </View>
-                )}
-                {screen !== "التسميع" && (
-                  <Text style={fullReader ? s.readerHint : s.note}>
-                    اضغط على الآية للتفسير أو الاستماع. النص: Tanzil · الرسم العثماني · الإصدار {quranSource.version}{"\n"}{quranSource.url}
-                  </Text>
-                )}
+                <Button secondary label="→ العودة إلى السور" onPress={() => setSurah(null)} />
+                {heading(`سورة ${surah.name}`, `${arabic(surah.verses.length)} آيات · ${surah.place}`)}
+                <Recitation key={surah.id} surah={surah} />
               </>
             ) : (
               <>
@@ -375,7 +296,7 @@ export default function App() {
         {!fullReader && (
           <Text style={s.footer}>أثر القرآن · رحلة علم وعمل</Text>
         )}
-      </ScrollView>
+      </ScrollView>}
       {!fullReader && (
         <View style={s.nav}>
           {tabs.map((t, i) => (
@@ -444,61 +365,6 @@ export default function App() {
 }
 const s = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.paper },
-  readerScroll: { flex: 1, backgroundColor: "#FFFDF6" },
-  readerBody: {
-    flexGrow: 1,
-    padding: 14,
-    width: "100%",
-    maxWidth: 800,
-    alignSelf: "center",
-  },
-  readerToolbar: {
-    flexDirection: "row-reverse",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: 12,
-  },
-  readerBack: {
-    minHeight: 44,
-    paddingHorizontal: 12,
-    justifyContent: "center",
-  },
-  readerBackText: { color: colors.green, fontSize: 15 },
-  readerCaption: { color: colors.muted, fontSize: 13, paddingHorizontal: 12 },
-  mushafPage: {
-    flexGrow: 1,
-    borderWidth: 1,
-    borderColor: "#D9C89D",
-    padding: 18,
-    backgroundColor: "#FFFDF6",
-  },
-  surahFrame: {
-    borderWidth: 1,
-    borderColor: "#D9C89D",
-    backgroundColor: "#F3EFDF",
-    paddingVertical: 14,
-    paddingHorizontal: 20,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 24,
-  },
-  surahHeading: { fontSize: 25, fontWeight: "600", color: colors.ink },
-  ornament: { fontSize: 24, color: colors.gold },
-  mushafText: {
-    fontSize: 29,
-    lineHeight: 59,
-    textAlign: "center",
-    writingDirection: "rtl",
-    color: colors.ink,
-  },
-  readerHint: {
-    fontSize: 11,
-    lineHeight: 20,
-    textAlign: "center",
-    color: colors.muted,
-    marginTop: 12,
-  },
   top: {
     paddingHorizontal: 24,
     paddingVertical: 18,
