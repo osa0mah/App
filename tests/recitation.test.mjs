@@ -44,3 +44,25 @@ test("wrong continuation discards hidden partial words before a retry", () => {
   assert.equal(matchRecitation(verses, p, "الله أحد").verse, 0);
   assert.equal(matchRecitation(verses, p, "قل قل هو الله أحد").verse, 1);
 });
+
+test("word mode reveals each matching word and stops at the first incorrect word", async () => {
+  const { matchRecitationWords } = await import("../src/features/recitation.ts");
+  const words = verses.flat();
+  assert.equal(matchRecitationWords(words, 0, "قل"), 1);
+  assert.equal(matchRecitationWords(words, 0, "قل أعوذ برب الفلق"), 1);
+  assert.equal(matchRecitationWords(words, 1, "أعوذ برب الفلق"), 1);
+  assert.equal(matchRecitationWords(words, 1, "قل هو الله أحد"), 4);
+  assert.equal(matchRecitationWords(words, 4, "قل هو الله أحد"), 4);
+  assert.equal(matchRecitationWords(words, 4, "لم يلد ولم يولد"), 4);
+  assert.equal(matchRecitationWords(words, 4, "الله خطأ الصمد"), 5);
+  assert.equal(matchRecitationWords(words, 5, "الله الصمد"), 6);
+});
+test("word hypotheses can be revised without committing their partial words", async () => {
+  const { matchRecitationWords } = await import("../src/features/recitation.ts");
+  const words = verses.flat();
+  const committed = 0;
+  assert.equal(matchRecitationWords(words, committed, "قل هو"), 2);
+  assert.equal(matchRecitationWords(words, committed, "قل أعوذ"), 1);
+  assert.equal(matchRecitationWords(words, committed, "قل هو الله أحد"), 4);
+  assert.equal(matchRecitationWords(words, 4, "الله الصمد لم يلد ولم يولد ولم يكن له كفوا أحد"), words.length);
+});

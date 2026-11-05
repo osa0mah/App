@@ -44,3 +44,17 @@ export function matchRecitation(
   }
   return { verse, pending: [] };
 }
+
+// Accept the next words or a repeated prefix, stopping at the first mismatch.
+export function matchRecitationWords(
+  expected: string[], cursor: number, transcript: string,
+): number {
+  const spoken = normalizeArabic(transcript).split(" ").filter(Boolean);
+  let next = cursor;
+  for (let start = cursor; start >= 0; start--) {
+    let matched = 0;
+    while (matched < spoken.length && expected[start + matched] === spoken[matched]) matched++;
+    if (start + matched > next) next = start + matched;
+  }
+  return Math.min(next, expected.length);
+}
