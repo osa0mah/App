@@ -19,8 +19,8 @@ test("Arabic digit verse references and follow-up chapter context are preserved"
   assert.doesNotMatch(a.text, /الآية 1\n/);
 });
 test("unavailable surahs and causes of revelation do not invent source material", async () => {
-  const a = await answerMessage("تفسير سورة البقرة");
-  assert.match(a.text, /لا أملك نص/);
+  const a = await answerMessage("تفسير سورة غير موجودة");
+  assert.match(a.text, /لم أتعرف/);
   assert.equal(a.evidence, undefined);
   const b = await answerMessage("ما سبب نزول الإخلاص");
   assert.match(b.text, /لا تتوفر/);
@@ -195,7 +195,7 @@ test("one failed source does not suppress a verified answer from another scholar
 test("topic answers include a real local Quran verse and its exact tafsir only when relevant", async () => {
   const answer=await answerMessage("أبغى أعرف معنى أسماء الله",[],{search:async()=>[]});
   assert.ok(answer.sources.some(source=>source.kind==="tafsir"));
-  assert.match(answer.text,/بِسْمِ اللَّهِ/);
+  assert.match(answer.text,/بِسْمِ ٱللَّهِ/);
   assert.match(answer.text,/تفسير السعدي/);
   assert.equal(answer.sources[0].suggestion.chapter,1);
 });

@@ -1,7 +1,9 @@
 import { answerLearning } from "./learningAnswers.mjs";
 import { answerTopic, resolveTopic, scholarsIn } from "./topicAnswers.mjs";
 import tafsir from "../data/tafsir/saadi.json" with { type: "json" };
-import chapters from "../data/chapters.json" with { type: "json" };
+import {chapters, findChapter} from "./quranContent.mjs";
+import muyassar from "../data/tafsir/muyassar.json" with {type:"json"};
+import introductions from "../data/learning/introductions.json" with {type:"json"};
 
 import {
   normalizeSearch,
@@ -15,8 +17,8 @@ const digits = (s) =>
         : "۰۱۲۳۴۵۶۷۸۹".indexOf(c),
     ),
   );
-const getChapter = (text) =>
-  chapters.find((c) => normalizeSearch(text).includes(normalizeSearch(c.name)));
+const getChapter = findChapter;
+const verseIndex = chapters.flatMap(chapter => chapter.verses.map((text, index) => ({chapter,verse:index+1,text,normal:normalizeSearch(text),simple:normalizeSearch(chapter.recitationVerses[index])})));
 const getScholar = (text) => scholarsIn(text)[0] || null;
 const suggestion = (section) => ({ section });
 function contextFrom(message, history) {
@@ -64,15 +66,7 @@ export async function answerMessage(message, history = [], options = {}) {
           "السابعه",
         ].indexOf(ordinal[1]) + 1
       : null;
-  const quoted = chapters
-    .flatMap((c) =>
-      c.verses.map((text, i) => ({ chapter: c, verse: i + 1, text })),
-    )
-    .find(
-      (v) =>
-        normalizeSearch(v.text).length > 8 &&
-        normalized.includes(normalizeSearch(v.text)),
-    );
+  const quoted = verseIndex.find(entry => entry.normal.length > 8 && (normalized.includes(entry.normal) || normalized.includes(entry.simple)));
   const explicitUnknown =
     /سور[هة]/.test(message) &&
     !getChapter(message) &&
@@ -97,14 +91,14 @@ export async function answerMessage(message, history = [], options = {}) {
   if (!legalIntent && (quoted || verseMatch || ordinal || scriptureFollowup || (tafsirWord && (getChapter(message) || scriptureReference || !searchTopic(message))))) {
     if (explicitUnknown)
       return response(
-        "التفسير المضمن حاليًا يشمل الفاتحة والإخلاص. لا أملك نصًا موثقًا لتفسير السورة المطلوبة بعد.",
+        "لم أتعرف على اسم السورة. اكتب اسمًا صحيحًا أو رقم السورة من ١ إلى ١١٤.",
         "تعلّم",
       );
     const chapter = quoted?.chapter || context.chapter;
     const requested = verse ?? quoted?.verse;
     if (!chapter)
       return response(
-        "اذكر اسم السورة ورقم الآية، أو اكتب نص الآية التي تريد تفسيرها. المتاح حاليًا: الفاتحة والإخلاص.",
+        "اذكر اسم السورة ورقم الآية، أو اكتب نص الآية التي تريد تفسيرها. التفسير متاح للسور الـ١١٤.",
         "تعلّم",
       );
     if (
@@ -118,16 +112,17 @@ export async function answerMessage(message, history = [], options = {}) {
         `سورة ${chapter.name} تتكون من ${chapter.verses.length} آيات. ما رقم الآية التي تقصدها؟`,
         "تعلّم",
       );
-    const entries = tafsir.ayahs.filter(
-      (a) => a.surah === chapter.id && (!requested || a.ayah === requested),
-    );
+    const edition = [1,112].includes(chapter.id) ? tafsir : muyassar;
+    const allEntries = edition.ayahs.filter(a => a.surah === chapter.id && (!requested || a.ayah === requested));
+    const entries = (requested || allEntries.length <= 7 ? allEntries : allEntries.slice(0,3)).map(entry => edition === muyassar && entry.ayah === 1 ? {...entry,text:introductions.chapters.find(item=>item.id===chapter.id).firstVerseTafsir} : entry);
+    const continuation = entries.length < allEntries.length ? "\n\nعرضت تفسير أول ثلاث آيات. جميع آيات السورة متاحة في تبويب التفسير داخل قسم التعلّم." : "";
     return response(
-      `تفسير السعدي لسورة ${chapter.name}${requested ? `، الآية ${requested}` : ""}:\n\n${entries.map((a) => `الآية ${a.ayah}\n${a.text}`).join("\n\n")}`,
+      `${edition.edition} لسورة ${chapter.name}${requested ? `، الآية ${requested}` : ""}:\n\n${entries.map((a) => `الآية ${a.ayah}\n${a.text}`).join("\n\n")}${continuation}`,
       "تعلّم",
       {
         source: {
-          title: "تفسير السعدي · نص من المصدر",
-          url: tafsir.upstreamSource,
+          title: `${edition.edition} · نص من المصدر`,
+          url: edition.upstreamSource,
         },
         suggestion: {
           section: "تعلّم",

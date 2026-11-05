@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Modal,
   Pressable,
   ScrollView,
+  type ScrollViewInstance,
   StyleSheet,
   Text,
   TextInput,
@@ -11,7 +12,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { surahs, Surah } from "./content";
+import { surahs, Surah, quranSource } from "./content";
+import { normalizeChapterSearch } from "./learning";
 import Tafsir from "./features/Tafsir";
 import Learning from "./features/Learning";
 import VerseAudio from "./features/VerseAudio";
@@ -62,6 +64,9 @@ export default function App() {
     : "الرئيسية";
   const setScreen = (target: Screen) => router.setParams({ section: target });
   const [surah, setSurah] = useState<Surah | null>(null);
+  const contentScroll = useRef<ScrollViewInstance>(null);
+  const scrollToStart = () => contentScroll.current?.scrollTo({ y: 0, animated: false });
+  useEffect(() => { contentScroll.current?.scrollTo({ y: 0, animated: false }); }, [screen, surah?.id]);
   const [tafsirTarget, setTafsirTarget] = useState<{
     chapter: number;
     verse: number;
@@ -104,7 +109,7 @@ export default function App() {
   };
   const fullReader = screen === "القرآن" && surah !== null;
   const list = surahs.filter(
-    (x) => x.name.includes(query.trim()) || String(x.id) === query.trim(),
+    (x) => normalizeChapterSearch(x.name).includes(normalizeChapterSearch(query)) || String(x.id) === normalizeChapterSearch(query),
   );
   const heading = (title: string, subtitle?: string) => (
     <View style={s.heading}>
@@ -117,7 +122,7 @@ export default function App() {
   const sourceButton = (id: number, v = 1) => (
     <Button
       secondary
-      label="قراءة تفسير السعدي داخل التطبيق"
+      label="قراءة تفسير الآية داخل التطبيق"
       onPress={() => setTafsirTarget({ chapter: id, verse: v })}
     />
   );
@@ -155,6 +160,7 @@ export default function App() {
         </View>
       )}
       <ScrollView
+        ref={contentScroll}
         style={fullReader ? s.readerScroll : undefined}
         contentContainerStyle={fullReader ? s.readerBody : s.body}
         keyboardShouldPersistTaps="handled"
@@ -224,12 +230,11 @@ export default function App() {
               />
             )}
             <Text style={s.note}>
-              المحتوى المتاح الآن: الفاتحة والإخلاص. بقية المصحف والخدمات قيد
-              التطوير.
+              المصحف كامل: ١١٤ سورة للقراءة، مع التفسير ومقاصد السور وهداياتها داخل التطبيق.
             </Text>
           </>
         )}
-        {screen === "تعلّم" && <Learning initialChapter={learningChapter} />}
+        {screen === "تعلّم" && <Learning initialChapter={learningChapter} onNavigate={openChatSection} onContentStart={scrollToStart} />}
         {(screen === "القرآن" || screen === "التسميع") && (
           <>
             {surah ? (
@@ -276,9 +281,9 @@ export default function App() {
                         <Text style={s.ornament}>✦</Text>
                       </View>
                     )}
-                    {surah.id !== 1 && (
+                    {!!surah.bismillah && (
                       <Text style={s.basmala}>
-                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                        {surah.bismillah}
                       </Text>
                     )}
                     {fullReader ? (
@@ -319,8 +324,7 @@ export default function App() {
                 )}
                 {screen !== "التسميع" && (
                   <Text style={fullReader ? s.readerHint : s.note}>
-                    اضغط على الآية لعرض خياراتها. النص التجريبي برواية حفص،
-                    ويحتاج مقابلة على مصحف معتمد قبل النشر.
+                    اضغط على الآية للتفسير أو الاستماع. النص: Tanzil · الرسم العثماني · الإصدار {quranSource.version}{"\n"}{quranSource.url}
                   </Text>
                 )}
               </>
@@ -328,7 +332,7 @@ export default function App() {
               <>
                 {heading(
                   screen === "التسميع" ? "راجع حفظك" : "القرآن الكريم",
-                  "سورتان متاحتان في النسخة الأولى",
+                  "١١٤ سورة · المصحف كاملًا",
                 )}
                 <TextInput
                   nativeID="quran-surah-search"
@@ -341,7 +345,7 @@ export default function App() {
                 {cards()}
                 {list.length === 0 && (
                   <Text style={s.note}>
-                    هذه السورة غير متاحة في النسخة الأولية.
+                    لم نجد سورة بهذا الاسم أو الرقم.
                   </Text>
                 )}
               </>

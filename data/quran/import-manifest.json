@@ -1,0 +1,473 @@
+{
+  "retrievedAt": "2026-11-05T17:48:28.766Z",
+  "documents": [
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/LICENSE",
+      "sha256": "92f3c7ee3a04599ab2327052570bc94a82ebf1fdd3d0e8cf5c9e2c3a9282b279"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/1.json",
+      "sha256": "d36fdf06d7469e05a523a3730f15ba83605568442b0c53e353b5a12a0b67e18b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/10.json",
+      "sha256": "46ca083249d8fd51b3a76f847e72f2ed2ae49d5e66874d3832fbdbe78cff1ad8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/100.json",
+      "sha256": "c44988caa4d3da767bfab1da3a65c4bf86546d37a74034ff340022ac71258511"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/101.json",
+      "sha256": "5bd0899302043b696a86961bf0574b1714b94796e8e2331c6bc3e82c3b501799"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/102.json",
+      "sha256": "09c8e0b68008c07c3ef3b282837f908362789be0b6d6d2f08875f258523f1026"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/103.json",
+      "sha256": "9d846e909b086b68b842d22a597beedf836a7470909c6712b5a942e5b54d8620"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/104.json",
+      "sha256": "283f9d9602859a5e953ae791ef8c07b7b44f8acdec95649bf6d965c3aad2f050"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/105.json",
+      "sha256": "51753e0224aecb4d22152829f5e59be07ad0ac76e98a7ffcc65f8709db02c625"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/106.json",
+      "sha256": "debea5ff3c032fba9bb748d53932ebe9ba1c505b779ed23caaf23754b2d37a0b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/107.json",
+      "sha256": "8c5e8423a86d20166b007079420b11450899dd30cf355ad938f611dfdbaeb7aa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/108.json",
+      "sha256": "b023e7a510e926804198f2db91233f943b5cf75b64ae07c14cbfbfdf6587474b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/109.json",
+      "sha256": "3d63ddbe0ef3b136a13537f4f3add7901a7faf4a9fc9ffaa888e0c53684d1202"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/11.json",
+      "sha256": "86bb86363d6baeda54c5470651760f39006b97175dfcbb1c6c167b834913901c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/110.json",
+      "sha256": "de3925c447a7cf9cebbc5cbe7ecea64adf1dc5d42923ac3c61d4753000943ef3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/111.json",
+      "sha256": "967f13e447c71f7815def4bca433d689cdd51a5050f527f04c3a7a4fe1b957a1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/112.json",
+      "sha256": "5706f09cf7551d0138dd4638d93c22f1841fbf60aad28bbfcdfff589bb49b0d7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/113.json",
+      "sha256": "46e2ac7b4fb621256f7f714bb96fe01620f64fd850c323124e695fa56b854307"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/114.json",
+      "sha256": "f0e7297f8200b02bb2dcb93227437749e92a661eefcd1ad9b3e4dde1cecfb672"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/12.json",
+      "sha256": "664a07cd82001d716ed8d35c5bcd2f7977dc3c26815b1be4e65b828e3836f40f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/13.json",
+      "sha256": "7b45ba52b4995c2a0fa8af2742af5392ceac209b973412f8727d0cfde6eb2387"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/14.json",
+      "sha256": "486811c4ca3c144c40d2579d097a81371510963a80e5371d5110117d1f782a17"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/15.json",
+      "sha256": "6499e28ccad515e9dd21aefbca41901bf0518e606f403796fec1882ad90c1b86"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/16.json",
+      "sha256": "a167636cd1ec26d906c2b9b76c7b0e0c2dd8157b76049eeec66718ba1ec5c3b9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/17.json",
+      "sha256": "78f8015695747835e432fc231bf7b6a91d2f43c0c638a66e0b8c360d01c8093b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/18.json",
+      "sha256": "281c762c7dd55ca9e1591cd976644ad9d9a80e75d091532d8b0e27e790773477"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/19.json",
+      "sha256": "96307b8fa82d90c0f76eacb6b4054515b26f3b761b01e1c8d6530e98ad8c587d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/2.json",
+      "sha256": "ec0540f4953489399c1f94fc547bc2d1f53390865eea773eeceeb70347940b24"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/20.json",
+      "sha256": "4ca695ab0f0a6520ee1a354a39c063b701d8806439c6541d02ba44c19016e529"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/21.json",
+      "sha256": "a3c1415e4b0c7c842d9e988a581ba024d14f179fbe5ae00704072a82daaa74d8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/22.json",
+      "sha256": "7b5a04319627962e5d501b477d368d8a86f2cffc9f955cabbe5955bb2f076025"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/23.json",
+      "sha256": "9a3f61c33cde74870a874b44dab3145b24c9535ec5108869d9e48170467a396d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/24.json",
+      "sha256": "f20d013bb6a167062f24dbb4f01377511daa130e21812c1a40fb4a66b7a2e8b6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/25.json",
+      "sha256": "755a6589c2f9dfa7550dcbb20006d99cada1c44af96c2446de085b72c59c1462"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/26.json",
+      "sha256": "41114736b2712380557e871fde722cea0e81fded01016cceb0284de44404b3c2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/27.json",
+      "sha256": "6cf5084eab999b637201a212de0a6502f407c66eb876ad51b382e2f3133a3261"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/28.json",
+      "sha256": "dab28c35870a041f9e33dd55b7f77514d709c3fde7c68f5a38feb99e89190e65"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/29.json",
+      "sha256": "29c2413385a17d6a210c8261f2461ccb36cda9aa2e83779680f021d0fb74dd1d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/3.json",
+      "sha256": "d5e5c5d6af40a5443b4e94b99ee88ebc8de8fd3880eb2b4681a097a46c33868d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/30.json",
+      "sha256": "3752e7ca5ed721d3924c18be697b0350aac9f4f6f40ffe0ccdc0d6da5ab7b0f9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/31.json",
+      "sha256": "fd212903f82064801964022de1990a55dc3f757eb14503574557bc4fb06e25a6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/32.json",
+      "sha256": "471181a7031e19cc4dd9d129a6698e3f208b21288078ceb8bda9fef3eb8194c9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/33.json",
+      "sha256": "eef870c07403c15929e5c295abe17cbe1cb0a0d258a63395ce05497f2b2eb49e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/34.json",
+      "sha256": "2ba8fd0d0506667008c14983fdb5c2d64f739617d1c646f16cce05e922102882"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/35.json",
+      "sha256": "5a929744c85b922c49ccdc770a68f5bbd986522e6ea1732b3a3fd0a76678af86"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/36.json",
+      "sha256": "78e810b0bd6fd48efb4aa0c0ad256fc1bdb49ed02e78443977ff03c7f7351df0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/37.json",
+      "sha256": "50099f0b16bb25d5f7ceadfabffc22eb13f796c5c8cf1b518f50ebf5e6230e6c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/38.json",
+      "sha256": "529c515c56d87171bdbd7c13cb388335d07f4cf31cf41e414b279127f5ed5936"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/39.json",
+      "sha256": "aea7f94d9fdaaba83f665561952c58d4fbed7ffe97245df5faeb5a525912bfbd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/4.json",
+      "sha256": "f557366bcf58fb7fe654824b9333566ae93d3099ba9187fef6ec81ae9c1aa052"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/40.json",
+      "sha256": "39133cd91b9ae85bccccc2aa032cca57052bd53547c42fc7bc552efe974e6acd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/41.json",
+      "sha256": "97b1e7944923dc625e1e52ef7c01278cd5bd83929843b82069455d7db287f6cd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/42.json",
+      "sha256": "37c1f08072055ea5b9ac589046b4c8f2d79a167bbf1f73ea2c58dd401167c9d2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/43.json",
+      "sha256": "559849c75910f8564b0d7b13b759e6827ab38ea3ed0d2caeb6a11e379dd67200"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/44.json",
+      "sha256": "c149c7fffd6b63ed327dae323a637d5630b59c28fa6bf8b03d54b285f3951d21"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/45.json",
+      "sha256": "5ee60a6013621a4a11375cf60b9bf91aaca04dea750216e9aa0520654146be35"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/46.json",
+      "sha256": "5c66d05ad8d5fc271f6de4c9ef0e1a5026895bed4f32bd98d86e701001e7e6f0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/47.json",
+      "sha256": "94645a69ecac9046af84b5f66c1f8113d56569e99e0da16a5868527a8703a2c5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/48.json",
+      "sha256": "ca18dbe124d3fcffbedbe08012d83bd1749dfe963b818d272ea1204cf295acee"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/49.json",
+      "sha256": "2a17b638900ee9870de956e927b4fccd1633151bc8387db7ec9254f6fb1cb613"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/5.json",
+      "sha256": "191ae16efd1d293978ad4ad6b155050f6dc447bd2e8cb2b80c448e8a2365b83a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/50.json",
+      "sha256": "02d803c73bd34c8274122b34f052fbeea402ae2c2d7bfca51dce26cd864035d9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/51.json",
+      "sha256": "7e14fa409f0ca21598ec997258f6380792b75601d2e3c4ea50fe7e1e5108f992"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/52.json",
+      "sha256": "9de7b9523fdbafab9f5cf883b45569efc8c06576ce4ae8f6a5e39752dbff8ba1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/53.json",
+      "sha256": "d2955c3efa5abf8ff52444d170e88a0c611900e08ad00ef582630354a9c8abca"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/54.json",
+      "sha256": "22db63bddde17cf77ceb992e3beb8998eccdfaed76e98216de4305eae3e1c864"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/55.json",
+      "sha256": "8a313746842471e875949155149fc8fe3364988d989a2641259439ac9dc6f354"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/56.json",
+      "sha256": "2fe38f93fa40d10a1b0adf79b2ee31d60cf93079a2cc9c39e6e7ad9eba0242d5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/57.json",
+      "sha256": "d2e706391ec7528a267dfb439b0b77a4a68992a36c704f47c27c8509189e950f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/58.json",
+      "sha256": "ece8304a8e4fdb820d51d7a9380a790b21645b5dc7054974f3a3cbe72cfcd426"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/59.json",
+      "sha256": "6d4326d682031e09d9df537f4afae33ed419dea317f4233aba89cf49039582c7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/6.json",
+      "sha256": "c8e9cd07402fbb99a8db8fa9fcb0f777f07398bd64e70c796de0a8204f68e49c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/60.json",
+      "sha256": "6d616b816ccf125d75f910f4a0e1d1bbab428575488f6335cf4b11cd8e4e3a23"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/61.json",
+      "sha256": "4411417f56d57b7e814b81acf745fd2ecbf43f69e9cd5b2fe743513017459c67"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/62.json",
+      "sha256": "697a32b502e4cba93d123824df2114078b08de29d3b0de47421037d0848555f1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/63.json",
+      "sha256": "35aead3b252d7c269ea7911d20ea975eb00fa454f179f5170bd69f2d0a124093"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/64.json",
+      "sha256": "559043fee55949daca1d4ce6d77f7678c168d15027a212872fc17b4da8bb533f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/65.json",
+      "sha256": "195427fca66a6d25e858ca07a03f8499f1977105ab9e2859903fd872c7f8b29a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/66.json",
+      "sha256": "66bcffd6f37924f26a0f53163bd482cfe0101d6d02044fa19b30b3526c916153"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/67.json",
+      "sha256": "bc95069b4a4648c7f1b38d60e10e389c5b4189b0ff17f2d92fba894e5965570f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/68.json",
+      "sha256": "a2a18cd086c73b188fd3252e7f82d9fded48d46dd3565338d7f452e128a6fdb4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/69.json",
+      "sha256": "1cdbf6e081fffdd44f8bb63fcb3f70e1473b973def077c18669711f1615589c1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/7.json",
+      "sha256": "611965eebc0ff3c423386d61b6c5d62d3090b5a693fcec67b7563903edc92b6e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/70.json",
+      "sha256": "13a7a90050ce70c1d50e2dbdfd0fa53f7651f6d7be386c0219f9b32b6325c3f1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/71.json",
+      "sha256": "db083be59cec85050148af61a06af4fc80dbdf79de4da473cc8b4401eb395fda"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/72.json",
+      "sha256": "0024c07a65c956f67f8edfd62aeaf11be4699aa68c973eee4aa502853e104525"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/73.json",
+      "sha256": "414b467d38345218f860d1fa41325e99603d4ea101927a4ba89e1a7c7d7ad859"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/74.json",
+      "sha256": "9737578e82182a7bcdbb7374cf67ff7a1dd1bbe025845f355fc9c06d4d23ba4d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/75.json",
+      "sha256": "2cfa3d19a54d2f8ca4f32e3939fc4ffc38f92b151fee5307d6f7c7ef2a5c677b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/76.json",
+      "sha256": "33efdcb7ef6ed3dcc44d58e8f2ae57240c0ce21b0163d4e37d7ed18f34fcfb7b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/77.json",
+      "sha256": "3efe70a5e671c089c9cc3edbd1e21b6e6c6d85abed32e05cf6fdcfa94e2cc12f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/78.json",
+      "sha256": "2103829518c349ea2a99b9ef590ac5bbf7d1a9b96390eb97994b24b9e8be6ff4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/79.json",
+      "sha256": "bc514dd738d6d9c7e0576317ecac2c0d7d01b7c09142f7cf12bd5de14d1c3157"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/8.json",
+      "sha256": "aa7ebaca6359887f942f65ddcc41ec333121e2a7bf44baf8ed130fdca6b86bd3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/80.json",
+      "sha256": "5e5a98092d24c6f133744a9fd15af3106a3fbfc2ffea1cee8a65839bc59d6ba9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/81.json",
+      "sha256": "adb5e03865a3bdbc1fe97d1254e07a18fed057b7a85b2484be185f7aa8120a10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/82.json",
+      "sha256": "416dc85297ee5c7967cc026be14d9c7732173207748a6dbd8e92fd80f17bfa29"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/83.json",
+      "sha256": "7f3cb467f02bf39b2aa94912ac48d7504ac7e23e76ebff1c3c085eeece98208b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/84.json",
+      "sha256": "bd7686d6ebcf74e7f44173e06dbe64ed3a9ecf7c51f46b38504e4b4522ec8884"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/85.json",
+      "sha256": "4589e07d7507aad4a548f1d1c9021ac5c6c86ba5058187cb81dfe79a2e9fd24e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/86.json",
+      "sha256": "9345e92f5688f140e4093621d45b4b1f25db6670777c494a474d75b83006eb63"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/87.json",
+      "sha256": "5ad8be63ea0a4f1558a91a56efdcb8009141fdb3d1756154b17ee2d55217aa3b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/88.json",
+      "sha256": "e6c177d8d5f763992e75c63026e3026755fa9718618ad072fcf514ff1e3fedda"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/89.json",
+      "sha256": "0b4ef75262ff7759cefc8402291cb352de519406a315d484798ac4b8c86b3fdb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/9.json",
+      "sha256": "6167a1c98a4455dc0fb659bb288c31c598a74c208da84569ffdce2c808ac2005"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/90.json",
+      "sha256": "263162aed716071baaf92d3a58ea016ff01766ec1bdfa4a239c9b5029407fe9f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/91.json",
+      "sha256": "4cc2dc9fe37950f7e14cf0f81f5836e9a2965f7d691191a53e3a673b3b81d800"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/92.json",
+      "sha256": "b6cd05fbccc98ac88faa4b6a27ba869678e1022bbdf61ad2dc0f15510515d77e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/93.json",
+      "sha256": "f418dd414446f1586c733b1d71bc46e7af9b2e9e8fd1772dd5c417de2ddfc2da"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/94.json",
+      "sha256": "e957382b955b54b4f2cf0f6ee06937ad0260135632d8aadcd63f811528663861"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/95.json",
+      "sha256": "28a2ff2ab36b563254c99c1d3c504bd0c4b445a642b5b10faf1000e2f13f07fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/96.json",
+      "sha256": "f3d3a9906a959921ac9e2dac36700b9a3661d6a5eb91c65ef7eadbfe2f87582c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/97.json",
+      "sha256": "eb9cf860d6a68bd2c4f374eda8342bb2519afb38b84ae20d229f4b26362c88fd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/98.json",
+      "sha256": "11404c73d888f6815397e7b1605a240ddb8c3cdad8c7d13c2b271b09fea0220d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spa5k/tafsir_api/v1.2.1/tafsir/ar-tafsir-muyassar/99.json",
+      "sha256": "73329250fb5b6423c800c6fa7d7f08a45abb826de47bd14602b031c865888678"
+    },
+    {
+      "url": "https://tanzil.net/pub/download/index.php?quranType=simple&outType=xml",
+      "sha256": "d9b5bad94e4725191aa8da9a0404bd8e6447696ef05a71f9220ab546d7a8f47f"
+    },
+    {
+      "url": "https://tanzil.net/pub/download/index.php?quranType=uthmani&outType=xml",
+      "sha256": "203f0f1bf3158b1e5be4ab9f8f6870e570aab6d9a626fe6192a70b75d4afe0fd"
+    }
+  ]
+}

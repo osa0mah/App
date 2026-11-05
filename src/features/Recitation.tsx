@@ -11,9 +11,10 @@ import { openRecitationMicrophone } from "./recitationMicrophone";
 import type { RecitationMicrophone } from "./recitationMicrophone";
 
 export default function Recitation({ surah }: { surah: Surah }) {
+  const recitationText = surah.recitationVerses;
   const verses = useMemo(
-    () => surah.verses.map((verse) => normalizeArabic(verse).split(" ").filter(Boolean)),
-    [surah],
+    () => recitationText.map((verse) => normalizeArabic(verse).split(" ").filter(Boolean)),
+    [recitationText],
   );
   const expectedWords = useMemo(() => verses.flat(), [verses]);
   const ends = useMemo(
@@ -259,7 +260,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
         </Text>
       </View>
       <View style={f.card}>
-        {surah.verses.map((verse, i) => {
+        {recitationText.map((verse, i) => {
           const start = i === 0 ? 0 : ends[i - 1];
           return (
             <Text key={i} style={f.verse}

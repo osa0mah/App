@@ -1,5 +1,5 @@
 import { Pressable, ScrollView, Text, View, StyleSheet } from "react-native";
-import data from "../../data/tafsir/saadi.json";
+import {verseTafsir} from "../tafsir";
 import { surahs } from "../content";
 import { f } from "./featureStyles";
 export default function Tafsir({
@@ -11,12 +11,12 @@ export default function Tafsir({
   verse: number;
   onClose: () => void;
 }) {
-  const entry = data.ayahs.find((a) => a.surah === chapter && a.ayah === verse);
+  const {entry, source: data} = verseTafsir(chapter, verse);
   const surah = surahs.find((s) => s.id === chapter);
   return (
     <View style={styles.overlay}>
       <View style={styles.sheet}>
-        <Text style={f.title}>تفسير السعدي</Text>
+        <Text style={f.title}>{data.edition}</Text>
         <Text style={f.note}>
           سورة {surah?.name} · الآية {verse.toLocaleString("ar-SA")}
         </Text>
@@ -26,8 +26,7 @@ export default function Tafsir({
             {entry?.text ?? "تفسير هذه الآية غير متاح في النسخة الحالية."}
           </Text>
           <Text style={f.source}>
-            النص: تفسير السعدي · بيانات Tafsir API، الإصدار {data.version}، من
-            مجموعة QUL. محفوظ داخل التطبيق دون إعادة صياغة.
+            النص: {data.edition} · بيانات Tafsir API، الإصدار {data.version}. محفوظ داخل التطبيق دون إعادة صياغة.
           </Text>
         </ScrollView>
         <Pressable

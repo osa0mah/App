@@ -1,7 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { surahs, scholars } from "../src/content.ts";
-test("sample surahs have the expected verse counts and unique IDs", () => {
+test("all 114 surahs have the expected verse counts and unique IDs", () => {
+  assert.equal(surahs.length, 114);
   assert.equal(new Set(surahs.map((s) => s.id)).size, surahs.length);
   assert.equal(surahs.find((s) => s.id === 1).verses.length, 7);
   assert.equal(surahs.find((s) => s.id === 112).verses.length, 4);

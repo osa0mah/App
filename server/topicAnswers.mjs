@@ -2,7 +2,7 @@ import { loadCatalog, queryCatalog } from "./fatwaCatalog.mjs";
 import { providers, readSource } from "./fatwaSources.mjs";
 import { normalizeSearch, searchTopic, topicTerms, relevance } from "./searchText.mjs";
 import tafsir from "../data/tafsir/saadi.json" with { type: "json" };
-import chapters from "../data/chapters.json" with { type: "json" };
+import {chapters} from "./quranContent.mjs";
 export const scholarLabels = { binbaz: "ابن باز", ibnothaimeen: "ابن عثيمين", alfawzan: "صالح الفوزان" };
 export function scholarsIn(text) {
   const normal = normalizeSearch(text);

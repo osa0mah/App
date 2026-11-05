@@ -33,7 +33,7 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "lint": "expo lint",
-    "test": "node --experimental-strip-types tests/content.test.mjs && node --experimental-strip-types tests/recitation.test.mjs && node tests/fatwaSources.test.mjs && node tests/tafsir.test.mjs && node tests/chat.test.mjs && node tests/learning.test.mjs && node tests/catalog.test.mjs && node tests/catalogSnapshot.test.mjs && node tests/catalogSeeds.test.mjs && node tests/archiveAudio.test.mjs && node tests/sourceBody.test.mjs && node tests/uthaymeen.test.mjs && node --experimental-strip-types tests/recitationMicrophone.test.mjs",
+    "test": "node --experimental-strip-types tests/content.test.mjs && node --experimental-strip-types tests/recitation.test.mjs && node tests/fatwaSources.test.mjs && node tests/tafsir.test.mjs && node tests/fullQuran.test.mjs && node tests/chat.test.mjs && node tests/learning.test.mjs && node tests/catalog.test.mjs && node tests/catalogSnapshot.test.mjs && node tests/catalogSeeds.test.mjs && node tests/archiveAudio.test.mjs && node tests/sourceBody.test.mjs && node tests/uthaymeen.test.mjs && node --experimental-strip-types tests/recitationMicrophone.test.mjs",
     "export:web": "expo export --platform web",
     "package:web": "node scripts/package-web.mjs",
     "build:web": "npm run build:catalog && expo export --platform web",

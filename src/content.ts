@@ -1,13 +1,14 @@
-import chapters from "../data/chapters.json" with { type: "json" };
+import data from "../data/chapters.json" with { type: "json" };
 export type Surah = {
   id: number;
   name: string;
   place: string;
-  theme: string;
-  lessons: string[];
+  bismillah: string;
   verses: string[];
+  recitationVerses: string[];
 };
-export const surahs: Surah[] = chapters;
+export const surahs: Surah[] = data.chapters;
+export const quranSource = data.source;
 export const scholars = [
   { name: "عبد العزيز بن باز", url: "https://binbaz.org.sa/" },
   { name: "صالح الفوزان", url: "https://www.alfawzan.af.org.sa/" },
