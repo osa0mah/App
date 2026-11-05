@@ -17,6 +17,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
   );
   const progress = useRef<RecitationProgress>({ verse: 0, pending: [] });
   const [completed, setCompleted] = useState(0);
+  const [finished, setFinished] = useState(false);
   const [listening, setListening] = useState(false);
   const [recognizing, setRecognizing] = useState(false);
   const microphone = useRef<RecitationMicrophone | null>(null);
@@ -37,6 +38,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
     clearRetry();
     setListening(false);
     setRecognizing(false);
+    setCompleted(progress.current.verse);
     setHoldingMicrophone(false);
     microphone.current?.stop();
     microphone.current = null;
@@ -47,7 +49,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
     try {
       ExpoSpeechRecognitionModule.start({
         lang: "ar-SA",
-        interimResults: false,
+        interimResults: true,
         continuous: true,
         maxAlternatives: 1,
       });
@@ -58,6 +60,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
   const scheduleRetry = (notice?: string) => {
     if (!active.current || !wanted.current || retry.current) return;
     setRecognizing(false);
+    setCompleted(progress.current.verse);
     if (notice) setMessage(notice);
     const delay = notice
       ? Math.min(15000, 600 * 2 ** Math.min(interruptions.current++, 5)) : 350;
@@ -106,19 +109,22 @@ export default function Recitation({ surah }: { surah: Surah }) {
             : "خدمة التعرّف الصوتي غير متاحة في هذا المتصفح. جرّب Google Chrome أو Microsoft Edge.");
   });
   useSpeechRecognitionEvent("result", (event) => {
-    if (!active.current || !wanted.current || !event.isFinal) return;
+    if (!active.current || !wanted.current) return;
     interruptions.current = 0;
     setMessage("");
     const next = matchRecitation(verses, progress.current, event.results[0]?.transcript ?? "");
-    progress.current = next;
+    // Each interim result replaces the previous hypothesis. Match it against
+    // committed progress so repeated partial results cannot duplicate words.
+    if (event.isFinal) progress.current = next;
     setCompleted(next.verse);
-    if (next.verse === verses.length) {
+    if (event.isFinal && next.verse === verses.length) {
+      setFinished(true);
       stop();
       setMessage("أتممت تسميع السورة. أحسنت!");
     }
   });
   const start = async () => {
-    if (wanted.current || completed === verses.length) return;
+    if (wanted.current || finished) return;
     wanted.current = true;
     const request = ++session.current;
     setListening(true);
@@ -166,8 +172,8 @@ export default function Recitation({ surah }: { surah: Surah }) {
           اضغط ابدأ التسميع واقرأ من أول السورة. يستمر الميكروفون بالاستماع،
           وتظهر كل آية بعد مطابقتها كاملة. إذا أخطأت، أعد الآية ولن يظهر النص حتى تطابقها.
         </Text>
-        <Pressable accessibilityRole="button" disabled={completed === verses.length}
-          accessibilityState={{ disabled: completed === verses.length }} style={f.button}
+        <Pressable accessibilityRole="button" disabled={finished}
+          accessibilityState={{ disabled: finished }} style={f.button}
           onPress={() => { if (wanted.current) stop(); else void start(); }}>
           <Text style={f.buttonText}>{listening ? "إيقاف التسميع" : "ابدأ التسميع"}</Text>
         </Pressable>
@@ -181,6 +187,7 @@ export default function Recitation({ surah }: { surah: Surah }) {
           stop();
           progress.current = { verse: 0, pending: [] };
           setCompleted(0);
+          setFinished(false);
           setMessage("");
         }}>
           <Text style={f.label}>إعادة التسميع من البداية</Text>
