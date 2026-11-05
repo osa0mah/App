@@ -1,4 +1,5 @@
 import { load } from "cheerio";
+import { readSourceBody } from "./sourceBody.mjs";
 import { relevance } from "./searchText.mjs";
 export const providers = {
   binbaz: {
@@ -94,9 +95,14 @@ export async function sourceHtml(url, provider, fetcher = fetch, init = {}) {
     const type = response.headers.get("content-type") || "";
     if (!type.includes("text/html") && !type.includes("application/xhtml+xml"))
       throw new SourceError("المصدر لم يُرجع صفحة نصية يمكن قراءتها.");
-    const body = await response.text();
-    if (body.length > 2_000_000)
-      throw new SourceError("صفحة المصدر أكبر من الحد المتاح.");
+    let body;
+    try {
+      body = await readSourceBody(response);
+    } catch (error) {
+      if (error.message === "DOCUMENT_TOO_LARGE")
+        throw new SourceError("صفحة المصدر أكبر من الحد المتاح.", "DOCUMENT_TOO_LARGE");
+      throw new SourceError("تعذّرت قراءة صفحة المصدر. حاول مجددًا لاحقًا.");
+    }
     const title = load(body)("title").text();
     if (/just a moment|access denied|captcha|attention required/i.test(title))
       throw new SourceError(

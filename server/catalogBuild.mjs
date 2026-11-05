@@ -1,4 +1,5 @@
 import { load } from "cheerio";
+import { readSourceBody, SOURCE_PAGE_BYTES } from "./sourceBody.mjs";
 import { providers, extractSearch } from "./fatwaSources.mjs";
 function safe(value, p) {
   const u = new URL(value, p.base);
@@ -115,8 +116,9 @@ async function document(url, p, fetcher, deadline, timeoutMs = 12000) {
       await r.body?.cancel();
       throw error;
     }
-    const content = await r.text();
-    if (content.length > 2_000_000) throw Error("DOCUMENT_TOO_LARGE");
+    const content = await readSourceBody(
+      r, current.pathname === "/robots.txt" ? 1024 * 1024 : undefined,
+    );
     return { text: content, url: current.href, status: r.status };
   }
   throw Error("REDIRECT_LIMIT");
@@ -434,7 +436,7 @@ export async function collectCatalog(options = {}) {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
     coverage: "partial",
-    sources: all.map((x) => x.status),
+    sources: all.map((x) => ({ ...x.status, bodyLimitBytes: SOURCE_PAGE_BYTES })),
     records: all.flatMap((x) => x.records),
   };
 }

@@ -1,6 +1,7 @@
 import { readFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
 import { dirname } from "node:path";
 import { providers } from "./fatwaSources.mjs";
+import { SOURCE_PAGE_BYTES } from "./sourceBody.mjs";
 export const MINIMUM_PUBLISHED_COUNTS = Object.freeze({ binbaz: 277 });
 export function sanitizeSnapshot(value) {
   if (
@@ -75,6 +76,8 @@ export function sanitizeSnapshot(value) {
             (x) => typeof x === "string" && /^[A-Z0-9_]{1,70}$/.test(x),
           )
         : [],
+      bodyLimitBytes: Number.isSafeInteger(source.bodyLimitBytes) && source.bodyLimitBytes > 0
+        ? source.bodyLimitBytes : 0,
       retained: !!source.retained,
       updatedAt: validDate(source.updatedAt) || value.generatedAt,
       lastAttemptAt:
@@ -212,6 +215,8 @@ export function refreshKeys(catalog, { now = Date.now(), force = false } = {}) {
     const source = catalog.sources.find((s) => s.key === key);
     const count = catalog.records.filter((r) => r.provider === key).length;
     if (!source || source.lastAttemptAt === null) return true;
+    if (source.bodyLimitBytes !== SOURCE_PAGE_BYTES && source.pageFailures?.some((failure) => failure.code === "DOCUMENT_TOO_LARGE"))
+      return true;
     const dataAge = now - Date.parse(source.updatedAt || catalog.generatedAt);
     if (count > 0 && dataAge >= 0 && dataAge < 24 * 60 * 60 * 1000)
       return false;
