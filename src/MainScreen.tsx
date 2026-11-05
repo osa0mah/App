@@ -133,6 +133,19 @@ export default function App() {
       onPress={() => setTafsirTarget({ chapter: id, verse: v })}
     />
   );
+  const resumeBookmark = () => {
+    if (!bookmark) return;
+    setScreen("القرآن");
+    setSurah(surahs.find(chapter => chapter.id === bookmark.id)!);
+    setReaderStartVerse(bookmark.verse);
+    setVerse(null);
+    setTafsirTarget(null);
+  };
+  const bookmarkCard = () => bookmark && <View style={s.card}>
+    <Text style={s.sectionTitle}>موضع القراءة المحفوظ</Text>
+    <Button secondary label={`متابعة سورة ${surahs.find(chapter => chapter.id === bookmark.id)!.name} · الآية ${arabic(bookmark.verse)}`} onPress={resumeBookmark} />
+    <Button secondary label="إزالة حفظ موضع القراءة" onPress={() => setBookmark(null)} />
+  </View>;
   const cards = () =>
     list.map((item) => (
       <Pressable
@@ -168,6 +181,7 @@ export default function App() {
         </View>
       )}
       {fullReader ? <QuranReader initialChapter={surah!.id} initialVerse={readerStartVerse}
+        bookmark={bookmark} onRemoveBookmark={() => setBookmark(null)}
         interactionEnabled={verse === null && tafsirTarget === null}
         onExit={() => setSurah(null)} onVersePress={(chapter, selectedVerse) => { setSurah(surahs.find(item => item.id === chapter)!); setVerse(selectedVerse); }} /> : <ScrollView
         ref={contentScroll}
@@ -228,18 +242,7 @@ export default function App() {
                 </Pressable>
               ))}
             </View>
-            {bookmark && (
-              <Button
-                secondary
-                label={`متابعة سورة ${surahs.find((x) => x.id === bookmark.id)?.name} · الآية ${arabic(bookmark.verse)}`}
-                onPress={() => {
-                  setScreen("القرآن");
-                  setSurah(surahs.find((x) => x.id === bookmark.id)!);
-                  setReaderStartVerse(bookmark.verse);
-                  setVerse(null);
-                }}
-              />
-            )}
+            {bookmarkCard()}
             <Text style={s.note}>
               المصحف كامل: ١١٤ سورة للقراءة، مع التفسير ومقاصد السور وهداياتها داخل التطبيق.
             </Text>
@@ -260,6 +263,7 @@ export default function App() {
                   screen === "التسميع" ? "راجع حفظك" : "القرآن الكريم",
                   "١١٤ سورة · المصحف كاملًا",
                 )}
+                {screen === "القرآن" && bookmarkCard()}
                 <TextInput
                   nativeID="quran-surah-search"
                   accessibilityLabel="البحث عن سورة"
@@ -349,9 +353,9 @@ export default function App() {
               )}
               <Button
                 secondary
-                label="حفظ موضع القراءة لهذه الجلسة"
+                label={bookmark?.id === surah?.id && bookmark?.verse === verse ? "إزالة حفظ هذه الآية" : "حفظ موضع القراءة لهذه الجلسة"}
                 onPress={() => {
-                  if (surah && verse) setBookmark({ id: surah.id, verse });
+                  if (surah && verse) setBookmark(bookmark?.id === surah.id && bookmark.verse === verse ? null : { id: surah.id, verse });
                   setVerse(null);
                 }}
               />

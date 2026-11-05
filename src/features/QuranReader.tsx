@@ -7,8 +7,8 @@ import { useReaderDesktop } from "./useReaderDesktop";
 import QuranVerse from "./QuranVerse";
 const arabic = (number: number) => number.toLocaleString("ar-SA");
 type IndexTab = "السور" | "الأجزاء" | "الصفحات";
-type Props = { initialChapter: number; initialVerse?: number; interactionEnabled: boolean; onExit: () => void; onVersePress: (chapter: number, verse: number) => void };
-export default function QuranReader({ initialChapter, initialVerse = 1, interactionEnabled, onExit, onVersePress }: Props) {
+type Props = { bookmark: {id: number; verse: number} | null; onRemoveBookmark: () => void; initialChapter: number; initialVerse?: number; interactionEnabled: boolean; onExit: () => void; onVersePress: (chapter: number, verse: number) => void };
+export default function QuranReader({ bookmark, onRemoveBookmark, initialChapter, initialVerse = 1, interactionEnabled, onExit, onVersePress }: Props) {
   const { width, height } = useWindowDimensions();
   const [bodySize, setBodySize] = useState({ width: 0, height: 0 });
   const [page, setPage] = useState(() => pageForVerse(initialChapter, initialVerse));
@@ -61,7 +61,7 @@ export default function QuranReader({ initialChapter, initialVerse = 1, interact
               {section.verses.map(verse => <QuranVerse key={`${verse.chapter}:${verse.verse}`}
                 highlighted={focusVerse?.chapter === verse.chapter && focusVerse.verse === verse.verse}
                 label={`سورة ${section.name}، الآية ${verse.verse}: ${verse.text}`} onPress={() => { if (enabled) onVersePress(verse.chapter, verse.verse); }}>
-                {verse.text}{" "}<Text style={s.verseNumber}>﴿{arabic(verse.verse)}﴾</Text>{" "}
+                {verse.text}{" "}<Text style={s.verseNumber}>﴿{arabic(verse.verse)}﴾</Text>{bookmark?.id === verse.chapter && bookmark.verse === verse.verse && <Text accessibilityLabel="موضع القراءة المحفوظ" style={s.bookmarkMark}> ★</Text>}{" "}
               </QuranVerse>)}
             </Text>
           </View>)}
@@ -70,6 +70,10 @@ export default function QuranReader({ initialChapter, initialVerse = 1, interact
       </ScrollView>
     </View>
     <View style={s.footer}>
+      {bookmark && <View style={s.bookmarkControls}>
+        <Pressable accessibilityRole="button" accessibilityLabel="متابعة الآية المحفوظة داخل المصحف" style={s.bookmarkResume} onPress={() => choosePage(pageForVerse(bookmark.id, bookmark.verse), {chapter: bookmark.id, verse: bookmark.verse})}><Text numberOfLines={1} style={s.toolText}>★ متابعة {surahs[bookmark.id-1].name} · الآية {arabic(bookmark.verse)}</Text></Pressable>
+        <Pressable accessibilityRole="button" accessibilityLabel="إزالة حفظ موضع القراءة" style={s.toolButton} onPress={() => { if (focusVerse?.chapter === bookmark.id && focusVerse.verse === bookmark.verse) setFocusVerse(null); onRemoveBookmark(); }}><Text style={s.toolText}>إزالة الحفظ</Text></Pressable>
+      </View>}
       <View style={s.controls}>
         <Pressable accessibilityRole="button" accessibilityLabel="الصفحة السابقة" accessibilityState={{ disabled: page === 1 }} disabled={page === 1 || !enabled} style={[s.pageButton, page === 1 && s.disabled]} onPress={() => turn(-1)}><Text style={s.toolText}>→ السابقة</Text></Pressable>
         <Pressable accessibilityRole="button" accessibilityLabel={`الانتقال إلى صفحة، الحالية ${page}`} style={s.pageIndicator} onPress={() => { setIndexTab("الصفحات"); setPageInput(String(page)); setPageError(""); setIndexOpen(true); }}><Text accessibilityLiveRegion="polite" style={s.pageLabel}>صفحة {arabic(page)} من {arabic(mushafPageCount)}</Text></Pressable>
@@ -122,6 +126,9 @@ const s = StyleSheet.create({
   basmala: { lineHeight: 50, textAlign: "center", color: "#193D35", marginBottom: 10 },
   scripture: { color: "#193D35", textAlign: "center", writingDirection: "rtl", userSelect: "none" },
   verseNumber: { color: "#92713F" },
+  bookmarkMark: { color: "#A78032", fontSize: 15 },
+  bookmarkControls: { flexDirection: "row-reverse", alignItems: "center", gap: 8, borderBottomWidth: 1, borderBottomColor: "#E9E3D1" },
+  bookmarkResume: { flex: 1, padding: 10, minHeight: 44, justifyContent: "center" },
   paperPage: { textAlign: "center", color: "#92713F", marginTop: 22, fontSize: 16 },
   footer: { borderTopWidth: 1, borderTopColor: "#E9E3D1", paddingHorizontal: 10, paddingBottom: 4, backgroundColor: "#F9F7EE" },
   controls: { flexDirection: "row-reverse", alignItems: "center", justifyContent: "space-between" },
