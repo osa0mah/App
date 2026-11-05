@@ -7,6 +7,8 @@ import {
 import { Surah } from "../content";
 import { matchRecitation, normalizeArabic, RecitationProgress } from "./recitation";
 import { f } from "./featureStyles";
+import { openRecitationMicrophone } from "./recitationMicrophone";
+import type { RecitationMicrophone } from "./recitationMicrophone";
 
 export default function Recitation({ surah }: { surah: Surah }) {
   const verses = useMemo(
@@ -16,13 +18,15 @@ export default function Recitation({ surah }: { surah: Surah }) {
   const progress = useRef<RecitationProgress>({ verse: 0, pending: [] });
   const [completed, setCompleted] = useState(0);
   const [listening, setListening] = useState(false);
+  const [recognizing, setRecognizing] = useState(false);
+  const microphone = useRef<RecitationMicrophone | null>(null);
+  const [holdingMicrophone, setHoldingMicrophone] = useState(false);
   const [message, setMessage] = useState("");
   const active = useRef(true);
   const wanted = useRef(false);
   const session = useRef(0);
   const retry = useRef<ReturnType<typeof setTimeout> | null>(null);
   const interruptions = useRef(0);
-  const startedAt = useRef(0);
   const clearRetry = () => {
     if (retry.current) clearTimeout(retry.current);
     retry.current = null;
@@ -32,12 +36,15 @@ export default function Recitation({ surah }: { surah: Surah }) {
     wanted.current = false;
     clearRetry();
     setListening(false);
+    setRecognizing(false);
+    setHoldingMicrophone(false);
+    microphone.current?.stop();
+    microphone.current = null;
     ExpoSpeechRecognitionModule.abort();
   };
   const beginRecognition = () => {
     if (!active.current || !wanted.current) return;
     try {
-      startedAt.current = Date.now();
       ExpoSpeechRecognitionModule.start({
         lang: "ar-SA",
         interimResults: false,
@@ -45,10 +52,19 @@ export default function Recitation({ surah }: { surah: Surah }) {
         maxAlternatives: 1,
       });
     } catch {
-      wanted.current = false;
-      setListening(false);
-      setMessage("تعذّر تشغيل الميكروفون. اضغط ابدأ التسميع للمحاولة مجددًا.");
+      scheduleRetry("تعذّر بدء التعرّف مؤقتًا. نحاول الاتصال تلقائيًا؛ يمكنك إبقاء الجلسة مفتوحة.");
     }
+  };
+  const scheduleRetry = (notice?: string) => {
+    if (!active.current || !wanted.current || retry.current) return;
+    setRecognizing(false);
+    if (notice) setMessage(notice);
+    const delay = notice
+      ? Math.min(15000, 600 * 2 ** Math.min(interruptions.current++, 5)) : 350;
+    retry.current = setTimeout(() => {
+      retry.current = null;
+      beginRecognition();
+    }, delay);
   };
   useEffect(() => {
     active.current = true;
@@ -56,42 +72,43 @@ export default function Recitation({ surah }: { surah: Surah }) {
       active.current = false;
       wanted.current = false;
       if (retry.current) clearTimeout(retry.current);
+      microphone.current?.stop();
+      microphone.current = null;
       try { ExpoSpeechRecognitionModule.abort(); } catch { /* Device unavailable. */ }
     };
   }, []);
   useSpeechRecognitionEvent("start", () => {
     if (!active.current) return;
     if (!wanted.current) { ExpoSpeechRecognitionModule.abort(); return; }
-    setListening(true);
+    setRecognizing(true);
   });
   useSpeechRecognitionEvent("end", () => {
     if (!active.current || !wanted.current) return;
-    // Browsers and mobile recognizers may end even with continuous enabled.
-    // Preserve the session and hidden partial verse through normal pauses.
-    interruptions.current = Date.now() - startedAt.current < 1500
-      ? interruptions.current + 1 : 0;
-    if (interruptions.current >= 3) {
-      wanted.current = false;
-      setListening(false);
-      setMessage("توقف التعرّف الصوتي عدة مرات. تحقق من إذن الميكروفون والاتصال، ثم ابدأ مجددًا.");
-      return;
-    }
-    clearRetry();
-    retry.current = setTimeout(beginRecognition, 350);
+    scheduleRetry();
   });
   useSpeechRecognitionEvent("error", (event) => {
     if (!active.current || !wanted.current) return;
-    if (event.error === "no-speech") return; // Resume on end after a quiet pause.
-    wanted.current = false;
-    clearRetry();
-    setListening(false);
+    if (["network", "busy", "aborted", "no-speech", "speech-timeout"].includes(event.error)) {
+      scheduleRetry(event.error === "network"
+        ? "خدمة التعرّف الصوتي غير متصلة. نحاول الاتصال تلقائيًا. إذا استمر ذلك جرّب Google Chrome أو Microsoft Edge."
+        : undefined);
+      return;
+    }
+    stop();
     setMessage(event.error === "not-allowed"
       ? "لم يُسمح باستخدام الميكروفون. فعّل الإذن في المتصفح أو إعدادات الجهاز."
-      : "تعذّر التعرّف على الصوت. تحقق من الاتصال ثم ابدأ التسميع مجددًا.");
+      : event.error === "service-not-allowed"
+        ? "المتصفح لا يسمح بخدمة التعرّف الصوتي. جرّب Google Chrome أو Microsoft Edge."
+        : event.error === "language-not-supported"
+          ? "خدمة التعرّف الحالية لا تدعم العربية. جرّب Google Chrome أو Microsoft Edge."
+          : event.error === "audio-capture"
+            ? "تعذّر الوصول إلى الميكروفون. تحقق من توصيله وإعدادات الإدخال."
+            : "خدمة التعرّف الصوتي غير متاحة في هذا المتصفح. جرّب Google Chrome أو Microsoft Edge.");
   });
   useSpeechRecognitionEvent("result", (event) => {
     if (!active.current || !wanted.current || !event.isFinal) return;
     interruptions.current = 0;
+    setMessage("");
     const next = matchRecitation(verses, progress.current, event.results[0]?.transcript ?? "");
     progress.current = next;
     setCompleted(next.verse);
@@ -122,12 +139,22 @@ export default function Recitation({ surah }: { surah: Surah }) {
         setMessage("يلزم السماح بالميكروفون لبدء التسميع.");
         return;
       }
+      const capture = await openRecitationMicrophone(() => {
+        if (!active.current || !wanted.current || session.current !== request) return;
+        stop();
+        setMessage("انقطع الميكروفون أو أُوقف إذنه. تحقق منه ثم ابدأ التسميع مجددًا.");
+      });
+      if (!active.current || !wanted.current || session.current !== request) {
+        capture.stop();
+        return;
+      }
+      microphone.current = capture;
+      setHoldingMicrophone(capture.active());
       beginRecognition();
     } catch {
       if (!active.current || session.current !== request) return;
-      wanted.current = false;
-      setListening(false);
-      setMessage("تعذّر بدء التسميع. تحقق من إذن الميكروفون ثم حاول مجددًا.");
+      stop();
+      setMessage("تعذّر فتح الميكروفون. اسمح باستخدامه وتحقق من اختيار جهاز الإدخال الصحيح.");
     }
   };
 
@@ -145,7 +172,10 @@ export default function Recitation({ surah }: { surah: Surah }) {
           <Text style={f.buttonText}>{listening ? "إيقاف التسميع" : "ابدأ التسميع"}</Text>
         </Pressable>
         <Text accessibilityLiveRegion="polite" style={f.note}>
-          {listening ? "● الميكروفون يستمع الآن" : "الميكروفون متوقف"} · {completed} / {verses.length} آيات
+          {!listening ? "الميكروفون متوقف" : recognizing
+            ? "● نستمع لتسميعك الآن"
+            : holdingMicrophone ? "● الميكروفون مفتوح · جارٍ استئناف التعرّف"
+              : "جلسة التسميع مفعّلة · جارٍ تشغيل التعرّف"} · {completed} / {verses.length} آيات
         </Text>
         <Pressable accessibilityRole="button" style={f.chip} onPress={() => {
           stop();
