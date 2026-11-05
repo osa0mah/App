@@ -152,3 +152,94 @@ test("archived audio results are offered as recordings without fabricating a wri
   assert.equal(answer.evidence, undefined);
   assert.equal(answer.source.url, archive);
 });
+
+test("natural Witr inquiry is not mistaken for tafsir and automatically retrieves multiple scholars", async () => {
+  const calls=[];
+  const answer=await answerMessage("أبغى استفسر عن صلاة الوتر",[],{
+    search:async(p,q)=>{calls.push([p.name,q]);return p.name.includes("الفوزان")?[]:[{id:"/test",title:"صلاة الوتر"}];},
+    read:async p=>({title:"صلاة الوتر",scholar:p.name,answer:`نص اختبار موثق المصدر لـ${p.name}، وليس فتوى حقيقية.`,sourceUrl:p.base+"/test"}),
+  });
+  assert.equal(calls.length,3);
+  assert.ok(calls.every(([,query])=>query==="صلاة الوتر"));
+  assert.match(answer.text,/في فتاوى ابن باز/);
+  assert.match(answer.text,/في فتاوى ابن عثيمين/);
+  assert.doesNotMatch(answer.text,/اذكر اسم السورة/);
+  assert.equal(answer.sources.filter(source=>source.kind==="fatwa").length,2);
+  assert.ok(answer.sources.every(source=>source.suggestion.scholar));
+  assert.ok(!answer.sources.some(source=>source.kind==="tafsir"));
+});
+test("explain a general religious topic does not inherit an old surah as a verse request", async () => {
+  let query="";
+  await answerMessage("اشرح صلاة الوتر",[{role:"user",content:"تفسير الفاتحة"}],{
+    search:async(p,q)=>{query=q;return [];},
+  });
+  assert.equal(query,"صلاة الوتر");
+});
+test("an explicit source restricts the answer and a natural-language follow-up retains its topic", async () => {
+  const names=[];let query="";
+  await answerMessage("طيب ابن عثيمين",[{role:"user",content:"أبغى استفسر عن صلاة الوتر"}],{
+    search:async(p,q)=>{names.push(p.name);query=q;return [];},
+  });
+  assert.deepEqual(names,["محمد بن صالح العثيمين"]);
+  assert.equal(query,"صلاة الوتر");
+});
+test("one failed source does not suppress a verified answer from another scholar", async () => {
+  const answer=await answerMessage("أريد أعرف عن صلاة الوتر",[],{
+    search:async p=>{if(p.name.includes("باز"))throw Error("source unavailable");return p.name.includes("عثيمين")?[{id:"/test",title:"صلاة الوتر"}]:[];},
+    read:async p=>({title:"صلاة الوتر",scholar:p.name,answer:"نص اختبار من المصدر الآخر وليس فتوى حقيقية.",sourceUrl:p.base+"/test"}),
+  });
+  assert.match(answer.text,/نص اختبار من المصدر الآخر/);
+  assert.match(answer.text,/تعذّر جلب نص من ابن باز/);
+  assert.equal(answer.sources.length,1);
+});
+test("topic answers include a real local Quran verse and its exact tafsir only when relevant", async () => {
+  const answer=await answerMessage("أبغى أعرف معنى أسماء الله",[],{search:async()=>[]});
+  assert.ok(answer.sources.some(source=>source.kind==="tafsir"));
+  assert.match(answer.text,/بِسْمِ اللَّهِ/);
+  assert.match(answer.text,/تفسير السعدي/);
+  assert.equal(answer.sources[0].suggestion.chapter,1);
+});
+test("clarifying questions and greetings do not turn into unnecessary source searches",async()=>{
+  let calls=0;const options={search:async()=>{calls++;return [];}};
+  const greeting=await answerMessage("السلام عليكم",[],options);
+  assert.match(greeting.text,/وعليكم السلام/);
+  const question=await answerMessage("عندي سؤال",[{role:"user",content:"صلاة الوتر"}],options);
+  assert.match(question.text,/ما الموضوع/);
+  assert.equal(calls,0);
+});
+test("follow-up evidence questions keep the preceding topic instead of asking for a verse",async()=>{
+  let query="";
+  await answerMessage("وما الدليل؟",[{role:"user",content:"أبغى استفسر عن صلاة الوتر"}],{search:async(p,q)=>{query=q;return [];}});
+  assert.equal(query,"صلاة الوتر");
+});
+test("generic prayer matches do not replace a requested specific prayer",async()=>{
+  let reads=0;
+  const answer=await answerMessage("صلاة الوتر",[],{search:async()=>[{id:"/test",title:"صلاة الفجر"}],read:async()=>{reads++;}});
+  assert.equal(reads,0);
+  assert.match(answer.text,/لم أتحقق من ارتباطها/);
+});
+
+test("multiple named scholars and conversational comparison words do not pollute the topic",async()=>{
+  const names=[];const queries=[];
+  await answerMessage("أبغى أقارن بين ابن باز وابن عثيمين في صلاة الوتر",[],{search:async(p,q)=>{names.push(p.name);queries.push(q);return [];}});
+  assert.deepEqual(names,["عبد العزيز بن باز","محمد بن صالح العثيمين"]);
+  assert.ok(queries.every(query=>query==="صلاة الوتر"));
+});
+test("a source-only restriction and timing follow-up retain the original natural-language subject",async()=>{
+  const history=[{role:"user",content:"أبغى استفسر عن صلاة الوتر"}];let query="";
+  await answerMessage("ابن باز فقط",history,{search:async(p,q)=>{query=q;return [];}});
+  assert.equal(query,"صلاة الوتر");
+  await answerMessage("وما وقتها؟",history,{search:async(p,q)=>{query=q;return [];}});
+  assert.match(query,/صلاة الوتر/);assert.match(query,/وقت/);
+});
+test("a ruling about something descending is not confused with a cause of Quran revelation",async()=>{
+  let calls=0;
+  const answer=await answerMessage("حكم نزول الدم",[],{search:async()=>{calls++;return [];}});
+  assert.equal(calls,3);assert.doesNotMatch(answer.text,/أي سورة|سبب نزول سورة/);
+});
+
+test("a follow-up to a comparison retains both explicitly selected scholars",async()=>{
+  const names=[];
+  await answerMessage("طيب وما وقتها؟",[{role:"user",content:"قارن ابن باز وابن عثيمين في صلاة الوتر"}],{search:async p=>{names.push(p.name);return [];}});
+  assert.deepEqual(names,["عبد العزيز بن باز","محمد بن صالح العثيمين"]);
+});

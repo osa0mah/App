@@ -9,11 +9,20 @@ export type ChatSuggestion = {
   scholar?: string;
   query?: string;
 };
+export type ChatSource = {
+  title: string;
+  url: string;
+  scholar?: string;
+  kind?: "fatwa" | "tafsir";
+  actionLabel?: string;
+  suggestion?: ChatSuggestion;
+};
 export type ChatMessage = {
   id: string;
   role: "user" | "assistant";
   text: string;
   source?: { title: string; url: string };
+  sources?: ChatSource[];
   suggestion?: ChatSuggestion | null;
   explanation?: string;
 };
@@ -81,6 +90,7 @@ export default function ChatAssistant({
           role: "assistant",
           text: data.text,
           source: data.source,
+          sources: Array.isArray(data.sources) ? data.sources : undefined,
           suggestion: data.suggestion,
           explanation: data.explanation,
         },
@@ -117,8 +127,9 @@ export default function ChatAssistant({
       {!messages.length && (
         <View style={f.card}>
           <Text style={f.text}>
-            أهلًا بك. أقدر أعرض لك تفسير الآية من النص المضمن، أو أبحث عن نص
-            فتوى من الشيخ الذي تختاره. إذا لم أجد مصدرًا موثقًا سأوضح ذلك.
+            أهلًا بك. اسألني عن الموضوع مباشرة، مثل «أبغى أستفسر عن صلاة الوتر».
+            أبحث في فتاوى المشايخ، وأضيف النص المرتبط من القرآن والتفسير إن توفر.
+            ويمكنك تحديد شيخ إذا رغبت.
           </Text>
         </View>
       )}
@@ -148,14 +159,23 @@ export default function ChatAssistant({
                 </Text>
               </View>
             )}
-            {m.source && (
+            {!!m.sources?.length && m.sources.map((source, index) => (
+              <View key={`${source.url}:${index}`} style={s.citation}>
+                <Text selectable style={f.source}>المصدر: {source.title}{"\n"}{source.url}</Text>
+                {source.suggestion && <Pressable accessibilityRole="button" style={f.chip}
+                  onPress={() => onNavigate(source.suggestion!)}>
+                  <Text style={f.label}>{source.actionLabel || `فتح قسم ${source.suggestion.section}`} ←</Text>
+                </Pressable>}
+              </View>
+            ))}
+            {!m.sources?.length && m.source && (
               <Text selectable style={f.source}>
                 المصدر: {m.source.title}
                 {"\n"}
                 {m.source.url}
               </Text>
             )}
-            {m.suggestion && (
+            {!m.sources?.length && m.suggestion && (
               <Pressable
                 accessibilityRole="button"
                 style={[f.chip, { marginTop: 16 }]}
@@ -169,13 +189,13 @@ export default function ChatAssistant({
       </View>
       {pending && (
         <Text accessibilityLiveRegion="polite" style={f.note}>
-          جارٍ تجهيز إجابتك من المصادر…
+          جارٍ البحث في الفتاوى والقرآن والتفسير…
         </Text>
       )}
       <View style={f.row}>
         {[
           "فسّر الآية الثانية من الفاتحة",
-          "أريد فتوى ابن باز عن صلاة الوتر",
+          "أبغى أستفسر عن صلاة الوتر",
           "كيف أبدأ التسميع؟",
         ].map((value) => (
           <Pressable
@@ -224,7 +244,7 @@ export default function ChatAssistant({
         </Pressable>
       )}
       <Text style={f.note}>
-        النص المنقول يظهر كما ورد في المصدر. إذا ظهر شرح مساعد، فهو منفصل عن
+        النص المنقول أو مقتطفه يبقى منسوبًا إلى مصدره. إذا ظهر شرح مساعد، فهو منفصل عن
         النص الأصلي. المحادثة محفوظة خلال الجلسة فقط.
       </Text>
     </>
@@ -241,5 +261,6 @@ const s = StyleSheet.create({
     textAlign: "right",
     marginBottom: 10,
   },
+  citation: { borderTopWidth: 1, borderTopColor: "#E4E8DF", marginTop: 14, paddingTop: 6 },
   explanation: { borderTopWidth: 1, borderTopColor: "#E4E8DF", marginTop: 16 },
 });
