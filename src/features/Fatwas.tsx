@@ -43,6 +43,7 @@ export default function Fatwas({
     available: boolean;
     error?: string;
     reason?: string | null;
+    warning?: string | null;
     pageCount?: number;
   } | null>(null);
   useEffect(() => {
@@ -179,6 +180,9 @@ export default function Fatwas({
                 : "لم يجهز فهرس هذا الشيخ من الصفحات الرسمية بعد. البحث غير متاح لهذا المصدر حاليًا.")
             : "جارٍ التحقق من الفهرس…"}
         </Text>
+        {catalogInfo?.key === ids[index] && catalogInfo.warning && (
+          <Text style={f.note}>{catalogInfo.warning}</Text>
+        )}
         {catalogInfo?.key === ids[index] && catalogInfo.reason && (
           <Text selectable style={f.note}>
             سبب عدم الجاهزية: {catalogInfo.reason}

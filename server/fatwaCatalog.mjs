@@ -77,12 +77,21 @@ export function catalogStatus(catalog, key) {
       reason =
         "لم تُكتشف عناوين قابلة للفهرسة في الصفحات التي تم الوصول إليها.";
   }
+  const pageCode = source?.pageFailures?.[0]?.code;
+  if (reason && pageCode && (issues.includes("PAGE_UNAVAILABLE") || issues.includes("SOURCE_ACCESS_DENIED")))
+    reason += ` رمز الاتصال: ${pageCode}.`;
   return {
     count,
-    updatedAt: catalog.generatedAt,
+    updatedAt: source?.updatedAt || catalog.generatedAt,
+    lastAttemptAt: source?.lastAttemptAt || catalog.generatedAt,
+    retained: !!source?.retained,
+    warning: source?.retained
+      ? "لم يكتمل تحديث المصدر؛ نعرض آخر فهرس محفوظ."
+      : null,
     coverage: "partial",
     available: !!source && count > 0,
     pageCount: source?.pageCount ?? 0,
+    pageFailures: source?.pageFailures ?? [],
     robots: source?.robots ?? null,
     reason,
   };

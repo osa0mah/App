@@ -37,3 +37,11 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["generated/fatwa-catalog.json"]
+
+[[plugins]]
+  package = "./netlify/plugins/fatwa-catalog-cache"
+
+[[headers]]
+  for = "/catalog/fatwas.json"
+  [headers.values]
+    Cache-Control = "no-cache"

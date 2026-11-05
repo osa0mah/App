@@ -257,3 +257,20 @@ test('a persistent robots timeout is retried at most once',async()=>{
 test('otherwise unclassified Node network errors keep a safe code without exposing the message',async()=>{
  const {robotsFailure}=await import('../server/catalogBuild.mjs');const result=robotsFailure(new Error('private-fixture',{cause:{code:'UND_ERR_INTERNAL_ERROR',message:'private-fixture'}}));assert.equal(result.code,'NETWORK_FAILURE');assert.equal(result.detail,'UND_ERR_INTERNAL_ERROR');assert.ok(!JSON.stringify(result).includes('private-fixture'));
 });
+
+test("page failures retain safe connection diagnostics without query or raw errors", async () => {
+  const catalog = await collectCatalog({
+    keys: ["alfawzan"],
+    fetcher: async (url) => {
+      if (url.endsWith("/robots.txt")) return html("User-agent: *\nAllow: /");
+      throw Object.assign(new Error("private connection details"), { name: "TimeoutError" });
+    },
+    deadline: Date.now() + 10000,
+    maxPages: 2,
+  });
+  const source = catalog.sources[0];
+  assert.equal(source.pageFailures[0].code, "TIMEOUT");
+  assert.equal(source.pageFailures[0].path, "/");
+  assert.match(catalogStatus(catalog, "alfawzan").reason, /TIMEOUT/);
+  assert.ok(!JSON.stringify(catalog).includes("private connection details"));
+});

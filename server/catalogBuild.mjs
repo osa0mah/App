@@ -74,7 +74,7 @@ export function robotPolicy(text) {
     },
   };
 }
-async function document(url, p, fetcher, deadline, timeoutMs = 5000) {
+async function document(url, p, fetcher, deadline, timeoutMs = 12000) {
   let current = safe(url, p);
   for (let i = 0; i < 4; i++) {
     if (Date.now() >= deadline) throw Error("TIME_BUDGET");
@@ -230,6 +230,7 @@ export async function collectProvider(
 ) {
   const p = providers[key];
   if (!p) throw Error("UNKNOWN_PROVIDER");
+  const pageFailures = [];
   const issues = new Set(),
     records = new Map(),
     queue = [],
@@ -381,6 +382,8 @@ export async function collectProvider(
           enqueue(u.href);
       });
     } catch (e) {
+      if (pageFailures.length < 3)
+        pageFailures.push({ path: new URL(url).pathname, ...robotsFailure(e) });
       issues.add(
         ["HTTP_403", "HTTP_429"].includes(e.message)
           ? "SOURCE_ACCESS_DENIED"
@@ -416,13 +419,16 @@ export async function collectProvider(
       pageCount,
       coverage: records.size ? "partial" : "unavailable",
       issues: [...issues],
+      pageFailures,
       robots: robotsStatus,
     },
   };
 }
 export async function collectCatalog(options = {}) {
   const all = await Promise.all(
-    Object.keys(providers).map((key) => collectProvider(key, options)),
+    (options.keys || Object.keys(providers))
+      .filter((key) => Object.hasOwn(providers, key))
+      .map((key) => collectProvider(key, options)),
   );
   return {
     schemaVersion: 1,

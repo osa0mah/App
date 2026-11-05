@@ -42,3 +42,7 @@ yarn-error.*
 
 # Generated official-source title catalog (rebuilt during deployment)
 generated/
+
+# Last-good public metadata snapshots, managed by the deploy cache
+catalog-cache/
+public/catalog/
