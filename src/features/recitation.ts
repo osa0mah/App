@@ -8,25 +8,39 @@ export function normalizeArabic(text: string): string {
     .replace(/\s+/g, " ")
     .trim();
 }
-export function advanceRecitation(
-  expected: string[],
-  cursor: number,
+export type RecitationProgress = { verse: number; pending: string[] };
+
+// Pending words stay hidden. Only an exact, complete next verse is committed.
+export function matchRecitation(
+  verses: string[][],
+  progress: RecitationProgress,
   transcript: string,
-): number {
+): RecitationProgress {
   const spoken = normalizeArabic(transcript).split(" ").filter(Boolean);
-  if (!spoken.length) return cursor;
-  // Accept a fresh segment or a repeated prefix, never skip an unmatched word.
-  for (let start = cursor; start >= 0; start--) {
-    if (start + spoken.length <= cursor) continue;
-    if (spoken.every((word, i) => expected[start + i] === word))
-      return Math.max(cursor, start + spoken.length);
+  if (!spoken.length || progress.verse >= verses.length) return progress;
+  const tokens = [...progress.pending, ...spoken];
+  let verse = progress.verse;
+  let offset = 0;
+  while (verse < verses.length) {
+    const expected = verses[verse];
+    let found = -1;
+    for (let start = offset; start + expected.length <= tokens.length; start++) {
+      if (expected.every((word, i) => tokens[start + i] === word)) {
+        found = start;
+        break;
+      }
+    }
+    if (found < 0) {
+      // A correction may begin in the same result after an incorrect passage.
+      // Keep only a suffix that can still become the required verse.
+      for (let size = Math.min(expected.length - 1, tokens.length - offset); size > 0; size--) {
+        const tail = tokens.slice(-size);
+        if (tail.every((word, i) => word === expected[i])) return { verse, pending: tail };
+      }
+      return { verse, pending: [] };
+    }
+    offset = found + expected.length;
+    verse++;
   }
-  // Reveal the verified prefix even if a later word in the segment is wrong.
-  let matched = 0;
-  while (
-    matched < spoken.length &&
-    expected[cursor + matched] === spoken[matched]
-  )
-    matched++;
-  return cursor + matched;
+  return { verse, pending: [] };
 }

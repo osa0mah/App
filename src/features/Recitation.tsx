@@ -5,80 +5,39 @@ import {
   useSpeechRecognitionEvent,
 } from "expo-speech-recognition";
 import { Surah } from "../content";
-import { advanceRecitation, normalizeArabic } from "./recitation";
+import { matchRecitation, normalizeArabic, RecitationProgress } from "./recitation";
 import { f } from "./featureStyles";
+
 export default function Recitation({ surah }: { surah: Surah }) {
-  const words = useMemo(() => surah.verses.map((v) => v.split(/\s+/)), [surah]);
-  const expected = useMemo(() => words.flat().map(normalizeArabic), [words]);
-  const [cursor, setCursor] = useState(0);
-  const position = useRef(0);
+  const verses = useMemo(
+    () => surah.verses.map((verse) => normalizeArabic(verse).split(" ").filter(Boolean)),
+    [surah],
+  );
+  const progress = useRef<RecitationProgress>({ verse: 0, pending: [] });
+  const [completed, setCompleted] = useState(0);
   const [listening, setListening] = useState(false);
   const [message, setMessage] = useState("");
-  const [transcript, setTranscript] = useState("");
-  const [mode, setMode] = useState<"words" | "verses">("words");
   const active = useRef(true);
-  useEffect(() => {
-    active.current = true;
-    return () => {
-      active.current = false;
-      try {
-        ExpoSpeechRecognitionModule.abort();
-      } catch {
-        /* Recognition may be unavailable on this device. */
-      }
-    };
-  }, []);
-  useSpeechRecognitionEvent("start", () => {
-    if (active.current) setListening(true);
-  });
-  useSpeechRecognitionEvent("end", () => {
-    if (active.current) setListening(false);
-  });
-  useSpeechRecognitionEvent("error", (e) => {
-    if (!active.current || e.error === "aborted") return;
+  const wanted = useRef(false);
+  const session = useRef(0);
+  const retry = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const interruptions = useRef(0);
+  const startedAt = useRef(0);
+  const clearRetry = () => {
+    if (retry.current) clearTimeout(retry.current);
+    retry.current = null;
+  };
+  const stop = () => {
+    session.current++;
+    wanted.current = false;
+    clearRetry();
     setListening(false);
-    setMessage(
-      e.error === "not-allowed"
-        ? "لم يُسمح باستخدام الميكروفون. فعّل الإذن في المتصفح أو إعدادات الجهاز."
-        : e.error === "no-speech"
-          ? "لم نلتقط كلامًا واضحًا. اضغط بدء وحاول مجددًا."
-          : "تعذّر التعرّف على الصوت. تحقق من الاتصال ودعم اللغة العربية ثم حاول مجددًا.",
-    );
-  });
-  useSpeechRecognitionEvent("result", (e) => {
-    if (!active.current || !e.isFinal) return;
-    const heard = e.results[0]?.transcript ?? "";
-    setTranscript(heard);
-    const next = advanceRecitation(expected, position.current, heard);
-    setMessage(
-      next > position.current
-        ? "تمت مطابقة الكلمات الظاهرة مع النص."
-        : "لم تتطابق بداية المقطع مع الكلمة التالية؛ أعد قراءتها بوضوح. قد يخطئ التعرّف الصوتي.",
-    );
-    position.current = next;
-    setCursor(next);
-    if (next === expected.length) {
-      ExpoSpeechRecognitionModule.stop();
-      setMessage(
-        "اكتملت مطابقة نص السورة. هذا لا يُعد تقييمًا للتجويد أو مخارج الحروف.",
-      );
-    }
-  });
-  const start = async () => {
-    setMessage("");
+    ExpoSpeechRecognitionModule.abort();
+  };
+  const beginRecognition = () => {
+    if (!active.current || !wanted.current) return;
     try {
-      if (!ExpoSpeechRecognitionModule.isRecognitionAvailable()) {
-        setMessage(
-          "التعرّف الصوتي غير متاح هنا. على اللابتوب جرّب Chrome أو Edge عبر رابط HTTPS. على الهاتف يلزم إصدار تطوير أصلي يدعم هذه الميزة.",
-        );
-        return;
-      }
-      const permission =
-        await ExpoSpeechRecognitionModule.requestPermissionsAsync();
-      if (!permission.granted) {
-        setMessage("يلزم السماح بالميكروفون لبدء التسميع.");
-        return;
-      }
+      startedAt.current = Date.now();
       ExpoSpeechRecognitionModule.start({
         lang: "ar-SA",
         interimResults: false,
@@ -86,9 +45,89 @@ export default function Recitation({ surah }: { surah: Surah }) {
         maxAlternatives: 1,
       });
     } catch {
-      setMessage(
-        "تعذّر بدء التسميع في هذا الجهاز. جرّب متصفحًا يدعم التعرّف الصوتي.",
-      );
+      wanted.current = false;
+      setListening(false);
+      setMessage("تعذّر تشغيل الميكروفون. اضغط ابدأ التسميع للمحاولة مجددًا.");
+    }
+  };
+  useEffect(() => {
+    active.current = true;
+    return () => {
+      active.current = false;
+      wanted.current = false;
+      if (retry.current) clearTimeout(retry.current);
+      try { ExpoSpeechRecognitionModule.abort(); } catch { /* Device unavailable. */ }
+    };
+  }, []);
+  useSpeechRecognitionEvent("start", () => {
+    if (!active.current) return;
+    if (!wanted.current) { ExpoSpeechRecognitionModule.abort(); return; }
+    setListening(true);
+  });
+  useSpeechRecognitionEvent("end", () => {
+    if (!active.current || !wanted.current) return;
+    // Browsers and mobile recognizers may end even with continuous enabled.
+    // Preserve the session and hidden partial verse through normal pauses.
+    interruptions.current = Date.now() - startedAt.current < 1500
+      ? interruptions.current + 1 : 0;
+    if (interruptions.current >= 3) {
+      wanted.current = false;
+      setListening(false);
+      setMessage("توقف التعرّف الصوتي عدة مرات. تحقق من إذن الميكروفون والاتصال، ثم ابدأ مجددًا.");
+      return;
+    }
+    clearRetry();
+    retry.current = setTimeout(beginRecognition, 350);
+  });
+  useSpeechRecognitionEvent("error", (event) => {
+    if (!active.current || !wanted.current) return;
+    if (event.error === "no-speech") return; // Resume on end after a quiet pause.
+    wanted.current = false;
+    clearRetry();
+    setListening(false);
+    setMessage(event.error === "not-allowed"
+      ? "لم يُسمح باستخدام الميكروفون. فعّل الإذن في المتصفح أو إعدادات الجهاز."
+      : "تعذّر التعرّف على الصوت. تحقق من الاتصال ثم ابدأ التسميع مجددًا.");
+  });
+  useSpeechRecognitionEvent("result", (event) => {
+    if (!active.current || !wanted.current || !event.isFinal) return;
+    interruptions.current = 0;
+    const next = matchRecitation(verses, progress.current, event.results[0]?.transcript ?? "");
+    progress.current = next;
+    setCompleted(next.verse);
+    if (next.verse === verses.length) {
+      stop();
+      setMessage("أتممت تسميع السورة. أحسنت!");
+    }
+  });
+  const start = async () => {
+    if (wanted.current || completed === verses.length) return;
+    wanted.current = true;
+    const request = ++session.current;
+    setListening(true);
+    setMessage("");
+    interruptions.current = 0;
+    try {
+      if (!ExpoSpeechRecognitionModule.isRecognitionAvailable()) {
+        wanted.current = false;
+        setListening(false);
+        setMessage("التعرّف الصوتي غير متاح هنا. على اللابتوب جرّب Chrome أو Edge عبر رابط HTTPS.");
+        return;
+      }
+      const permission = await ExpoSpeechRecognitionModule.requestPermissionsAsync();
+      if (!active.current || !wanted.current || session.current !== request) return;
+      if (!permission.granted) {
+        wanted.current = false;
+        setListening(false);
+        setMessage("يلزم السماح بالميكروفون لبدء التسميع.");
+        return;
+      }
+      beginRecognition();
+    } catch {
+      if (!active.current || session.current !== request) return;
+      wanted.current = false;
+      setListening(false);
+      setMessage("تعذّر بدء التسميع. تحقق من إذن الميكروفون ثم حاول مجددًا.");
     }
   };
 
@@ -97,94 +136,38 @@ export default function Recitation({ surah }: { surah: Surah }) {
       <View style={f.card}>
         <Text style={f.title}>سمّع بصوتك</Text>
         <Text style={f.text}>
-          الآيات مخفية. ابدأ من أول السورة واقرأ بوضوح، ثم توقّف قليلًا حتى
-          يعتمد المتعرّف المقطع. تظهر الكلمات المطابقة بالتتابع، أو الآية بعد
-          اكتمالها حسب اختيارك.
+          اضغط ابدأ التسميع واقرأ من أول السورة. يستمر الميكروفون بالاستماع،
+          وتظهر كل آية بعد مطابقتها كاملة. إذا أخطأت، أعد الآية ولن يظهر النص حتى تطابقها.
         </Text>
-        <Text style={f.note}>
-          بضغط «بدء التسميع» تسمح بالتعرّف الصوتي. قد يرسل المتصفح أو نظام
-          الجهاز الصوت إلى مزوّد خدمته. التطبيق لا يحفظ التسجيل. هذه مطابقة نصية
-          تجريبية، وليست تصحيحًا للتجويد أو تقنية ترتيل نفسها.
-        </Text>
-        <View style={f.row}>
-          {(["words", "verses"] as const).map((value) => (
-            <Pressable
-              accessibilityRole="radio"
-              accessibilityState={{ checked: mode === value }}
-              key={value}
-              style={[f.chip, mode === value && f.selected]}
-              onPress={() => setMode(value)}
-            >
-              <Text style={f.label}>
-                {value === "words" ? "إظهار كلمة بكلمة" : "إظهار الآية كاملة"}
-              </Text>
-            </Pressable>
-          ))}
-        </View>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityState={{ disabled: cursor === expected.length }}
-          disabled={cursor === expected.length}
-          style={f.button}
-          onPress={() => {
-            if (listening) ExpoSpeechRecognitionModule.stop();
-            else void start();
-          }}
-        >
-          <Text style={f.buttonText}>
-            {listening ? "إيقاف الاستماع" : "بدء التسميع"}
-          </Text>
+        <Pressable accessibilityRole="button" disabled={completed === verses.length}
+          accessibilityState={{ disabled: completed === verses.length }} style={f.button}
+          onPress={() => { if (wanted.current) stop(); else void start(); }}>
+          <Text style={f.buttonText}>{listening ? "إيقاف التسميع" : "ابدأ التسميع"}</Text>
         </Pressable>
         <Text accessibilityLiveRegion="polite" style={f.note}>
-          {listening ? "● الميكروفون يستمع الآن" : "الميكروفون متوقف"} ·{" "}
-          {cursor} / {expected.length} كلمة
+          {listening ? "● الميكروفون يستمع الآن" : "الميكروفون متوقف"} · {completed} / {verses.length} آيات
         </Text>
-        <Pressable
-          accessibilityRole="button"
-          style={f.chip}
-          onPress={() => {
-            ExpoSpeechRecognitionModule.abort();
-            position.current = 0;
-            setCursor(0);
-            setTranscript("");
-            setMessage("");
-            setListening(false);
-          }}
-        >
+        <Pressable accessibilityRole="button" style={f.chip} onPress={() => {
+          stop();
+          progress.current = { verse: 0, pending: [] };
+          setCompleted(0);
+          setMessage("");
+        }}>
           <Text style={f.label}>إعادة التسميع من البداية</Text>
         </Pressable>
-        {!!message && (
-          <Text accessibilityLiveRegion="polite" style={f.note}>
-            {message}
-          </Text>
-        )}
-        {!!transcript && (
-          <Text style={f.note}>التقط المتعرّف: {transcript}</Text>
-        )}
+        {!!message && <Text accessibilityLiveRegion="polite" style={f.note}>{message}</Text>}
+        <Text style={f.note}>
+          قد يخطئ التعرّف الصوتي؛ المطابقة لا تقيّم التجويد أو مخارج الحروف.
+          قد يعالج مزوّد المتصفح أو الجهاز الصوت، والتطبيق لا يحفظ التسجيل.
+        </Text>
       </View>
       <View style={f.card}>
-        {words.map((verse, i) => {
-          const start = words.slice(0, i).reduce((n, v) => n + v.length, 0);
-          const complete = cursor >= start + verse.length;
-          return (
-            <Text key={i} style={f.verse}>
-              {verse.map((word, j) => {
-                const visible =
-                  mode === "verses" ? complete : cursor > start + j;
-                return (
-                  <Text
-                    key={j}
-                    accessibilityLabel={visible ? word : "كلمة مخفية"}
-                    style={!visible ? f.hidden : undefined}
-                  >
-                    {visible ? word : "•••"}{" "}
-                  </Text>
-                );
-              })}
-              <Text style={f.source}>﴿{(i + 1).toLocaleString("ar-SA")}﴾</Text>
-            </Text>
-          );
-        })}
+        {surah.verses.map((verse, i) => (
+          <Text key={i} style={f.verse} accessibilityLabel={i < completed ? verse : `الآية ${i + 1} مخفية`}>
+            <Text style={i < completed ? undefined : f.hidden}>{i < completed ? verse : "••• ••• •••"} </Text>
+            <Text style={f.source}>﴿{(i + 1).toLocaleString("ar-SA")}﴾</Text>
+          </Text>
+        ))}
       </View>
     </>
   );
