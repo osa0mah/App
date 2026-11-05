@@ -1,3 +1,4 @@
+import {answerHadithQuestion} from "./hadithAnswers.mjs";
 import { answerLearning } from "./learningAnswers.mjs";
 import { answerTopic, resolveTopic, scholarsIn } from "./topicAnswers.mjs";
 import tafsir from "../data/tafsir/saadi.json" with { type: "json" };
@@ -46,6 +47,8 @@ export async function answerMessage(message, history = [], options = {}) {
     mode: "source",
     ...extra,
   });
+  const hadithAnswer = await answerHadithQuestion(message, history);
+  if (hadithAnswer) return hadithAnswer;
   const legalIntent = /فتو|فتاو|حكم|يجوز|حلال|حرام/.test(normalized) || getScholar(message);
   const learning = answerLearning(message, history, { legalIntent: !!legalIntent, chapterContext: context.chapter });
   if (learning) return learning;

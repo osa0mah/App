@@ -3,17 +3,18 @@ import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
 import { contentBase } from "./contentApi";
 import { f } from "./featureStyles";
 export type ChatSuggestion = {
-  section: "القرآن" | "تعلّم" | "الفتاوى" | "القراء" | "التسميع";
+  section: "القرآن" | "تعلّم" | "الفتاوى" | "القراء" | "التسميع" | "الأحاديث";
   chapter?: number;
   verse?: number;
   scholar?: string;
   query?: string;
+  hadithId?: string;
 };
 export type ChatSource = {
   title: string;
   url: string;
   scholar?: string;
-  kind?: "fatwa" | "tafsir";
+  kind?: "fatwa" | "tafsir" | "hadith";
   actionLabel?: string;
   suggestion?: ChatSuggestion;
 };
@@ -206,6 +207,7 @@ export default function ChatAssistant({
           "فسّر الآية الثانية من الفاتحة",
           "أبغى أستفسر عن صلاة الوتر",
           "ما مقاصد العلم والعمل؟",
+          "حديث إنما الأعمال بالنيات",
           "كيف أبدأ التسميع؟",
         ].map((value) => (
           <Pressable

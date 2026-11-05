@@ -4,8 +4,9 @@ import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
 import { handler as fatwas } from "../netlify/functions/fatwas.mjs";
 import { handler as chat } from "../netlify/functions/chat.mjs";
+import { handler as hadiths } from "../netlify/functions/hadiths.mjs";
 
-export function createPreviewServer({ metroPort = 8081, handlers = { fatwas, chat } } = {}) {
+export function createPreviewServer({ metroPort = 8081, handlers = { fatwas, chat, hadiths } } = {}) {
   const server = http.createServer(async (req, res) => {
     if (!req.url?.startsWith("/") || req.url.startsWith("//")) { res.writeHead(400); res.end(); return; }
     const url = new URL(req.url, "http://preview.local");
@@ -21,7 +22,7 @@ export function createPreviewServer({ metroPort = 8081, handlers = { fatwas, cha
         catch { allowed = false; }
       }
       if (!allowed) { json(403, { error: "طلب من خارج المعاينة المحلية." }); return; }
-      const handle = url.pathname === "/api/fatwas" ? handlers.fatwas : url.pathname === "/api/chat" ? handlers.chat : null;
+      const handle = url.pathname === "/api/fatwas" ? handlers.fatwas : url.pathname === "/api/chat" ? handlers.chat : url.pathname === "/api/hadiths" ? handlers.hadiths : null;
       if (!handle) { json(404, { error: "الخدمة غير موجودة." }); return; }
       try {
         const chunks = []; let bytes = 0;

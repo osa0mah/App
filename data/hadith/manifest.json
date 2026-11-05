@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-11-05T18:21:39.254Z",
+  "stats": {
+    "total": 31997,
+    "albani": 13821,
+    "muttafaq": 1254,
+    "sahihayn": 14940
+  },
+  "collections": [
+    {
+      "id": "bukhari",
+      "title": "صحيح البخاري",
+      "total": 7589,
+      "accepted": 7580,
+      "excluded": 9,
+      "blank": 9
+    },
+    {
+      "id": "muslim",
+      "title": "صحيح مسلم",
+      "total": 7563,
+      "accepted": 7360,
+      "excluded": 203,
+      "blank": 203
+    },
+    {
+      "id": "abudawud",
+      "title": "سنن أبي داود",
+      "total": 5274,
+      "accepted": 3570,
+      "excluded": 1704,
+      "blank": 2
+    },
+    {
+      "id": "tirmidhi",
+      "title": "جامع الترمذي",
+      "total": 3998,
+      "accepted": 2616,
+      "excluded": 1382,
+      "blank": 74
+    },
+    {
+      "id": "nasai",
+      "title": "سنن النسائي",
+      "total": 5765,
+      "accepted": 4596,
+      "excluded": 1169,
+      "blank": 86
+    },
+    {
+      "id": "ibnmajah",
+      "title": "سنن ابن ماجه",
+      "total": 4343,
+      "accepted": 3039,
+      "excluded": 1304,
+      "blank": 5
+    },
+    {
+      "id": "hadeethenc",
+      "title": "موسوعة الأحاديث النبوية",
+      "total": 3582,
+      "accepted": 3236,
+      "excluded": 346
+    }
+  ],
+  "sources": [
+    {
+      "id": "hadith-api",
+      "title": "Hadith API",
+      "url": "https://github.com/fawazahmed0/hadith-api",
+      "version": "df57907be35291c91ad6a6691180e22ca9920784",
+      "license": "Unlicense",
+      "notice": "This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to <https://unlicense.org>\n"
+    },
+    {
+      "id": "hadeethenc",
+      "title": "موسوعة الأحاديث النبوية",
+      "url": "https://hadeethenc.com/ar",
+      "version": "1.8.0",
+      "notice": "#---------------------------\r\n# Translated Prophetic Hadiths\r\n# Language: العربية\r\n# Source: https://hadeethenc.com/ar\r\n# Last update: 2026-10-14 00:00:55 (v1.8.0)\r\n# Check for updates: https://hadeethenc.com/en/check/ar/v1.8.0\r\n# PLEASE DON'T REMOVE THIS IMPORTANT INFORMATION!\r\n#---------------------------",
+      "termsUrl": "https://hadeethenc.com/ar/home",
+      "downloadUrl": "https://hadeethenc.com/ar/browse/download/ar/csv"
+    }
+  ],
+  "sha256": "6eabaaf1173f0acff343ea7c8255a8333cb03564d1011dfeff1591312a3b3f52",
+  "documents": [
+    {
+      "url": "https://hadeethenc.com/ar/browse/download/ar/csv",
+      "bytes": 10451301,
+      "sha256": "81d58b15f67efe56a8e12dd274953019ad643e13b28500978c33bd6ecdcfed74"
+    },
+    {
+      "url": "https://hadeethenc.com/robots.txt",
+      "bytes": 131,
+      "sha256": "15c9f7a9194b4cfb349dc58f0323b7e3d85b65fb51ecb4e612803a5cbfb6aa24"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/editions/ara-abudawud.json",
+      "bytes": 7345422,
+      "sha256": "216139c5f40a8147e700d62ffa3b5b2fe45d0e034f86941a193c598c10056189"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/editions/ara-bukhari.json",
+      "bytes": 9770083,
+      "sha256": "e34a3402889ca378871da3c5984b7875c680920e93f1c8738ac7afe502179562"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/editions/ara-ibnmajah.json",
+      "bytes": 5583102,
+      "sha256": "b406e6be81588ab0ec1ddbed32f5fd95bbcdda242c460d88331e82eb5c2bc0aa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/editions/ara-muslim.json",
+      "bytes": 8685140,
+      "sha256": "194073b24090c5368e4d14a3f55c9e0ef144c7437bd7e5aa83aa4d2bc54a8ea0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/editions/ara-nasai.json",
+      "bytes": 7152291,
+      "sha256": "c705983c19bb089c87cd6531aff609bd94d862183ed0859115b0ff991826a956"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/editions/ara-tirmidhi.json",
+      "bytes": 7120806,
+      "sha256": "408028cd56329ed78edbe3ad443beb96b58e16c3e5bd49f9bc7b0eac77c8820f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fawazahmed0/hadith-api/df57907be35291c91ad6a6691180e22ca9920784/LICENSE",
+      "bytes": 1211,
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ test("local preview serves API responses, bounds bodies, blocks other origins, a
   await listen(upstream);
   const calls=[];
   const handle = async event => { calls.push(event);return {statusCode:200,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"*"},body:JSON.stringify(event)}; };
-  const preview=createPreviewServer({metroPort:upstream.address().port,handlers:{fatwas:handle,chat:handle}});
+  const preview=createPreviewServer({metroPort:upstream.address().port,handlers:{fatwas:handle,chat:handle,hadiths:handle}});
   await listen(preview);const origin=`http://127.0.0.1:${preview.address().port}`;
   try {
     assert.equal(await (await fetch(origin+"/?section=reader")).text(),"development:/?section=reader");
@@ -30,7 +30,9 @@ test("local preview serves API responses, bounds bodies, blocks other origins, a
     assert.equal((await fetch(origin+"/api/chat",{method:"POST",body:"x".repeat(48001)})).status,413);
     assert.equal((await fetch(origin+"/api/chat",{method:"POST",headers:{Origin:"https://evil.example"},body:"{}"})).status,403);
     assert.equal((await fetch(origin+"/api/unknown")).status,404);
-    assert.equal(calls.length,2);
+    const hadiths=await fetch(origin+"/api/hadiths?q="+encodeURIComponent("النيات"));
+    assert.equal((await hadiths.json()).queryStringParameters.q,"النيات");
+    assert.equal(calls.length,3);
     await new Promise((ok,fail)=>{
       const socket=new WebSocket(origin.replace("http:","ws:")+"/hot");
       const timer=setTimeout(()=>fail(Error("HMR websocket handshake timed out")),3000);

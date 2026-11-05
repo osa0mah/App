@@ -20,6 +20,12 @@
   force = true
 
 [[redirects]]
+  from = "/api/hadiths"
+  to = "/.netlify/functions/hadiths"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -37,7 +43,7 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["generated/fatwa-catalog.json"]
+  included_files = ["generated/fatwa-catalog.json", "data/hadith/catalog.json.gz", "data/hadith/manifest.json"]
 
 [[plugins]]
   package = "./netlify/plugins/fatwa-catalog-cache"
