@@ -40,7 +40,8 @@
           "microphonePermission": "اسمح لأثر القرآن بسماع تلاوتك أثناء التسميع.",
           "speechRecognitionPermission": "اسمح لأثر القرآن بتحويل تلاوتك إلى نص لإظهار الكلمات المطابقة."
         }
-      ]
+      ],
+      "expo-video"
     ],
     "scheme": "atharalquran"
   }

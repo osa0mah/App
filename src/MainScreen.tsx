@@ -24,10 +24,11 @@ import ChatAssistant, {
 } from "./features/ChatAssistant";
 import Fatwas from "./features/Fatwas";
 import Hadiths from "./features/Hadiths";
+import Tajweed from "./features/Tajweed";
 import Recitation from "./features/Recitation";
 import QuranReader from "./features/QuranReader";
 const tabs = ["الرئيسية", "القرآن", "تعلّم", "المساعد"] as const;
-type Screen = (typeof tabs)[number] | "القراء" | "الفتاوى" | "التسميع" | "الأحاديث";
+type Screen = (typeof tabs)[number] | "القراء" | "الفتاوى" | "التسميع" | "الأحاديث" | "التجويد";
 const colors = {
   ink: "#193D35",
   muted: "#738077",
@@ -60,7 +61,7 @@ function Button({
 export default function App() {
   const router = useRouter();
   const params = useLocalSearchParams<{ section?: string }>();
-  const valid: Screen[] = [...tabs, "القراء", "الفتاوى", "التسميع", "الأحاديث"];
+  const valid: Screen[] = [...tabs, "القراء", "الفتاوى", "التسميع", "الأحاديث", "التجويد"];
   const screen: Screen = valid.includes(params.section as Screen)
     ? (params.section as Screen)
     : "الرئيسية";
@@ -84,7 +85,10 @@ export default function App() {
     query?: string;
   }>({});
   const [hadithContext, setHadithContext] = useState<{query?: string; id?: string}>({});
+  const [tajweedCompleted, setTajweedCompleted] = useState<Set<string>>(() => new Set());
+  const [tajweedLesson, setTajweedLesson] = useState<string | undefined>();
   const openChatSection = (target: ChatSuggestion) => {
+    if (target.section === "التجويد") setTajweedLesson(target.lessonId);
     setReaderStartVerse(target.verse ?? 1);
     if (target.section === "الأحاديث") setHadithContext({query: target.query, id: target.hadithId});
     setLearningChapter(target.section === "تعلّم" ? target.chapter ?? null : null);
@@ -108,6 +112,7 @@ export default function App() {
     verse: number;
   } | null>(null);
   const navigate = (target: Screen) => {
+    if (target === "التجويد") setTajweedLesson(undefined);
     if (target === "الأحاديث") setHadithContext({});
     setLearningChapter(null);
     setScreen(target);
@@ -213,6 +218,7 @@ export default function App() {
                   { name: "تعلّم", icon: "✧", desc: "مقاصد السور وهداياتها" },
                   { name: "القراء", icon: "♫", desc: "اختر صوتًا يرافقك" },
                   { name: "الأحاديث", icon: "❧", desc: "اقرأ الحديث ومصدره وحكمه" },
+                  { name: "التجويد", icon: "◈", desc: "تعلّم الأحكام وشاهد تطبيقها" },
                   {
                     name: "التسميع",
                     icon: "◎",
@@ -283,6 +289,7 @@ export default function App() {
           </>
         )}
         {screen === "القراء" && <Readers />}
+        {screen === "التجويد" && <Tajweed initialLesson={tajweedLesson} onContentStart={scrollToStart} completed={tajweedCompleted} onCompletedChange={setTajweedCompleted} />}
         {screen === "الأحاديث" && <Hadiths initialQuery={hadithContext.query} initialId={hadithContext.id} onContentStart={scrollToStart} />}
         {screen === "الفتاوى" && (
           <Fatwas

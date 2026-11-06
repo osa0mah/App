@@ -1,0 +1,20 @@
+// Metadata and streaming URLs only. No audio/video is downloaded or republished.
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+const cache=path.join(tmpdir(),'athar-tajweed-metadata');await mkdir(cache,{recursive:true});
+const receipts=[];
+async function get(url){const key=createHash('sha256').update(url).digest('hex');const file=path.join(cache,key);let text;try{text=await readFile(file,'utf8');}catch{}if(!text){const r=await fetch(url,{signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error(`HTTP ${r.status}: ${url}`);text=await r.text();await writeFile(file,text);}receipts.push({url,sha256:createHash('sha256').update(text).digest('hex')});return JSON.parse(text);}
+const query='title:"شرح التجويد فيديو د أيمن رشدي سويد"';
+const search=await get('https://archive.org/advancedsearch.php?'+new URLSearchParams({q:query,output:'json',rows:'200','fl[]':'identifier,title'}));
+const wanted=[1,2,11,12,13,14,10,18,55,58,80,19,20,21,22,23,24,26,27,28,29,30,100,103,106,88,38,92];
+const selected=wanted.map(number=>{const match=search.response.docs.find(item=>Number(item.title.match(/سويد\s+(\d+)\./)?.[1])===number);if(!match)throw Error(`Missing Ayman lesson ${number}`);return{number,id:match.identifier};});
+const clips=[];let cursor=0;
+await Promise.all(Array.from({length:3},async()=>{while(cursor<selected.length){const item=selected[cursor++];const url='https://archive.org/metadata/'+encodeURIComponent(item.id);const data=await get(url);if(data.metadata.mediatype!=='movies'||!/أيمن.*سويد/.test(data.metadata.title))throw Error('Wrong video attribution');const file=data.files.find(file=>file.name.endsWith('.mp4')&&['MPEG4','h.264'].includes(file.format));if(!file)throw Error(`No playable video ${item.id}`);clips.push({id:`ayman-${item.number}`,teacher:'ayman',type:'video',title:data.metadata.title,itemId:item.id,sourceUrl:'https://archive.org/details/'+encodeURIComponent(item.id),metadataUrl:url,fileName:file.name,streamUrl:'https://archive.org/download/'+encodeURIComponent(item.id)+'/'+encodeURIComponent(file.name),duration:Number(file.length)||null,size:Number(file.size),attribution:'بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا.'});}}));
+const faresId='20_20240810_202408';const fares=await get('https://archive.org/metadata/'+faresId);
+if(!/فارس عنتر/.test(fares.metadata.title)||fares.metadata.mediatype!=='audio')throw Error('Wrong audio collection');
+for(const file of fares.files.filter(file=>file.name.endsWith('.m4a'))){const number=Number(file.name.match(/^\s*(\d+)/)?.[1]);if(!number)throw Error('Missing audio lesson number');clips.push({id:`fares-${number}`,teacher:'fares',type:'audio',title:file.name.replace(/\.m4a$/,''),itemId:faresId,sourceUrl:'https://archive.org/details/'+faresId,metadataUrl:'https://archive.org/metadata/'+faresId,fileName:file.name,streamUrl:'https://archive.org/download/'+faresId+'/'+encodeURIComponent(file.name),duration:Number(file.length)||null,size:Number(file.size),attribution:'بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا.'});}
+clips.sort((a,b)=>a.teacher.localeCompare(b.teacher)||Number(a.id.split('-')[1])-Number(b.id.split('-')[1]));
+const result={retrievedAt:new Date().toISOString(),provider:'Internet Archive',audioSeries:{itemId:faresId,title:fares.metadata.title,sourceUrl:'https://archive.org/details/'+faresId},note:'مراجع لتسجيلات منشورة لدى مزودها الأصلي، دون تنزيلها داخل المشروع أو إعادة رفعها. فهرسة العنوان لا تعني أن مؤلف الشرح المكتوب هو المعلّم، ولا تثبت صفة القناة الرسمية. قد تتغير إتاحة المقاطع.',teachers:[{id:'ayman',name:'أيمن سويد',availableType:'video'},{id:'fares',name:'فارس عنتر',availableType:'audio'}],clips,documents:receipts};
+await writeFile(new URL('../data/tajweed/media.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(`Media indexed: ${clips.filter(c=>c.type==='video').length} videos, ${clips.filter(c=>c.type==='audio').length} audio lessons.`);

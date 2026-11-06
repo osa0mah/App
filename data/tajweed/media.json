@@ -1,0 +1,958 @@
+{
+  "retrievedAt": "2026-11-06T13:51:29.269Z",
+  "provider": "Internet Archive",
+  "audioSeries": {
+    "itemId": "20_20240810_202408",
+    "title": "دورة التجويد المتكاملة للشيخ فارس عنتر صوتية",
+    "sourceUrl": "https://archive.org/details/20_20240810_202408"
+  },
+  "note": "مراجع لتسجيلات منشورة لدى مزودها الأصلي، دون تنزيلها داخل المشروع أو إعادة رفعها. فهرسة العنوان لا تعني أن مؤلف الشرح المكتوب هو المعلّم، ولا تثبت صفة القناة الرسمية. قد تتغير إتاحة المقاطع.",
+  "teachers": [
+    {
+      "id": "ayman",
+      "name": "أيمن سويد",
+      "availableType": "video"
+    },
+    {
+      "id": "fares",
+      "name": "فارس عنتر",
+      "availableType": "audio"
+    }
+  ],
+  "clips": [
+    {
+      "id": "ayman-1",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 001. الملف الأول معنى التجويد",
+      "itemId": "001.0",
+      "sourceUrl": "https://archive.org/details/001.0",
+      "metadataUrl": "https://archive.org/metadata/001.0",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 001. الملف الأول معنى التجويد.mp4",
+      "streamUrl": "https://archive.org/download/001.0/__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20001.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D9%85%D8%B9%D9%86%D9%89%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF.mp4",
+      "duration": 383.45,
+      "size": 14989851,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-2",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 002. الملف الثاني مراتب القراءة",
+      "itemId": "002.002",
+      "sourceUrl": "https://archive.org/details/002.002",
+      "metadataUrl": "https://archive.org/metadata/002.002",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 002. الملف الثاني مراتب القراءة.mp4",
+      "streamUrl": "https://archive.org/download/002.002/__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20002.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D9%85%D8%B1%D8%A7%D8%AA%D8%A8%20%D8%A7%D9%84%D9%82%D8%B1%D8%A7%D8%A1%D8%A9.mp4",
+      "duration": 475.34,
+      "size": 19318140,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-10",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 010. الملف العاشر أحكام الميم الساكنة",
+      "itemId": "010.00.",
+      "sourceUrl": "https://archive.org/details/010.00.",
+      "metadataUrl": "https://archive.org/metadata/010.00.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 010. الملف العاشر أحكام الميم الساكنة.mp4",
+      "streamUrl": "https://archive.org/download/010.00./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20010.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B9%D8%A7%D8%B4%D8%B1%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D9%8A%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D9%83%D9%86%D8%A9.mp4",
+      "duration": 778.61,
+      "size": 28377718,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-11",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 011. الملف الحادي عشر أحكام النون الساكنة الأظهار",
+      "itemId": "011.011.",
+      "sourceUrl": "https://archive.org/details/011.011.",
+      "metadataUrl": "https://archive.org/metadata/011.011.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 011. الملف الحادي عشر أحكام النون الساكنة   الأظهار.mp4",
+      "streamUrl": "https://archive.org/download/011.011./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20011.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AD%D8%A7%D8%AF%D9%8A%20%D8%B9%D8%B4%D8%B1%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B3%D8%A7%D9%83%D9%86%D8%A9%20%20%20%D8%A7%D9%84%D8%A3%D8%B8%D9%87%D8%A7%D8%B1.mp4",
+      "duration": 761.71,
+      "size": 25919063,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-12",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 012. الملف الثاني عشر أحكام النون الساكنة الأخفاء",
+      "itemId": "012.012.",
+      "sourceUrl": "https://archive.org/details/012.012.",
+      "metadataUrl": "https://archive.org/metadata/012.012.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 012. الملف الثاني عشر أحكام النون الساكنة   الأخفاء.mp4",
+      "streamUrl": "https://archive.org/download/012.012./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20012.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%B9%D8%B4%D8%B1%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B3%D8%A7%D9%83%D9%86%D8%A9%20%20%20%D8%A7%D9%84%D8%A3%D8%AE%D9%81%D8%A7%D8%A1.mp4",
+      "duration": 1068.86,
+      "size": 31036260,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-13",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 013. الملف الثالث عشر أحكام النون الساكنة الأقلاب",
+      "itemId": "013.013.",
+      "sourceUrl": "https://archive.org/details/013.013.",
+      "metadataUrl": "https://archive.org/metadata/013.013.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 013. الملف الثالث عشر أحكام النون الساكنة   الأقلاب.mp4",
+      "streamUrl": "https://archive.org/download/013.013./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20013.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%20%D8%B9%D8%B4%D8%B1%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B3%D8%A7%D9%83%D9%86%D8%A9%20%20%20%D8%A7%D9%84%D8%A3%D9%82%D9%84%D8%A7%D8%A8.mp4",
+      "duration": 869.82,
+      "size": 30449607,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-14",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 014. الملف الرابع عشر أحكام النون الساكنة الأدغام",
+      "itemId": "014.014.",
+      "sourceUrl": "https://archive.org/details/014.014.",
+      "metadataUrl": "https://archive.org/metadata/014.014.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 014. الملف الرابع عشر أحكام النون الساكنة   الأدغام.mp4",
+      "streamUrl": "https://archive.org/download/014.014./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20014.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%20%D8%B9%D8%B4%D8%B1%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B3%D8%A7%D9%83%D9%86%D8%A9%20%20%20%D8%A7%D9%84%D8%A3%D8%AF%D8%BA%D8%A7%D9%85.mp4",
+      "duration": 1129.37,
+      "size": 36626158,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-18",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 018. الملف الثامن عشر النون والميم المشددتين",
+      "itemId": "018.018.",
+      "sourceUrl": "https://archive.org/details/018.018.",
+      "metadataUrl": "https://archive.org/metadata/018.018.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 018. الملف الثامن عشر النون والميم المشددتين.mp4",
+      "streamUrl": "https://archive.org/download/018.018./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20018.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%20%D8%B9%D8%B4%D8%B1%20%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D9%88%D8%A7%D9%84%D9%85%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AF%D8%AF%D8%AA%D9%8A%D9%86.mp4",
+      "duration": 273.53,
+      "size": 10038654,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-19",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 019. الملف التاسع عشر أنواع الــمــدود",
+      "itemId": "019.019.",
+      "sourceUrl": "https://archive.org/details/019.019.",
+      "metadataUrl": "https://archive.org/metadata/019.019.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 019. الملف التاسع عشر أنواع الــمــدود.mp4",
+      "streamUrl": "https://archive.org/download/019.019./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20019.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B3%D8%B9%20%D8%B9%D8%B4%D8%B1%20%D8%A3%D9%86%D9%88%D8%A7%D8%B9%20%D8%A7%D9%84%D9%80%D9%80%D9%85%D9%80%D9%80%D8%AF%D9%88%D8%AF.mp4",
+      "duration": 375.3,
+      "size": 13738277,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-20",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 020. الملف العشرون المــــد الطبيعي",
+      "itemId": "020.020.",
+      "sourceUrl": "https://archive.org/details/020.020.",
+      "metadataUrl": "https://archive.org/metadata/020.020.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 020. الملف العشرون المــــد الطبيعي.mp4",
+      "streamUrl": "https://archive.org/download/020.020./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20020.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D8%A7%D9%84%D9%85%D9%80%D9%80%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A.mp4",
+      "duration": 714.83,
+      "size": 27314428,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-21",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 021. الملف الحادي والعشرون مــد الــبدل",
+      "itemId": "021.021",
+      "sourceUrl": "https://archive.org/details/021.021",
+      "metadataUrl": "https://archive.org/metadata/021.021",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 021. الملف الحادي والعشرون مــد الــبدل.mp4",
+      "streamUrl": "https://archive.org/download/021.021/__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20021.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AD%D8%A7%D8%AF%D9%8A%20%D9%88%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%80%D9%80%D8%A8%D8%AF%D9%84.mp4",
+      "duration": 337.39,
+      "size": 12831068,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-22",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 022. الملف الثاني و العشرون مــد الــعــوض",
+      "itemId": "022.022.",
+      "sourceUrl": "https://archive.org/details/022.022.",
+      "metadataUrl": "https://archive.org/metadata/022.022.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 022. الملف الثاني و العشرون مــد الــعــوض.mp4",
+      "streamUrl": "https://archive.org/download/022.022./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20022.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%80%D9%80%D8%B9%D9%80%D9%80%D9%88%D8%B6.mp4",
+      "duration": 323.45,
+      "size": 10054917,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-23",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 023. الملف الثالث و العشرون الــمــد المــتصــل",
+      "itemId": "023.023.",
+      "sourceUrl": "https://archive.org/details/023.023.",
+      "metadataUrl": "https://archive.org/metadata/023.023.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 023. الملف الثالث و العشرون الــمــد المــتصــل.mp4",
+      "streamUrl": "https://archive.org/download/023.023./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20023.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D8%A7%D9%84%D9%80%D9%80%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%85%D9%80%D9%80%D8%AA%D8%B5%D9%80%D9%80%D9%84.mp4",
+      "duration": 554.1,
+      "size": 18118319,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-24",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 024. الملف الرابع و العشرون الــمــد المــنـفـصــل",
+      "itemId": "024.024.",
+      "sourceUrl": "https://archive.org/details/024.024.",
+      "metadataUrl": "https://archive.org/metadata/024.024.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 024. الملف الرابع و العشرون الــمــد المــنـفـصــل.mp4",
+      "streamUrl": "https://archive.org/download/024.024./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20024.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D8%A7%D9%84%D9%80%D9%80%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%85%D9%80%D9%80%D9%86%D9%80%D9%81%D9%80%D8%B5%D9%80%D9%80%D9%84.mp4",
+      "duration": 305.74,
+      "size": 11199454,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-26",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 026. الملف السادس و العشرون مــد الــصلة",
+      "itemId": "026.026.",
+      "sourceUrl": "https://archive.org/details/026.026.",
+      "metadataUrl": "https://archive.org/metadata/026.026.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 026. الملف السادس و العشرون مــد الــصلة.mp4",
+      "streamUrl": "https://archive.org/download/026.026./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20026.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B3%D8%A7%D8%AF%D8%B3%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%80%D9%80%D8%B5%D9%84%D8%A9.mp4",
+      "duration": 701.73,
+      "size": 24189029,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-27",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 027. لملف السابع و العشرون الــمــد اللازم",
+      "itemId": "027.027.",
+      "sourceUrl": "https://archive.org/details/027.027.",
+      "metadataUrl": "https://archive.org/metadata/027.027.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 027. لملف السابع و العشرون الــمــد اللازم.mp4",
+      "streamUrl": "https://archive.org/download/027.027./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20027.%20%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B3%D8%A7%D8%A8%D8%B9%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D8%A7%D9%84%D9%80%D9%80%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%84%D8%A7%D8%B2%D9%85.mp4",
+      "duration": 698.46,
+      "size": 26101768,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-28",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 028. الملف الثامن و العشرون الــمــد الـعـارض للسكون",
+      "itemId": "028.028.",
+      "sourceUrl": "https://archive.org/details/028.028.",
+      "metadataUrl": "https://archive.org/metadata/028.028.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 028. الملف الثامن و العشرون الــمــد الـعـارض للسكون.mp4",
+      "streamUrl": "https://archive.org/download/028.028./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20028.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D8%A7%D9%84%D9%80%D9%80%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%80%D8%B9%D9%80%D8%A7%D8%B1%D8%B6%20%D9%84%D9%84%D8%B3%D9%83%D9%88%D9%86.mp4",
+      "duration": 426.13,
+      "size": 15822640,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-29",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 029. الملف التاسع و العشرون الــمــد اللـيـن",
+      "itemId": "029.029.",
+      "sourceUrl": "https://archive.org/details/029.029.",
+      "metadataUrl": "https://archive.org/metadata/029.029.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 029. الملف التاسع و العشرون الــمــد اللـيـن.mp4",
+      "streamUrl": "https://archive.org/download/029.029./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20029.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B3%D8%B9%20%D9%88%20%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%88%D9%86%20%D8%A7%D9%84%D9%80%D9%80%D9%85%D9%80%D9%80%D8%AF%20%D8%A7%D9%84%D9%84%D9%80%D9%8A%D9%80%D9%86.mp4",
+      "duration": 468.58,
+      "size": 16027766,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-30",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 030. الملف الثلاثون علاقة مد اللين بالمد العارض للسكون",
+      "itemId": "030.30.",
+      "sourceUrl": "https://archive.org/details/030.30.",
+      "metadataUrl": "https://archive.org/metadata/030.30.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 030. الملف الثلاثون علاقة مد اللين بالمد العارض للسكون.mp4",
+      "streamUrl": "https://archive.org/download/030.30./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20030.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D9%88%D9%86%20%D8%B9%D9%84%D8%A7%D9%82%D8%A9%20%D9%85%D8%AF%20%D8%A7%D9%84%D9%84%D9%8A%D9%86%20%D8%A8%D8%A7%D9%84%D9%85%D8%AF%20%D8%A7%D9%84%D8%B9%D8%A7%D8%B1%D8%B6%20%D9%84%D9%84%D8%B3%D9%83%D9%88%D9%86.mp4",
+      "duration": 523.61,
+      "size": 17006669,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-38",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 038. الملف الثامن و الثلاثون الوقف والابتداء",
+      "itemId": "038.38.",
+      "sourceUrl": "https://archive.org/details/038.38.",
+      "metadataUrl": "https://archive.org/metadata/038.38.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 038. الملف الثامن و الثلاثون الوقف والابتداء.mp4",
+      "streamUrl": "https://archive.org/download/038.38./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20038.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%20%D9%88%20%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D9%88%D9%86%20%D8%A7%D9%84%D9%88%D9%82%D9%81%20%D9%88%D8%A7%D9%84%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A1.mp4",
+      "duration": 662.35,
+      "size": 22373756,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-55",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 055. الملف الخامس والخمسون اللام الشمسية والقمرية",
+      "itemId": "055.055.",
+      "sourceUrl": "https://archive.org/details/055.055.",
+      "metadataUrl": "https://archive.org/metadata/055.055.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 055. الملف الخامس والخمسون اللام الشمسية والقمرية.mp4",
+      "streamUrl": "https://archive.org/download/055.055./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20055.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%20%D9%88%D8%A7%D9%84%D8%AE%D9%85%D8%B3%D9%88%D9%86%20%D8%A7%D9%84%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D8%B4%D9%85%D8%B3%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D9%82%D9%85%D8%B1%D9%8A%D8%A9.mp4",
+      "duration": 651.06,
+      "size": 22091026,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-58",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 058. الملف الثامن والخمسون مخارج الحروف",
+      "itemId": "058.058.",
+      "sourceUrl": "https://archive.org/details/058.058.",
+      "metadataUrl": "https://archive.org/metadata/058.058.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 058. الملف الثامن والخمسون مخارج الحروف.mp4",
+      "streamUrl": "https://archive.org/download/058.058./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20058.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%20%D9%88%D8%A7%D9%84%D8%AE%D9%85%D8%B3%D9%88%D9%86%20%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81.mp4",
+      "duration": 234.66,
+      "size": 7984685,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-80",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 080. الملف الثامنون صفات الحروف",
+      "itemId": "080.080",
+      "sourceUrl": "https://archive.org/details/080.080",
+      "metadataUrl": "https://archive.org/metadata/080.080",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 080. الملف الثامنون صفات الحروف.mp4",
+      "streamUrl": "https://archive.org/download/080.080/__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20080.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%D9%88%D9%86%20%D8%B5%D9%81%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81.mp4",
+      "duration": 253.1,
+      "size": 8033645,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-88",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 088. الملف الثامن والثمانين القلقلة",
+      "itemId": "088.088.",
+      "sourceUrl": "https://archive.org/details/088.088.",
+      "metadataUrl": "https://archive.org/metadata/088.088.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 088. الملف الثامن والثمانين القلقلة.mp4",
+      "streamUrl": "https://archive.org/download/088.088./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20088.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86%20%D9%88%D8%A7%D9%84%D8%AB%D9%85%D8%A7%D9%86%D9%8A%D9%86%20%D8%A7%D9%84%D9%82%D9%84%D9%82%D9%84%D8%A9.mp4",
+      "duration": 489.22,
+      "size": 21731130,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-92",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 092. الملف الثاني و التسعين همزة الوصل",
+      "itemId": "092.092.",
+      "sourceUrl": "https://archive.org/details/092.092.",
+      "metadataUrl": "https://archive.org/metadata/092.092.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 092. الملف الثاني و التسعين همزة الوصل.mp4",
+      "streamUrl": "https://archive.org/download/092.092./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20092.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%B3%D8%B9%D9%8A%D9%86%20%D9%87%D9%85%D8%B2%D8%A9%20%D8%A7%D9%84%D9%88%D8%B5%D9%84.mp4",
+      "duration": 727.23,
+      "size": 24656152,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-100",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 100. الملف المائة الله",
+      "itemId": "alfirdwsiy1433_gmail_100._201704",
+      "sourceUrl": "https://archive.org/details/alfirdwsiy1433_gmail_100._201704",
+      "metadataUrl": "https://archive.org/metadata/alfirdwsiy1433_gmail_100._201704",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 100. الملف المائة الله.mp4",
+      "streamUrl": "https://archive.org/download/alfirdwsiy1433_gmail_100._201704/__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20100.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D8%A9%20%D8%A7%D9%84%D9%84%D9%87.mp4",
+      "duration": 188.85,
+      "size": 6714753,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-103",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 103. الملف الثالث بعد المائة التفخيم والترقيق",
+      "itemId": "103.03.",
+      "sourceUrl": "https://archive.org/details/103.03.",
+      "metadataUrl": "https://archive.org/metadata/103.03.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 103. الملف الثالث بعد المائة التفخيم والترقيق.mp4",
+      "streamUrl": "https://archive.org/download/103.03./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20103.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%20%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D8%A9%20%D8%A7%D9%84%D8%AA%D9%81%D8%AE%D9%8A%D9%85%20%D9%88%D8%A7%D9%84%D8%AA%D8%B1%D9%82%D9%8A%D9%82.mp4",
+      "duration": 658.94,
+      "size": 28054249,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "ayman-106",
+      "teacher": "ayman",
+      "type": "video",
+      "title": "شرح التجويد فيديو د أيمن رشدي سويد 106. الملف السادس بعد المائة حكم الراء",
+      "itemId": "106.06.",
+      "sourceUrl": "https://archive.org/details/106.06.",
+      "metadataUrl": "https://archive.org/metadata/106.06.",
+      "fileName": "__شرح التجويد فيديو د أيمن رشدي سويد _ 106. الملف السادس بعد المائة حكم الراء.mp4",
+      "streamUrl": "https://archive.org/download/106.06./__%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%AF%20%D8%A3%D9%8A%D9%85%D9%86%20%D8%B1%D8%B4%D8%AF%D9%8A%20%D8%B3%D9%88%D9%8A%D8%AF%20_%20106.%20%D8%A7%D9%84%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%B3%D8%A7%D8%AF%D8%B3%20%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D8%A9%20%D8%AD%D9%83%D9%85%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A1.mp4",
+      "duration": 981.18,
+      "size": 38466235,
+      "attribution": "بحسب عنوان التسجيل وفهرس الملفات المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-1",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "01شرح حكم الإظهار  مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "01شرح حكم الإظهار  مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/01%D8%B4%D8%B1%D8%AD%20%D8%AD%D9%83%D9%85%20%D8%A7%D9%84%D8%A5%D8%B8%D9%87%D8%A7%D8%B1%20%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%20%D9%88%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%A7%D8%B1%D8%B3%20%D8%B9%D9%86%D8%AA%D8%B1.m4a",
+      "duration": 2009.15,
+      "size": 32493740,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-2",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "02شرح الإدغام بغنة مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "02شرح الإدغام بغنة مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/02%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%A5%D8%AF%D8%BA%D8%A7%D9%85%20%D8%A8%D8%BA%D9%86%D8%A9%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%20%D9%88%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%A7%D8%B1%D8%B3%20%D8%B9%D9%86%D8%AA%D8%B1.m4a",
+      "duration": 2771.21,
+      "size": 44818033,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-3",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "03شرح الإدغام بغير غنة  مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "03شرح الإدغام بغير غنة  مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/03%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%A5%D8%AF%D8%BA%D8%A7%D9%85%20%D8%A8%D8%BA%D9%8A%D8%B1%20%D8%BA%D9%86%D8%A9%20%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%20%D9%88%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%A7%D8%B1%D8%B3%20%D8%B9%D9%86%D8%AA%D8%B1.m4a",
+      "duration": 2354.62,
+      "size": 38080742,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-4",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "04شرح حكم الإقلاب  مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "04شرح حكم الإقلاب  مع التطبيق العملي والتدريبات من دورة أحكام التجويد المتكاملة مع فارس عنتر.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/04%D8%B4%D8%B1%D8%AD%20%D8%AD%D9%83%D9%85%20%D8%A7%D9%84%D8%A5%D9%82%D9%84%D8%A7%D8%A8%20%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%20%D9%88%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%A7%D8%B1%D8%B3%20%D8%B9%D9%86%D8%AA%D8%B1.m4a",
+      "duration": 2020.56,
+      "size": 32678078,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-5",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "05الإخفاء الحقيقي مع القاف والحروف المفخمة وطريقة اخراج الغنة المفخمة مع دورة أحكام التجويد",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "05الإخفاء الحقيقي مع القاف والحروف المفخمة وطريقة اخراج الغنة المفخمة مع دورة أحكام التجويد.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/05%D8%A7%D9%84%D8%A5%D8%AE%D9%81%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%82%D9%8A%D9%82%D9%8A%20%D9%85%D8%B9%20%D8%A7%D9%84%D9%82%D8%A7%D9%81%20%D9%88%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D9%85%D9%81%D8%AE%D9%85%D8%A9%20%D9%88%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D8%AE%D8%B1%D8%A7%D8%AC%20%D8%A7%D9%84%D8%BA%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D9%81%D8%AE%D9%85%D8%A9%20%D9%85%D8%B9%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF.m4a",
+      "duration": 2289.88,
+      "size": 37033730,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-6",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "06شرح الإخفاء الحقيقي مع حرف الكاف والحروف المرققة وطريقة اخراج غنة الإخفاء. مع دورة أحكام التجويد",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "06شرح الإخفاء الحقيقي مع حرف الكاف والحروف المرققة وطريقة اخراج غنة الإخفاء. مع دورة أحكام التجويد.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/06%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%A5%D8%AE%D9%81%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%82%D9%8A%D9%82%D9%8A%20%D9%85%D8%B9%20%D8%AD%D8%B1%D9%81%20%D8%A7%D9%84%D9%83%D8%A7%D9%81%20%D9%88%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D9%85%D8%B1%D9%82%D9%82%D8%A9%20%D9%88%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D8%AE%D8%B1%D8%A7%D8%AC%20%D8%BA%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AE%D9%81%D8%A7%D8%A1.%20%D9%85%D8%B9%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF.m4a",
+      "duration": 2813.12,
+      "size": 45495725,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-7",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "07أحكام الميم والنون المشددتين واللحن الجلي  فيهما شرح تحفة الأطفال مع دورة أحكام التجويد المتكاملة",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "07أحكام الميم والنون المشددتين واللحن الجلي  فيهما شرح تحفة الأطفال مع دورة أحكام التجويد المتكاملة.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/07%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D9%8A%D9%85%20%D9%88%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D9%85%D8%B4%D8%AF%D8%AF%D8%AA%D9%8A%D9%86%20%D9%88%D8%A7%D9%84%D9%84%D8%AD%D9%86%20%D8%A7%D9%84%D8%AC%D9%84%D9%8A%20%20%D9%81%D9%8A%D9%87%D9%85%D8%A7%20%D8%B4%D8%B1%D8%AD%20%D8%AA%D8%AD%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84%20%D9%85%D8%B9%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9.m4a",
+      "duration": 1552.72,
+      "size": 25111985,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-8",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "08شرح الإخفاء الشفوي كما يفعله إمام القراء الشيخ الحصري - رحمه الله - وشرح أحكام الميم الساكنة",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "08شرح الإخفاء الشفوي كما يفعله إمام القراء الشيخ الحصري - رحمه الله - وشرح أحكام الميم الساكنة.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/08%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%A5%D8%AE%D9%81%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%81%D9%88%D9%8A%20%D9%83%D9%85%D8%A7%20%D9%8A%D9%81%D8%B9%D9%84%D9%87%20%D8%A5%D9%85%D8%A7%D9%85%20%D8%A7%D9%84%D9%82%D8%B1%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%A7%D9%84%D8%AD%D8%B5%D8%B1%D9%8A%20-%20%D8%B1%D8%AD%D9%85%D9%87%20%D8%A7%D9%84%D9%84%D9%87%20-%20%D9%88%D8%B4%D8%B1%D8%AD%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D9%8A%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D9%83%D9%86%D8%A9.m4a",
+      "duration": 2375.15,
+      "size": 38412723,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-9",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "09شرح مراتب الغنن مع دورة أحكام التجويد المتكاملة الدرس التاسع مع فارس عنتر",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "09شرح مراتب الغنن مع دورة أحكام التجويد المتكاملة الدرس التاسع مع فارس عنتر.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/09%D8%B4%D8%B1%D8%AD%20%D9%85%D8%B1%D8%A7%D8%AA%D8%A8%20%D8%A7%D9%84%D8%BA%D9%86%D9%86%20%D9%85%D8%B9%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D8%A7%D9%84%D8%AF%D8%B1%D8%B3%20%D8%A7%D9%84%D8%AA%D8%A7%D8%B3%D8%B9%20%D9%85%D8%B9%20%D9%81%D8%A7%D8%B1%D8%B3%20%D8%B9%D9%86%D8%AA%D8%B1.m4a",
+      "duration": 1730.75,
+      "size": 27991142,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-10",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "10زمن الغنة الصحيح للميم والنون والفرق بين مراتب الغنن وأزمنة الغنن والرد على الآراء الغير صحيحة",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "10زمن الغنة الصحيح للميم والنون والفرق بين مراتب الغنن وأزمنة الغنن والرد على الآراء الغير صحيحة.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/10%D8%B2%D9%85%D9%86%20%D8%A7%D9%84%D8%BA%D9%86%D8%A9%20%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%AD%20%D9%84%D9%84%D9%85%D9%8A%D9%85%20%D9%88%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D9%88%D8%A7%D9%84%D9%81%D8%B1%D9%82%20%D8%A8%D9%8A%D9%86%20%D9%85%D8%B1%D8%A7%D8%AA%D8%A8%20%D8%A7%D9%84%D8%BA%D9%86%D9%86%20%D9%88%D8%A3%D8%B2%D9%85%D9%86%D8%A9%20%D8%A7%D9%84%D8%BA%D9%86%D9%86%20%D9%88%D8%A7%D9%84%D8%B1%D8%AF%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A2%D8%B1%D8%A7%D8%A1%20%D8%A7%D9%84%D8%BA%D9%8A%D8%B1%20%D8%B5%D8%AD%D9%8A%D8%AD%D8%A9.m4a",
+      "duration": 1454.87,
+      "size": 23529657,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-11",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "11اللامات السواكن وأحوال لام التعريف الـ  اللام القمرية. دورة أحكام التجويد المتكاملة الدرس الحادي عشر",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "11اللامات السواكن وأحوال لام التعريف الـ  اللام القمرية. دورة أحكام التجويد المتكاملة الدرس الحادي عشر.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/11%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D9%83%D9%86%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81%20%D8%A7%D9%84%D9%80%20%20%D8%A7%D9%84%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D9%82%D9%85%D8%B1%D9%8A%D8%A9.%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D8%A7%D9%84%D8%AF%D8%B1%D8%B3%20%D8%A7%D9%84%D8%AD%D8%A7%D8%AF%D9%8A%20%D8%B9%D8%B4%D8%B1.m4a",
+      "duration": 1420.16,
+      "size": 22968192,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-12",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "12اللام الشمسية مع شرح تحفة الأطفال . دورة أحكام التجويد المتكاملة الدرس الثاني عشر التجويد للمبتدئين",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "12اللام الشمسية مع شرح تحفة الأطفال . دورة أحكام التجويد المتكاملة الدرس الثاني عشر التجويد للمبتدئين.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/12%D8%A7%D9%84%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D8%B4%D9%85%D8%B3%D9%8A%D8%A9%20%D9%85%D8%B9%20%D8%B4%D8%B1%D8%AD%20%D8%AA%D8%AD%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84%20.%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D8%A7%D9%84%D8%AF%D8%B1%D8%B3%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%B9%D8%B4%D8%B1%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86.m4a",
+      "duration": 2462.38,
+      "size": 39823546,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-13",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "13لام الفعل المظهرة والمدغمة (قل نعم وقلنا) شرح اللامات السواكن وتحفة الأطفال دورة أحكام التجويد",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "13لام الفعل المظهرة والمدغمة (قل نعم وقلنا) شرح اللامات السواكن وتحفة الأطفال دورة أحكام التجويد.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/13%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D9%81%D8%B9%D9%84%20%D8%A7%D9%84%D9%85%D8%B8%D9%87%D8%B1%D8%A9%20%D9%88%D8%A7%D9%84%D9%85%D8%AF%D8%BA%D9%85%D8%A9%20(%D9%82%D9%84%20%D9%86%D8%B9%D9%85%20%D9%88%D9%82%D9%84%D9%86%D8%A7)%20%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D9%83%D9%86%20%D9%88%D8%AA%D8%AD%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF.m4a",
+      "duration": 1453.48,
+      "size": 23507212,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-14",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "14دورة مخارج الحروف وصفاتها مع شرح الجزرية مخرج الجوف الدرس 14 شرح أنواع المخارج وتقسيمها",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "14دورة مخارج الحروف وصفاتها مع شرح الجزرية مخرج الجوف الدرس 14 شرح أنواع المخارج وتقسيمها.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/14%D8%AF%D9%88%D8%B1%D8%A9%20%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA%D9%87%D8%A7%20%D9%85%D8%B9%20%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AC%D8%B2%D8%B1%D9%8A%D8%A9%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AC%D9%88%D9%81%20%D8%A7%D9%84%D8%AF%D8%B1%D8%B3%2014%20%D8%B4%D8%B1%D8%AD%20%D8%A3%D9%86%D9%88%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%AA%D9%82%D8%B3%D9%8A%D9%85%D9%87%D8%A7.m4a",
+      "duration": 2442.67,
+      "size": 39504810,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-15",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "15دورة مخارج الحروف وصفاتها مع شرح الجزرية مخرج الحلق الدرس 15 شرح أنواع المخارج وتقسيمها",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "15دورة مخارج الحروف وصفاتها مع شرح الجزرية مخرج الحلق الدرس 15 شرح أنواع المخارج وتقسيمها.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/15%D8%AF%D9%88%D8%B1%D8%A9%20%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA%D9%87%D8%A7%20%D9%85%D8%B9%20%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AC%D8%B2%D8%B1%D9%8A%D8%A9%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%20%D8%A7%D9%84%D8%AF%D8%B1%D8%B3%2015%20%D8%B4%D8%B1%D8%AD%20%D8%A3%D9%86%D9%88%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%AA%D9%82%D8%B3%D9%8A%D9%85%D9%87%D8%A7.m4a",
+      "duration": 1545.64,
+      "size": 24997669,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-16",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "16شرح مخرج اللسان وشرح مخرج القاف والكاف مع شرح الجزرية دورة المخارج والصفات",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "16شرح مخرج اللسان وشرح مخرج القاف والكاف مع شرح الجزرية دورة المخارج والصفات.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/16%D8%B4%D8%B1%D8%AD%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D9%88%D8%B4%D8%B1%D8%AD%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D9%82%D8%A7%D9%81%20%D9%88%D8%A7%D9%84%D9%83%D8%A7%D9%81%20%D9%85%D8%B9%20%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AC%D8%B2%D8%B1%D9%8A%D8%A9%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%A7%D9%84%D8%B5%D9%81%D8%A7%D8%AA.m4a",
+      "duration": 1203.28,
+      "size": 19460859,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-17",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "17شرح مخرج وسط اللسان. شرح مخرج الجيم والشين والياء مع شرح الجزرية دورة المخارج والصفات",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "17شرح مخرج وسط اللسان. شرح مخرج الجيم والشين والياء مع شرح الجزرية دورة المخارج والصفات.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/17%D8%B4%D8%B1%D8%AD%20%D9%85%D8%AE%D8%B1%D8%AC%20%D9%88%D8%B3%D8%B7%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86.%20%D8%B4%D8%B1%D8%AD%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AC%D9%8A%D9%85%20%D9%88%D8%A7%D9%84%D8%B4%D9%8A%D9%86%20%D9%88%D8%A7%D9%84%D9%8A%D8%A7%D8%A1%20%D9%85%D8%B9%20%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AC%D8%B2%D8%B1%D9%8A%D8%A9%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%A7%D9%84%D8%B5%D9%81%D8%A7%D8%AA.m4a",
+      "duration": 1792.6,
+      "size": 28991581,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-18",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "18شرح حرف الضاد (ض) عمليا مع التدريب والتطبيق دورة المخارج والصفات",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "18شرح حرف الضاد (ض) عمليا مع التدريب والتطبيق دورة المخارج والصفات.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/18%D8%B4%D8%B1%D8%AD%20%D8%AD%D8%B1%D9%81%20%D8%A7%D9%84%D8%B6%D8%A7%D8%AF%20(%D8%B6)%20%D8%B9%D9%85%D9%84%D9%8A%D8%A7%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%88%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%A7%D9%84%D8%B5%D9%81%D8%A7%D8%AA.m4a",
+      "duration": 1509.48,
+      "size": 24412870,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-19",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "19مخرج حرف الــ (لــ) المرقق والمفخم عمليا مع التطبيق دورة المخارج والصفات مع كتيب التجويد المصور",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "19مخرج حرف الــ (لــ) المرقق والمفخم عمليا مع التطبيق دورة المخارج والصفات مع كتيب التجويد المصور.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/19%D9%85%D8%AE%D8%B1%D8%AC%20%D8%AD%D8%B1%D9%81%20%D8%A7%D9%84%D9%80%D9%80%20(%D9%84%D9%80%D9%80)%20%D8%A7%D9%84%D9%85%D8%B1%D9%82%D9%82%20%D9%88%D8%A7%D9%84%D9%85%D9%81%D8%AE%D9%85%20%D8%B9%D9%85%D9%84%D9%8A%D8%A7%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%A7%D9%84%D8%B5%D9%81%D8%A7%D8%AA%20%D9%85%D8%B9%20%D9%83%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1.m4a",
+      "duration": 1289.87,
+      "size": 20861073,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-20",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "20علاج مشكلة الراء عند الكبار والأطفال مع شرح مخرج الراء والنون وشرح الجزرية",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "20علاج مشكلة الراء عند الكبار والأطفال مع شرح مخرج الراء والنون وشرح الجزرية.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/20%D8%B9%D9%84%D8%A7%D8%AC%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A1%20%D8%B9%D9%86%D8%AF%20%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%20%D9%88%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84%20%D9%85%D8%B9%20%D8%B4%D8%B1%D8%AD%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A1%20%D9%88%D8%A7%D9%84%D9%86%D9%88%D9%86%20%D9%88%D8%B4%D8%B1%D8%AD%20%D8%A7%D9%84%D8%AC%D8%B2%D8%B1%D9%8A%D8%A9.m4a",
+      "duration": 3012.35,
+      "size": 48717716,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-21",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "21مخرج اللسان الحروف النطعية (د _ ت _ ط) طرف اللسان دورة المخارج والصفات",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "21مخرج اللسان الحروف النطعية (د _ ت _ ط) طرف اللسان دورة المخارج والصفات.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/21%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D9%86%D8%B7%D8%B9%D9%8A%D8%A9%20(%D8%AF%20_%20%D8%AA%20_%20%D8%B7)%20%D8%B7%D8%B1%D9%81%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%A7%D9%84%D8%B5%D9%81%D8%A7%D8%AA.m4a",
+      "duration": 2052.74,
+      "size": 33198611,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-22",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "22حروف الــصـفـير والحروف الأســلية (ص، ز، س) مخرج طرف اللسان مع كتاب التجويد المصور PDF",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "22حروف الــصـفـير والحروف الأســلية (ص، ز، س) مخرج طرف اللسان مع كتاب التجويد المصور PDF.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/22%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D9%80%D9%80%D8%B5%D9%80%D9%81%D9%80%D9%8A%D8%B1%20%D9%88%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D8%A3%D8%B3%D9%80%D9%80%D9%84%D9%8A%D8%A9%20(%D8%B5%D8%8C%20%D8%B2%D8%8C%20%D8%B3)%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%B7%D8%B1%D9%81%20%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1%20PDF.m4a",
+      "duration": 1378.08,
+      "size": 22287727,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-23",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "23دورة مخارج الحروف الحروف اللثوية مشكلاتها وعلاجها ومخرجها الصحيح مع كتاب التجويد المصور",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "23دورة مخارج الحروف الحروف اللثوية مشكلاتها وعلاجها ومخرجها الصحيح مع كتاب التجويد المصور.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/23%D8%AF%D9%88%D8%B1%D8%A9%20%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D8%A7%D9%84%D9%84%D8%AB%D9%88%D9%8A%D8%A9%20%D9%85%D8%B4%D9%83%D9%84%D8%A7%D8%AA%D9%87%D8%A7%20%D9%88%D8%B9%D9%84%D8%A7%D8%AC%D9%87%D8%A7%20%D9%88%D9%85%D8%AE%D8%B1%D8%AC%D9%87%D8%A7%20%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%AD%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1.m4a",
+      "duration": 2148.68,
+      "size": 34750237,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-24",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "24دورة مخارج الحروف مع كتاب التجويد المصور مـــجـــا نــأ  التجويد للمبتدئين",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "24دورة مخارج الحروف مع كتاب التجويد المصور مـــجـــا نــأ  التجويد للمبتدئين.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/24%D8%AF%D9%88%D8%B1%D8%A9%20%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1%20%D9%85%D9%80%D9%80%D9%80%D8%AC%D9%80%D9%80%D9%80%D8%A7%20%D9%86%D9%80%D9%80%D8%A3%20%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86.m4a",
+      "duration": 1035.89,
+      "size": 16753699,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-25",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "25دور المخارج والصفات مخرج الواو والباء والميم مع كتاب التجويد المصور",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "25دور المخارج والصفات مخرج الواو والباء والميم مع كتاب التجويد المصور.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/25%D8%AF%D9%88%D8%B1%20%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D9%88%D8%A7%D9%84%D8%B5%D9%81%D8%A7%D8%AA%20%D9%85%D8%AE%D8%B1%D8%AC%20%D8%A7%D9%84%D9%88%D8%A7%D9%88%20%D9%88%D8%A7%D9%84%D8%A8%D8%A7%D8%A1%20%D9%88%D8%A7%D9%84%D9%85%D9%8A%D9%85%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1.m4a",
+      "duration": 1154.57,
+      "size": 18672971,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-26",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "26دورة مخارج الحروف مع كتاب التجويد المصور الدرس 26",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "26دورة مخارج الحروف مع كتاب التجويد المصور الدرس 26.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/26%D8%AF%D9%88%D8%B1%D8%A9%20%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1%20%D8%A7%D9%84%D8%AF%D8%B1%D8%B3%2026.m4a",
+      "duration": 561.97,
+      "size": 9089252,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-27",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "27شرح صفات الحروف والجزرية مع كتاب التجويد المصور 27",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "27شرح صفات الحروف والجزرية مع كتاب التجويد المصور 27.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/27%D8%B4%D8%B1%D8%AD%20%D8%B5%D9%81%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D9%88%D8%A7%D9%84%D8%AC%D8%B2%D8%B1%D9%8A%D8%A9%20%D9%85%D8%B9%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%B5%D9%88%D8%B1%2027.m4a",
+      "duration": 2381.72,
+      "size": 38519029,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-28",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "28 المرجع في  التجويد بالصور صفات الحروف",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "28 المرجع في  التجويد بالصور صفات الحروف.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/28%20%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D8%B9%20%D9%81%D9%8A%20%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D8%A8%D8%A7%D9%84%D8%B5%D9%88%D8%B1%20%D8%B5%D9%81%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81.m4a",
+      "duration": 1146.14,
+      "size": 18536736,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-29",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "29دورة أحكام التجويد من كتاب المرجع في التجويد ",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "29دورة أحكام التجويد من كتاب المرجع في التجويد .m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/29%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20%D9%85%D9%86%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D8%B9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20.m4a",
+      "duration": 1932.3,
+      "size": 31250769,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    },
+    {
+      "id": "fares-30",
+      "teacher": "fares",
+      "type": "audio",
+      "title": "30مخارج الحروف كاملة في فيديو واحد فقط",
+      "itemId": "20_20240810_202408",
+      "sourceUrl": "https://archive.org/details/20_20240810_202408",
+      "metadataUrl": "https://archive.org/metadata/20_20240810_202408",
+      "fileName": "30مخارج الحروف كاملة في فيديو واحد فقط.m4a",
+      "streamUrl": "https://archive.org/download/20_20240810_202408/30%D9%85%D8%AE%D8%A7%D8%B1%D8%AC%20%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81%20%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%81%D9%8A%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D9%88%D8%A7%D8%AD%D8%AF%20%D9%81%D9%82%D8%B7.m4a",
+      "duration": 2359.31,
+      "size": 38156504,
+      "attribution": "بحسب عنوان الدورة الصوتية وفهرسها المنشور في Internet Archive؛ ليست قناة رسمية موثقة هنا."
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://archive.org/advancedsearch.php?q=title%3A%22%D8%B4%D8%B1%D8%AD+%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF+%D9%81%D9%8A%D8%AF%D9%8A%D9%88+%D8%AF+%D8%A3%D9%8A%D9%85%D9%86+%D8%B1%D8%B4%D8%AF%D9%8A+%D8%B3%D9%88%D9%8A%D8%AF%22&output=json&rows=200&fl%5B%5D=identifier%2Ctitle",
+      "sha256": "8149ca3ac27bb178cb2775d7d561680cf6e16a053a1448cf6b3c73678dac7062"
+    },
+    {
+      "url": "https://archive.org/metadata/002.002",
+      "sha256": "a338ab12a27b6a3efbde46a0a0a25d5894f34d575c976fef9bae92a5a079c2a4"
+    },
+    {
+      "url": "https://archive.org/metadata/001.0",
+      "sha256": "4d81203b7b273b606b8fdeef023d8f0c6562428bdcf596d28174f1fc82752943"
+    },
+    {
+      "url": "https://archive.org/metadata/011.011.",
+      "sha256": "374024b0fcccbbfda8220f2c36c1e09a14038952da4c3778a6ee0055c54d868e"
+    },
+    {
+      "url": "https://archive.org/metadata/012.012.",
+      "sha256": "ca44fd5f82d2c7892011eb92417128651aa15c5002a1ca3e7493f67d900f3607"
+    },
+    {
+      "url": "https://archive.org/metadata/014.014.",
+      "sha256": "ed273597daf873d4256b55dbda4659a49453a38759fbf554f497b739ab1dc560"
+    },
+    {
+      "url": "https://archive.org/metadata/013.013.",
+      "sha256": "6c9dda816fc15e9e2f998a08edc87971d5e5bcb558ec5588f3b59e13955fd714"
+    },
+    {
+      "url": "https://archive.org/metadata/010.00.",
+      "sha256": "8af70fc7c386fe378b22d2cd1afa527a0ffcd1e6189fbb2d0f430980b39876a7"
+    },
+    {
+      "url": "https://archive.org/metadata/018.018.",
+      "sha256": "8c5def712afa4efa2e1485b80d28ad623310d7b1a93d481682d37726bbdc5432"
+    },
+    {
+      "url": "https://archive.org/metadata/055.055.",
+      "sha256": "4139a5a8ec33fbcef49f4e7712e032318eb40a792e7fb2db3b933cd945fecd43"
+    },
+    {
+      "url": "https://archive.org/metadata/058.058.",
+      "sha256": "fd1168bd5b89644d7c43172f6baea24568f6bde46d9e248092efa5bd5c4ae06e"
+    },
+    {
+      "url": "https://archive.org/metadata/080.080",
+      "sha256": "cccdd5bb29f38a214805f360b50e1c82e522c6cd0949dca4467e4acefaf31e9d"
+    },
+    {
+      "url": "https://archive.org/metadata/019.019.",
+      "sha256": "e0f5eebe69008926fa9b796ef1509a957180c1725cbcf0f2eb4f89cc9240953d"
+    },
+    {
+      "url": "https://archive.org/metadata/020.020.",
+      "sha256": "7da7c40f63e8fbe1eda1ec9a434971a8fc7e5c391803da5d5ac7cc90529b951b"
+    },
+    {
+      "url": "https://archive.org/metadata/021.021",
+      "sha256": "efc0603ef55ce1ac67dde7c1d7fbef85ce06c6d76d3a2f8f92368f265b2d07d7"
+    },
+    {
+      "url": "https://archive.org/metadata/022.022.",
+      "sha256": "22fbbfb072f23730ae76d30ff1b896f9a8f7eb3cf21e3da60ac3be38b9fd5871"
+    },
+    {
+      "url": "https://archive.org/metadata/024.024.",
+      "sha256": "08bd5c2f3f949082d4d6d4e1c4bced86499e268347fc93bde9f881363c16a0dd"
+    },
+    {
+      "url": "https://archive.org/metadata/023.023.",
+      "sha256": "a77d5b18b81b005da72cf32de32bed10c178052e7a7a327b2fa6956286b37b2a"
+    },
+    {
+      "url": "https://archive.org/metadata/026.026.",
+      "sha256": "2f225cf28d0491bbeebab8d51bdf4025d7355b75e85a9199df43e342f9eb0cf3"
+    },
+    {
+      "url": "https://archive.org/metadata/027.027.",
+      "sha256": "eac20c2a3e767e69d42584b488d5223e9f73e6fa8ed6104cac1d25928e327c39"
+    },
+    {
+      "url": "https://archive.org/metadata/028.028.",
+      "sha256": "21040afde16327182426ec0f9ddfe81842e2acaee9d293049298c39fbf546c8c"
+    },
+    {
+      "url": "https://archive.org/metadata/029.029.",
+      "sha256": "85d9dd13a78f50c4552374aaff5bdc51967dce7c8117a19b9f9fabdc9075f1bb"
+    },
+    {
+      "url": "https://archive.org/metadata/alfirdwsiy1433_gmail_100._201704",
+      "sha256": "f815d993e06b0ebedc1e0861a9c6adc03a34cc6b480b4c2839dbc8a1639f529d"
+    },
+    {
+      "url": "https://archive.org/metadata/103.03.",
+      "sha256": "18f840c74112f283eab0de8676e8ce90254214d67fb157763c453289943628cd"
+    },
+    {
+      "url": "https://archive.org/metadata/106.06.",
+      "sha256": "aede79c3f880c47d2cf6fcc6f8b72544b3bda59bc6326630e51fb5687759987a"
+    },
+    {
+      "url": "https://archive.org/metadata/088.088.",
+      "sha256": "551f13dc0d783eff2a3c3d61726706202c41657764a4995556efa1510d8dae98"
+    },
+    {
+      "url": "https://archive.org/metadata/038.38.",
+      "sha256": "5f92f040ca6a070fb6ec9b9fdc6e10aacfff2e6e5c2c6ce4f3266d03625982fb"
+    },
+    {
+      "url": "https://archive.org/metadata/092.092.",
+      "sha256": "7b63a9b1cf3701ece93e306c759228911e61997f3d52037279db55eecd3fb75c"
+    },
+    {
+      "url": "https://archive.org/metadata/030.30.",
+      "sha256": "9cfcad32a20f0cccbf4f90df8b3c02e815e2d14985a2d974972db84f67f8e066"
+    },
+    {
+      "url": "https://archive.org/metadata/20_20240810_202408",
+      "sha256": "3aa2dabb42064f581c607df375e6253f279318f2df54eac13ff3f5c1e7cd2e6b"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {answerTajweed} from "./tajweedAnswers.mjs";
 import {answerHadithQuestion} from "./hadithAnswers.mjs";
 import { answerLearning } from "./learningAnswers.mjs";
 import { answerTopic, resolveTopic, scholarsIn } from "./topicAnswers.mjs";
@@ -47,6 +48,8 @@ export async function answerMessage(message, history = [], options = {}) {
     mode: "source",
     ...extra,
   });
+  const tajweedAnswer = answerTajweed(message);
+  if (tajweedAnswer) return tajweedAnswer;
   const hadithAnswer = await answerHadithQuestion(message, history);
   if (hadithAnswer) return hadithAnswer;
   const legalIntent = /فتو|فتاو|حكم|يجوز|حلال|حرام/.test(normalized) || getScholar(message);
